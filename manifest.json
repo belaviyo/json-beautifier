@@ -1,0 +1,29 @@
+{
+  "manifest_version":2,
+  "version":"0.1.0",
+  "name":"JSON Beautifier",
+  "description":"Display JSON objects by transforming them into Syntax editable highlighted HTML",
+  "permissions":[
+    "storage",
+    "tabs",
+    "webRequest",
+    "*://*/*"
+  ],
+  "background":{
+    "scripts":[
+      "background.js"
+    ]
+  },
+  "icons": {
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png",
+    "256": "data/icons/256.png",
+    "512": "data/icons/512.png"
+  },
+  "homepage_url": "http://add0n.com/json-beautifier.html",
+  "web_accessible_resources": [
+    "data/view/*"
+  ]
+}
