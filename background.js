@@ -9,6 +9,8 @@ chrome.webRequest.onHeadersReceived.addListener(
     let matched = [
       'application/json',
       'application/x-javascript',
+      'application/hal+json',
+      'application/vnd.error+json'
       'text/javascript',
       'text/x-javascript',
       'text/x-json',
