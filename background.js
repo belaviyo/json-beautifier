@@ -2,24 +2,23 @@
 
 var ids = {};
 
-chrome.webRequest.onHeadersReceived.addListener(
-  (d) => {
-    let type = d.responseHeaders.filter(o => o.name.toLowerCase() === 'content-type')
-      .map(o => o.value.split(';')[0])[0];
-    let matched = [
-      'application/json',
-      'application/x-javascript',
-      'application/hal+json',
-      'application/vnd.error+json'
-      'text/javascript',
-      'text/x-javascript',
-      'text/x-json',
-      'text/plain'
-    ].indexOf(type) !== -1;
-    if (matched) {
-      ids[d.tabId] = type;
-    }
-  },
+chrome.webRequest.onHeadersReceived.addListener(d => {
+  const type = d.responseHeaders.filter(o => o.name.toLowerCase() === 'content-type')
+    .map(o => o.value.split(';')[0])[0];
+  const matched = [
+    'application/json',
+    'application/x-javascript',
+    'application/hal+json',
+    'application/vnd.error+json',
+    'text/javascript',
+    'text/x-javascript',
+    'text/x-json',
+    'text/plain'
+  ].indexOf(type) !== -1;
+  if (matched) {
+    ids[d.tabId] = type;
+  }
+},
   {
     urls: ['*://*/*'],
     types: ['main_frame']
@@ -28,7 +27,7 @@ chrome.webRequest.onHeadersReceived.addListener(
 );
 
 chrome.tabs.onUpdated.addListener(tabId => {
-  let type = ids[tabId];
+  const type = ids[tabId];
   if (type) {
     delete ids[tabId];
     if (type !== 'text/plain') {
@@ -56,8 +55,8 @@ chrome.tabs.onUpdated.addListener(tabId => {
 
 // FAQs & Feedback
 chrome.storage.local.get('version', prefs => {
-  let version = chrome.runtime.getManifest().version;
-  let isFirefox = navigator.userAgent.indexOf('Firefox') !== -1;
+  const version = chrome.runtime.getManifest().version;
+  const isFirefox = navigator.userAgent.indexOf('Firefox') !== -1;
   if (isFirefox ? !prefs.version : prefs.version !== version) {
     chrome.storage.local.set({version}, () => {
       chrome.tabs.create({
@@ -67,7 +66,7 @@ chrome.storage.local.get('version', prefs => {
     });
   }
 });
-(function () {
-  let {name, version} = chrome.runtime.getManifest();
+{
+  const {name, version} = chrome.runtime.getManifest();
   chrome.runtime.setUninstallURL('http://add0n.com/feedback.html?name=' + name + '&version=' + version);
-})();
+}

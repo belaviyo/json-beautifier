@@ -1,13 +1,13 @@
 /* globals JSONEditor */
 'use strict';
 
-function render () {
-  let content = document.body.textContent;
+function render() {
+  const content = document.body.textContent;
   try {
-    let json = JSON.parse(content);
-    let container = document.querySelector('pre');
+    const json = JSON.parse(content);
+    const container = document.querySelector('pre');
     container.textContent = '';
-    let editor = new JSONEditor(container, {
+    const editor = new JSONEditor(container, {
 
     });
     editor.set(json);
