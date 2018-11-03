@@ -7,9 +7,7 @@ function render() {
     const json = JSON.parse(content);
     const container = document.querySelector('pre');
     container.textContent = '';
-    const editor = new JSONEditor(container, {
-
-    });
+    const editor = new JSONEditor(container, {});
     editor.set(json);
   }
   catch (e) {}
