@@ -8,8 +8,8 @@ body:not([data-loaded=true])::after {
   height: 100vh;
   background: rgba(0, 0, 0, 0.7) url(chrome-extension://__MSG_@@extension_id__/data/view/loading.svg) center center no-repeat;
 }
-body[data-loaded=true] {
-  margin: 0;
+body[data-loaded="true"] {
+  margin: 0 !important;
 }
 
 pre {

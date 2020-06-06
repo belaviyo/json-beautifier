@@ -2,12 +2,10 @@
 
 chrome.runtime.onMessage.addListener(({method, type}, {tab}) => {
   if (method === 'convert') {
-    if (type !== 'text/plain') {
-      chrome.tabs.insertCSS(tab.id, {
-        file: 'data/view/inject.css',
-        runAt: 'document_start'
-      });
-    }
+    chrome.tabs.insertCSS(tab.id, {
+      file: 'data/view/inject.css',
+      runAt: 'document_start'
+    });
     const isFirefox = /Firefox/.test(navigator.userAgent);
     chrome.tabs.insertCSS(tab.id, {
       file: `data/view/json-editor/jsoneditor-${isFirefox ? 'firefox' : 'chrome'}.css`,
