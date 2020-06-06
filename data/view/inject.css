@@ -1,4 +1,4 @@
-body:not([data-loaded=true]):after {
+body:not([data-loaded=true])::after {
   content: '';
   display: block;
   position: fixed;
@@ -7,6 +7,9 @@ body:not([data-loaded=true]):after {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.7) url(chrome-extension://__MSG_@@extension_id__/data/view/loading.svg) center center no-repeat;
+}
+body[data-loaded=true] {
+  margin: 0;
 }
 
 pre {

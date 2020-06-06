@@ -1,11 +1,10 @@
 {
   "manifest_version": 2,
-  "version": "0.1.6",
+  "version": "0.1.7",
   "name": "JSON Beautifier & Editor",
   "description": "Display JSON objects by transforming them into Syntax editable highlighted HTML",
   "permissions": [
     "storage",
-    "tabs",
     "<all_urls>"
   ],
   "background": {

@@ -1,3 +1,2 @@
-Link: https://github.com/josdejong/jsoneditor/archive/v5.32.5.zip
-  -> /dist/jsoneditor.js
-    MD5: bb5ddbdbe1ed62615644abe00354d5cc
+https://unpkg.com/jsoneditor@9.0.0/dist/jsoneditor.js
+https://unpkg.com/jsoneditor@9.0.0/dist/jsoneditor.css
