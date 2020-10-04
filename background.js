@@ -7,8 +7,9 @@ chrome.runtime.onMessage.addListener(({method, type}, {tab}) => {
       runAt: 'document_start'
     });
     const isFirefox = /Firefox/.test(navigator.userAgent);
+    const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
     chrome.tabs.insertCSS(tab.id, {
-      file: `data/view/json-editor/jsoneditor-${isFirefox ? 'firefox' : 'chrome'}.css`,
+      file: `data/view/json-editor/jsoneditor-${isFirefox ? 'firefox' : 'chrome'}${isDarkTheme ? '-dark' : ''}.css`,
       runAt: 'document_start'
     });
 
