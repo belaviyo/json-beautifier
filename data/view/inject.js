@@ -98,7 +98,6 @@ else {
 
 /* backup and restore */
 function backup() {
-  console.log('backup');
   const states = {};
   const step = (parent, node) => {
     node.childs.forEach((node, index) => {
