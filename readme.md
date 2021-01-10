@@ -10,10 +10,6 @@
 - Applied `prefers-color-scheme: dark` method and only supported by newer versions of browsers
 - Source: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 
-## Currently dark theme supported browsers
-- Chromium based browsers: ✅
-- Firefox: ❌
-
 ## How to load directly this repo as extension?
 - Chromium
     - Go to [Extensions Page](chrome://extensions/)

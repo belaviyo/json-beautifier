@@ -1,7 +1,48 @@
 /* globals JSONEditor */
 'use strict';
 
-var editor;
+let editor;
+const base = document.createElement('base');
+base.href = chrome.runtime.getURL('/data/view/ace/theme/');
+document.head.appendChild(base);
+
+function buttons() {
+  const menu = document.querySelector('.jsoneditor-menu');
+  if (menu) {
+    const button = document.createElement('button');
+    button.classList.add('save');
+    button.title = 'Save JSON to the default Download Directory';
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    const p1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    svg.setAttribute('viewBox', '0 0 48 48');
+    p1.setAttribute('d', 'M0 0h48v48H0z');
+    p1.setAttribute('fill', 'none');
+    const p2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p2.setAttribute('d', 'M34 6H10c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V14l-8-8zM24 38c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm6-20H10v-8h20v8z');
+    svg.appendChild(p1);
+    svg.appendChild(p2);
+    button.appendChild(svg);
+    button.style.background = 'none';
+    menu.insertBefore(button, menu.firstChild);
+    button.onclick = e => {
+      e.stopPropagation();
+      e.preventDefault();
+      let content = editor.getText();
+      if (['text', 'code', 'preview'].some(a => a === editor.mode) === false) {
+        content = JSON.stringify(editor.get(), null, 2);
+      }
+      const blob = new Blob([content], {
+        type: 'application/json;charset=utf-8'
+      });
+      const a = document.createElement('a');
+      a.download = (document.title || 'content') + '.json';
+      const href = URL.createObjectURL(blob);
+      a.href = href;
+      a.click();
+      URL.revokeObjectURL(href);
+    };
+  }
+}
 
 function render() {
   const content = document.body.textContent;
@@ -9,10 +50,40 @@ function render() {
     const json = JSON.parse(content);
     const container = document.querySelector('pre');
     container.textContent = '';
-    editor = new JSONEditor(container, {
-      modes: ['tree', 'code', 'text']
+
+    const config = {
+      modes: ['tree', 'code', 'text'],
+      mode: 'code',
+      onModeChange(mode) {
+        buttons();
+        chrome.storage.local.set({
+          mode
+        });
+      }
+    };
+    if (matchMedia('(prefers-color-scheme: dark)').matches) {
+      config.theme = 'ace/theme/twilight';
+    }
+    chrome.storage.local.get({
+      mode: 'tree'
+    }, prefs => {
+      config.mode = prefs.mode;
+      editor = new JSONEditor(container, config);
+      buttons();
+      editor.set(json);
+      chrome.storage.local.get({
+        [location.href]: false
+      }, prefs => {
+        if (prefs[location.href]) {
+          restore(prefs[location.href].states, editor.node);
+          editor.ready = true;
+          document.querySelector('.jsoneditor-tree').scrollTop = prefs[location.href].top;
+        }
+        else {
+          editor.ready = true;
+        }
+      });
     });
-    editor.set(json);
   }
   catch (e) {}
   document.body.dataset.loaded = true;
@@ -23,4 +94,65 @@ if (document.readyState === 'complete') {
 }
 else {
   window.addEventListener('load', render);
+}
+
+/* backup and restore */
+function backup() {
+  console.log('backup');
+  const states = {};
+  const step = (parent, node) => {
+    node.childs.forEach((node, index) => {
+      if (node.expanded) {
+        parent[index] = {};
+        step(parent[index], node);
+      }
+    });
+  };
+  step(states, editor.node);
+  chrome.storage.local.get({
+    'history-length': 20,
+    'history-links': []
+  }, prefs => {
+    if (prefs['history-length']) {
+      prefs['history-links'].unshift(location.href);
+      prefs['history-links'] = prefs['history-links'].filter((s, i, l) => l.indexOf(s) === i);
+      prefs[location.href] = {
+        states,
+        top: document.querySelector('.jsoneditor-tree').scrollTop
+      };
+      if (prefs['history-links'].length > prefs['history-length']) {
+        const keys = prefs['history-links'].slice(-1 * (prefs['history-length'] - 1));
+        chrome.storage.local.remove(keys);
+        prefs['history-links'] = prefs['history-links'].slice(0, prefs['history-length']);
+      }
+      chrome.storage.local.set(prefs);
+    }
+  });
+}
+function restore(obj, node) {
+  if (node.childs) {
+    for (const key of Object.keys(obj)) {
+      const n = node.childs[key];
+      if (n) {
+        n.expand(false);
+        restore(obj[key], n);
+      }
+    }
+  }
+}
+{
+  let timeout;
+
+  document.addEventListener('click', ({target}) => {
+    if (target.classList.contains('jsoneditor-expanded') || target.classList.contains('jsoneditor-collapsed')) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => backup(), 500);
+    }
+  });
+  document.addEventListener('keyup', e => {
+    if (e.code === 'KeyE' && e.ctrlKey) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => backup(), 500);
+    }
+  });
 }

@@ -1,25 +1,34 @@
 'use strict';
 
-chrome.runtime.onMessage.addListener(({method, type}, {tab}) => {
+chrome.runtime.onMessage.addListener(({method}, {tab}) => {
   if (method === 'convert') {
     chrome.tabs.insertCSS(tab.id, {
       file: 'data/view/inject.css',
       runAt: 'document_start'
     });
     const isFirefox = /Firefox/.test(navigator.userAgent);
-    const isDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
     chrome.tabs.insertCSS(tab.id, {
-      file: `data/view/json-editor/jsoneditor-${isFirefox ? 'firefox' : 'chrome'}${isDarkTheme ? '-dark' : ''}.css`,
+      file: `data/view/json-editor/jsoneditor-${isFirefox ? 'firefox' : 'chrome'}.css`,
       runAt: 'document_start'
     });
-
+    chrome.tabs.insertCSS(tab.id, {
+      file: `data/view/json-editor/extra.css`,
+      runAt: 'document_start'
+    });
     chrome.tabs.executeScript(tab.id, {
       file: 'data/view/json-editor/jsoneditor.js',
       runAt: 'document_start'
-    }, () => chrome.tabs.executeScript(tab.id, {
-      file: 'data/view/inject.js',
-      runAt: 'document_start'
-    }));
+    }, () => {
+      chrome.tabs.executeScript(tab.id, {
+        file: 'data/view/ace/theme/twilight.js',
+        runAt: 'document_start'
+      }, () => {
+        chrome.tabs.executeScript(tab.id, {
+          file: 'data/view/inject.js',
+          runAt: 'document_start'
+        });
+      });
+    });
   }
 });
 
@@ -37,10 +46,11 @@ chrome.runtime.onMessage.addListener(({method, type}, {tab}) => {
         if (reason === 'install' || (prefs.faqs && reason === 'update')) {
           const doUpdate = (Date.now() - prefs['last-update']) / 1000 / 60 / 60 / 24 > 45;
           if (doUpdate && previousVersion !== version) {
-            tabs.create({
+            tabs.query({active: true, currentWindow: true}, tbs => tabs.create({
               url: page + '?version=' + version + (previousVersion ? '&p=' + previousVersion : '') + '&type=' + reason,
-              active: reason === 'install'
-            });
+              active: reason === 'install',
+              ...(tbs && tbs.length && {index: tbs[0].index + 1})
+            }));
             storage.local.set({'last-update': Date.now()});
           }
         }

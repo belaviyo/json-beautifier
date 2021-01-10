@@ -1,0 +1,5 @@
+{
+  "description": {
+    "message": "Mostrar los objetos JSON transformándolos en HTML resaltado y editable por sintaxis para validarlos, formatearlos y guardarlos."
+  }
+}
