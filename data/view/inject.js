@@ -45,7 +45,7 @@ function buttons() {
 }
 
 function render() {
-  const content = document.body.textContent;
+  const content = document.body.textContent.trim();
   try {
     const json = JSON.parse(content);
     const container = document.querySelector('pre');
@@ -59,6 +59,61 @@ function render() {
         chrome.storage.local.set({
           mode
         });
+      },
+      onCreateMenu(items, node) {
+        items.push({
+          text: 'Copy Object Path',
+          title: 'Copy object path to the clipboard',
+          className: 'jsoneditor-copy-path',
+          click() {
+            const single = path => {
+              let content = '';
+              for (let i = 0; i < path.length; i++) {
+                if (typeof path[i] === 'number') {
+                  content = content.substring(0, content.length - 1);
+                  content += '[' + path[i] + ']';
+                }
+                else {
+                  content += path[i];
+                }
+                if (i !== path.length - 1) content += '.';
+              }
+              return content;
+            };
+
+            navigator.clipboard.writeText(node.paths.map(single).join('\n'));
+          }
+        }, {
+          text: 'Copy Inner JSON',
+          title: 'Copy inner JSON object to the clipboard',
+          className: 'jsoneditor-copy-inner',
+          click() {
+            const nodes = editor.getNodesByRange({
+              path: node.paths[0]
+            }, {
+              path: node.paths[node.paths.length - 1]
+            });
+            navigator.clipboard.writeText(nodes.map(node => JSON.stringify(node.value, null, '  ')).join('\n'));
+          }
+        }, {
+          text: 'Copy Outer JSON',
+          title: 'Copy outer JSON object to the clipboard',
+          className: 'jsoneditor-copy-outer',
+          click() {
+            const nodes = editor.getNodesByRange({
+              path: node.paths[0]
+            }, {
+              path: node.paths[node.paths.length - 1]
+            });
+            const cache = {};
+            for (const node of nodes) {
+              cache[node.path.slice(-1).pop()] = node.value;
+            }
+            navigator.clipboard.writeText(JSON.stringify(cache, null, '  '));
+          }
+        });
+
+        return items;
       }
     };
     if (matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -139,7 +194,7 @@ function restore(obj, node) {
     }
   }
 }
-{
+if (location.protocol.indexOf('extension') === -1) {
   let timeout;
 
   document.addEventListener('click', ({target}) => {

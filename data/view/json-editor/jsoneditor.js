@@ -21,11 +21,11 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  *
- * Copyright (c) 2011-2020 Jos de Jong, http://jsoneditoronline.org
+ * Copyright (c) 2011-2021 Jos de Jong, http://jsoneditoronline.org
  *
  * @author  Jos de Jong, <wjosdejong@gmail.com>
- * @version 9.1.7
- * @date    2020-12-30
+ * @version 9.1.10
+ * @date    2021-02-14
  */
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -5504,8 +5504,8 @@ __webpack_require__.d(__webpack_exports__, {
   "previewModeMixins": function() { return /* binding */ previewModeMixins; }
 });
 
-// EXTERNAL MODULE: ./node_modules/simple-json-repair/lib/cjs/index-commonjs.js
-var index_commonjs = __webpack_require__(761);
+// EXTERNAL MODULE: ./node_modules/jsonrepair/lib/cjs/index-commonjs.js
+var index_commonjs = __webpack_require__(8909);
 var index_commonjs_default = /*#__PURE__*/__webpack_require__.n(index_commonjs);
 // EXTERNAL MODULE: ./src/js/constants.js
 var constants = __webpack_require__(4188);
@@ -6891,8 +6891,8 @@ __webpack_require__.d(__webpack_exports__, {
   "textModeMixins": function() { return /* binding */ textModeMixins; }
 });
 
-// EXTERNAL MODULE: ./node_modules/simple-json-repair/lib/cjs/index-commonjs.js
-var index_commonjs = __webpack_require__(761);
+// EXTERNAL MODULE: ./node_modules/jsonrepair/lib/cjs/index-commonjs.js
+var index_commonjs = __webpack_require__(8909);
 var index_commonjs_default = /*#__PURE__*/__webpack_require__.n(index_commonjs);
 // EXTERNAL MODULE: ./src/js/ace/index.js
 var ace = __webpack_require__(8170);
@@ -9099,7 +9099,15 @@ var constants = __webpack_require__(4188);
 ;// CONCATENATED MODULE: ./src/js/Node.js
 
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
@@ -13947,6 +13955,8 @@ Node._findSchema = function (topLevelSchema, schemaRefs, path) {
       currentSchema = schema;
 
       if ('$ref' in currentSchema && typeof currentSchema.$ref === 'string') {
+        var _ref$match;
+
         var ref = currentSchema.$ref;
 
         if (ref in schemaRefs) {
@@ -13972,6 +13982,21 @@ Node._findSchema = function (topLevelSchema, schemaRefs, path) {
             _iterator2.e(err);
           } finally {
             _iterator2.f();
+          }
+        } else if (((_ref$match = ref.match(/#\//g)) === null || _ref$match === void 0 ? void 0 : _ref$match.length) === 1) {
+          var _ref$split = ref.split('#/'),
+              _ref$split2 = _slicedToArray(_ref$split, 2),
+              schemaUrl = _ref$split2[0],
+              relativePath = _ref$split2[1];
+
+          if (schemaUrl in schemaRefs) {
+            var referencedSchema = schemaRefs[schemaUrl];
+            var reference = {
+              $ref: '#/'.concat(relativePath)
+            };
+            return Node._findSchema(referencedSchema, schemaRefs, nextPath, reference);
+          } else {
+            throw Error("Unable to resolve reference ".concat(ref));
           }
         } else {
           throw Error("Unable to resolve reference ".concat(ref));
@@ -15402,7 +15427,7 @@ treemode.setText = function (jsonText) {
     this.set((0,util.parse)(jsonText)); // this can throw an error
   } catch (err) {
     // try to repair json, replace JavaScript notation with JSON notation
-    var repairedJsonText = (0,util.trySimpleJsonRepair)(jsonText); // try to parse again
+    var repairedJsonText = (0,util.tryJsonRepair)(jsonText); // try to parse again
 
     this.set((0,util.parse)(repairedJsonText)); // this can throw an error
   }
@@ -15419,7 +15444,7 @@ treemode.updateText = function (jsonText) {
     this.update((0,util.parse)(jsonText)); // this can throw an error
   } catch (err) {
     // try to repair json, replace JavaScript notation with JSON notation
-    var repairJsonText = (0,util.trySimpleJsonRepair)(jsonText); // try to parse again
+    var repairJsonText = (0,util.tryJsonRepair)(jsonText); // try to parse again
 
     this.update((0,util.parse)(repairJsonText)); // this can throw an error
   }
@@ -17030,7 +17055,7 @@ exports.O = function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "parse": function() { return /* binding */ parse; },
-/* harmony export */   "trySimpleJsonRepair": function() { return /* binding */ trySimpleJsonRepair; },
+/* harmony export */   "tryJsonRepair": function() { return /* binding */ tryJsonRepair; },
 /* harmony export */   "escapeUnicodeChars": function() { return /* binding */ escapeUnicodeChars; },
 /* harmony export */   "validate": function() { return /* binding */ validate; },
 /* harmony export */   "extend": function() { return /* binding */ extend; },
@@ -17090,8 +17115,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_polyfills__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(233);
 /* harmony import */ var javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var simple_json_repair__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(761);
-/* harmony import */ var simple_json_repair__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(simple_json_repair__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var jsonrepair__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8909);
+/* harmony import */ var jsonrepair__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jsonrepair__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _assets_jsonlint_jsonlint__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6589);
 /* harmony import */ var json_source_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7026);
 /* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7907);
@@ -17129,9 +17154,9 @@ function parse(jsonString) {
  * @param {string} jsonString
  */
 
-function trySimpleJsonRepair(jsonString) {
+function tryJsonRepair(jsonString) {
   try {
-    return simple_json_repair__WEBPACK_IMPORTED_MODULE_2___default()(jsonString);
+    return jsonrepair__WEBPACK_IMPORTED_MODULE_2___default()(jsonString);
   } catch (err) {
     // repair was not successful, return original text
     return jsonString;
@@ -18029,7 +18054,7 @@ function getPositionForPath(text, paths) {
   }
 
   try {
-    jsmap = json_source_map__WEBPACK_IMPORTED_MODULE_4__/* .parse */ .Q(text);
+    jsmap = json_source_map__WEBPACK_IMPORTED_MODULE_4__.parse(text);
   } catch (err) {
     return result;
   }
@@ -48176,7 +48201,6 @@ function escapeJsonPtr(str) {
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
-var __webpack_unused_export__;
 
 
 var escapedChars = {
@@ -48193,7 +48217,7 @@ var escapedChars = {
 var A_CODE = 'a'.charCodeAt();
 
 
-exports.Q = function (source, _, options) {
+exports.parse = function (source, _, options) {
   var pointers = {};
   var line = 0;
   var column = 0;
@@ -48415,7 +48439,7 @@ exports.Q = function (source, _, options) {
 };
 
 
-__webpack_unused_export__ = function (data, _, options) {
+exports.stringify = function (data, _, options) {
   if (!validType(data)) return;
   var wsLine = 0;
   var wsPos, wsColumn;
@@ -48641,6 +48665,874 @@ var ESC_1 = /\//g;
 function escapeJsonPointer(str) {
   return str.replace(ESC_0, '~0')
             .replace(ESC_1, '~1');
+}
+
+
+/***/ }),
+
+/***/ 5755:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = JsonRepairError;
+
+function JsonRepairError(message, char) {
+  if (!(this instanceof JsonRepairError)) {
+    throw new SyntaxError('Constructor must be called with the new operator');
+  }
+
+  this.message = message + ' (char ' + char + ')';
+  this.char = char;
+  this.stack = new Error().stack;
+}
+
+JsonRepairError.prototype = new Error();
+JsonRepairError.prototype.constructor = Error;
+
+
+/***/ }),
+
+/***/ 8909:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__(8107).default
+
+
+/***/ }),
+
+/***/ 8107:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports.default = jsonrepair;
+
+var _JsonRepairError = _interopRequireDefault(__webpack_require__(5755));
+
+var _stringUtils = __webpack_require__(1536);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// token types enumeration
+var DELIMITER = 0;
+var NUMBER = 1;
+var STRING = 2;
+var SYMBOL = 3;
+var WHITESPACE = 4;
+var COMMENT = 5;
+var UNKNOWN = 6;
+/**
+ * @typedef {DELIMITER | NUMBER | STRING | SYMBOL | WHITESPACE | COMMENT | UNKNOWN} TokenType
+ */
+// map with all delimiters
+
+var DELIMITERS = {
+  '': true,
+  '{': true,
+  '}': true,
+  '[': true,
+  ']': true,
+  ':': true,
+  ',': true,
+  // for JSONP and MongoDB data type notation
+  '(': true,
+  ')': true,
+  ';': true,
+  // for string concatenation
+  '+': true
+}; // map with all escape characters
+
+var ESCAPE_CHARACTERS = {
+  '"': '"',
+  '\\': '\\',
+  '/': '/',
+  b: '\b',
+  f: '\f',
+  n: '\n',
+  r: '\r',
+  t: '\t' // \u is handled by getToken()
+
+}; // TODO: can we unify CONTROL_CHARACTERS and ESCAPE_CHARACTERS?
+
+var CONTROL_CHARACTERS = {
+  '\b': '\\b',
+  '\f': '\\f',
+  '\n': '\\n',
+  '\r': '\\r',
+  '\t': '\\t'
+};
+var SYMBOLS = {
+  null: 'null',
+  true: 'true',
+  false: 'false'
+};
+var PYTHON_SYMBOLS = {
+  None: 'null',
+  True: 'true',
+  False: 'false'
+};
+var input = ''; // current json text
+
+var output = ''; // generated output
+
+var index = 0; // current index in text
+
+var c = ''; // current token character in text
+
+var token = ''; // current token
+
+var tokenType = UNKNOWN; // type of current token
+
+/**
+ * Repair a string containing an invalid JSON document.
+ * For example changes JavaScript notation into JSON notation.
+ *
+ * Example:
+ *
+ *     jsonrepair('{name: \'John\'}") // '{"name": "John"}'
+ *
+ * @param {string} text
+ * @return {string}
+ */
+
+function jsonrepair(text) {
+  // initialize
+  input = text;
+  output = '';
+  index = 0;
+  c = input.charAt(0);
+  token = '';
+  tokenType = UNKNOWN; // get first token
+
+  processNextToken();
+  var isRootLevelObject = tokenType === DELIMITER && token === '{'; // parse everything
+
+  parseObject();
+
+  if (token === '') {
+    // reached the end of the document properly
+    return output;
+  }
+
+  if (isRootLevelObject && tokenIsStartOfValue()) {
+    // start of a new value after end of the root level object: looks like
+    // newline delimited JSON -> turn into a root level array
+    while (tokenIsStartOfValue()) {
+      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ','); // parse next newline delimited item
+
+      parseObject();
+    } // wrap the output in an array
+
+
+    return "[\n".concat(output, "\n]");
+  }
+
+  throw new _JsonRepairError.default('Unexpected characters', index - token.length);
+}
+/**
+ * Get the next character from the expression.
+ * The character is stored into the char c. If the end of the expression is
+ * reached, the function puts an empty string in c.
+ */
+
+
+function next() {
+  index++;
+  c = input.charAt(index); // Note: not using input[index] because that returns undefined when index is out of range
+}
+/**
+ * check whether the current token is the start of a value:
+ * object, array, number, string, or symbol
+ * @returns {boolean}
+ */
+
+
+function tokenIsStartOfValue() {
+  return tokenType === DELIMITER && (token === '[' || token === '{') || tokenType === STRING || tokenType === NUMBER || tokenType === SYMBOL;
+}
+/**
+ * check whether the current token is the start of a key (or possible key):
+ * number, string, or symbol
+ * @returns {boolean}
+ */
+
+
+function tokenIsStartOfKey() {
+  return tokenType === STRING || tokenType === NUMBER || tokenType === SYMBOL;
+}
+/**
+ * Process the previous token, and get next token in the current text
+ */
+
+
+function processNextToken() {
+  output += token;
+  tokenType = UNKNOWN;
+  token = '';
+  getTokenDelimiter();
+
+  if (tokenType === WHITESPACE) {
+    // we leave the whitespace as it is, except replacing special white
+    // space character
+    token = (0, _stringUtils.normalizeWhitespace)(token);
+    processNextToken();
+  }
+
+  if (tokenType === COMMENT) {
+    // ignore comments
+    tokenType = UNKNOWN;
+    token = '';
+    processNextToken();
+  }
+} // check for delimiters like ':', '{', ']'
+
+
+function getTokenDelimiter() {
+  if (DELIMITERS[c]) {
+    tokenType = DELIMITER;
+    token = c;
+    next();
+    return;
+  }
+
+  getTokenNumber();
+} // check for a number like "2.3e+5"
+
+
+function getTokenNumber() {
+  if ((0, _stringUtils.isDigit)(c) || c === '-') {
+    tokenType = NUMBER;
+
+    if (c === '-') {
+      token += c;
+      next();
+
+      if (!(0, _stringUtils.isDigit)(c)) {
+        throw new _JsonRepairError.default('Invalid number, digit expected', index);
+      }
+    } else if (c === '0') {
+      token += c;
+      next();
+    } else {// digit 1-9, nothing extra to do
+    }
+
+    while ((0, _stringUtils.isDigit)(c)) {
+      token += c;
+      next();
+    }
+
+    if (c === '.') {
+      token += c;
+      next();
+
+      if (!(0, _stringUtils.isDigit)(c)) {
+        throw new _JsonRepairError.default('Invalid number, digit expected', index);
+      }
+
+      while ((0, _stringUtils.isDigit)(c)) {
+        token += c;
+        next();
+      }
+    }
+
+    if (c === 'e' || c === 'E') {
+      token += c;
+      next();
+
+      if (c === '+' || c === '-') {
+        token += c;
+        next();
+      }
+
+      if (!(0, _stringUtils.isDigit)(c)) {
+        throw new _JsonRepairError.default('Invalid number, digit expected', index);
+      }
+
+      while ((0, _stringUtils.isDigit)(c)) {
+        token += c;
+        next();
+      }
+    }
+
+    return;
+  }
+
+  getTokenString();
+} // get a token string like '"hello world"'
+
+
+function getTokenString() {
+  if ((0, _stringUtils.isQuote)(c)) {
+    var quote = (0, _stringUtils.normalizeQuote)(c);
+    token += '"'; // output valid double quote
+
+    tokenType = STRING;
+    next();
+
+    while (c !== '' && (0, _stringUtils.normalizeQuote)(c) !== quote) {
+      if (c === '\\') {
+        // handle escape characters
+        next();
+        var unescaped = ESCAPE_CHARACTERS[c];
+
+        if (unescaped !== undefined) {
+          token += '\\' + c;
+          next();
+        } else if (c === 'u') {
+          // parse escaped unicode character, like '\\u260E'
+          token += "\\u";
+          next();
+
+          for (var u = 0; u < 4; u++) {
+            if (!(0, _stringUtils.isHex)(c)) {
+              throw new _JsonRepairError.default('Invalid unicode character', index - token.length);
+            }
+
+            token += c;
+            next();
+          }
+        } else if (c === '\'') {
+          // escaped single quote character -> remove the escape character
+          token += '\'';
+          next();
+        } else {
+          throw new _JsonRepairError.default('Invalid escape character "\\' + c + '"', index);
+        }
+      } else if (CONTROL_CHARACTERS[c]) {
+        // unescaped special character
+        // fix by adding an escape character
+        token += CONTROL_CHARACTERS[c];
+        next();
+      } else if (c === '"') {
+        // unescaped double quote -> escape it
+        token += '\\"';
+        next();
+      } else {
+        // a regular character
+        token += c;
+        next();
+      }
+    }
+
+    if ((0, _stringUtils.normalizeQuote)(c) !== quote) {
+      throw new _JsonRepairError.default('End of string expected', index - token.length);
+    }
+
+    token += '"'; // output valid double quote
+
+    next();
+    return;
+  }
+
+  getTokenAlpha();
+} // check for symbols (true, false, null)
+
+
+function getTokenAlpha() {
+  if ((0, _stringUtils.isAlpha)(c)) {
+    tokenType = SYMBOL;
+
+    while ((0, _stringUtils.isAlpha)(c) || (0, _stringUtils.isDigit)(c) || c === '$') {
+      token += c;
+      next();
+    }
+
+    return;
+  }
+
+  getTokenWhitespace();
+} // get whitespaces: space, tab, newline, and carriage return
+
+
+function getTokenWhitespace() {
+  if ((0, _stringUtils.isWhitespace)(c) || (0, _stringUtils.isSpecialWhitespace)(c)) {
+    tokenType = WHITESPACE;
+
+    while ((0, _stringUtils.isWhitespace)(c) || (0, _stringUtils.isSpecialWhitespace)(c)) {
+      token += c;
+      next();
+    }
+
+    return;
+  }
+
+  getTokenComment();
+}
+
+function getTokenComment() {
+  // find a block comment '/* ... */'
+  if (c === '/' && input[index + 1] === '*') {
+    tokenType = COMMENT;
+
+    while (c !== '' && (c !== '*' || c === '*' && input[index + 1] !== '/')) {
+      token += c;
+      next();
+    }
+
+    if (c === '*' && input[index + 1] === '/') {
+      token += c;
+      next();
+      token += c;
+      next();
+    }
+
+    return;
+  } // find a comment '// ...'
+
+
+  if (c === '/' && input[index + 1] === '/') {
+    tokenType = COMMENT;
+
+    while (c !== '' && c !== '\n') {
+      token += c;
+      next();
+    }
+
+    return;
+  }
+
+  getTokenUnknown();
+} // something unknown is found, wrong characters -> a syntax error
+
+
+function getTokenUnknown() {
+  tokenType = UNKNOWN;
+
+  while (c !== '') {
+    token += c;
+    next();
+  }
+
+  throw new _JsonRepairError.default('Syntax error in part "' + token + '"', index - token.length);
+}
+/**
+ * Parse an object like '{"key": "value"}'
+ * @return {*}
+ */
+
+
+function parseObject() {
+  if (tokenType === DELIMITER && token === '{') {
+    processNextToken(); // TODO: can we make this redundant?
+
+    if (tokenType === DELIMITER && token === '}') {
+      // empty object
+      processNextToken();
+      return;
+    }
+
+    while (true) {
+      // parse key
+      if (tokenType === SYMBOL || tokenType === NUMBER) {
+        // unquoted key -> add quotes around it, change it into a string
+        tokenType = STRING;
+        token = "\"".concat(token, "\"");
+      }
+
+      if (tokenType !== STRING) {
+        // TODO: handle ambiguous cases like '[{"a":1,{"b":2}]' which could be an array with two objects or one
+        throw new _JsonRepairError.default('Object key expected', index - token.length);
+      }
+
+      processNextToken(); // parse colon (key/value separator)
+
+      if (tokenType === DELIMITER && token === ':') {
+        processNextToken();
+      } else {
+        if (tokenIsStartOfValue()) {
+          // we expect a colon here, but got the start of a value
+          // -> insert a colon before any inserted whitespaces at the end of output
+          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ':');
+        } else {
+          throw new _JsonRepairError.default('Colon expected', index - token.length);
+        }
+      } // parse value
+
+
+      parseObject(); // parse comma (key/value pair separator)
+
+      if (tokenType === DELIMITER && token === ',') {
+        processNextToken();
+
+        if (tokenType === DELIMITER && token === '}') {
+          // we've just passed a trailing comma -> remove the trailing comma
+          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
+          break;
+        }
+      } else {
+        if (tokenIsStartOfKey()) {
+          // we expect a comma here, but got the start of a new key
+          // -> insert a comma before any inserted whitespaces at the end of output
+          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
+        } else {
+          break;
+        }
+      }
+    }
+
+    if (tokenType === DELIMITER && token === '}') {
+      processNextToken();
+    } else {
+      // missing end bracket -> insert the missing bracket
+      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, '}');
+    }
+
+    return;
+  }
+
+  parseArray();
+}
+/**
+ * Parse an object like '["item1", "item2", ...]'
+ */
+
+
+function parseArray() {
+  if (tokenType === DELIMITER && token === '[') {
+    processNextToken();
+
+    if (tokenType === DELIMITER && token === ']') {
+      // empty array
+      processNextToken();
+      return;
+    }
+
+    while (true) {
+      // parse item
+      parseObject(); // parse comma (item separator)
+
+      if (tokenType === DELIMITER && token === ',') {
+        processNextToken();
+
+        if (tokenType === DELIMITER && token === ']') {
+          // we've just passed a trailing comma -> remove the trailing comma
+          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
+          break;
+        }
+      } else {
+        if (tokenIsStartOfValue()) {
+          // we expect a comma here, but got the start of a new item
+          // -> insert a comma before any inserted whitespaces at the end of output
+          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
+        } else {
+          break;
+        }
+      }
+    }
+
+    if (tokenType === DELIMITER && token === ']') {
+      processNextToken();
+    } else {
+      // missing end bracket -> insert the missing bracket
+      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ']');
+    }
+
+    return;
+  }
+
+  parseString();
+}
+/**
+ * Parse a string enclosed by double quotes "...". Can contain escaped quotes
+ */
+
+
+function parseString() {
+  if (tokenType === STRING) {
+    processNextToken();
+
+    while (tokenType === DELIMITER && token === '+') {
+      // string concatenation like "hello" + "world"
+      token = ''; // don't output the concatenation
+
+      processNextToken();
+
+      if (tokenType === STRING) {
+        // concatenate with the previous string
+        var endIndex = output.lastIndexOf('"');
+        output = output.substring(0, endIndex) + token.substring(1);
+        token = '';
+        processNextToken();
+      }
+    }
+
+    return;
+  }
+
+  parseNumber();
+}
+/**
+ * Parse a number
+ */
+
+
+function parseNumber() {
+  if (tokenType === NUMBER) {
+    processNextToken();
+    return;
+  }
+
+  parseSymbol();
+}
+/**
+ * Parse constants true, false, null
+ */
+
+
+function parseSymbol() {
+  if (tokenType === SYMBOL) {
+    // a supported symbol: true, false, null
+    if (SYMBOLS[token]) {
+      processNextToken();
+      return;
+    } // for example replace None with null
+
+
+    if (PYTHON_SYMBOLS[token]) {
+      token = PYTHON_SYMBOLS[token];
+      processNextToken();
+      return;
+    } // make a copy of the symbol, let's see what comes next
+
+
+    var symbol = token;
+    var symbolIndex = output.length;
+    token = '';
+    processNextToken(); // if (tokenType === DELIMITER && token === '(') {
+
+    if (tokenType === DELIMITER && token === '(') {
+      // a MongoDB function call or JSONP call
+      // Can be a MongoDB data type like in {"_id": ObjectId("123")}
+      // token = '' // do not output the function name
+      // processNextToken()
+      // next()
+      token = ''; // do not output the ( character
+
+      processNextToken(); // process the part inside the brackets
+
+      parseObject(); // skip the closing bracket ")" and ");"
+
+      if (tokenType === DELIMITER && token === ')') {
+        token = ''; // do not output the ) character
+
+        processNextToken();
+
+        if (tokenType === DELIMITER && token === ';') {
+          token = ''; // do not output the semicolon character
+
+          processNextToken();
+        }
+      }
+
+      return;
+    } // unknown symbol => turn into in a string
+    // it is possible that by reading the next token we already inserted
+    // extra spaces in the output which should be inside the string,
+    // hence the symbolIndex
+
+
+    output = (0, _stringUtils.insertAtIndex)(output, "\"".concat(symbol), symbolIndex);
+
+    while (tokenType === SYMBOL || tokenType === NUMBER) {
+      processNextToken();
+    }
+
+    output += '"';
+    return;
+  }
+
+  parseEnd();
+}
+/**
+ * Evaluated when the expression is not yet ended but expected to end
+ */
+
+
+function parseEnd() {
+  if (token === '') {
+    // syntax error or unexpected end of expression
+    throw new _JsonRepairError.default('Unexpected end of json string', index - token.length);
+  } else {
+    throw new _JsonRepairError.default('Value expected', index - token.length);
+  }
+}
+
+
+/***/ }),
+
+/***/ 1536:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.isAlpha = isAlpha;
+exports.isHex = isHex;
+exports.isDigit = isDigit;
+exports.isWhitespace = isWhitespace;
+exports.isSpecialWhitespace = isSpecialWhitespace;
+exports.normalizeWhitespace = normalizeWhitespace;
+exports.isQuote = isQuote;
+exports.normalizeQuote = normalizeQuote;
+exports.stripLastOccurrence = stripLastOccurrence;
+exports.insertBeforeLastWhitespace = insertBeforeLastWhitespace;
+exports.insertAtIndex = insertAtIndex;
+var SINGLE_QUOTES = ['\'', // quote
+"\u2018", // quote left
+"\u2019", // quote right
+"`", // grave accent
+"\xB4" // acute accent
+];
+var DOUBLE_QUOTES = ['"', "\u201C", // double quote left
+"\u201D" // double quote right
+];
+/**
+ * Check if the given character contains an alpha character, a-z, A-Z, _
+ * @param {string} c
+ * @return {boolean}
+ */
+
+function isAlpha(c) {
+  return /^[a-zA-Z_]$/.test(c);
+}
+/**
+ * Check if the given character contains a hexadecimal character 0-9, a-f, A-F
+ * @param {string} c
+ * @return {boolean}
+ */
+
+
+function isHex(c) {
+  return /^[0-9a-fA-F]$/.test(c);
+}
+/**
+ * checks if the given char c is a digit
+ * @param {string} c
+ * @return {boolean}
+ */
+
+
+function isDigit(c) {
+  return c >= '0' && c <= '9';
+}
+/**
+ * Check if the given character is a whitespace character like space, tab, or
+ * newline
+ * @param {string} c
+ * @return {boolean}
+ */
+
+
+function isWhitespace(c) {
+  return c === ' ' || c === '\t' || c === '\n' || c === '\r';
+}
+/**
+ * Check if the given character is a special whitespace character, some
+ * unicode variant
+ * @param {string} c
+ * @return {boolean}
+ */
+
+
+function isSpecialWhitespace(c) {
+  return c === "\xA0" || c >= "\u2000" && c <= "\u200A" || c === "\u202F" || c === "\u205F" || c === "\u3000";
+}
+/**
+ * Replace speical whitespace characters with regular spaces
+ * @param {string} text
+ * @returns {string}
+ */
+
+
+function normalizeWhitespace(text) {
+  var normalized = '';
+
+  for (var i = 0; i < text.length; i++) {
+    var char = text[i];
+    normalized += isSpecialWhitespace(char) ? ' ' : char;
+  }
+
+  return normalized;
+}
+/**
+ * Test whether the given character is a quote or double quote character.
+ * Also tests for special variants of quotes.
+ * @param {string} c
+ * @returns {boolean}
+ */
+
+
+function isQuote(c) {
+  return SINGLE_QUOTES.includes(c) || DOUBLE_QUOTES.includes(c);
+}
+/**
+ * Normalize special double or single quote characters to their regular
+ * variant ' or "
+ * @param {string} c
+ * @returns {string}
+ */
+
+
+function normalizeQuote(c) {
+  if (SINGLE_QUOTES.includes(c)) {
+    return '\'';
+  }
+
+  if (DOUBLE_QUOTES.includes(c)) {
+    return '"';
+  }
+
+  return c;
+}
+/**
+ * Strip last occurrence of textToStrip from text
+ * @param {string} text
+ * @param {string} textToStrip
+ * @returns {string}
+ */
+
+
+function stripLastOccurrence(text, textToStrip) {
+  var index = text.lastIndexOf(textToStrip);
+  return index !== -1 ? text.substring(0, index) + text.substring(index + 1) : text;
+}
+/**
+ * Insert textToInsert into text before the last whitespace in text
+ * @param {string} text
+ * @param {string} textToInsert
+ * @returns {string}
+ */
+
+
+function insertBeforeLastWhitespace(text, textToInsert) {
+  return text.replace(/\s*$/, function (match) {
+    return textToInsert + match;
+  });
+}
+/**
+ * Insert textToInsert at index in text
+ * @param {string} text
+ * @param {string} textToInsert
+ * @param {number} index
+ * @returns {string}
+ */
+
+
+function insertAtIndex(text, textToInsert, index) {
+  return text.substring(0, index) + textToInsert + text.substring(index);
 }
 
 
@@ -49250,737 +50142,6 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     };
 
 }));
-
-
-/***/ }),
-
-/***/ 4442:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-var JsonRepairError = /** @class */ (function (_super) {
-    __extends(JsonRepairError, _super);
-    /**
-     * @param {string} message  Explanatory message
-     * @param {number} char     Character index where the error happened
-     */
-    function JsonRepairError(message, char) {
-        var _this = _super.call(this, message + ' (char ' + char + ')') || this;
-        _this.char = char;
-        return _this;
-    }
-    return JsonRepairError;
-}(SyntaxError));
-exports.default = JsonRepairError;
-
-
-/***/ }),
-
-/***/ 761:
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-module.exports = __webpack_require__(7754).default
-
-
-/***/ }),
-
-/***/ 7754:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-__webpack_unused_export__ = ({ value: true });
-var JsonRepairError_1 = __webpack_require__(4442);
-var stringUtils_1 = __webpack_require__(2501);
-// token types enumeration
-var DELIMITER = 0;
-var NUMBER = 1;
-var STRING = 2;
-var SYMBOL = 3;
-var WHITESPACE = 4;
-var COMMENT = 5;
-var UNKNOWN = 6;
-// map with all delimiters
-var DELIMITERS = {
-    '': true,
-    '{': true,
-    '}': true,
-    '[': true,
-    ']': true,
-    ':': true,
-    ',': true,
-    // for JSONP and MongoDB data type notation
-    '(': true,
-    ')': true,
-    ';': true,
-    // for string concatenation
-    '+': true
-};
-// map with all escape characters
-var ESCAPE_CHARACTERS = {
-    '"': '"',
-    '\\': '\\',
-    '/': '/',
-    b: '\b',
-    f: '\f',
-    n: '\n',
-    r: '\r',
-    t: '\t'
-    // \u is handled by getToken()
-};
-// TODO: can we unify CONTROL_CHARACTERS and ESCAPE_CHARACTERS?
-var CONTROL_CHARACTERS = {
-    '\b': '\\b',
-    '\f': '\\f',
-    '\n': '\\n',
-    '\r': '\\r',
-    '\t': '\\t'
-};
-var SYMBOLS = {
-    null: 'null',
-    true: 'true',
-    false: 'false'
-};
-var PYTHON_SYMBOLS = {
-    None: 'null',
-    True: 'true',
-    False: 'false'
-};
-var input = ''; // current json text
-var output = ''; // generated output
-var index = 0; // current index in text
-var c = ''; // current token character in text
-var token = ''; // current token
-var tokenType = UNKNOWN; // type of current token
-/**
- * Repair a string containing an invalid JSON document.
- * For example changes JavaScript notation into JSON notation.
- *
- * Example:
- *
- *     repair('{name: \'John\'}") // '{"name": "John"}'
- *
- */
-function simpleJsonRepair(text) {
-    // initialize
-    input = text;
-    output = '';
-    index = 0;
-    c = input.charAt(0);
-    token = '';
-    tokenType = UNKNOWN;
-    // get first token
-    processNextToken();
-    // @ts-ignore
-    var isRootLevelObject = tokenType === DELIMITER && token === '{';
-    // parse everything
-    parseObject();
-    if (token === '') {
-        // reached the end of the document properly
-        return output;
-    }
-    if (isRootLevelObject && tokenIsStartOfValue()) {
-        // start of a new value after end of the root level object: looks like
-        // newline delimited JSON -> turn into a root level array
-        while (tokenIsStartOfValue()) {
-            output = stringUtils_1.insertBeforeLastWhitespace(output, ',');
-            // parse next newline delimited item
-            parseObject();
-        }
-        // wrap the output in an array
-        return "[\n" + output + "\n]";
-    }
-    throw new JsonRepairError_1.default('Unexpected characters', index - token.length);
-}
-exports.default = simpleJsonRepair;
-/**
- * Get the next character from the expression.
- * The character is stored into the char c. If the end of the expression is
- * reached, the function puts an empty string in c.
- */
-function next() {
-    index++;
-    c = input.charAt(index);
-    // Note: not using input[index] because that returns undefined when index is out of range
-}
-// check whether the current token is the start of a value:
-// object, array, number, string, or symbol
-function tokenIsStartOfValue() {
-    return (tokenType === DELIMITER && (token === '[' || token === '{')) ||
-        tokenType === STRING ||
-        tokenType === NUMBER ||
-        tokenType === SYMBOL;
-}
-// check whether the current token is the start of a key (or possible key):
-// number, string, or symbol
-function tokenIsStartOfKey() {
-    return tokenType === STRING ||
-        tokenType === NUMBER ||
-        tokenType === SYMBOL;
-}
-/**
- * Process the previous token, and get next token in the current text
- */
-function processNextToken() {
-    output += token;
-    tokenType = UNKNOWN;
-    token = '';
-    getTokenDelimiter();
-    // @ts-ignore
-    if (tokenType === WHITESPACE) {
-        // we leave the whitespace as it is, except replacing special white
-        // space character
-        token = stringUtils_1.normalizeWhitespace(token);
-        processNextToken();
-    }
-    // @ts-ignore
-    if (tokenType === COMMENT) {
-        // ignore comments
-        tokenType = UNKNOWN;
-        token = '';
-        processNextToken();
-    }
-}
-// check for delimiters like ':', '{', ']'
-function getTokenDelimiter() {
-    if (DELIMITERS[c]) {
-        tokenType = DELIMITER;
-        token = c;
-        next();
-        return;
-    }
-    getTokenNumber();
-}
-// check for a number like "2.3e+5"
-function getTokenNumber() {
-    if (stringUtils_1.isDigit(c) || c === '-') {
-        tokenType = NUMBER;
-        if (c === '-') {
-            token += c;
-            next();
-            if (!stringUtils_1.isDigit(c)) {
-                throw new JsonRepairError_1.default('Invalid number, digit expected', index);
-            }
-        }
-        else if (c === '0') {
-            token += c;
-            next();
-        }
-        else {
-            // digit 1-9, nothing extra to do
-        }
-        while (stringUtils_1.isDigit(c)) {
-            token += c;
-            next();
-        }
-        if (c === '.') {
-            token += c;
-            next();
-            if (!stringUtils_1.isDigit(c)) {
-                throw new JsonRepairError_1.default('Invalid number, digit expected', index);
-            }
-            while (stringUtils_1.isDigit(c)) {
-                token += c;
-                next();
-            }
-        }
-        if (c === 'e' || c === 'E') {
-            token += c;
-            next();
-            // @ts-ignore
-            if (c === '+' || c === '-') {
-                token += c;
-                next();
-            }
-            if (!stringUtils_1.isDigit(c)) {
-                throw new JsonRepairError_1.default('Invalid number, digit expected', index);
-            }
-            while (stringUtils_1.isDigit(c)) {
-                token += c;
-                next();
-            }
-        }
-        return;
-    }
-    getTokenString();
-}
-// get a token string like '"hello world"'
-function getTokenString() {
-    if (stringUtils_1.isQuote(c)) {
-        var quote = stringUtils_1.normalizeQuote(c);
-        token += '"'; // output valid double quote
-        tokenType = STRING;
-        next();
-        // @ts-ignore
-        while (c !== '' && stringUtils_1.normalizeQuote(c) !== quote) {
-            if (c === '\\') {
-                // handle escape characters
-                next();
-                var unescaped = ESCAPE_CHARACTERS[c];
-                if (unescaped !== undefined) {
-                    token += '\\' + c;
-                    next();
-                    // @ts-ignore
-                }
-                else if (c === 'u') {
-                    // parse escaped unicode character, like '\\u260E'
-                    token += '\\u';
-                    next();
-                    for (var u = 0; u < 4; u++) {
-                        if (!stringUtils_1.isHex(c)) {
-                            throw new JsonRepairError_1.default('Invalid unicode character', index - token.length);
-                        }
-                        token += c;
-                        next();
-                    }
-                    // @ts-ignore
-                }
-                else if (c === '\'') {
-                    // escaped single quote character -> remove the escape character
-                    token += '\'';
-                    next();
-                }
-                else {
-                    throw new JsonRepairError_1.default('Invalid escape character "\\' + c + '"', index);
-                }
-            }
-            else if (CONTROL_CHARACTERS[c]) {
-                // unescaped special character
-                // fix by adding an escape character
-                token += CONTROL_CHARACTERS[c];
-                next();
-            }
-            else if (c === '"') {
-                // unescaped double quote -> escape it
-                token += '\\"';
-                next();
-            }
-            else {
-                // a regular character
-                token += c;
-                next();
-            }
-        }
-        if (stringUtils_1.normalizeQuote(c) !== quote) {
-            throw new JsonRepairError_1.default('End of string expected', index - token.length);
-        }
-        token += '"'; // output valid double quote
-        next();
-        return;
-    }
-    getTokenAlpha();
-}
-// check for symbols (true, false, null)
-function getTokenAlpha() {
-    if (stringUtils_1.isAlpha(c)) {
-        tokenType = SYMBOL;
-        while (stringUtils_1.isAlpha(c) || stringUtils_1.isDigit(c) || c === '$') {
-            token += c;
-            next();
-        }
-        return;
-    }
-    getTokenWhitespace();
-}
-// get whitespaces: space, tab, newline, and carriage return
-function getTokenWhitespace() {
-    if (stringUtils_1.isWhitespace(c) || stringUtils_1.isSpecialWhitespace(c)) {
-        tokenType = WHITESPACE;
-        while (stringUtils_1.isWhitespace(c) || stringUtils_1.isSpecialWhitespace(c)) {
-            token += c;
-            next();
-        }
-        return;
-    }
-    getTokenComment();
-}
-function getTokenComment() {
-    // find a block comment '/* ... */'
-    if (c === '/' && input[index + 1] === '*') {
-        tokenType = COMMENT;
-        // @ts-ignore
-        while (c !== '' && (c !== '*' || (c === '*' && input[index + 1] !== '/'))) {
-            token += c;
-            next();
-        }
-        if (c === '*' && input[index + 1] === '/') {
-            token += c;
-            next();
-            token += c;
-            next();
-        }
-        return;
-    }
-    // find a comment '// ...'
-    if (c === '/' && input[index + 1] === '/') {
-        tokenType = COMMENT;
-        // @ts-ignore
-        while (c !== '' && c !== '\n') {
-            token += c;
-            next();
-        }
-        return;
-    }
-    getTokenUnknown();
-}
-// something unknown is found, wrong characters -> a syntax error
-function getTokenUnknown() {
-    tokenType = UNKNOWN;
-    while (c !== '') {
-        token += c;
-        next();
-    }
-    throw new JsonRepairError_1.default('Syntax error in part "' + token + '"', index - token.length);
-}
-/**
- * Parse an object like '{"key": "value"}'
- * @return {*}
- */
-function parseObject() {
-    if (tokenType === DELIMITER && token === '{') {
-        processNextToken();
-        // @ts-ignore
-        // TODO: can we make this redundant?
-        if (tokenType === DELIMITER && token === '}') {
-            // empty object
-            processNextToken();
-            return;
-        }
-        while (true) {
-            // parse key
-            // @ts-ignore
-            if (tokenType === SYMBOL || tokenType === NUMBER) {
-                // unquoted key -> add quotes around it, change it into a string
-                tokenType = STRING;
-                token = "\"" + token + "\"";
-            }
-            // @ts-ignore
-            if (tokenType !== STRING) {
-                // TODO: handle ambiguous cases like '[{"i":1,{"i":2}]'
-                throw new JsonRepairError_1.default('Object key expected', index - token.length);
-            }
-            processNextToken();
-            // parse colon (key/value separator)
-            // @ts-ignore
-            if (tokenType === DELIMITER && token === ':') {
-                processNextToken();
-            }
-            else {
-                if (tokenIsStartOfValue()) {
-                    // we expect a colon here, but got the start of a value
-                    // -> insert a colon before any inserted whitespaces at the end of output
-                    output = stringUtils_1.insertBeforeLastWhitespace(output, ':');
-                }
-                else {
-                    throw new JsonRepairError_1.default('Colon expected', index - token.length);
-                }
-            }
-            // parse value
-            parseObject();
-            // parse comma (key/value pair separator)
-            // @ts-ignore
-            if (tokenType === DELIMITER && token === ',') {
-                processNextToken();
-                // @ts-ignore
-                if (tokenType === DELIMITER && token === '}') {
-                    // we've just passed a trailing comma -> remove the trailing comma
-                    output = stringUtils_1.stripLastOccurrence(output, ',');
-                    break;
-                }
-            }
-            else {
-                if (tokenIsStartOfKey()) {
-                    // we expect a comma here, but got the start of a new key
-                    // -> insert a comma before any inserted whitespaces at the end of output
-                    output = stringUtils_1.insertBeforeLastWhitespace(output, ',');
-                }
-                else {
-                    break;
-                }
-            }
-        }
-        // @ts-ignore
-        if (tokenType === DELIMITER && token === '}') {
-            processNextToken();
-        }
-        else {
-            // missing end bracket -> insert the missing bracket
-            output = stringUtils_1.insertBeforeLastWhitespace(output, '}');
-        }
-        return;
-    }
-    parseArray();
-}
-/**
- * Parse an object like '["item1", "item2", ...]'
- * @return {*}
- */
-function parseArray() {
-    if (tokenType === DELIMITER && token === '[') {
-        processNextToken();
-        // @ts-ignore
-        if (tokenType === DELIMITER && token === ']') {
-            // empty array
-            processNextToken();
-            return;
-        }
-        while (true) {
-            // parse item
-            parseObject();
-            // parse comma (item separator)
-            // @ts-ignore
-            if (tokenType === DELIMITER && token === ',') {
-                processNextToken();
-                // @ts-ignore
-                if (tokenType === DELIMITER && token === ']') {
-                    // we've just passed a trailing comma -> remove the trailing comma
-                    output = stringUtils_1.stripLastOccurrence(output, ',');
-                    break;
-                }
-            }
-            else {
-                if (tokenIsStartOfValue()) {
-                    // we expect a comma here, but got the start of a new item
-                    // -> insert a comma before any inserted whitespaces at the end of output
-                    output = stringUtils_1.insertBeforeLastWhitespace(output, ',');
-                }
-                else {
-                    break;
-                }
-            }
-        }
-        // @ts-ignore
-        if (tokenType === DELIMITER && token === ']') {
-            processNextToken();
-        }
-        else {
-            // missing end bracket -> insert the missing bracket
-            output = stringUtils_1.insertBeforeLastWhitespace(output, ']');
-        }
-        return;
-    }
-    parseString();
-}
-/**
- * Parse a string enclosed by double quotes "...". Can contain escaped quotes
- * @return {*}
- */
-function parseString() {
-    if (tokenType === STRING) {
-        processNextToken();
-        // @ts-ignore
-        while (tokenType === DELIMITER && token === '+') {
-            // string concatenation like "hello" + "world"
-            token = ''; // don't output the concatenation
-            processNextToken();
-            if (tokenType === STRING) {
-                // concatenate with the previous string
-                var endIndex = output.lastIndexOf('"');
-                output = output.substring(0, endIndex) + token.substring(1);
-                token = '';
-                processNextToken();
-            }
-        }
-        return;
-    }
-    parseNumber();
-}
-/**
- * Parse a number
- */
-function parseNumber() {
-    if (tokenType === NUMBER) {
-        processNextToken();
-        return;
-    }
-    parseSymbol();
-}
-/**
- * Parse constants true, false, null
- */
-function parseSymbol() {
-    if (tokenType === SYMBOL) {
-        // a supported symbol: true, false, null
-        if (SYMBOLS[token]) {
-            processNextToken();
-            return;
-        }
-        // for example replace None with null
-        if (PYTHON_SYMBOLS[token]) {
-            token = PYTHON_SYMBOLS[token];
-            processNextToken();
-            return;
-        }
-        // make a copy of the symbol, let's see what comes next
-        var symbol = token;
-        var symbolIndex = output.length;
-        token = '';
-        processNextToken();
-        // @ts-ignore
-        // if (tokenType === DELIMITER && token === '(') {
-        if (tokenType === DELIMITER && token === '(') {
-            // a MongoDB function call or JSONP call
-            // Can be a MongoDB data type like in {"_id": ObjectId("123")}
-            // token = '' // do not output the function name
-            // processNextToken()
-            // next()
-            token = ''; // do not output the ( character
-            processNextToken();
-            // process the part inside the brackets
-            parseObject();
-            // skip the closing bracket ")" and ");"
-            // @ts-ignore
-            if (tokenType === DELIMITER && token === ')') {
-                token = ''; // do not output the ) character
-                processNextToken();
-                if (tokenType === DELIMITER && token === ';') {
-                    token = ''; // do not output the semicolon character
-                    processNextToken();
-                }
-            }
-            return;
-        }
-        // unknown symbol => turn into in a string
-        // it is possible that by reading the next token we already inserted
-        // extra spaces in the output which should be inside the string,
-        // hence the symbolIndex
-        output = stringUtils_1.insertAtIndex(output, "\"" + symbol, symbolIndex);
-        while (tokenType === SYMBOL || tokenType === NUMBER) {
-            processNextToken();
-        }
-        output += '"';
-        return;
-    }
-    parseEnd();
-}
-/**
- * Evaluated when the expression is not yet ended but expected to end
- */
-function parseEnd() {
-    if (token === '') {
-        // syntax error or unexpected end of expression
-        throw new JsonRepairError_1.default('Unexpected end of json string', index - token.length);
-    }
-    else {
-        throw new JsonRepairError_1.default('Value expected', index - token.length);
-    }
-}
-
-
-/***/ }),
-
-/***/ 2501:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.insertAtIndex = exports.insertBeforeLastWhitespace = exports.stripLastOccurrence = exports.normalizeQuote = exports.isQuote = exports.normalizeWhitespace = exports.isSpecialWhitespace = exports.isWhitespace = exports.isDigit = exports.isHex = exports.isAlpha = void 0;
-var SINGLE_QUOTES = [
-    '\'',
-    '\u2018',
-    '\u2019',
-    '\u0060',
-    '\u00B4' // acute accent
-];
-var DOUBLE_QUOTES = [
-    '"',
-    '\u201C',
-    '\u201D' // double quote right
-];
-/**
- * Check if the given character contains an alpha character, a-z, A-Z, _
- */
-function isAlpha(c) {
-    return /^[a-zA-Z_]$/.test(c);
-}
-exports.isAlpha = isAlpha;
-/**
- * Check if the given character contains a hexadecimal character 0-9, a-f, A-F
- */
-function isHex(c) {
-    return /^[0-9a-fA-F]$/.test(c);
-}
-exports.isHex = isHex;
-/**
- * checks if the given char c is a digit
- */
-function isDigit(c) {
-    return (c >= '0' && c <= '9');
-}
-exports.isDigit = isDigit;
-/**
- * Check if the given character is a whitespace character like space, tab, or
- * newline
- */
-function isWhitespace(c) {
-    return c === ' ' || c === '\t' || c === '\n' || c === '\r';
-}
-exports.isWhitespace = isWhitespace;
-function isSpecialWhitespace(c) {
-    return (c === '\u00A0' ||
-        (c >= '\u2000' && c <= '\u200A') ||
-        c === '\u202F' ||
-        c === '\u205F' ||
-        c === '\u3000');
-}
-exports.isSpecialWhitespace = isSpecialWhitespace;
-function normalizeWhitespace(text) {
-    var normalized = '';
-    for (var i = 0; i < text.length; i++) {
-        var char = text[i];
-        normalized += isSpecialWhitespace(char)
-            ? ' '
-            : char;
-    }
-    return normalized;
-}
-exports.normalizeWhitespace = normalizeWhitespace;
-function isQuote(c) {
-    return SINGLE_QUOTES.includes(c) || DOUBLE_QUOTES.includes(c);
-}
-exports.isQuote = isQuote;
-function normalizeQuote(c) {
-    if (SINGLE_QUOTES.includes(c)) {
-        return '\'';
-    }
-    if (DOUBLE_QUOTES.includes(c)) {
-        return '"';
-    }
-    return c;
-}
-exports.normalizeQuote = normalizeQuote;
-function stripLastOccurrence(text, textToStrip) {
-    var index = text.lastIndexOf(textToStrip);
-    return (index !== -1)
-        ? text.substring(0, index) + text.substring(index + 1)
-        : text;
-}
-exports.stripLastOccurrence = stripLastOccurrence;
-function insertBeforeLastWhitespace(text, textToInsert) {
-    return text.replace(/\s*$/, function (match) { return textToInsert + match; });
-}
-exports.insertBeforeLastWhitespace = insertBeforeLastWhitespace;
-function insertAtIndex(text, textToInsert, index) {
-    return text.substring(0, index) + textToInsert + text.substring(index);
-}
-exports.insertAtIndex = insertAtIndex;
 
 
 /***/ }),
@@ -51437,10 +51598,10 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /***/ (function(module) {
 
 /*!
- * vanilla-picker v2.11.0
+ * vanilla-picker v2.11.2
  * https://vanilla-picker.js.org
  *
- * Copyright 2017-2020 Andreas Borgen (https://github.com/Sphinxxxx), Adam Brooks (https://github.com/dissimulate)
+ * Copyright 2017-2021 Andreas Borgen (https://github.com/Sphinxxxx), Adam Brooks (https://github.com/dissimulate)
  * Released under the ISC license.
  */
 (function (global, factory) {

@@ -1,6 +1,6 @@
 'use strict';
 
-chrome.runtime.onMessage.addListener(({method}, {tab}) => {
+const onMessage = ({method}, {tab}) => {
   if (method === 'convert') {
     chrome.tabs.insertCSS(tab.id, {
       file: 'data/view/inject.css',
@@ -29,6 +29,37 @@ chrome.runtime.onMessage.addListener(({method}, {tab}) => {
         });
       });
     });
+  }
+};
+chrome.runtime.onMessage.addListener(onMessage);
+
+chrome.browserAction.onClicked.addListener(() => chrome.tabs.create({
+  url: 'data/page/index.html'
+}));
+
+{
+  const startup = () => chrome.contextMenus.create({
+    title: 'Open in JSON Editor',
+    contexts: ['selection'],
+    id: 'open-editor',
+    documentUrlPatterns: ['*://*/*']
+  });
+  chrome.runtime.onStartup.addListener(startup);
+  chrome.runtime.onInstalled.addListener(startup);
+}
+chrome.contextMenus.onClicked.addListener(info => {
+  if (info.menuItemId === 'open-editor') {
+    try {
+      const content = JSON.stringify(JSON.parse(info.selectionText), null, '');
+      chrome.tabs.create({
+        url: 'data/page/index.html?content=' + encodeURIComponent(content)
+      });
+    }
+    catch (e) {
+      chrome.tabs.executeScript({
+        code: `alert('Invalid JSON string');`
+      });
+    }
   }
 });
 
