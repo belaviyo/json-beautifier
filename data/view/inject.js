@@ -83,7 +83,8 @@ function render() {
 
             navigator.clipboard.writeText(node.paths.map(single).join('\n'));
           }
-        }, {
+        });
+        items.push({
           text: 'Copy Inner JSON',
           title: 'Copy inner JSON object to the clipboard',
           className: 'jsoneditor-copy-inner',
@@ -95,21 +96,19 @@ function render() {
             });
             navigator.clipboard.writeText(nodes.map(node => JSON.stringify(node.value, null, '  ')).join('\n'));
           }
-        }, {
+        });
+        items.push({
           text: 'Copy Outer JSON',
           title: 'Copy outer JSON object to the clipboard',
           className: 'jsoneditor-copy-outer',
           click() {
+            node.paths = node.paths.map(p => p.slice(0, -1));
             const nodes = editor.getNodesByRange({
               path: node.paths[0]
             }, {
               path: node.paths[node.paths.length - 1]
             });
-            const cache = {};
-            for (const node of nodes) {
-              cache[node.path.slice(-1).pop()] = node.value;
-            }
-            navigator.clipboard.writeText(JSON.stringify(cache, null, '  '));
+            navigator.clipboard.writeText(nodes.map(node => JSON.stringify(node.value, null, '  ')).join('\n'));
           }
         });
 
