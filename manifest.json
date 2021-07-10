@@ -1,25 +1,24 @@
 {
-  "manifest_version": 2,
-  "version": "0.2.7",
+  "manifest_version": 3,
+  "version": "0.3.0",
   "name": "JSON Beautifier & Editor",
   "description": "__MSG_description__",
   "default_locale": "en",
   "permissions": [
     "storage",
     "contextMenus",
-    "<all_urls>"
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*/*"
   ],
   "background": {
-    "persistent": false,
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "worker.js"
   },
   "content_scripts": [{
     "run_at": "document_start",
     "matches": ["<all_urls>"],
-    "js": ["data/file.js"],
-    "all_frames": false
+    "js": ["data/file.js"]
   }],
   "icons": {
     "16": "data/icons/16.png",
@@ -31,9 +30,12 @@
     "512": "data/icons/512.png"
   },
   "homepage_url": "https://add0n.com/json-beautifier.html",
-  "web_accessible_resources": [
-    "data/view/json-editor/img/jsoneditor-icons.svg",
-    "data/view/loading.svg"
-  ],
-  "browser_action": {}
+  "web_accessible_resources": [{
+    "resources": [
+      "data/view/json-editor/img/jsoneditor-icons.svg",
+      "data/view/loading.svg"
+    ],
+    "matches": ["<all_urls>"]
+  }],
+  "action": {}
 }
