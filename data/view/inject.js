@@ -6,6 +6,8 @@ const base = document.createElement('base');
 base.href = chrome.runtime.getURL('/data/view/ace/theme/');
 document.head.appendChild(base);
 
+document.body.classList.add('jsb');
+
 function buttons() {
   const menu = document.querySelector('.jsoneditor-menu');
   if (menu) {
@@ -139,7 +141,9 @@ function render() {
       });
     });
   }
-  catch (e) {}
+  catch (e) {
+    document.body.classList.remove('jsb');
+  }
   document.body.dataset.loaded = true;
 }
 
