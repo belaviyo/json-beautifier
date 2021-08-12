@@ -4,6 +4,7 @@ const type = document.contentType;
 const json = [
   'application/json',
   'application/hal+json',
+  'application/vnd.api+json',
   'application/vnd.error+json',
   'text/x-json',
   'text/plain'
