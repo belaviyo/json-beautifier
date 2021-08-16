@@ -72,7 +72,8 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
   chrome.runtime.onStartup.addListener(startup);
   chrome.runtime.onInstalled.addListener(startup);
 }
-chrome.contextMenus.onClicked.addListener(info => {
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+  console.log(info);
   if (info.menuItemId === 'sample') {
     chrome.tabs.create({
       url: chrome.runtime.getManifest().homepage_url + '#faq6'
@@ -91,8 +92,11 @@ chrome.contextMenus.onClicked.addListener(info => {
       });
     }
     catch (e) {
-      chrome.tabs.executeScript({
-        code: `alert('Invalid JSON string');`
+      chrome.scripting.executeScript({
+        target: {
+          tabId: tab.id
+        },
+        func: () => alert('Invalid JSON string')
       });
     }
   }
