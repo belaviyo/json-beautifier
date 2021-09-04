@@ -1,6 +1,11 @@
 /* globals JSONEditor */
 'use strict';
 
+// const meta = document.createElement('meta');
+// meta.setAttribute('http-equiv', 'Content-Security-Policy');
+// meta.setAttribute('content', `img-src data: chrome-extension:`);
+// document.head.appendChild(meta);
+
 let editor;
 const base = document.createElement('base');
 base.href = chrome.runtime.getURL('/data/view/ace/theme/');
