@@ -125,6 +125,16 @@ function render() {
     if (matchMedia('(prefers-color-scheme: dark)').matches) {
       config.theme = 'ace/theme/twilight';
     }
+
+    // can I load my resources
+    const i = new Image();
+    i.onerror = () => chrome.runtime.sendMessage({
+      method: 'alternative-interface',
+      json,
+      title: document.title || location.href
+    });
+    i.src = chrome.runtime.getURL('/data/view/json-editor/img/jsoneditor-icons.svg');
+
     chrome.storage.local.get({
       mode: 'tree'
     }, prefs => {

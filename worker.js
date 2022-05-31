@@ -12,36 +12,48 @@ const css = async () => {
   return css.r;
 };
 
-const onMessage = async ({method}, {tab}) => {
-  if (method === 'convert') {
+const cache = {};
+chrome.tabs.onRemoved.addListener(tabId => delete cache[tabId]);
+
+const onMessage = (request, {tab}, response) => {
+  if (request.method === 'convert') {
     const target = {
       tabId: tab.id
     };
-    await chrome.scripting.insertCSS({
+    chrome.scripting.insertCSS({
       target,
       files: ['data/view/inject.css']
+    }).then(async () => {
+      await chrome.scripting.insertCSS({
+        target,
+        css: await css()
+      });
+      await chrome.scripting.insertCSS({
+        target,
+        files: ['data/view/json-editor/extra.css']
+      });
+      await chrome.scripting.executeScript({
+        target,
+        files: ['data/view/json-editor/jsoneditor.js']
+      });
+      await chrome.scripting.executeScript({
+        target,
+        files: ['data/view/ace/theme/twilight.js']
+      });
+      await chrome.scripting.executeScript({
+        target,
+        files: ['data/view/inject.js']
+      });
     });
-
-    await chrome.scripting.insertCSS({
-      target,
-      css: await css()
+  }
+  else if (request.method === 'alternative-interface') {
+    cache[tab.id] = request;
+    chrome.tabs.update(tab.id, {
+      url: '/data/page/index.html?remote'
     });
-    await chrome.scripting.insertCSS({
-      target,
-      files: ['data/view/json-editor/extra.css']
-    });
-    await chrome.scripting.executeScript({
-      target,
-      files: ['data/view/json-editor/jsoneditor.js']
-    });
-    await chrome.scripting.executeScript({
-      target,
-      files: ['data/view/ace/theme/twilight.js']
-    });
-    await chrome.scripting.executeScript({
-      target,
-      files: ['data/view/inject.js']
-    });
+  }
+  else if (request.method === 'get-json') {
+    response(cache[tab.id]);
   }
 };
 chrome.runtime.onMessage.addListener(onMessage);
@@ -73,7 +85,6 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
   chrome.runtime.onInstalled.addListener(startup);
 }
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  console.log(info);
   if (info.menuItemId === 'sample') {
     chrome.tabs.create({
       url: chrome.runtime.getManifest().homepage_url + '#faq6'

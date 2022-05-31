@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.3.2",
+  "version": "0.3.3",
   "name": "JSON Beautifier & Editor",
   "description": "__MSG_description__",
   "default_locale": "en",
@@ -33,14 +33,13 @@
   "web_accessible_resources": [{
     "resources": [
       "data/view/json-editor/img/jsoneditor-icons.svg",
-      "data/view/loading.svg"
+      "data/view/loading.svg",
+      "data/page/index.html"
     ],
     "matches": ["<all_urls>"]
   }],
   "action": {},
   "commands": {
-    "_execute_action": {
-      "description": "Press the action button"
-    }
+    "_execute_action": {}
   }
 }

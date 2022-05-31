@@ -21,11 +21,11 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  *
- * Copyright (c) 2011-2021 Jos de Jong, http://jsoneditoronline.org
+ * Copyright (c) 2011-2022 Jos de Jong, http://jsoneditoronline.org
  *
  * @author  Jos de Jong, <wjosdejong@gmail.com>
- * @version 9.5.1
- * @date    2021-06-30
+ * @version 9.7.4
+ * @date    2022-03-15
  */
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -40,38 +40,6 @@
 })(self, function() {
 return /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
-
-/***/ 6835:
-/***/ (function(module) {
-
-"use strict";
-module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://raw.githubusercontent.com/ajv-validator/ajv/master/lib/refs/data.json#","description":"Meta-schema for $data reference (JSON Schema extension proposal)","type":"object","required":["$data"],"properties":{"$data":{"type":"string","anyOf":[{"format":"relative-json-pointer"},{"format":"json-pointer"}]}},"additionalProperties":false}');
-
-/***/ }),
-
-/***/ 2689:
-/***/ (function(module) {
-
-"use strict";
-module.exports = JSON.parse('{"id":"http://json-schema.org/draft-04/schema#","$schema":"http://json-schema.org/draft-04/schema#","description":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"positiveInteger":{"type":"integer","minimum":0},"positiveIntegerDefault0":{"allOf":[{"$ref":"#/definitions/positiveInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"minItems":1,"uniqueItems":true}},"type":"object","properties":{"id":{"type":"string"},"$schema":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"default":{},"multipleOf":{"type":"number","minimum":0,"exclusiveMinimum":true},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"boolean","default":false},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"boolean","default":false},"maxLength":{"$ref":"#/definitions/positiveInteger"},"minLength":{"$ref":"#/definitions/positiveIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"anyOf":[{"type":"boolean"},{"$ref":"#"}],"default":{}},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":{}},"maxItems":{"$ref":"#/definitions/positiveInteger"},"minItems":{"$ref":"#/definitions/positiveIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"maxProperties":{"$ref":"#/definitions/positiveInteger"},"minProperties":{"$ref":"#/definitions/positiveIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"anyOf":[{"type":"boolean"},{"$ref":"#"}],"default":{}},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"enum":{"type":"array","minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"dependencies":{"exclusiveMaximum":["maximum"],"exclusiveMinimum":["minimum"]},"default":{}}');
-
-/***/ }),
-
-/***/ 1030:
-/***/ (function(module) {
-
-"use strict";
-module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-06/schema#","$id":"http://json-schema.org/draft-06/schema#","title":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"nonNegativeInteger":{"type":"integer","minimum":0},"nonNegativeIntegerDefault0":{"allOf":[{"$ref":"#/definitions/nonNegativeInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"uniqueItems":true,"default":[]}},"type":["object","boolean"],"properties":{"$id":{"type":"string","format":"uri-reference"},"$schema":{"type":"string","format":"uri"},"$ref":{"type":"string","format":"uri-reference"},"title":{"type":"string"},"description":{"type":"string"},"default":{},"examples":{"type":"array","items":{}},"multipleOf":{"type":"number","exclusiveMinimum":0},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"number"},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"number"},"maxLength":{"$ref":"#/definitions/nonNegativeInteger"},"minLength":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"$ref":"#"},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":{}},"maxItems":{"$ref":"#/definitions/nonNegativeInteger"},"minItems":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"contains":{"$ref":"#"},"maxProperties":{"$ref":"#/definitions/nonNegativeInteger"},"minProperties":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"$ref":"#"},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"propertyNames":{"$ref":"#"},"const":{},"enum":{"type":"array","minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"default":{}}');
-
-/***/ }),
-
-/***/ 38:
-/***/ (function(module) {
-
-"use strict";
-module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-07/schema#","$id":"http://json-schema.org/draft-07/schema#","title":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"nonNegativeInteger":{"type":"integer","minimum":0},"nonNegativeIntegerDefault0":{"allOf":[{"$ref":"#/definitions/nonNegativeInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"uniqueItems":true,"default":[]}},"type":["object","boolean"],"properties":{"$id":{"type":"string","format":"uri-reference"},"$schema":{"type":"string","format":"uri"},"$ref":{"type":"string","format":"uri-reference"},"$comment":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"default":true,"readOnly":{"type":"boolean","default":false},"examples":{"type":"array","items":true},"multipleOf":{"type":"number","exclusiveMinimum":0},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"number"},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"number"},"maxLength":{"$ref":"#/definitions/nonNegativeInteger"},"minLength":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"$ref":"#"},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":true},"maxItems":{"$ref":"#/definitions/nonNegativeInteger"},"minItems":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"contains":{"$ref":"#"},"maxProperties":{"$ref":"#/definitions/nonNegativeInteger"},"minProperties":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"$ref":"#"},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"propertyNames":{"format":"regex"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"propertyNames":{"$ref":"#"},"const":true,"enum":{"type":"array","items":true,"minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"contentMediaType":{"type":"string"},"contentEncoding":{"type":"string"},"if":{"$ref":"#"},"then":{"$ref":"#"},"else":{"$ref":"#"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"default":true}');
-
-/***/ }),
 
 /***/ 897:
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -89,7 +57,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 
@@ -591,7 +559,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 /**
  * Show errors and schema warnings in a clickable table view
@@ -732,7 +700,7 @@ var ErrorTable = /*#__PURE__*/function () {
 
             var _pre = document.createElement('pre');
 
-            _pre.appendChild(document.createTextNode(error.message));
+            _pre.appendChild(document.createTextNode(error.message.replace(/<br>/gi, '\n')));
 
             td4.appendChild(_pre);
             trEl.appendChild(td4);
@@ -827,7 +795,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 var FocusTracker = /*#__PURE__*/function () {
   function FocusTracker(config) {
@@ -849,6 +817,7 @@ var FocusTracker = /*#__PURE__*/function () {
       }
     }.bind(this);
 
+    this._onBlur = this._onEvent.bind(this);
     this.focusFlag = false;
     this.firstEventFlag = true;
     /*
@@ -859,6 +828,7 @@ var FocusTracker = /*#__PURE__*/function () {
     if (this.onFocus || this.onBlur) {
       document.addEventListener('click', this._onClick);
       document.addEventListener('keyup', this._onKeyUp);
+      document.addEventListener('blur', this._onBlur);
     }
   }
   /**
@@ -872,6 +842,7 @@ var FocusTracker = /*#__PURE__*/function () {
     value: function destroy() {
       document.removeEventListener('click', this._onClick);
       document.removeEventListener('keyup', this._onKeyUp);
+      document.removeEventListener('blur', this._onBlur);
 
       this._onEvent({
         target: document.body
@@ -1246,39 +1217,35 @@ JSONEditor.prototype.setMode = function (mode) {
   options.mode = mode;
   var config = JSONEditor.modes[mode];
 
-  if (config) {
-    try {
-      var asText = config.data === 'text';
-      name = this.getName();
-      data = this[asText ? 'getText' : 'get'](); // get text or json
-
-      this.destroy();
-      clear(this);
-      extend(this, config.mixin);
-      this.create(container, options);
-      this.setName(name);
-      this[asText ? 'setText' : 'set'](data); // set text or json
-
-      if (typeof config.load === 'function') {
-        try {
-          config.load.call(this);
-        } catch (err) {
-          console.error(err);
-        }
-      }
-
-      if (typeof options.onModeChange === 'function' && mode !== oldMode) {
-        try {
-          options.onModeChange(mode, oldMode);
-        } catch (err) {
-          console.error(err);
-        }
-      }
-    } catch (err) {
-      this._onError(err);
-    }
-  } else {
+  if (!config) {
     throw new Error('Unknown mode "' + options.mode + '"');
+  }
+
+  var asText = config.data === 'text';
+  name = this.getName();
+  data = this[asText ? 'getText' : 'get'](); // get text or json
+
+  this.destroy();
+  clear(this);
+  extend(this, config.mixin);
+  this.create(container, options);
+  this.setName(name);
+  this[asText ? 'setText' : 'set'](data); // set text or json
+
+  if (typeof config.load === 'function') {
+    try {
+      config.load.call(this);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  if (typeof options.onModeChange === 'function' && mode !== oldMode) {
+    try {
+      options.onModeChange(mode, oldMode);
+    } catch (err) {
+      console.error(err);
+    }
   }
 };
 /**
@@ -1292,7 +1259,8 @@ JSONEditor.prototype.getMode = function () {
 };
 /**
  * Throw an error. If an error callback is configured in options.error, this
- * callback will be invoked. Else, a regular error is thrown.
+ * callback will be invoked. Else, a basic alert window with the error message
+ * will be shown to the user.
  * @param {Error} err
  * @private
  */
@@ -1302,7 +1270,7 @@ JSONEditor.prototype._onError = function (err) {
   if (this.options && typeof this.options.onError === 'function') {
     this.options.onError(err);
   } else {
-    throw err;
+    alert(err.toString());
   }
 };
 /**
@@ -1331,8 +1299,8 @@ JSONEditor.prototype.setSchema = function (schema, schemaRefs) {
           $data: true
         }); // support both draft-04 and draft-06 alongside the latest draft-07
 
-        ajv.addMetaSchema(__webpack_require__(2689));
-        ajv.addMetaSchema(__webpack_require__(1030));
+        ajv.addMetaSchema(__webpack_require__(7171));
+        ajv.addMetaSchema(__webpack_require__(6273));
       }
     } catch (err) {
       console.warn('Failed to create an instance of Ajv, JSON Schema validation is not available. Please use a JSONEditor bundle including Ajv, or pass an instance of Ajv as via the configuration option `ajv`.');
@@ -1354,7 +1322,8 @@ JSONEditor.prototype.setSchema = function (schema, schemaRefs) {
       this.validateSchema = ajv.compile(schema); // add schema to the options, so that when switching to an other mode,
       // the set schema is not lost
 
-      this.options.schema = schema; // validate now
+      this.options.schema = schema;
+      this.options.schemaRefs = schemaRefs; // validate now
 
       this.validate();
     }
@@ -1477,7 +1446,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 
@@ -1681,7 +1650,7 @@ module.exports = ace;
 window.ace.define('ace/theme/jsoneditor', ['require', 'exports', 'module', 'ace/lib/dom'], function (acequire, exports, module) {
   exports.isDark = false;
   exports.cssClass = 'ace-jsoneditor';
-  exports.cssText = ".ace-jsoneditor .ace_gutter {\nbackground: #ebebeb;\ncolor: #333\n}\n\n.ace-jsoneditor.ace_editor {\nfont-family: \"dejavu sans mono\", \"droid sans mono\", consolas, monaco, \"lucida console\", \"courier new\", courier, monospace, sans-serif;\nline-height: 1.3;\nbackground-color: #fff;\n}\n.ace-jsoneditor .ace_print-margin {\nwidth: 1px;\nbackground: #e8e8e8\n}\n.ace-jsoneditor .ace_scroller {\nbackground-color: #FFFFFF\n}\n.ace-jsoneditor .ace_text-layer {\ncolor: gray\n}\n.ace-jsoneditor .ace_variable {\ncolor: #1a1a1a\n}\n.ace-jsoneditor .ace_cursor {\nborder-left: 2px solid #000000\n}\n.ace-jsoneditor .ace_overwrite-cursors .ace_cursor {\nborder-left: 0px;\nborder-bottom: 1px solid #000000\n}\n.ace-jsoneditor .ace_marker-layer .ace_selection {\nbackground: lightgray\n}\n.ace-jsoneditor.ace_multiselect .ace_selection.ace_start {\nbox-shadow: 0 0 3px 0px #FFFFFF;\nborder-radius: 2px\n}\n.ace-jsoneditor .ace_marker-layer .ace_step {\nbackground: rgb(255, 255, 0)\n}\n.ace-jsoneditor .ace_marker-layer .ace_bracket {\nmargin: -1px 0 0 -1px;\nborder: 1px solid #BFBFBF\n}\n.ace-jsoneditor .ace_marker-layer .ace_active-line {\nbackground: #FFFBD1\n}\n.ace-jsoneditor .ace_gutter-active-line {\nbackground-color : #dcdcdc\n}\n.ace-jsoneditor .ace_marker-layer .ace_selected-word {\nborder: 1px solid lightgray\n}\n.ace-jsoneditor .ace_invisible {\ncolor: #BFBFBF\n}\n.ace-jsoneditor .ace_keyword,\n.ace-jsoneditor .ace_meta,\n.ace-jsoneditor .ace_support.ace_constant.ace_property-value {\ncolor: #AF956F\n}\n.ace-jsoneditor .ace_keyword.ace_operator {\ncolor: #484848\n}\n.ace-jsoneditor .ace_keyword.ace_other.ace_unit {\ncolor: #96DC5F\n}\n.ace-jsoneditor .ace_constant.ace_language {\ncolor: darkorange\n}\n.ace-jsoneditor .ace_constant.ace_numeric {\ncolor: red\n}\n.ace-jsoneditor .ace_constant.ace_character.ace_entity {\ncolor: #BF78CC\n}\n.ace-jsoneditor .ace_invalid {\ncolor: #FFFFFF;\nbackground-color: #FF002A;\n}\n.ace-jsoneditor .ace_fold {\nbackground-color: #AF956F;\nborder-color: #000000\n}\n.ace-jsoneditor .ace_storage,\n.ace-jsoneditor .ace_support.ace_class,\n.ace-jsoneditor .ace_support.ace_function,\n.ace-jsoneditor .ace_support.ace_other,\n.ace-jsoneditor .ace_support.ace_type {\ncolor: #C52727\n}\n.ace-jsoneditor .ace_string {\ncolor: green\n}\n.ace-jsoneditor .ace_comment {\ncolor: #BCC8BA\n}\n.ace-jsoneditor .ace_entity.ace_name.ace_tag,\n.ace-jsoneditor .ace_entity.ace_other.ace_attribute-name {\ncolor: #606060\n}\n.ace-jsoneditor .ace_markup.ace_underline {\ntext-decoration: underline\n}\n.ace-jsoneditor .ace_indent-guide {\nbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y\n}";
+  exports.cssText = ".ace-jsoneditor .ace_gutter {\nbackground: #ebebeb;\ncolor: #333\n}\n\n.ace-jsoneditor.ace_editor {\nline-height: 1.3;\nbackground-color: #fff;\n}\n.ace-jsoneditor .ace_print-margin {\nwidth: 1px;\nbackground: #e8e8e8\n}\n.ace-jsoneditor .ace_scroller {\nbackground-color: #FFFFFF\n}\n.ace-jsoneditor .ace_text-layer {\ncolor: gray\n}\n.ace-jsoneditor .ace_variable {\ncolor: #1a1a1a\n}\n.ace-jsoneditor .ace_cursor {\nborder-left: 2px solid #000000\n}\n.ace-jsoneditor .ace_overwrite-cursors .ace_cursor {\nborder-left: 0px;\nborder-bottom: 1px solid #000000\n}\n.ace-jsoneditor .ace_marker-layer .ace_selection {\nbackground: lightgray\n}\n.ace-jsoneditor.ace_multiselect .ace_selection.ace_start {\nbox-shadow: 0 0 3px 0px #FFFFFF;\nborder-radius: 2px\n}\n.ace-jsoneditor .ace_marker-layer .ace_step {\nbackground: rgb(255, 255, 0)\n}\n.ace-jsoneditor .ace_marker-layer .ace_bracket {\nmargin: -1px 0 0 -1px;\nborder: 1px solid #BFBFBF\n}\n.ace-jsoneditor .ace_marker-layer .ace_active-line {\nbackground: #FFFBD1\n}\n.ace-jsoneditor .ace_gutter-active-line {\nbackground-color : #dcdcdc\n}\n.ace-jsoneditor .ace_marker-layer .ace_selected-word {\nborder: 1px solid lightgray\n}\n.ace-jsoneditor .ace_invisible {\ncolor: #BFBFBF\n}\n.ace-jsoneditor .ace_keyword,\n.ace-jsoneditor .ace_meta,\n.ace-jsoneditor .ace_support.ace_constant.ace_property-value {\ncolor: #AF956F\n}\n.ace-jsoneditor .ace_keyword.ace_operator {\ncolor: #484848\n}\n.ace-jsoneditor .ace_keyword.ace_other.ace_unit {\ncolor: #96DC5F\n}\n.ace-jsoneditor .ace_constant.ace_language {\ncolor: darkorange\n}\n.ace-jsoneditor .ace_constant.ace_numeric {\ncolor: red\n}\n.ace-jsoneditor .ace_constant.ace_character.ace_entity {\ncolor: #BF78CC\n}\n.ace-jsoneditor .ace_invalid {\ncolor: #FFFFFF;\nbackground-color: #FF002A;\n}\n.ace-jsoneditor .ace_fold {\nbackground-color: #AF956F;\nborder-color: #000000\n}\n.ace-jsoneditor .ace_storage,\n.ace-jsoneditor .ace_support.ace_class,\n.ace-jsoneditor .ace_support.ace_function,\n.ace-jsoneditor .ace_support.ace_other,\n.ace-jsoneditor .ace_support.ace_type {\ncolor: #C52727\n}\n.ace-jsoneditor .ace_string {\ncolor: green\n}\n.ace-jsoneditor .ace_comment {\ncolor: #BCC8BA\n}\n.ace-jsoneditor .ace_entity.ace_name.ace_tag,\n.ace-jsoneditor .ace_entity.ace_other.ace_attribute-name {\ncolor: #606060\n}\n.ace-jsoneditor .ace_markup.ace_underline {\ntext-decoration: underline\n}\n.ace-jsoneditor .ace_indent-guide {\nbackground: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y\n}";
   var dom = acequire('../lib/dom');
   dom.importCssString(exports.cssText, exports.cssClass);
 });
@@ -3993,34 +3962,34 @@ Selectr.prototype.add = function (data, checkDuplicate) {
     } // User passed a single object to the method
     // or Selectr passed an object from an array
     else if ("[object Object]" === Object.prototype.toString.call(data)) {
-        if (checkDuplicate) {
-          var dupe = false;
-          util.each(this.options, function (i, option) {
-            if (option.value.toLowerCase() === data.value.toLowerCase()) {
-              dupe = true;
-            }
-          });
-
-          if (dupe) {
-            return false;
+      if (checkDuplicate) {
+        var dupe = false;
+        util.each(this.options, function (i, option) {
+          if (option.value.toLowerCase() === data.value.toLowerCase()) {
+            dupe = true;
           }
+        });
+
+        if (dupe) {
+          return false;
         }
+      }
 
-        var option = util.createElement('option', data);
-        this.data.push(data); // Add the new option to the list
+      var option = util.createElement('option', data);
+      this.data.push(data); // Add the new option to the list
 
-        this.options.push(option); // Add the index for later use
+      this.options.push(option); // Add the index for later use
 
-        option.idx = this.options.length > 0 ? this.options.length - 1 : 0; // Create a new item
+      option.idx = this.options.length > 0 ? this.options.length - 1 : 0; // Create a new item
 
-        createItem.call(this, option); // Select the item if required
+      createItem.call(this, option); // Select the item if required
 
-        if (data.selected) {
-          this.select(option.idx);
-        }
+      if (data.selected) {
+        this.select(option.idx);
+      }
 
-        return option;
-      } // We may have had an empty select so update
+      return option;
+    } // We may have had an empty select so update
     // the placeholder to reflect the changes.
 
 
@@ -4520,10 +4489,10 @@ module.exports = Selectr;
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "qD": function() { return /* binding */ DEFAULT_MODAL_ANCHOR; },
 /* harmony export */   "EX": function() { return /* binding */ SIZE_LARGE; },
 /* harmony export */   "WF": function() { return /* binding */ MAX_PREVIEW_CHARACTERS; },
-/* harmony export */   "oW": function() { return /* binding */ PREVIEW_HISTORY_LIMIT; }
+/* harmony export */   "oW": function() { return /* binding */ PREVIEW_HISTORY_LIMIT; },
+/* harmony export */   "qD": function() { return /* binding */ DEFAULT_MODAL_ANCHOR; }
 /* harmony export */ });
 var DEFAULT_MODAL_ANCHOR = document.body;
 var SIZE_LARGE = 10 * 1024 * 1024; // 10 MB
@@ -4652,9 +4621,9 @@ module.exports = 'data:application/javascript;base64,Im5vIHVzZSBzdHJpY3QiOwohKGZ
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "m0": function() { return /* binding */ setLanguage; },
+/* harmony export */   "Iu": function() { return /* binding */ translate; },
 /* harmony export */   "cC": function() { return /* binding */ setLanguages; },
-/* harmony export */   "Iu": function() { return /* binding */ translate; }
+/* harmony export */   "m0": function() { return /* binding */ setLanguage; }
 /* harmony export */ });
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4987);
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_polyfills__WEBPACK_IMPORTED_MODULE_0__);
@@ -5620,8 +5589,8 @@ function translate(key, data, lang) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "r": function() { return /* binding */ createQuery; },
-/* harmony export */   "J": function() { return /* binding */ executeQuery; }
+/* harmony export */   "J": function() { return /* binding */ executeQuery; },
+/* harmony export */   "r": function() { return /* binding */ createQuery; }
 /* harmony export */ });
 /* harmony import */ var jmespath__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5156);
 /* harmony import */ var jmespath__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jmespath__WEBPACK_IMPORTED_MODULE_0__);
@@ -5700,20 +5669,22 @@ if (typeof Element !== 'undefined') {
   // Polyfill for array remove
   (function () {
     function polyfill(item) {
-      if ('remove' in item) {
-        return;
-      }
-
-      Object.defineProperty(item, 'remove', {
-        configurable: true,
-        enumerable: true,
-        writable: true,
-        value: function remove() {
-          if (this.parentNode !== undefined) {
-            this.parentNode.removeChild(this);
-          }
+      if (typeof item !== 'undefined') {
+        if ('remove' in item) {
+          return;
         }
-      });
+
+        Object.defineProperty(item, 'remove', {
+          configurable: true,
+          enumerable: true,
+          writable: true,
+          value: function remove() {
+            if (this.parentNode !== undefined) {
+              this.parentNode.removeChild(this);
+            }
+          }
+        });
+      }
     }
 
     if (typeof window.Element !== 'undefined') {
@@ -5786,7 +5757,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 // EXTERNAL MODULE: ./node_modules/jsonrepair/lib/cjs/index-commonjs.js
-var index_commonjs = __webpack_require__(8909);
+var index_commonjs = __webpack_require__(3860);
 var index_commonjs_default = /*#__PURE__*/__webpack_require__.n(index_commonjs);
 // EXTERNAL MODULE: ./src/js/constants.js
 var constants = __webpack_require__(4188);
@@ -5799,7 +5770,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 /**
  * Keep track on any history, be able
@@ -6141,8 +6112,12 @@ previewmode.create = function (container) {
     if (this.options && this.options.modes && this.options.modes.length) {
       this.modeSwitcher = new ModeSwitcher/* ModeSwitcher */.x(this.menu, this.options.modes, this.options.mode, function onSwitch(mode) {
         // switch mode and restore focus
-        me.setMode(mode);
-        me.modeSwitcher.focus();
+        try {
+          me.setMode(mode);
+          me.modeSwitcher.focus();
+        } catch (err) {
+          me._onError(err);
+        }
       });
     }
   }
@@ -6753,7 +6728,7 @@ var i18n = __webpack_require__(7907);
  * @returns {string | undefined} Returns the string representation of the JSON object.
  */
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function stringifyPartial(value, space, limit) {
   var _space; // undefined by default
@@ -7173,7 +7148,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 // EXTERNAL MODULE: ./node_modules/jsonrepair/lib/cjs/index-commonjs.js
-var index_commonjs = __webpack_require__(8909);
+var index_commonjs = __webpack_require__(3860);
 var index_commonjs_default = /*#__PURE__*/__webpack_require__.n(index_commonjs);
 // EXTERNAL MODULE: ./src/js/ace/index.js
 var ace = __webpack_require__(8170);
@@ -7244,7 +7219,7 @@ function validateCustom(json, onValidate) {
 ;// CONCATENATED MODULE: ./src/js/textmode.js
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 
 
@@ -7475,8 +7450,12 @@ textmode.create = function (container) {
     if (this.options && this.options.modes && this.options.modes.length) {
       this.modeSwitcher = new ModeSwitcher/* ModeSwitcher */.x(this.menu, this.options.modes, this.options.mode, function onSwitch(mode) {
         // switch mode and restore focus
-        me.setMode(mode);
-        me.modeSwitcher.focus();
+        try {
+          me.setMode(mode);
+          me.modeSwitcher.focus();
+        } catch (err) {
+          me._onError(err);
+        }
       });
     }
 
@@ -7491,7 +7470,7 @@ textmode.create = function (container) {
         // TODO: this anchor falls below the margin of the content,
         // therefore the normal a.href does not work. We use a click event
         // for now, but this should be fixed.
-        window.open(poweredBy.href, poweredBy.target, 'noopener');
+        window.open(poweredBy.href, poweredBy.target, 'noreferrer');
       };
 
       this.menu.appendChild(poweredBy);
@@ -7520,7 +7499,7 @@ textmode.create = function (container) {
       readOnly: isReadOnly
     });
     aceEditor.setShowPrintMargin(false);
-    aceEditor.setFontSize('13px');
+    aceEditor.setFontSize('14px');
     aceSession.setMode('ace/mode/json');
     aceSession.setTabSize(this.indentation);
     aceSession.setUseSoftTabs(true);
@@ -7699,26 +7678,29 @@ textmode._updateHistoryButtons = function () {
 
 
 textmode._showSortModal = function () {
-  var me = this;
-  var container = this.options.modalAnchor || constants/* DEFAULT_MODAL_ANCHOR */.qD;
-  var json = this.get();
+  try {
+    var onSort = function onSort(sortedBy) {
+      if (Array.isArray(json)) {
+        var sortedJson = (0,util.sort)(json, sortedBy.path, sortedBy.direction);
+        me.sortedBy = sortedBy;
+        me.update(sortedJson);
+      }
 
-  function onSort(sortedBy) {
-    if (Array.isArray(json)) {
-      var sortedJson = (0,util.sort)(json, sortedBy.path, sortedBy.direction);
-      me.sortedBy = sortedBy;
-      me.update(sortedJson);
-    }
+      if ((0,util.isObject)(json)) {
+        var _sortedJson = (0,util.sortObjectKeys)(json, sortedBy.direction);
 
-    if ((0,util.isObject)(json)) {
-      var _sortedJson = (0,util.sortObjectKeys)(json, sortedBy.direction);
+        me.sortedBy = sortedBy;
+        me.update(_sortedJson);
+      }
+    };
 
-      me.sortedBy = sortedBy;
-      me.update(_sortedJson);
-    }
+    var me = this;
+    var container = this.options.modalAnchor || constants/* DEFAULT_MODAL_ANCHOR */.qD;
+    var json = this.get();
+    (0,showSortModal.showSortModal)(container, json, onSort, me.sortedBy);
+  } catch (err) {
+    this._onError(err);
   }
-
-  (0,showSortModal.showSortModal)(container, json, onSort, me.sortedBy);
 };
 /**
  * Open a transform modal
@@ -7729,25 +7711,29 @@ textmode._showSortModal = function () {
 textmode._showTransformModal = function () {
   var _this3 = this;
 
-  var _this$options = this.options,
-      modalAnchor = _this$options.modalAnchor,
-      createQuery = _this$options.createQuery,
-      executeQuery = _this$options.executeQuery,
-      queryDescription = _this$options.queryDescription;
-  var json = this.get();
-  (0,showTransformModal.showTransformModal)({
-    container: modalAnchor || constants/* DEFAULT_MODAL_ANCHOR */.qD,
-    json: json,
-    queryDescription: queryDescription,
-    // can be undefined
-    createQuery: createQuery,
-    executeQuery: executeQuery,
-    onTransform: function onTransform(query) {
-      var updatedJson = executeQuery(json, query);
+  try {
+    var _this$options = this.options,
+        modalAnchor = _this$options.modalAnchor,
+        _createQuery = _this$options.createQuery,
+        _executeQuery = _this$options.executeQuery,
+        queryDescription = _this$options.queryDescription;
+    var json = this.get();
+    (0,showTransformModal.showTransformModal)({
+      container: modalAnchor || constants/* DEFAULT_MODAL_ANCHOR */.qD,
+      json: json,
+      queryDescription: queryDescription,
+      // can be undefined
+      createQuery: _createQuery,
+      executeQuery: _executeQuery,
+      onTransform: function onTransform(query) {
+        var updatedJson = _executeQuery(json, query);
 
-      _this3.update(updatedJson);
-    }
-  });
+        _this3.update(updatedJson);
+      }
+    });
+  } catch (err) {
+    this._onError(err);
+  }
 };
 /**
  * Handle text selection
@@ -8854,7 +8840,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 var Highlighter = /*#__PURE__*/function () {
   function Highlighter() {
@@ -9387,6 +9373,14 @@ var constants = __webpack_require__(4188);
 ;// CONCATENATED MODULE: ./src/js/Node.js
 
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -9401,13 +9395,13 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function Node_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function Node_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function Node_createClass(Constructor, protoProps, staticProps) { if (protoProps) Node_defineProperties(Constructor.prototype, protoProps); if (staticProps) Node_defineProperties(Constructor, staticProps); return Constructor; }
+function Node_createClass(Constructor, protoProps, staticProps) { if (protoProps) Node_defineProperties(Constructor.prototype, protoProps); if (staticProps) Node_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 
@@ -9484,9 +9478,14 @@ var Node = /*#__PURE__*/function () {
         this.editable.value = this.editor.options.mode !== 'view';
 
         if ((this.editor.options.mode === 'tree' || this.editor.options.mode === 'form') && typeof this.editor.options.onEditable === 'function') {
+          var getValue = this.getValue.bind(this);
           var editable = this.editor.options.onEditable({
             field: this.field,
-            value: this.value,
+
+            get value() {
+              return getValue();
+            },
+
             path: this.getPath()
           });
 
@@ -10427,10 +10426,15 @@ var Node = /*#__PURE__*/function () {
     value: function _updateCssClassName() {
       if (this.dom.field && this.editor && this.editor.options && typeof this.editor.options.onClassName === 'function' && this.dom.tree) {
         (0,util.removeAllClassNames)(this.dom.tree);
+        var getValue = this.getValue.bind(this);
         var addClasses = this.editor.options.onClassName({
           path: this.getPath(),
           field: this.field,
-          value: this.value
+
+          get value() {
+            return getValue();
+          }
+
         }) || '';
         (0,util.addClassName)(this.dom.tree, 'jsoneditor-values ' + addClasses);
       }
@@ -11296,12 +11300,7 @@ var Node = /*#__PURE__*/function () {
             defaultOption.textContent = '--';
             this.dom.select.appendChild(defaultOption); // Iterate all enum values and add them as options
 
-            for (var i = 0; i < this["enum"].length; i++) {
-              var option = document.createElement('option');
-              option.value = this["enum"][i];
-              option.textContent = this["enum"][i];
-              this.dom.select.appendChild(option);
-            }
+            this._updateEnumOptions();
 
             this.dom.tdSelect = document.createElement('td');
             this.dom.tdSelect.className = 'jsoneditor-tree';
@@ -11322,7 +11321,7 @@ var Node = /*#__PURE__*/function () {
             delete this.valueFieldHTML;
           }
         } else {
-          // cleanup select box when displayed
+          // cleanup select box when displayed, and attach the editable div instead
           if (this.dom.tdSelect) {
             this.dom.tdSelect.parentNode.removeChild(this.dom.tdSelect);
             delete this.dom.tdSelect;
@@ -11330,11 +11329,12 @@ var Node = /*#__PURE__*/function () {
             this.dom.tdValue.innerHTML = this.valueFieldHTML;
             this.dom.tdValue.style.visibility = '';
             delete this.valueFieldHTML;
+            this.dom.tdValue.appendChild(this.dom.value);
           }
         } // show color picker when value is a color
 
 
-        if (this.editable.value && this.editor.options.colorPicker && typeof value === 'string' && (0,util.isValidColor)(value)) {
+        if (this.editor.options.colorPicker && typeof value === 'string' && (0,util.isValidColor)(value)) {
           if (!this.dom.color) {
             this.dom.color = document.createElement('div');
             this.dom.color.className = 'jsoneditor-color';
@@ -11346,6 +11346,13 @@ var Node = /*#__PURE__*/function () {
 
 
           (0,util.addClassName)(this.dom.value, 'jsoneditor-color-value');
+
+          if (!this.editable.value) {
+            (0,util.addClassName)(this.dom.color, 'jsoneditor-color-readonly');
+          } else {
+            (0,util.removeClassName)(this.dom.color, 'jsoneditor-color-readonly');
+          }
+
           this.dom.color.style.backgroundColor = value;
         } else {
           // cleanup color picker when displayed
@@ -11393,6 +11400,23 @@ var Node = /*#__PURE__*/function () {
         (0,util.stripFormatting)(domValue);
 
         this._updateDomDefault();
+      }
+    }
+  }, {
+    key: "_updateEnumOptions",
+    value: function _updateEnumOptions() {
+      if (!this["enum"] || !this.dom.select) {
+        return;
+      } // clear the existing options
+
+
+      this.dom.select.innerHTML = ''; // Iterate all enum values and add them as options
+
+      for (var i = 0; i < this["enum"].length; i++) {
+        var option = document.createElement('option');
+        option.value = this["enum"][i];
+        option.textContent = this["enum"][i];
+        this.dom.select.appendChild(option);
       }
     }
   }, {
@@ -11840,6 +11864,8 @@ var Node = /*#__PURE__*/function () {
         }
 
         this._updateSchema();
+
+        this._updateEnumOptions();
       } // apply value to DOM
 
 
@@ -12133,7 +12159,7 @@ var Node = /*#__PURE__*/function () {
         }
       }
 
-      if (type === 'click' && (event.target === node.dom.tdColor || event.target === node.dom.color)) {
+      if (type === 'click' && (event.target === node.dom.tdColor || event.target === node.dom.color) && this.editable.value) {
         this._showColorPicker();
       } // swap the value of a boolean when the checkbox displayed left is clicked
 
@@ -12200,7 +12226,7 @@ var Node = /*#__PURE__*/function () {
               // if read-only, we use the regular click behavior of an anchor
               if ((0,util.isUrl)(this.value)) {
                 event.preventDefault();
-                window.open(this.value, '_blank', 'noopener');
+                window.open(this.value, '_blank', 'noreferrer');
               }
             }
 
@@ -12382,7 +12408,7 @@ var Node = /*#__PURE__*/function () {
         if (target === this.dom.value) {
           if (!this.editable.value || event.ctrlKey) {
             if ((0,util.isUrl)(this.value)) {
-              window.open(this.value, '_blank', 'noopener');
+              window.open(this.value, '_blank', 'noreferrer');
               handled = true;
             }
           }
@@ -13843,10 +13869,16 @@ var Node = /*#__PURE__*/function () {
       if (this.type === 'object' || this.type === 'array') {
         if (this.editor.options.onNodeName) {
           try {
+            var getValue = this.getValue.bind(this);
             nodeName = this.editor.options.onNodeName({
               path: this.getPath(),
               size: count,
-              type: this.type
+              type: this.type,
+
+              get value() {
+                return getValue();
+              }
+
             });
           } catch (err) {
             console.error('Error in onNodeName callback: ', err);
@@ -14271,7 +14303,7 @@ Node._findSchema = function (topLevelSchema, schemaRefs, path) {
               if (segment in currentSchema) {
                 currentSchema = currentSchema[segment];
               } else {
-                throw Error("Unable to resovle reference ".concat(ref));
+                throw Error("Unable to resolve reference ".concat(ref));
               }
             }
           } catch (err) {
@@ -14290,7 +14322,14 @@ Node._findSchema = function (topLevelSchema, schemaRefs, path) {
             var reference = {
               $ref: '#/'.concat(relativePath)
             };
-            return Node._findSchema(referencedSchema, schemaRefs, nextPath, reference);
+            var auxNextPath = [];
+            auxNextPath.push(nextKey);
+
+            if (nextPath.length > 0) {
+              auxNextPath.push.apply(auxNextPath, _toConsumableArray(nextPath));
+            }
+
+            return Node._findSchema(referencedSchema, schemaRefs, auxNextPath, reference);
           } else {
             throw Error("Unable to resolve reference ".concat(ref));
           }
@@ -14531,7 +14570,7 @@ function NodeHistory_classCallCheck(instance, Constructor) { if (!(instance inst
 
 function NodeHistory_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function NodeHistory_createClass(Constructor, protoProps, staticProps) { if (protoProps) NodeHistory_defineProperties(Constructor.prototype, protoProps); if (staticProps) NodeHistory_defineProperties(Constructor, staticProps); return Constructor; }
+function NodeHistory_createClass(Constructor, protoProps, staticProps) { if (protoProps) NodeHistory_defineProperties(Constructor.prototype, protoProps); if (staticProps) NodeHistory_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 /**
@@ -14886,7 +14925,7 @@ function SearchBox_classCallCheck(instance, Constructor) { if (!(instance instan
 
 function SearchBox_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function SearchBox_createClass(Constructor, protoProps, staticProps) { if (protoProps) SearchBox_defineProperties(Constructor.prototype, protoProps); if (staticProps) SearchBox_defineProperties(Constructor, staticProps); return Constructor; }
+function SearchBox_createClass(Constructor, protoProps, staticProps) { if (protoProps) SearchBox_defineProperties(Constructor.prototype, protoProps); if (staticProps) SearchBox_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 /**
@@ -15261,7 +15300,7 @@ function TreePath_classCallCheck(instance, Constructor) { if (!(instance instanc
 
 function TreePath_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function TreePath_createClass(Constructor, protoProps, staticProps) { if (protoProps) TreePath_defineProperties(Constructor.prototype, protoProps); if (staticProps) TreePath_defineProperties(Constructor, staticProps); return Constructor; }
+function TreePath_createClass(Constructor, protoProps, staticProps) { if (protoProps) TreePath_defineProperties(Constructor.prototype, protoProps); if (staticProps) TreePath_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 
 
@@ -16508,8 +16547,12 @@ treemode._createFrame = function () {
       var me = this;
       this.modeSwitcher = new ModeSwitcher/* ModeSwitcher */.x(this.menu, this.options.modes, this.options.mode, function onSwitch(mode) {
         // switch mode and restore focus
-        me.setMode(mode);
-        me.modeSwitcher.focus();
+        try {
+          me.setMode(mode);
+          me.modeSwitcher.focus();
+        } catch (err) {
+          me._onError(err);
+        }
       });
     } // create search box
 
@@ -17357,75 +17400,76 @@ exports.O = function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "parse": function() { return /* binding */ parse; },
-/* harmony export */   "tryJsonRepair": function() { return /* binding */ tryJsonRepair; },
-/* harmony export */   "escapeUnicodeChars": function() { return /* binding */ escapeUnicodeChars; },
-/* harmony export */   "validate": function() { return /* binding */ validate; },
-/* harmony export */   "extend": function() { return /* binding */ extend; },
+/* harmony export */   "addClassName": function() { return /* binding */ addClassName; },
+/* harmony export */   "addEventListener": function() { return /* binding */ addEventListener; },
 /* harmony export */   "clear": function() { return /* binding */ clear; },
-/* harmony export */   "getType": function() { return /* binding */ getType; },
-/* harmony export */   "isUrl": function() { return /* binding */ isUrl; },
-/* harmony export */   "isArray": function() { return /* binding */ isArray; },
-/* harmony export */   "getWindow": function() { return /* binding */ getWindow; },
+/* harmony export */   "compileJSONPointer": function() { return /* binding */ compileJSONPointer; },
+/* harmony export */   "contains": function() { return /* binding */ contains; },
+/* harmony export */   "debounce": function() { return /* binding */ debounce; },
+/* harmony export */   "escapeUnicodeChars": function() { return /* binding */ escapeUnicodeChars; },
+/* harmony export */   "extend": function() { return /* binding */ extend; },
+/* harmony export */   "findUniqueName": function() { return /* binding */ findUniqueName; },
+/* harmony export */   "formatSize": function() { return /* binding */ formatSize; },
+/* harmony export */   "get": function() { return /* binding */ get; },
 /* harmony export */   "getAbsoluteLeft": function() { return /* binding */ getAbsoluteLeft; },
 /* harmony export */   "getAbsoluteTop": function() { return /* binding */ getAbsoluteTop; },
-/* harmony export */   "addClassName": function() { return /* binding */ addClassName; },
+/* harmony export */   "getChildPaths": function() { return /* binding */ getChildPaths; },
+/* harmony export */   "getColorCSS": function() { return /* binding */ getColorCSS; },
+/* harmony export */   "getIndexForPosition": function() { return /* binding */ getIndexForPosition; },
+/* harmony export */   "getInnerText": function() { return /* binding */ getInnerText; },
+/* harmony export */   "getInputSelection": function() { return /* binding */ getInputSelection; },
+/* harmony export */   "getInternetExplorerVersion": function() { return /* binding */ getInternetExplorerVersion; },
+/* harmony export */   "getPositionForPath": function() { return /* binding */ getPositionForPath; },
+/* harmony export */   "getSelection": function() { return /* binding */ getSelection; },
+/* harmony export */   "getSelectionOffset": function() { return /* binding */ getSelectionOffset; },
+/* harmony export */   "getType": function() { return /* binding */ getType; },
+/* harmony export */   "getWindow": function() { return /* binding */ getWindow; },
+/* harmony export */   "hasParentNode": function() { return /* binding */ hasParentNode; },
+/* harmony export */   "improveSchemaError": function() { return /* binding */ improveSchemaError; },
+/* harmony export */   "insideRect": function() { return /* binding */ insideRect; },
+/* harmony export */   "isArray": function() { return /* binding */ isArray; },
+/* harmony export */   "isChildOf": function() { return /* binding */ isChildOf; },
+/* harmony export */   "isFirefox": function() { return /* binding */ isFirefox; },
+/* harmony export */   "isObject": function() { return /* binding */ isObject; },
+/* harmony export */   "isPromise": function() { return /* binding */ isPromise; },
+/* harmony export */   "isTimestamp": function() { return /* binding */ isTimestamp; },
+/* harmony export */   "isUrl": function() { return /* binding */ isUrl; },
+/* harmony export */   "isValidColor": function() { return /* binding */ isValidColor; },
+/* harmony export */   "isValidValidationError": function() { return /* binding */ isValidValidationError; },
+/* harmony export */   "isValidationErrorChanged": function() { return /* binding */ isValidationErrorChanged; },
+/* harmony export */   "limitCharacters": function() { return /* binding */ limitCharacters; },
+/* harmony export */   "makeFieldTooltip": function() { return /* binding */ makeFieldTooltip; },
+/* harmony export */   "parse": function() { return /* binding */ parse; },
+/* harmony export */   "parsePath": function() { return /* binding */ parsePath; },
+/* harmony export */   "parseString": function() { return /* binding */ parseString; },
 /* harmony export */   "removeAllClassNames": function() { return /* binding */ removeAllClassNames; },
 /* harmony export */   "removeClassName": function() { return /* binding */ removeClassName; },
-/* harmony export */   "stripFormatting": function() { return /* binding */ stripFormatting; },
-/* harmony export */   "setEndOfContentEditable": function() { return /* binding */ setEndOfContentEditable; },
-/* harmony export */   "selectContentEditable": function() { return /* binding */ selectContentEditable; },
-/* harmony export */   "getSelection": function() { return /* binding */ getSelection; },
-/* harmony export */   "setSelection": function() { return /* binding */ setSelection; },
-/* harmony export */   "getSelectionOffset": function() { return /* binding */ getSelectionOffset; },
-/* harmony export */   "setSelectionOffset": function() { return /* binding */ setSelectionOffset; },
-/* harmony export */   "getInnerText": function() { return /* binding */ getInnerText; },
-/* harmony export */   "hasParentNode": function() { return /* binding */ hasParentNode; },
-/* harmony export */   "getInternetExplorerVersion": function() { return /* binding */ getInternetExplorerVersion; },
-/* harmony export */   "isFirefox": function() { return /* binding */ isFirefox; },
-/* harmony export */   "addEventListener": function() { return /* binding */ addEventListener; },
 /* harmony export */   "removeEventListener": function() { return /* binding */ removeEventListener; },
-/* harmony export */   "isChildOf": function() { return /* binding */ isChildOf; },
-/* harmony export */   "parsePath": function() { return /* binding */ parsePath; },
-/* harmony export */   "stringifyPath": function() { return /* binding */ stringifyPath; },
-/* harmony export */   "improveSchemaError": function() { return /* binding */ improveSchemaError; },
-/* harmony export */   "isPromise": function() { return /* binding */ isPromise; },
-/* harmony export */   "isValidValidationError": function() { return /* binding */ isValidValidationError; },
-/* harmony export */   "insideRect": function() { return /* binding */ insideRect; },
-/* harmony export */   "debounce": function() { return /* binding */ debounce; },
-/* harmony export */   "textDiff": function() { return /* binding */ textDiff; },
-/* harmony export */   "getInputSelection": function() { return /* binding */ getInputSelection; },
-/* harmony export */   "getIndexForPosition": function() { return /* binding */ getIndexForPosition; },
-/* harmony export */   "getPositionForPath": function() { return /* binding */ getPositionForPath; },
-/* harmony export */   "compileJSONPointer": function() { return /* binding */ compileJSONPointer; },
-/* harmony export */   "getColorCSS": function() { return /* binding */ getColorCSS; },
-/* harmony export */   "isValidColor": function() { return /* binding */ isValidColor; },
-/* harmony export */   "makeFieldTooltip": function() { return /* binding */ makeFieldTooltip; },
-/* harmony export */   "get": function() { return /* binding */ get; },
-/* harmony export */   "findUniqueName": function() { return /* binding */ findUniqueName; },
-/* harmony export */   "getChildPaths": function() { return /* binding */ getChildPaths; },
+/* harmony export */   "removeReturnsAndSurroundingWhitespace": function() { return /* binding */ removeReturnsAndSurroundingWhitespace; },
+/* harmony export */   "selectContentEditable": function() { return /* binding */ selectContentEditable; },
+/* harmony export */   "setEndOfContentEditable": function() { return /* binding */ setEndOfContentEditable; },
+/* harmony export */   "setSelection": function() { return /* binding */ setSelection; },
+/* harmony export */   "setSelectionOffset": function() { return /* binding */ setSelectionOffset; },
 /* harmony export */   "sort": function() { return /* binding */ sort; },
 /* harmony export */   "sortObjectKeys": function() { return /* binding */ sortObjectKeys; },
-/* harmony export */   "parseString": function() { return /* binding */ parseString; },
-/* harmony export */   "isTimestamp": function() { return /* binding */ isTimestamp; },
-/* harmony export */   "formatSize": function() { return /* binding */ formatSize; },
-/* harmony export */   "limitCharacters": function() { return /* binding */ limitCharacters; },
-/* harmony export */   "isObject": function() { return /* binding */ isObject; },
-/* harmony export */   "contains": function() { return /* binding */ contains; },
-/* harmony export */   "isValidationErrorChanged": function() { return /* binding */ isValidationErrorChanged; }
+/* harmony export */   "stringifyPath": function() { return /* binding */ stringifyPath; },
+/* harmony export */   "stripFormatting": function() { return /* binding */ stripFormatting; },
+/* harmony export */   "textDiff": function() { return /* binding */ textDiff; },
+/* harmony export */   "tryJsonRepair": function() { return /* binding */ tryJsonRepair; },
+/* harmony export */   "validate": function() { return /* binding */ validate; }
 /* harmony export */ });
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4987);
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_polyfills__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(233);
 /* harmony import */ var javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jsonrepair__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8909);
+/* harmony import */ var jsonrepair__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3860);
 /* harmony import */ var jsonrepair__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jsonrepair__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _assets_jsonlint_jsonlint__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6589);
 /* harmony import */ var json_source_map__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7026);
 /* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7907);
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 
 
@@ -17842,8 +17886,8 @@ function getInnerText(element, buffer) {
 
 
   if (element.nodeValue) {
-    // remove return characters and the whitespace surrounding return characters
-    var trimmedValue = element.nodeValue.replace(/\s*\n\s*/g, '');
+    // remove return characters and the whitespaces surrounding those return characters
+    var trimmedValue = removeReturnsAndSurroundingWhitespace(element.nodeValue);
 
     if (trimmedValue !== '') {
       return buffer.flush() + trimmedValue;
@@ -17888,6 +17932,13 @@ function getInnerText(element, buffer) {
 
 
   return '';
+} // regular expression matching one or multiple return characters with all their
+// enclosing white spaces
+
+function removeReturnsAndSurroundingWhitespace(text) {
+  return text.replace(/(\b|^)\s*(\b|$)/g, function (match) {
+    return /\n/.exec(match) ? '' : match;
+  });
 }
 /**
  * Test whether an element has the provided parent node somewhere up the node tree.
@@ -19050,6 +19101,8 @@ exports.buildDom = function buildDom(arr, parent, refs) {
                 el[n] = val;
             } else if (n === "ref") {
                 if (refs) refs[val] = el;
+            } else if (n === "style") {
+                if (typeof val == "string") el.style.cssText = val;
             } else if (val != null) {
                 el.setAttribute(n, val);
             }
@@ -19141,7 +19194,34 @@ exports.hasCssString = function(id, doc) {
     }
 };
 
-exports.importCssString = function importCssString(cssText, id, target) {
+var strictCSP;
+var cssCache = [];
+exports.useStrictCSP = function(value) {
+    strictCSP = value;
+    if (value == false) insertPendingStyles();
+    else if (!cssCache) cssCache = [];
+};
+
+function insertPendingStyles() {
+    var cache = cssCache;
+    cssCache = null;
+    cache && cache.forEach(function(item) {
+        importCssString(item[0], item[1]);
+    });
+}
+
+function importCssString(cssText, id, target) {
+    if (typeof document == "undefined")
+        return;
+    if (cssCache) {
+        if (target) {
+            insertPendingStyles();
+        } else if (target === false) {
+            return cssCache.push([cssText, id]);
+        }
+    }
+    if (strictCSP) return;
+
     var container = target;
     if (!target || !target.getRootNode) {
         container = document;
@@ -19166,7 +19246,8 @@ exports.importCssString = function importCssString(cssText, id, target) {
     if (container == doc)
         container = exports.getDocumentHead(doc);
     container.insertBefore(style, container.firstChild);
-};
+}
+exports.importCssString = importCssString;
 
 exports.importCssStylsheet = function(uri, doc) {
     exports.buildDom(["link", {rel: "stylesheet", href: uri}], exports.getDocumentHead(doc));
@@ -19208,10 +19289,6 @@ exports.scrollbarWidth = function(document) {
     return noScrollbar-withScrollbar;
 };
 
-if (typeof document == "undefined") {
-    exports.importCssString = function() {};
-}
-
 exports.computedStyle = function(element, style) {
     return window.getComputedStyle(element, "") || {};
 };
@@ -19227,6 +19304,8 @@ exports.HAS_CSS_TRANSFORMS = false;
 exports.HI_DPI = useragent.isWin
     ? typeof window !== "undefined" && window.devicePixelRatio >= 1.5
     : true;
+
+if (useragent.isChromeOS) exports.HI_DPI = false;
 
 if (typeof document !== "undefined") {
     var div = document.createElement("div");
@@ -21455,18 +21534,16 @@ function DragdropHandler(mouseHandler) {
 
     var editor = mouseHandler.editor;
 
-    var blankImage = dom.createElement("img");
-    blankImage.src = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
-    if (useragent.isOpera)
-        blankImage.style.cssText = "width:1px;height:1px;position:fixed;top:0;left:0;z-index:2147483647;opacity:0;";
+    var dragImage = dom.createElement("div");
+    dragImage.style.cssText = "top:-100px;position:absolute;z-index:2147483647;opacity:0.5";
+    dragImage.textContent = "\xa0";
 
     var exports = ["dragWait", "dragWaitEnd", "startDrag", "dragReadyEnd", "onMouseDrag"];
 
-     exports.forEach(function(x) {
-         mouseHandler[x] = this[x];
+    exports.forEach(function(x) {
+        mouseHandler[x] = this[x];
     }, this);
     editor.on("mousedown", this.onMouseDown.bind(mouseHandler));
-
 
     var mouseTarget = editor.container;
     var dragSelectionMarker, x, y;
@@ -21491,14 +21568,12 @@ function DragdropHandler(mouseHandler) {
 
         var dataTransfer = e.dataTransfer;
         dataTransfer.effectAllowed = editor.getReadOnly() ? "copy" : "copyMove";
-        if (useragent.isOpera) {
-            editor.container.appendChild(blankImage);
-            blankImage.scrollTop = 0;
-        }
-        dataTransfer.setDragImage && dataTransfer.setDragImage(blankImage, 0, 0);
-        if (useragent.isOpera) {
-            editor.container.removeChild(blankImage);
-        }
+        editor.container.appendChild(dragImage);
+
+        dataTransfer.setDragImage && dataTransfer.setDragImage(dragImage, 0, 0);
+        setTimeout(function() {
+            editor.container.removeChild(dragImage);
+        });
         dataTransfer.clearData();
         dataTransfer.setData("Text", editor.session.getTextRange());
 
@@ -22437,12 +22512,13 @@ exports.AppConfig = AppConfig;
 
 });
 
-ace.define("ace/config",["require","exports","module","ace/lib/lang","ace/lib/oop","ace/lib/net","ace/lib/app_config"], function(require, exports, module) {
+ace.define("ace/config",["require","exports","module","ace/lib/lang","ace/lib/oop","ace/lib/net","ace/lib/dom","ace/lib/app_config"], function(require, exports, module) {
 "no use strict";
 
 var lang = require("./lib/lang");
 var oop = require("./lib/oop");
 var net = require("./lib/net");
+var dom = require("./lib/dom");
 var AppConfig = require("./lib/app_config").AppConfig;
 
 module.exports = exports = new AppConfig();
@@ -22460,13 +22536,13 @@ var options = {
     suffix: ".js",
     $moduleUrls: {},
     loadWorkerFromBlob: true,
-    sharedPopups: false
+    sharedPopups: false,
+    useStrictCSP: null
 };
 
 exports.get = function(key) {
     if (!options.hasOwnProperty(key))
         throw new Error("Unknown config key: " + key);
-
     return options[key];
 };
 
@@ -22475,6 +22551,8 @@ exports.set = function(key, value) {
         options[key] = value;
     else if (this.setDefaultValue("", key, value) == false)
         throw new Error("Unknown config key: " + key);
+    if (key == "useStrictCSP")
+        dom.useStrictCSP(value);
 };
 
 exports.all = function() {
@@ -22621,7 +22699,7 @@ function deHyphenate(str) {
     return str.replace(/-(.)/g, function(m, m1) { return m1.toUpperCase(); });
 }
 
-exports.version = "1.4.12";
+exports.version = "1.4.14";
 
 });
 
@@ -22696,6 +22774,7 @@ var MouseHandler = function(editor) {
 
 (function() {
     this.onMouseEvent = function(name, e) {
+        if (!this.editor.session) return;
         this.editor._emit(name, new MouseEvent(e, this.editor));
     };
 
@@ -22745,7 +22824,7 @@ var MouseHandler = function(editor) {
         var onCaptureEnd = function(e) {
             editor.off("beforeEndOperation", onOperationEnd);
             clearInterval(timerId);
-            onCaptureInterval();
+            if (editor.session) onCaptureInterval();
             self[self.state + "End"] && self[self.state + "End"](e);
             self.state = "";
             self.isMousePressed = renderer.$isMousePressed = false;
@@ -24166,7 +24245,6 @@ var Selection = function(session) {
     this.detach = function() {
         this.lead.detach();
         this.anchor.detach();
-        this.session = this.doc = null;
     };
 
     this.fromOrientedRange = function(range) {
@@ -24382,7 +24460,7 @@ var Tokenizer = function(rules) {
 
     this.removeCapturingGroups = function(src) {
         var r = src.replace(
-            /\\.|\[(?:\\.|[^\\\]])*|\(\?[:=!]|(\()/g,
+            /\\.|\[(?:\\.|[^\\\]])*|\(\?[:=!<]|(\()/g,
             function(x, y) {return y ? "(?:" : x;}
         );
         return r;
@@ -27340,21 +27418,38 @@ function Folding() {
         if (location == null) {
             range = new Range(0, 0, this.getLength(), 0);
             if (expandInner == null) expandInner = true;
-        } else if (typeof location == "number")
+        } else if (typeof location == "number") {
             range = new Range(location, 0, location, this.getLine(location).length);
-        else if ("row" in location)
+        } else if ("row" in location) {
             range = Range.fromPoints(location, location);
-        else
+        } else if (Array.isArray(location)) {
+            folds = [];
+            location.forEach(function(range) {
+                folds = folds.concat(this.unfold(range));
+            }, this);
+            return folds;
+        } else {
             range = location;
+        }
         
         folds = this.getFoldsInRangeList(range);
+        var outermostFolds = folds;
+        while (
+            folds.length == 1
+            && Range.comparePoints(folds[0].start, range.start) < 0 
+            && Range.comparePoints(folds[0].end, range.end) > 0
+        ) {
+            this.expandFolds(folds);
+            folds = this.getFoldsInRangeList(range);
+        }
+        
         if (expandInner != false) {
             this.removeFolds(folds);
         } else {
             this.expandFolds(folds);
         }
-        if (folds.length)
-            return folds;
+        if (outermostFolds.length)
+            return outermostFolds;
     };
     this.isRowFolded = function(docRow, startFoldRow) {
         return !!this.getFoldLine(docRow, startFoldRow);
@@ -28021,7 +28116,7 @@ EditSession.$uid = 0;
     oop.implement(this, EventEmitter);
     this.setDocument = function(doc) {
         if (this.doc)
-            this.doc.removeListener("change", this.$onChange);
+            this.doc.off("change", this.$onChange);
 
         this.doc = doc;
         doc.on("change", this.$onChange);
@@ -29547,6 +29642,9 @@ EditSession.$uid = 0;
         }
         this.$stopWorker();
         this.removeAllListeners();
+        if (this.doc) {
+            this.doc.off("change", this.$onChange);
+        }
         this.selection.detach();
     };
 
@@ -29938,7 +30036,7 @@ var Search = function() {
             var len = re.length;
             var forEachInLine = function(row, offset, callback) {
                 var startRow = backwards ? row - len + 1 : row;
-                if (startRow < 0) return;
+                if (startRow < 0 || startRow + len > session.getLength()) return;
                 var line = session.getLine(startRow);
                 var startIndex = line.search(re[0]);
                 if (!backwards && startIndex < offset || startIndex === -1) return;
@@ -30356,6 +30454,7 @@ function bindKey(win, mac) {
 }
 exports.commands = [{
     name: "showSettingsMenu",
+    description: "Show settings menu",
     bindKey: bindKey("Ctrl-,", "Command-,"),
     exec: function(editor) {
         config.loadModule("ace/ext/settings_menu", function(module) {
@@ -30366,6 +30465,7 @@ exports.commands = [{
     readOnly: true
 }, {
     name: "goToNextError",
+    description: "Go to next error",
     bindKey: bindKey("Alt-E", "F4"),
     exec: function(editor) {
         config.loadModule("./ext/error_marker", function(module) {
@@ -30376,6 +30476,7 @@ exports.commands = [{
     readOnly: true
 }, {
     name: "goToPreviousError",
+    description: "Go to previous error",
     bindKey: bindKey("Alt-Shift-E", "Shift-F4"),
     exec: function(editor) {
         config.loadModule("./ext/error_marker", function(module) {
@@ -30422,6 +30523,7 @@ exports.commands = [{
     readOnly: true
 }, {
     name: "toggleFoldWidget",
+    description: "Toggle fold widget",
     bindKey: bindKey("F2", "F2"),
     exec: function(editor) { editor.session.toggleFoldWidget(); },
     multiSelectAction: "forEach",
@@ -30429,6 +30531,7 @@ exports.commands = [{
     readOnly: true
 }, {
     name: "toggleParentFoldWidget",
+    description: "Toggle parent fold widget",
     bindKey: bindKey("Alt-F2", "Alt-F2"),
     exec: function(editor) { editor.session.toggleFoldWidget(true); },
     multiSelectAction: "forEach",
@@ -31155,6 +31258,7 @@ exports.commands = [{
     scrollIntoView: "none"
 }, {
     name: "addLineAfter",
+    description: "Add new line after the current line",
     exec: function(editor) {
         editor.selection.clearSelection();
         editor.navigateLineEnd();
@@ -31164,6 +31268,7 @@ exports.commands = [{
     scrollIntoView: "cursor"
 }, {
     name: "addLineBefore",
+    description: "Add new line before the current line",
     exec: function(editor) {
         editor.selection.clearSelection();
         var cursor = editor.getCursorPosition();
@@ -31919,7 +32024,7 @@ Editor.$uid = 0;
         }
         var e = {text: text};
         this._signal("copy", e);
-        clipboard.lineMode = copyLine ? e.text : "";
+        clipboard.lineMode = copyLine ? e.text : false;
         return e.text;
     };
     this.onCopy = function() {
@@ -31939,7 +32044,7 @@ Editor.$uid = 0;
         this._signal("paste", e);
         var text = e.text;
 
-        var lineMode = text == clipboard.lineMode;
+        var lineMode = text === clipboard.lineMode;
         var session = this.session;
         if (!this.inMultiSelectMode || this.inVirtualSelectionMode) {
             if (lineMode)
@@ -35283,12 +35388,16 @@ var Cursor = function(parentEl) {
         for (var i = cursors.length; i--; )
             cursors[i].style.animationDuration = this.blinkInterval + "ms";
 
+        this.$isAnimating = true;
         setTimeout(function() {
-            dom.addCssClass(this.element, "ace_animate-blinking");
+            if (this.$isAnimating) {
+                dom.addCssClass(this.element, "ace_animate-blinking");
+            }
         }.bind(this));
     };
     
     this.$stopCssAnimation = function() {
+        this.$isAnimating = false;
         dom.removeCssClass(this.element, "ace_animate-blinking");
     };
 
@@ -35359,6 +35468,7 @@ var Cursor = function(parentEl) {
         this.$stopCssAnimation();
 
         if (this.smoothBlinking) {
+            this.$isSmoothBlinking = false;
             dom.removeCssClass(this.element, "ace_smooth-blinking");
         }
         
@@ -35370,8 +35480,11 @@ var Cursor = function(parentEl) {
         }
 
         if (this.smoothBlinking) {
-            setTimeout(function(){
-                dom.addCssClass(this.element, "ace_smooth-blinking");
+            this.$isSmoothBlinking = true;
+            setTimeout(function() {
+                if (this.$isSmoothBlinking) {
+                    dom.addCssClass(this.element, "ace_smooth-blinking");
+                }
             }.bind(this));
         }
         
@@ -36372,7 +36485,7 @@ margin: 0 10px;\
 var useragent = require("./lib/useragent");
 var HIDE_TEXTAREA = useragent.isIE;
 
-dom.importCssString(editorCss, "ace_editor.css");
+dom.importCssString(editorCss, "ace_editor.css", false);
 
 var VirtualRenderer = function(container, theme) {
     var _self = this;
@@ -36383,6 +36496,8 @@ var VirtualRenderer = function(container, theme) {
     if (dom.HI_DPI) dom.addCssClass(this.container, "ace_hidpi");
 
     this.setTheme(theme);
+    if (config.get("useStrictCSP") == null) 
+        config.set("useStrictCSP", false);
 
     this.$gutter = dom.createElement("div");
     this.$gutter.className = "ace_gutter";
@@ -36634,7 +36749,7 @@ var VirtualRenderer = function(container, theme) {
 
         if (this.resizing)
             this.resizing = 0;
-        this.scrollBarV.scrollLeft = this.scrollBarV.scrollTop = null;
+        this.scrollBarH.scrollLeft = this.scrollBarV.scrollTop = null;
     };
     
     this.$updateCachedSize = function(force, gutterWidth, width, height) {
@@ -37400,7 +37515,7 @@ var VirtualRenderer = function(container, theme) {
     };
     this.scrollTo = function(x, y) {
         this.session.setScrollTop(y);
-        this.session.setScrollLeft(y);
+        this.session.setScrollLeft(x);
     };
     this.scrollBy = function(deltaX, deltaY) {
         deltaY && this.session.setScrollTop(this.session.getScrollTop() + deltaY);
@@ -39458,7 +39573,7 @@ background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZ
 exports.$id = "ace/theme/textmate";
 
 var dom = require("../lib/dom");
-dom.importCssString(exports.cssText, exports.cssClass);
+dom.importCssString(exports.cssText, exports.cssClass, false);
 });
 
 ace.define("ace/line_widgets",["require","exports","module","ace/lib/dom"], function(require, exports, module) {
@@ -40005,7 +40120,7 @@ dom.importCssString("\
         border-left-color: transparent!important;\
         top: -5px;\
     }\
-", "");
+", "error_marker.css", false);
 
 });
 
@@ -40272,7 +40387,7 @@ var keyUtil = require("../lib/keys");
 
 var MAX_COUNT = 999;
 
-dom.importCssString(searchboxCss, "ace_searchbox");
+dom.importCssString(searchboxCss, "ace_searchbox", false);
 
 var SearchBox = function(editor, range, showReplaceForm) {
     var div = dom.createElement("div");
@@ -41410,11 +41525,11 @@ function addFormat(name, format) {
 function addDefaultMetaSchema(self) {
   var $dataSchema;
   if (self._opts.$data) {
-    $dataSchema = __webpack_require__(6835);
+    $dataSchema = __webpack_require__(894);
     self.addMetaSchema($dataSchema, $dataSchema.$id, true);
   }
   if (self._opts.meta === false) return;
-  var metaSchema = __webpack_require__(38);
+  var metaSchema = __webpack_require__(6680);
   if (self._opts.$data) metaSchema = $dataMetaSchema(metaSchema, META_SUPPORT_DATA);
   self.addMetaSchema(metaSchema, META_SCHEMA_ID, true);
   self._refs['http://json-schema.org/schema'] = META_SCHEMA_ID;
@@ -41517,7 +41632,7 @@ Cache.prototype.clear = function Cache_clear() {
 "use strict";
 
 
-var MissingRefError = __webpack_require__(5359).MissingRef;
+var MissingRefError = (__webpack_require__(5359).MissingRef);
 
 module.exports = compileAsync;
 
@@ -42481,7 +42596,7 @@ function resolveIds(schema) {
 
 
 var ruleModules = __webpack_require__(9646)
-  , toHash = __webpack_require__(3724).toHash;
+  , toHash = (__webpack_require__(3724).toHash);
 
 module.exports = function rules() {
   var RULES = [
@@ -42903,7 +43018,7 @@ module.exports = function (metaSchema, keywordsJsonPointers) {
 "use strict";
 
 
-var metaSchema = __webpack_require__(38);
+var metaSchema = __webpack_require__(6680);
 
 module.exports = {
   $id: 'https://github.com/ajv-validator/ajv/blob/master/lib/definition_schema.js',
@@ -46874,6 +46989,18 @@ module.exports = function naturalSort (a, b) {
   var TYPE_NULL = 7;
   var TYPE_ARRAY_NUMBER = 8;
   var TYPE_ARRAY_STRING = 9;
+  var TYPE_NAME_TABLE = {
+    0: 'number',
+    1: 'any',
+    2: 'string',
+    3: 'array',
+    4: 'object',
+    5: 'boolean',
+    6: 'expression',
+    7: 'null',
+    8: 'Array<number>',
+    9: 'Array<string>'
+  };
 
   var TOK_EOF = "EOF";
   var TOK_UNQUOTEDIDENTIFIER = "UnquotedIdentifier";
@@ -47285,10 +47412,8 @@ module.exports = function naturalSort (a, b) {
             var node = {type: "Field", name: token.value};
             if (this._lookahead(0) === TOK_LPAREN) {
                 throw new Error("Quoted identifier not allowed for function names.");
-            } else {
-                return node;
             }
-            break;
+            return node;
           case TOK_NOT:
             right = this.expression(bindingPower.Not);
             return {type: "NotExpression", children: [right]};
@@ -47322,10 +47447,8 @@ module.exports = function naturalSort (a, b) {
                 right = this._parseProjectionRHS(bindingPower.Star);
                 return {type: "Projection",
                         children: [{type: "Identity"}, right]};
-            } else {
-                return this._parseMultiselectList();
             }
-            break;
+            return this._parseMultiselectList();
           case TOK_CURRENT:
             return {type: TOK_CURRENT};
           case TOK_EXPREF:
@@ -47357,13 +47480,11 @@ module.exports = function naturalSort (a, b) {
             if (this._lookahead(0) !== TOK_STAR) {
                 right = this._parseDotRHS(rbp);
                 return {type: "Subexpression", children: [left, right]};
-            } else {
-                // Creating a projection.
-                this._advance();
-                right = this._parseProjectionRHS(rbp);
-                return {type: "ValueProjection", children: [left, right]};
             }
-            break;
+            // Creating a projection.
+            this._advance();
+            right = this._parseProjectionRHS(rbp);
+            return {type: "ValueProjection", children: [left, right]};
           case TOK_PIPE:
             right = this.expression(bindingPower.Pipe);
             return {type: TOK_PIPE, children: [left, right]};
@@ -47417,13 +47538,11 @@ module.exports = function naturalSort (a, b) {
             if (token.type === TOK_NUMBER || token.type === TOK_COLON) {
                 right = this._parseIndexExpression();
                 return this._projectIfSlice(left, right);
-            } else {
-                this._match(TOK_STAR);
-                this._match(TOK_RBRACKET);
-                right = this._parseProjectionRHS(bindingPower.Star);
-                return {type: "Projection", children: [left, right]};
             }
-            break;
+            this._match(TOK_STAR);
+            this._match(TOK_RBRACKET);
+            right = this._parseProjectionRHS(bindingPower.Star);
+            return {type: "Projection", children: [left, right]};
           default:
             this._errorToken(this._lookaheadToken(0));
         }
@@ -47600,19 +47719,15 @@ module.exports = function naturalSort (a, b) {
           var matched, current, result, first, second, field, left, right, collected, i;
           switch (node.type) {
             case "Field":
-              if (value === null ) {
-                  return null;
-              } else if (isObject(value)) {
+              if (value !== null && isObject(value)) {
                   field = value[node.name];
                   if (field === undefined) {
                       return null;
                   } else {
                       return field;
                   }
-              } else {
-                return null;
               }
-              break;
+              return null;
             case "Subexpression":
               result = this.visit(node.children[0], value);
               for (i = 1; i < node.children.length; i++) {
@@ -47983,11 +48098,16 @@ module.exports = function naturalSort (a, b) {
                 }
             }
             if (!typeMatched) {
+                var expected = currentSpec
+                    .map(function(typeIdentifier) {
+                        return TYPE_NAME_TABLE[typeIdentifier];
+                    })
+                    .join(',');
                 throw new Error("TypeError: " + name + "() " +
                                 "expected argument " + (i + 1) +
-                                " to be type " + currentSpec +
-                                " but received type " + actualType +
-                                " instead.");
+                                " to be type " + expected +
+                                " but received type " +
+                                TYPE_NAME_TABLE[actualType] + " instead.");
             }
         }
     },
@@ -48968,974 +49088,6 @@ var ESC_1 = /\//g;
 function escapeJsonPointer(str) {
   return str.replace(ESC_0, '~0')
             .replace(ESC_1, '~1');
-}
-
-
-/***/ }),
-
-/***/ 5755:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.default = JsonRepairError;
-
-function JsonRepairError(message, char) {
-  if (!(this instanceof JsonRepairError)) {
-    throw new SyntaxError('Constructor must be called with the new operator');
-  }
-
-  this.message = message + ' (char ' + char + ')';
-  this.char = char;
-  this.stack = new Error().stack;
-}
-
-JsonRepairError.prototype = new Error();
-JsonRepairError.prototype.constructor = Error;
-
-
-/***/ }),
-
-/***/ 8909:
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-module.exports = __webpack_require__(8107).default
-
-
-/***/ }),
-
-/***/ 8107:
-/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
-
-"use strict";
-var __webpack_unused_export__;
-
-
-__webpack_unused_export__ = ({
-  value: true
-});
-exports.default = jsonrepair;
-
-var _JsonRepairError = _interopRequireDefault(__webpack_require__(5755));
-
-var _stringUtils = __webpack_require__(1536);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// token types enumeration
-var DELIMITER = 0;
-var NUMBER = 1;
-var STRING = 2;
-var SYMBOL = 3;
-var WHITESPACE = 4;
-var COMMENT = 5;
-var UNKNOWN = 6;
-/**
- * @typedef {DELIMITER | NUMBER | STRING | SYMBOL | WHITESPACE | COMMENT | UNKNOWN} TokenType
- */
-// map with all delimiters
-
-var DELIMITERS = {
-  '': true,
-  '{': true,
-  '}': true,
-  '[': true,
-  ']': true,
-  ':': true,
-  ',': true,
-  // for JSONP and MongoDB data type notation
-  '(': true,
-  ')': true,
-  ';': true,
-  // for string concatenation
-  '+': true
-}; // map with all escape characters
-
-var ESCAPE_CHARACTERS = {
-  '"': '"',
-  '\\': '\\',
-  '/': '/',
-  b: '\b',
-  f: '\f',
-  n: '\n',
-  r: '\r',
-  t: '\t' // \u is handled by getToken()
-
-}; // TODO: can we unify CONTROL_CHARACTERS and ESCAPE_CHARACTERS?
-
-var CONTROL_CHARACTERS = {
-  '\b': '\\b',
-  '\f': '\\f',
-  '\n': '\\n',
-  '\r': '\\r',
-  '\t': '\\t'
-};
-var SYMBOLS = {
-  null: 'null',
-  true: 'true',
-  false: 'false'
-};
-var PYTHON_SYMBOLS = {
-  None: 'null',
-  True: 'true',
-  False: 'false'
-};
-var input = ''; // current json text
-
-var output = ''; // generated output
-
-var index = 0; // current index in text
-
-var c = ''; // current token character in text
-
-var token = ''; // current token
-
-var tokenType = UNKNOWN; // type of current token
-
-/**
- * Repair a string containing an invalid JSON document.
- * For example changes JavaScript notation into JSON notation.
- *
- * Example:
- *
- *     jsonrepair('{name: \'John\'}") // '{"name": "John"}'
- *
- * @param {string} text
- * @return {string}
- */
-
-function jsonrepair(text) {
-  // initialize
-  input = text;
-  output = '';
-  index = 0;
-  c = input.charAt(0);
-  token = '';
-  tokenType = UNKNOWN; // get first token
-
-  processNextToken();
-  var rootLevelTokenType = tokenType; // parse everything
-
-  parseObject(); // ignore trailing comma
-
-  skipComma();
-
-  if (token === '') {
-    // reached the end of the document properly
-    return output;
-  }
-
-  if (rootLevelTokenType === tokenType && tokenIsStartOfValue()) {
-    // start of a new value after end of the root level object: looks like
-    // newline delimited JSON -> turn into a root level array
-    var stashedOutput = '';
-
-    while (rootLevelTokenType === tokenType && tokenIsStartOfValue()) {
-      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
-      stashedOutput += output;
-      output = ''; // parse next newline delimited item
-
-      parseObject(); // ignore trailing comma
-
-      skipComma();
-    } // wrap the output in an array
-
-
-    return "[\n".concat(stashedOutput).concat(output, "\n]");
-  }
-
-  throw new _JsonRepairError.default('Unexpected characters', index - token.length);
-}
-/**
- * Get the next character from the expression.
- * The character is stored into the char c. If the end of the expression is
- * reached, the function puts an empty string in c.
- */
-
-
-function next() {
-  index++;
-  c = input.charAt(index); // Note: not using input[index] because that returns undefined when index is out of range
-}
-/**
- * Special version of the function next, used to parse escaped strings
- */
-
-
-function nextSkipEscape() {
-  next();
-
-  if (c === '\\') {
-    next();
-  }
-}
-/**
- * check whether the current token is the start of a value:
- * object, array, number, string, or symbol
- * @returns {boolean}
- */
-
-
-function tokenIsStartOfValue() {
-  return tokenType === DELIMITER && (token === '[' || token === '{') || tokenType === STRING || tokenType === NUMBER || tokenType === SYMBOL;
-}
-/**
- * check whether the current token is the start of a key (or possible key):
- * number, string, or symbol
- * @returns {boolean}
- */
-
-
-function tokenIsStartOfKey() {
-  return tokenType === STRING || tokenType === NUMBER || tokenType === SYMBOL;
-}
-/**
- * Process the previous token, and get next token in the current text
- */
-
-
-function processNextToken() {
-  output += token;
-  tokenType = UNKNOWN;
-  token = '';
-  getTokenDelimiter();
-
-  if (tokenType === WHITESPACE) {
-    // we leave the whitespace as it is, except replacing special white
-    // space character
-    token = (0, _stringUtils.normalizeWhitespace)(token);
-    processNextToken();
-  }
-
-  if (tokenType === COMMENT) {
-    // ignore comments
-    tokenType = UNKNOWN;
-    token = '';
-    processNextToken();
-  }
-}
-
-function skipComma() {
-  if (token === ',') {
-    token = '';
-    tokenType = UNKNOWN;
-    processNextToken();
-  }
-} // check for delimiters like ':', '{', ']'
-
-
-function getTokenDelimiter() {
-  if (DELIMITERS[c]) {
-    tokenType = DELIMITER;
-    token = c;
-    next();
-    return;
-  }
-
-  getTokenNumber();
-} // check for a number like "2.3e+5"
-
-
-function getTokenNumber() {
-  if ((0, _stringUtils.isDigit)(c) || c === '-') {
-    tokenType = NUMBER;
-
-    if (c === '-') {
-      token += c;
-      next();
-
-      if (!(0, _stringUtils.isDigit)(c)) {
-        throw new _JsonRepairError.default('Invalid number, digit expected', index);
-      }
-    } else if (c === '0') {
-      token += c;
-      next();
-    } else {// digit 1-9, nothing extra to do
-    }
-
-    while ((0, _stringUtils.isDigit)(c)) {
-      token += c;
-      next();
-    }
-
-    if (c === '.') {
-      token += c;
-      next();
-
-      if (!(0, _stringUtils.isDigit)(c)) {
-        throw new _JsonRepairError.default('Invalid number, digit expected', index);
-      }
-
-      while ((0, _stringUtils.isDigit)(c)) {
-        token += c;
-        next();
-      }
-    }
-
-    if (c === 'e' || c === 'E') {
-      token += c;
-      next();
-
-      if (c === '+' || c === '-') {
-        token += c;
-        next();
-      }
-
-      if (!(0, _stringUtils.isDigit)(c)) {
-        throw new _JsonRepairError.default('Invalid number, digit expected', index);
-      }
-
-      while ((0, _stringUtils.isDigit)(c)) {
-        token += c;
-        next();
-      }
-    }
-
-    return;
-  }
-
-  getTokenEscapedString();
-} // get a token string like '\"hello world\"'
-
-
-function getTokenEscapedString() {
-  if (c === '\\' && input.charAt(index + 1) === '"') {
-    // an escaped piece of JSON
-    next();
-    getTokenString(nextSkipEscape);
-  } else {
-    getTokenString(next);
-  }
-} // get a token string like '"hello world"'
-
-
-function getTokenString(getNext) {
-  if ((0, _stringUtils.isQuote)(c)) {
-    var quote = (0, _stringUtils.normalizeQuote)(c);
-    var isEndQuote = (0, _stringUtils.isSingleQuote)(c) ? _stringUtils.isSingleQuote : _stringUtils.isDoubleQuote;
-    token += '"'; // output valid double quote
-
-    tokenType = STRING;
-    getNext(); // eslint-disable-next-line no-unmodified-loop-condition
-
-    while (c !== '' && !isEndQuote(c)) {
-      if (c === '\\') {
-        // handle escape characters
-        getNext();
-        var unescaped = ESCAPE_CHARACTERS[c];
-
-        if (unescaped !== undefined) {
-          token += '\\' + c;
-          getNext();
-        } else if (c === 'u') {
-          // parse escaped unicode character, like '\\u260E'
-          token += "\\u";
-          getNext();
-
-          for (var u = 0; u < 4; u++) {
-            if (!(0, _stringUtils.isHex)(c)) {
-              throw new _JsonRepairError.default('Invalid unicode character', index - token.length);
-            }
-
-            token += c;
-            getNext();
-          }
-        } else if (c === '\'') {
-          // escaped single quote character -> remove the escape character
-          token += '\'';
-          getNext();
-        } else {
-          throw new _JsonRepairError.default('Invalid escape character "\\' + c + '"', index);
-        }
-      } else if (CONTROL_CHARACTERS[c]) {
-        // unescaped special character
-        // fix by adding an escape character
-        token += CONTROL_CHARACTERS[c];
-        getNext();
-      } else if (c === '"') {
-        // unescaped double quote -> escape it
-        token += '\\"';
-        getNext();
-      } else {
-        // a regular character
-        token += c;
-        getNext();
-      }
-    }
-
-    if ((0, _stringUtils.normalizeQuote)(c) !== quote) {
-      throw new _JsonRepairError.default('End of string expected', index - token.length);
-    }
-
-    token += '"'; // output valid double quote
-
-    getNext();
-    return;
-  }
-
-  getTokenAlpha();
-} // check for symbols (true, false, null)
-
-
-function getTokenAlpha() {
-  if ((0, _stringUtils.isAlpha)(c)) {
-    tokenType = SYMBOL;
-
-    while ((0, _stringUtils.isAlpha)(c) || (0, _stringUtils.isDigit)(c) || c === '$') {
-      token += c;
-      next();
-    }
-
-    return;
-  }
-
-  getTokenWhitespace();
-} // get whitespaces: space, tab, newline, and carriage return
-
-
-function getTokenWhitespace() {
-  if ((0, _stringUtils.isWhitespace)(c) || (0, _stringUtils.isSpecialWhitespace)(c)) {
-    tokenType = WHITESPACE;
-
-    while ((0, _stringUtils.isWhitespace)(c) || (0, _stringUtils.isSpecialWhitespace)(c)) {
-      token += c;
-      next();
-    }
-
-    return;
-  }
-
-  getTokenComment();
-}
-
-function getTokenComment() {
-  // find a block comment '/* ... */'
-  if (c === '/' && input[index + 1] === '*') {
-    tokenType = COMMENT;
-
-    while (c !== '' && (c !== '*' || c === '*' && input[index + 1] !== '/')) {
-      token += c;
-      next();
-    }
-
-    if (c === '*' && input[index + 1] === '/') {
-      token += c;
-      next();
-      token += c;
-      next();
-    }
-
-    return;
-  } // find a comment '// ...'
-
-
-  if (c === '/' && input[index + 1] === '/') {
-    tokenType = COMMENT;
-
-    while (c !== '' && c !== '\n') {
-      token += c;
-      next();
-    }
-
-    return;
-  }
-
-  getTokenUnknown();
-} // something unknown is found, wrong characters -> a syntax error
-
-
-function getTokenUnknown() {
-  tokenType = UNKNOWN;
-
-  while (c !== '') {
-    token += c;
-    next();
-  }
-
-  throw new _JsonRepairError.default('Syntax error in part "' + token + '"', index - token.length);
-}
-/**
- * Parse an object like '{"key": "value"}'
- * @return {*}
- */
-
-
-function parseObject() {
-  if (tokenType === DELIMITER && token === '{') {
-    processNextToken(); // TODO: can we make this redundant?
-
-    if (tokenType === DELIMITER && token === '}') {
-      // empty object
-      processNextToken();
-      return;
-    }
-
-    while (true) {
-      // parse key
-      if (tokenType === SYMBOL || tokenType === NUMBER) {
-        // unquoted key -> add quotes around it, change it into a string
-        tokenType = STRING;
-        token = "\"".concat(token, "\"");
-      }
-
-      if (tokenType !== STRING) {
-        // TODO: handle ambiguous cases like '[{"a":1,{"b":2}]' which could be an array with two objects or one
-        throw new _JsonRepairError.default('Object key expected', index - token.length);
-      }
-
-      processNextToken(); // parse colon (key/value separator)
-
-      if (tokenType === DELIMITER && token === ':') {
-        processNextToken();
-      } else {
-        if (tokenIsStartOfValue()) {
-          // we expect a colon here, but got the start of a value
-          // -> insert a colon before any inserted whitespaces at the end of output
-          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ':');
-        } else {
-          throw new _JsonRepairError.default('Colon expected', index - token.length);
-        }
-      } // parse value
-
-
-      parseObject(); // parse comma (key/value pair separator)
-
-      if (tokenType === DELIMITER && token === ',') {
-        processNextToken();
-
-        if (tokenType === DELIMITER && token === '}') {
-          // we've just passed a trailing comma -> remove the trailing comma
-          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
-          break;
-        }
-
-        if (token === '') {
-          // end of json reached, but missing }
-          // Strip the missing comma (the closing bracket will be added later)
-          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
-          break;
-        }
-      } else {
-        if (tokenIsStartOfKey()) {
-          // we expect a comma here, but got the start of a new key
-          // -> insert a comma before any inserted whitespaces at the end of output
-          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
-        } else {
-          break;
-        }
-      }
-    }
-
-    if (tokenType === DELIMITER && token === '}') {
-      processNextToken();
-    } else {
-      // missing end bracket -> insert the missing bracket
-      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, '}');
-    }
-
-    return;
-  }
-
-  parseArray();
-}
-/**
- * Parse an object like '["item1", "item2", ...]'
- */
-
-
-function parseArray() {
-  if (tokenType === DELIMITER && token === '[') {
-    processNextToken();
-
-    if (tokenType === DELIMITER && token === ']') {
-      // empty array
-      processNextToken();
-      return;
-    }
-
-    while (true) {
-      // parse item
-      parseObject(); // parse comma (item separator)
-
-      if (tokenType === DELIMITER && token === ',') {
-        processNextToken();
-
-        if (tokenType === DELIMITER && token === ']') {
-          // we've just passed a trailing comma -> remove the trailing comma
-          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
-          break;
-        }
-
-        if (token === '') {
-          // end of json reached, but missing ]
-          // Strip the missing comma (the closing bracket will be added later)
-          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
-          break;
-        }
-      } else {
-        if (tokenIsStartOfValue()) {
-          // we expect a comma here, but got the start of a new item
-          // -> insert a comma before any inserted whitespaces at the end of output
-          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
-        } else {
-          break;
-        }
-      }
-    }
-
-    if (tokenType === DELIMITER && token === ']') {
-      processNextToken();
-    } else {
-      // missing end bracket -> insert the missing bracket
-      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ']');
-    }
-
-    return;
-  }
-
-  parseString();
-}
-/**
- * Parse a string enclosed by double quotes "...". Can contain escaped quotes
- */
-
-
-function parseString() {
-  if (tokenType === STRING) {
-    processNextToken();
-
-    while (tokenType === DELIMITER && token === '+') {
-      // string concatenation like "hello" + "world"
-      token = ''; // don't output the concatenation
-
-      processNextToken();
-
-      if (tokenType === STRING) {
-        // concatenate with the previous string
-        var endIndex = output.lastIndexOf('"');
-        output = output.substring(0, endIndex) + token.substring(1);
-        token = '';
-        processNextToken();
-      }
-    }
-
-    return;
-  }
-
-  parseNumber();
-}
-/**
- * Parse a number
- */
-
-
-function parseNumber() {
-  if (tokenType === NUMBER) {
-    processNextToken();
-    return;
-  }
-
-  parseSymbol();
-}
-/**
- * Parse constants true, false, null
- */
-
-
-function parseSymbol() {
-  if (tokenType === SYMBOL) {
-    // a supported symbol: true, false, null
-    if (SYMBOLS[token]) {
-      processNextToken();
-      return;
-    } // for example replace None with null
-
-
-    if (PYTHON_SYMBOLS[token]) {
-      token = PYTHON_SYMBOLS[token];
-      processNextToken();
-      return;
-    } // make a copy of the symbol, let's see what comes next
-
-
-    var symbol = token;
-    var symbolIndex = output.length;
-    token = '';
-    processNextToken(); // if (tokenType === DELIMITER && token === '(') {
-
-    if (tokenType === DELIMITER && token === '(') {
-      // a MongoDB function call or JSONP call
-      // Can be a MongoDB data type like in {"_id": ObjectId("123")}
-      // token = '' // do not output the function name
-      // processNextToken()
-      // next()
-      token = ''; // do not output the ( character
-
-      processNextToken(); // process the part inside the brackets
-
-      parseObject(); // skip the closing bracket ")" and ");"
-
-      if (tokenType === DELIMITER && token === ')') {
-        token = ''; // do not output the ) character
-
-        processNextToken();
-
-        if (tokenType === DELIMITER && token === ';') {
-          token = ''; // do not output the semicolon character
-
-          processNextToken();
-        }
-      }
-
-      return;
-    } // unknown symbol => turn into in a string
-    // it is possible that by reading the next token we already inserted
-    // extra spaces in the output which should be inside the string,
-    // hence the symbolIndex
-
-
-    output = (0, _stringUtils.insertAtIndex)(output, "\"".concat(symbol), symbolIndex);
-
-    while (tokenType === SYMBOL || tokenType === NUMBER) {
-      processNextToken();
-    }
-
-    output += '"';
-    return;
-  }
-
-  parseEnd();
-}
-/**
- * Evaluated when the expression is not yet ended but expected to end
- */
-
-
-function parseEnd() {
-  if (token === '') {
-    // syntax error or unexpected end of expression
-    throw new _JsonRepairError.default('Unexpected end of json string', index - token.length);
-  } else {
-    throw new _JsonRepairError.default('Value expected', index - token.length);
-  }
-}
-
-
-/***/ }),
-
-/***/ 1536:
-/***/ (function(__unused_webpack_module, exports) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-  value: true
-}));
-exports.isAlpha = isAlpha;
-exports.isHex = isHex;
-exports.isDigit = isDigit;
-exports.isWhitespace = isWhitespace;
-exports.isSpecialWhitespace = isSpecialWhitespace;
-exports.normalizeWhitespace = normalizeWhitespace;
-exports.isQuote = isQuote;
-exports.isSingleQuote = isSingleQuote;
-exports.isDoubleQuote = isDoubleQuote;
-exports.normalizeQuote = normalizeQuote;
-exports.stripLastOccurrence = stripLastOccurrence;
-exports.insertBeforeLastWhitespace = insertBeforeLastWhitespace;
-exports.insertAtIndex = insertAtIndex;
-var SINGLE_QUOTES = {
-  '\'': true,
-  // quote
-  "\u2018": true,
-  // quote left
-  "\u2019": true,
-  // quote right
-  "`": true,
-  // grave accent
-  "\xB4": true // acute accent
-
-};
-var DOUBLE_QUOTES = {
-  '"': true,
-  "\u201C": true,
-  // double quote left
-  "\u201D": true // double quote right
-
-};
-/**
- * Check if the given character contains an alpha character, a-z, A-Z, _
- * @param {string} c
- * @return {boolean}
- */
-
-function isAlpha(c) {
-  return ALPHA_REGEX.test(c);
-}
-
-var ALPHA_REGEX = /^[a-zA-Z_]$/;
-/**
- * Check if the given character contains a hexadecimal character 0-9, a-f, A-F
- * @param {string} c
- * @return {boolean}
- */
-
-function isHex(c) {
-  return HEX_REGEX.test(c);
-}
-
-var HEX_REGEX = /^[0-9a-fA-F]$/;
-/**
- * checks if the given char c is a digit
- * @param {string} c
- * @return {boolean}
- */
-
-function isDigit(c) {
-  return DIGIT_REGEX.test(c);
-}
-
-var DIGIT_REGEX = /^[0-9]$/;
-/**
- * Check if the given character is a whitespace character like space, tab, or
- * newline
- * @param {string} c
- * @return {boolean}
- */
-
-function isWhitespace(c) {
-  return c === ' ' || c === '\t' || c === '\n' || c === '\r';
-}
-/**
- * Check if the given character is a special whitespace character, some
- * unicode variant
- * @param {string} c
- * @return {boolean}
- */
-
-
-function isSpecialWhitespace(c) {
-  return c === "\xA0" || c >= "\u2000" && c <= "\u200A" || c === "\u202F" || c === "\u205F" || c === "\u3000";
-}
-/**
- * Replace speical whitespace characters with regular spaces
- * @param {string} text
- * @returns {string}
- */
-
-
-function normalizeWhitespace(text) {
-  var normalized = '';
-
-  for (var i = 0; i < text.length; i++) {
-    var char = text[i];
-    normalized += isSpecialWhitespace(char) ? ' ' : char;
-  }
-
-  return normalized;
-}
-/**
- * Test whether the given character is a quote or double quote character.
- * Also tests for special variants of quotes.
- * @param {string} c
- * @returns {boolean}
- */
-
-
-function isQuote(c) {
-  return SINGLE_QUOTES[c] === true || DOUBLE_QUOTES[c] === true;
-}
-/**
- * Test whether the given character is a single quote character.
- * Also tests for special variants of single quotes.
- * @param {string} c
- * @returns {boolean}
- */
-
-
-function isSingleQuote(c) {
-  return SINGLE_QUOTES[c] === true;
-}
-/**
- * Test whether the given character is a double quote character.
- * Also tests for special variants of double quotes.
- * @param {string} c
- * @returns {boolean}
- */
-
-
-function isDoubleQuote(c) {
-  return DOUBLE_QUOTES[c] === true;
-}
-/**
- * Normalize special double or single quote characters to their regular
- * variant ' or "
- * @param {string} c
- * @returns {string}
- */
-
-
-function normalizeQuote(c) {
-  if (SINGLE_QUOTES[c] === true) {
-    return '\'';
-  }
-
-  if (DOUBLE_QUOTES[c] === true) {
-    return '"';
-  }
-
-  return c;
-}
-/**
- * Strip last occurrence of textToStrip from text
- * @param {string} text
- * @param {string} textToStrip
- * @returns {string}
- */
-
-
-function stripLastOccurrence(text, textToStrip) {
-  var index = text.lastIndexOf(textToStrip);
-  return index !== -1 ? text.substring(0, index) + text.substring(index + 1) : text;
-}
-/**
- * Insert textToInsert into text before the last whitespace in text
- * @param {string} text
- * @param {string} textToInsert
- * @returns {string}
- */
-
-
-function insertBeforeLastWhitespace(text, textToInsert) {
-  var index = text.length;
-
-  if (!isWhitespace(text[index - 1])) {
-    // no trailing whitespaces
-    return text + textToInsert;
-  }
-
-  while (isWhitespace(text[index - 1])) {
-    index--;
-  }
-
-  return text.substring(0, index) + textToInsert + text.substring(index);
-}
-/**
- * Insert textToInsert at index in text
- * @param {string} text
- * @param {string} textToInsert
- * @param {number} index
- * @returns {string}
- */
-
-
-function insertAtIndex(text, textToInsert, index) {
-  return text.substring(0, index) + textToInsert + text.substring(index);
 }
 
 
@@ -52001,7 +51153,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /***/ (function(module) {
 
 /*!
- * vanilla-picker v2.11.2
+ * vanilla-picker v2.12.1
  * https://vanilla-picker.js.org
  *
  * Copyright 2017-2021 Andreas Borgen (https://github.com/Sphinxxxx), Adam Brooks (https://github.com/dissimulate)
@@ -52010,7 +51162,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 (function (global, factory) {
    true ? module.exports = factory() :
   0;
-}(this, (function () { 'use strict';
+})(this, (function () { 'use strict';
 
   var classCallCheck = function (instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -52181,7 +51333,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
           }
       }, {
           key: 'rgba',
-          get: function get$$1() {
+          get: function get() {
               if (this._rgba) {
                   return this._rgba;
               }
@@ -52191,7 +51343,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
               return this._rgba = Color.hslToRgb(this._hsla);
           },
-          set: function set$$1(rgb) {
+          set: function set(rgb) {
               if (rgb.length === 3) {
                   rgb[3] = 1;
               }
@@ -52201,17 +51353,17 @@ Object.defineProperty(exports, '__esModule', { value: true });
           }
       }, {
           key: 'rgbString',
-          get: function get$$1() {
+          get: function get() {
               return this.printRGB();
           }
       }, {
           key: 'rgbaString',
-          get: function get$$1() {
+          get: function get() {
               return this.printRGB(true);
           }
       }, {
           key: 'hsla',
-          get: function get$$1() {
+          get: function get() {
               if (this._hsla) {
                   return this._hsla;
               }
@@ -52221,7 +51373,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
               return this._hsla = Color.rgbToHsl(this._rgba);
           },
-          set: function set$$1(hsl) {
+          set: function set(hsl) {
               if (hsl.length === 3) {
                   hsl[3] = 1;
               }
@@ -52231,17 +51383,17 @@ Object.defineProperty(exports, '__esModule', { value: true });
           }
       }, {
           key: 'hslString',
-          get: function get$$1() {
+          get: function get() {
               return this.printHSL();
           }
       }, {
           key: 'hslaString',
-          get: function get$$1() {
+          get: function get() {
               return this.printHSL(true);
           }
       }, {
           key: 'hex',
-          get: function get$$1() {
+          get: function get() {
               var rgb = this.rgba,
                   hex = rgb.map(function (x, i) {
                   return i < 3 ? x.toString(16) : Math.round(x * 255).toString(16);
@@ -52251,7 +51403,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
                   return x.padStart(2, '0');
               }).join('');
           },
-          set: function set$$1(hex) {
+          set: function set(hex) {
               this.rgba = Color.hexToRgb(hex);
           }
       }], [{
@@ -52486,7 +51638,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
       });
   }
 
-  var BG_TRANSP = 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'2\' height=\'2\'%3E%3Cpath d=\'M1,0H0V1H2V2H1\' fill=\'lightgrey\'/%3E%3C/svg%3E")';
+  var BG_TRANSP = 'linear-gradient(45deg, lightgrey 25%, transparent 25%, transparent 75%, lightgrey 75%) 0 0 / 2em 2em,\n                   linear-gradient(45deg, lightgrey 25%,       white 25%,       white 75%, lightgrey 75%) 1em 1em / 2em 2em';
   var HUES = 360;
 
   var EVENT_KEY = 'keydown',
@@ -52512,10 +51664,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
           }
       });
   }
-
-  var _style = document.createElement('style');
-  _style.textContent = '.picker_wrapper.no_alpha .picker_alpha{display:none}.picker_wrapper.no_editor .picker_editor{position:absolute;z-index:-1;opacity:0}.picker_wrapper.no_cancel .picker_cancel{display:none}.layout_default.picker_wrapper{display:-webkit-box;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;flex-flow:row wrap;-webkit-box-pack:justify;justify-content:space-between;-webkit-box-align:stretch;align-items:stretch;font-size:10px;width:25em;padding:.5em}.layout_default.picker_wrapper input,.layout_default.picker_wrapper button{font-size:1rem}.layout_default.picker_wrapper>*{margin:.5em}.layout_default.picker_wrapper::before{content:\'\';display:block;width:100%;height:0;-webkit-box-ordinal-group:2;order:1}.layout_default .picker_slider,.layout_default .picker_selector{padding:1em}.layout_default .picker_hue{width:100%}.layout_default .picker_sl{-webkit-box-flex:1;flex:1 1 auto}.layout_default .picker_sl::before{content:\'\';display:block;padding-bottom:100%}.layout_default .picker_editor{-webkit-box-ordinal-group:2;order:1;width:6.5rem}.layout_default .picker_editor input{width:100%;height:100%}.layout_default .picker_sample{-webkit-box-ordinal-group:2;order:1;-webkit-box-flex:1;flex:1 1 auto}.layout_default .picker_done,.layout_default .picker_cancel{-webkit-box-ordinal-group:2;order:1}.picker_wrapper{box-sizing:border-box;background:#f2f2f2;box-shadow:0 0 0 1px silver;cursor:default;font-family:sans-serif;color:#444;pointer-events:auto}.picker_wrapper:focus{outline:none}.picker_wrapper button,.picker_wrapper input{box-sizing:border-box;border:none;box-shadow:0 0 0 1px silver;outline:none}.picker_wrapper button:focus,.picker_wrapper button:active,.picker_wrapper input:focus,.picker_wrapper input:active{box-shadow:0 0 2px 1px dodgerblue}.picker_wrapper button{padding:.4em .6em;cursor:pointer;background-color:whitesmoke;background-image:-webkit-gradient(linear, left bottom, left top, from(gainsboro), to(transparent));background-image:linear-gradient(0deg, gainsboro, transparent)}.picker_wrapper button:active{background-image:-webkit-gradient(linear, left bottom, left top, from(transparent), to(gainsboro));background-image:linear-gradient(0deg, transparent, gainsboro)}.picker_wrapper button:hover{background-color:white}.picker_selector{position:absolute;z-index:1;display:block;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);border:2px solid white;border-radius:100%;box-shadow:0 0 3px 1px #67b9ff;background:currentColor;cursor:pointer}.picker_slider .picker_selector{border-radius:2px}.picker_hue{position:relative;background-image:-webkit-gradient(linear, left top, right top, from(red), color-stop(yellow), color-stop(lime), color-stop(cyan), color-stop(blue), color-stop(magenta), to(red));background-image:linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta, red);box-shadow:0 0 0 1px silver}.picker_sl{position:relative;box-shadow:0 0 0 1px silver;background-image:-webkit-gradient(linear, left top, left bottom, from(white), color-stop(50%, rgba(255,255,255,0))),-webkit-gradient(linear, left bottom, left top, from(black), color-stop(50%, rgba(0,0,0,0))),-webkit-gradient(linear, left top, right top, from(gray), to(rgba(128,128,128,0)));background-image:linear-gradient(180deg, white, rgba(255,255,255,0) 50%),linear-gradient(0deg, black, rgba(0,0,0,0) 50%),linear-gradient(90deg, gray, rgba(128,128,128,0))}.picker_alpha,.picker_sample{position:relative;background:url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'2\' height=\'2\'%3E%3Cpath d=\'M1,0H0V1H2V2H1\' fill=\'lightgrey\'/%3E%3C/svg%3E") left top/contain white;box-shadow:0 0 0 1px silver}.picker_alpha .picker_selector,.picker_sample .picker_selector{background:none}.picker_editor input{font-family:monospace;padding:.2em .4em}.picker_sample::before{content:\'\';position:absolute;display:block;width:100%;height:100%;background:currentColor}.picker_arrow{position:absolute;z-index:-1}.picker_wrapper.popup{position:absolute;z-index:2;margin:1.5em}.picker_wrapper.popup,.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{background:#f2f2f2;box-shadow:0 0 10px 1px rgba(0,0,0,0.4)}.picker_wrapper.popup .picker_arrow{width:3em;height:3em;margin:0}.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{content:"";display:block;position:absolute;top:0;left:0;z-index:-99}.picker_wrapper.popup .picker_arrow::before{width:100%;height:100%;-webkit-transform:skew(45deg);transform:skew(45deg);-webkit-transform-origin:0 100%;transform-origin:0 100%}.picker_wrapper.popup .picker_arrow::after{width:150%;height:150%;box-shadow:none}.popup.popup_top{bottom:100%;left:0}.popup.popup_top .picker_arrow{bottom:0;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.popup.popup_bottom{top:100%;left:0}.popup.popup_bottom .picker_arrow{top:0;left:0;-webkit-transform:rotate(90deg) scale(1, -1);transform:rotate(90deg) scale(1, -1)}.popup.popup_left{top:0;right:100%}.popup.popup_left .picker_arrow{top:0;right:0;-webkit-transform:scale(-1, 1);transform:scale(-1, 1)}.popup.popup_right{top:0;left:100%}.popup.popup_right .picker_arrow{top:0;left:0}';
-  document.documentElement.firstElementChild.appendChild(_style);
 
   var Picker = function () {
       function Picker(options) {
@@ -52952,7 +52100,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
                   transp = opaque.replace('hsl', 'hsla').replace(')', ', 0)'),
                   bg = 'linear-gradient(' + [opaque, transp] + ')';
 
-              this._domA.style.backgroundImage = bg + ', ' + BG_TRANSP;
+              this._domA.style.background = bg + ', ' + BG_TRANSP;
 
               if (!flags.fromEditor) {
                   var format = this.settings.editorFormat,
@@ -52997,19 +52145,1022 @@ Object.defineProperty(exports, '__esModule', { value: true });
               }
               return toggle;
           }
-      }], [{
-          key: 'StyleElement',
-          get: function get$$1() {
-              return _style;
-          }
       }]);
       return Picker;
   }();
 
+  {
+      var style = document.createElement('style');
+      style.textContent = '.picker_wrapper.no_alpha .picker_alpha{display:none}.picker_wrapper.no_editor .picker_editor{position:absolute;z-index:-1;opacity:0}.picker_wrapper.no_cancel .picker_cancel{display:none}.layout_default.picker_wrapper{display:flex;flex-flow:row wrap;justify-content:space-between;align-items:stretch;font-size:10px;width:25em;padding:.5em}.layout_default.picker_wrapper input,.layout_default.picker_wrapper button{font-size:1rem}.layout_default.picker_wrapper>*{margin:.5em}.layout_default.picker_wrapper::before{content:"";display:block;width:100%;height:0;order:1}.layout_default .picker_slider,.layout_default .picker_selector{padding:1em}.layout_default .picker_hue{width:100%}.layout_default .picker_sl{flex:1 1 auto}.layout_default .picker_sl::before{content:"";display:block;padding-bottom:100%}.layout_default .picker_editor{order:1;width:6.5rem}.layout_default .picker_editor input{width:100%;height:100%}.layout_default .picker_sample{order:1;flex:1 1 auto}.layout_default .picker_done,.layout_default .picker_cancel{order:1}.picker_wrapper{box-sizing:border-box;background:#f2f2f2;box-shadow:0 0 0 1px silver;cursor:default;font-family:sans-serif;color:#444;pointer-events:auto}.picker_wrapper:focus{outline:none}.picker_wrapper button,.picker_wrapper input{box-sizing:border-box;border:none;box-shadow:0 0 0 1px silver;outline:none}.picker_wrapper button:focus,.picker_wrapper button:active,.picker_wrapper input:focus,.picker_wrapper input:active{box-shadow:0 0 2px 1px #1e90ff}.picker_wrapper button{padding:.4em .6em;cursor:pointer;background-color:#f5f5f5;background-image:linear-gradient(0deg, gainsboro, transparent)}.picker_wrapper button:active{background-image:linear-gradient(0deg, transparent, gainsboro)}.picker_wrapper button:hover{background-color:#fff}.picker_selector{position:absolute;z-index:1;display:block;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%);border:2px solid #fff;border-radius:100%;box-shadow:0 0 3px 1px #67b9ff;background:currentColor;cursor:pointer}.picker_slider .picker_selector{border-radius:2px}.picker_hue{position:relative;background-image:linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta, red);box-shadow:0 0 0 1px silver}.picker_sl{position:relative;box-shadow:0 0 0 1px silver;background-image:linear-gradient(180deg, white, rgba(255, 255, 255, 0) 50%),linear-gradient(0deg, black, rgba(0, 0, 0, 0) 50%),linear-gradient(90deg, #808080, rgba(128, 128, 128, 0))}.picker_alpha,.picker_sample{position:relative;background:linear-gradient(45deg, lightgrey 25%, transparent 25%, transparent 75%, lightgrey 75%) 0 0/2em 2em,linear-gradient(45deg, lightgrey 25%, white 25%, white 75%, lightgrey 75%) 1em 1em/2em 2em;box-shadow:0 0 0 1px silver}.picker_alpha .picker_selector,.picker_sample .picker_selector{background:none}.picker_editor input{font-family:monospace;padding:.2em .4em}.picker_sample::before{content:"";position:absolute;display:block;width:100%;height:100%;background:currentColor}.picker_arrow{position:absolute;z-index:-1}.picker_wrapper.popup{position:absolute;z-index:2;margin:1.5em}.picker_wrapper.popup,.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{background:#f2f2f2;box-shadow:0 0 10px 1px rgba(0,0,0,.4)}.picker_wrapper.popup .picker_arrow{width:3em;height:3em;margin:0}.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{content:"";display:block;position:absolute;top:0;left:0;z-index:-99}.picker_wrapper.popup .picker_arrow::before{width:100%;height:100%;-webkit-transform:skew(45deg);transform:skew(45deg);-webkit-transform-origin:0 100%;transform-origin:0 100%}.picker_wrapper.popup .picker_arrow::after{width:150%;height:150%;box-shadow:none}.popup.popup_top{bottom:100%;left:0}.popup.popup_top .picker_arrow{bottom:0;left:0;-webkit-transform:rotate(-90deg);transform:rotate(-90deg)}.popup.popup_bottom{top:100%;left:0}.popup.popup_bottom .picker_arrow{top:0;left:0;-webkit-transform:rotate(90deg) scale(1, -1);transform:rotate(90deg) scale(1, -1)}.popup.popup_left{top:0;right:100%}.popup.popup_left .picker_arrow{top:0;right:0;-webkit-transform:scale(-1, 1);transform:scale(-1, 1)}.popup.popup_right{top:0;left:100%}.popup.popup_right .picker_arrow{top:0;left:0}';
+      document.documentElement.firstElementChild.appendChild(style);
+
+      Picker.StyleElement = style;
+  }
+
   return Picker;
 
-})));
+}));
 
+
+/***/ }),
+
+/***/ 402:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = JsonRepairError;
+
+function JsonRepairError(message, char) {
+  if (!(this instanceof JsonRepairError)) {
+    throw new SyntaxError('Constructor must be called with the new operator');
+  }
+
+  this.message = message + ' (char ' + char + ')';
+  this.char = char;
+  this.stack = new Error().stack;
+}
+
+JsonRepairError.prototype = new Error();
+JsonRepairError.prototype.constructor = Error;
+
+
+/***/ }),
+
+/***/ 3860:
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+module.exports = __webpack_require__(7490)["default"]
+
+
+/***/ }),
+
+/***/ 7490:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+var __webpack_unused_export__;
+
+
+__webpack_unused_export__ = ({
+  value: true
+});
+exports["default"] = jsonrepair;
+
+var _JsonRepairError = _interopRequireDefault(__webpack_require__(402));
+
+var _stringUtils = __webpack_require__(9422);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// token types enumeration
+var DELIMITER = 0;
+var NUMBER = 1;
+var STRING = 2;
+var SYMBOL = 3;
+var WHITESPACE = 4;
+var COMMENT = 5;
+var UNKNOWN = 6;
+/**
+ * @typedef {DELIMITER | NUMBER | STRING | SYMBOL | WHITESPACE | COMMENT | UNKNOWN} TokenType
+ */
+// map with all delimiters
+
+var DELIMITERS = {
+  '': true,
+  '{': true,
+  '}': true,
+  '[': true,
+  ']': true,
+  ':': true,
+  ',': true,
+  // for JSONP and MongoDB data type notation
+  '(': true,
+  ')': true,
+  ';': true,
+  // for string concatenation
+  '+': true
+}; // map with all escape characters
+
+var ESCAPE_CHARACTERS = {
+  '"': '"',
+  '\\': '\\',
+  '/': '/',
+  b: '\b',
+  f: '\f',
+  n: '\n',
+  r: '\r',
+  t: '\t' // \u is handled by getToken()
+
+}; // TODO: can we unify CONTROL_CHARACTERS and ESCAPE_CHARACTERS?
+
+var CONTROL_CHARACTERS = {
+  '\b': '\\b',
+  '\f': '\\f',
+  '\n': '\\n',
+  '\r': '\\r',
+  '\t': '\\t'
+};
+var SYMBOLS = {
+  null: 'null',
+  true: 'true',
+  false: 'false'
+};
+var PYTHON_SYMBOLS = {
+  None: 'null',
+  True: 'true',
+  False: 'false'
+};
+var input = ''; // current json text
+
+var output = ''; // generated output
+
+var index = 0; // current index in text
+
+var c = ''; // current token character in text
+
+var token = ''; // current token
+
+var tokenType = UNKNOWN; // type of current token
+
+/**
+ * Repair a string containing an invalid JSON document.
+ * For example changes JavaScript notation into JSON notation.
+ *
+ * Example:
+ *
+ *     jsonrepair('{name: \'John\'}") // '{"name": "John"}'
+ *
+ * @param {string} text
+ * @return {string}
+ */
+
+function jsonrepair(text) {
+  // initialize
+  input = text;
+  output = '';
+  index = 0;
+  c = input.charAt(0);
+  token = '';
+  tokenType = UNKNOWN; // get first token
+
+  processNextToken();
+  var rootLevelTokenType = tokenType; // parse everything
+
+  parseObject(); // ignore trailing comma
+
+  skipComma();
+
+  if (token === '') {
+    // reached the end of the document properly
+    return output;
+  }
+
+  if (rootLevelTokenType === tokenType && tokenIsStartOfValue()) {
+    // start of a new value after end of the root level object: looks like
+    // newline delimited JSON -> turn into a root level array
+    var stashedOutput = '';
+
+    while (rootLevelTokenType === tokenType && tokenIsStartOfValue()) {
+      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
+      stashedOutput += output;
+      output = ''; // parse next newline delimited item
+
+      parseObject(); // ignore trailing comma
+
+      skipComma();
+    } // wrap the output in an array
+
+
+    return "[\n".concat(stashedOutput).concat(output, "\n]");
+  }
+
+  throw new _JsonRepairError.default('Unexpected characters', index - token.length);
+}
+/**
+ * Get the next character from the expression.
+ * The character is stored into the char c. If the end of the expression is
+ * reached, the function puts an empty string in c.
+ */
+
+
+function next() {
+  index++;
+  c = input.charAt(index); // Note: not using input[index] because that returns undefined when index is out of range
+}
+/**
+ * Special version of the function next, used to parse escaped strings
+ */
+
+
+function nextSkipEscape() {
+  next();
+
+  if (c === '\\') {
+    next();
+  }
+}
+/**
+ * check whether the current token is the start of a value:
+ * object, array, number, string, or symbol
+ * @returns {boolean}
+ */
+
+
+function tokenIsStartOfValue() {
+  return tokenType === DELIMITER && (token === '[' || token === '{') || tokenType === STRING || tokenType === NUMBER || tokenType === SYMBOL;
+}
+/**
+ * check whether the current token is the start of a key (or possible key):
+ * number, string, or symbol
+ * @returns {boolean}
+ */
+
+
+function tokenIsStartOfKey() {
+  return tokenType === STRING || tokenType === NUMBER || tokenType === SYMBOL;
+}
+/**
+ * Process the previous token, and get next token in the current text
+ */
+
+
+function processNextToken() {
+  output += token;
+  tokenType = UNKNOWN;
+  token = '';
+  getTokenDelimiter();
+
+  if (tokenType === WHITESPACE) {
+    // we leave the whitespace as it is, except replacing special white
+    // space character
+    token = (0, _stringUtils.normalizeWhitespace)(token);
+    processNextToken();
+  }
+
+  if (tokenType === COMMENT) {
+    // ignore comments
+    tokenType = UNKNOWN;
+    token = '';
+    processNextToken();
+  }
+}
+
+function skipComma() {
+  if (token === ',') {
+    token = '';
+    tokenType = UNKNOWN;
+    processNextToken();
+  }
+} // check for delimiters like ':', '{', ']'
+
+
+function getTokenDelimiter() {
+  if (DELIMITERS[c]) {
+    tokenType = DELIMITER;
+    token = c;
+    next();
+    return;
+  }
+
+  getTokenNumber();
+} // check for a number like "2.3e+5"
+
+
+function getTokenNumber() {
+  if ((0, _stringUtils.isDigit)(c) || c === '-') {
+    tokenType = NUMBER;
+
+    if (c === '-') {
+      token += c;
+      next();
+
+      if (!(0, _stringUtils.isDigit)(c)) {
+        throw new _JsonRepairError.default('Invalid number, digit expected', index);
+      }
+    } else if (c === '0') {
+      token += c;
+      next();
+    } else {// digit 1-9, nothing extra to do
+    }
+
+    while ((0, _stringUtils.isDigit)(c)) {
+      token += c;
+      next();
+    }
+
+    if (c === '.') {
+      token += c;
+      next();
+
+      if (!(0, _stringUtils.isDigit)(c)) {
+        throw new _JsonRepairError.default('Invalid number, digit expected', index);
+      }
+
+      while ((0, _stringUtils.isDigit)(c)) {
+        token += c;
+        next();
+      }
+    }
+
+    if (c === 'e' || c === 'E') {
+      token += c;
+      next();
+
+      if (c === '+' || c === '-') {
+        token += c;
+        next();
+      }
+
+      if (!(0, _stringUtils.isDigit)(c)) {
+        throw new _JsonRepairError.default('Invalid number, digit expected', index);
+      }
+
+      while ((0, _stringUtils.isDigit)(c)) {
+        token += c;
+        next();
+      }
+    }
+
+    return;
+  }
+
+  getTokenEscapedString();
+} // get a token string like '\"hello world\"'
+
+
+function getTokenEscapedString() {
+  if (c === '\\' && input.charAt(index + 1) === '"') {
+    // an escaped piece of JSON
+    next();
+    getTokenString(nextSkipEscape);
+  } else {
+    getTokenString(next);
+  }
+} // get a token string like '"hello world"'
+
+
+function getTokenString(getNext) {
+  if ((0, _stringUtils.isQuote)(c)) {
+    var quote = (0, _stringUtils.normalizeQuote)(c);
+    var isEndQuote = (0, _stringUtils.isSingleQuote)(c) ? _stringUtils.isSingleQuote : _stringUtils.isDoubleQuote;
+    token += '"'; // output valid double quote
+
+    tokenType = STRING;
+    getNext(); // eslint-disable-next-line no-unmodified-loop-condition
+
+    while (c !== '' && !isEndQuote(c)) {
+      if (c === '\\') {
+        // handle escape characters
+        getNext();
+        var unescaped = ESCAPE_CHARACTERS[c];
+
+        if (unescaped !== undefined) {
+          token += '\\' + c;
+          getNext();
+        } else if (c === 'u') {
+          // parse escaped unicode character, like '\\u260E'
+          token += "\\u";
+          getNext();
+
+          for (var u = 0; u < 4; u++) {
+            if (!(0, _stringUtils.isHex)(c)) {
+              throw new _JsonRepairError.default('Invalid unicode character', index - token.length);
+            }
+
+            token += c;
+            getNext();
+          }
+        } else if (c === '\'') {
+          // escaped single quote character -> remove the escape character
+          token += '\'';
+          getNext();
+        } else {
+          throw new _JsonRepairError.default('Invalid escape character "\\' + c + '"', index);
+        }
+      } else if (CONTROL_CHARACTERS[c]) {
+        // unescaped special character
+        // fix by adding an escape character
+        token += CONTROL_CHARACTERS[c];
+        getNext();
+      } else if (c === '"') {
+        // unescaped double quote -> escape it
+        token += '\\"';
+        getNext();
+      } else {
+        // a regular character
+        token += c;
+        getNext();
+      }
+    }
+
+    if ((0, _stringUtils.normalizeQuote)(c) !== quote) {
+      throw new _JsonRepairError.default('End of string expected', index - token.length);
+    }
+
+    token += '"'; // output valid double quote
+
+    getNext();
+    return;
+  }
+
+  getTokenAlpha();
+} // check for symbols (true, false, null)
+
+
+function getTokenAlpha() {
+  if ((0, _stringUtils.isAlpha)(c)) {
+    tokenType = SYMBOL;
+
+    while ((0, _stringUtils.isAlpha)(c) || (0, _stringUtils.isDigit)(c) || c === '$') {
+      token += c;
+      next();
+    }
+
+    return;
+  }
+
+  getTokenWhitespace();
+} // get whitespaces: space, tab, newline, and carriage return
+
+
+function getTokenWhitespace() {
+  if ((0, _stringUtils.isWhitespace)(c) || (0, _stringUtils.isSpecialWhitespace)(c)) {
+    tokenType = WHITESPACE;
+
+    while ((0, _stringUtils.isWhitespace)(c) || (0, _stringUtils.isSpecialWhitespace)(c)) {
+      token += c;
+      next();
+    }
+
+    return;
+  }
+
+  getTokenComment();
+}
+
+function getTokenComment() {
+  // find a block comment '/* ... */'
+  if (c === '/' && input[index + 1] === '*') {
+    tokenType = COMMENT;
+
+    while (c !== '' && (c !== '*' || c === '*' && input[index + 1] !== '/')) {
+      token += c;
+      next();
+    }
+
+    if (c === '*' && input[index + 1] === '/') {
+      token += c;
+      next();
+      token += c;
+      next();
+    }
+
+    return;
+  } // find a comment '// ...'
+
+
+  if (c === '/' && input[index + 1] === '/') {
+    tokenType = COMMENT;
+
+    while (c !== '' && c !== '\n') {
+      token += c;
+      next();
+    }
+
+    return;
+  }
+
+  getTokenUnknown();
+} // something unknown is found, wrong characters -> a syntax error
+
+
+function getTokenUnknown() {
+  tokenType = UNKNOWN;
+
+  while (c !== '') {
+    token += c;
+    next();
+  }
+
+  throw new _JsonRepairError.default('Syntax error in part "' + token + '"', index - token.length);
+}
+/**
+ * Parse an object like '{"key": "value"}'
+ * @return {*}
+ */
+
+
+function parseObject() {
+  if (tokenType === DELIMITER && token === '{') {
+    processNextToken(); // TODO: can we make this redundant?
+
+    if (tokenType === DELIMITER && token === '}') {
+      // empty object
+      processNextToken();
+      return;
+    }
+
+    while (true) {
+      // parse key
+      if (tokenType === SYMBOL || tokenType === NUMBER) {
+        // unquoted key -> add quotes around it, change it into a string
+        tokenType = STRING;
+        token = "\"".concat(token, "\"");
+      }
+
+      if (tokenType !== STRING) {
+        // TODO: handle ambiguous cases like '[{"a":1,{"b":2}]' which could be an array with two objects or one
+        throw new _JsonRepairError.default('Object key expected', index - token.length);
+      }
+
+      processNextToken(); // parse colon (key/value separator)
+
+      if (tokenType === DELIMITER && token === ':') {
+        processNextToken();
+      } else {
+        if (tokenIsStartOfValue()) {
+          // we expect a colon here, but got the start of a value
+          // -> insert a colon before any inserted whitespaces at the end of output
+          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ':');
+        } else {
+          throw new _JsonRepairError.default('Colon expected', index - token.length);
+        }
+      } // parse value
+
+
+      parseObject(); // parse comma (key/value pair separator)
+
+      if (tokenType === DELIMITER && token === ',') {
+        processNextToken();
+
+        if (tokenType === DELIMITER && token === '}') {
+          // we've just passed a trailing comma -> remove the trailing comma
+          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
+          break;
+        }
+
+        if (token === '') {
+          // end of json reached, but missing }
+          // Strip the missing comma (the closing bracket will be added later)
+          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
+          break;
+        }
+      } else {
+        if (tokenIsStartOfKey()) {
+          // we expect a comma here, but got the start of a new key
+          // -> insert a comma before any inserted whitespaces at the end of output
+          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
+        } else {
+          break;
+        }
+      }
+    }
+
+    if (tokenType === DELIMITER && token === '}') {
+      processNextToken();
+    } else {
+      // missing end bracket -> insert the missing bracket
+      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, '}');
+    }
+
+    return;
+  }
+
+  parseArray();
+}
+/**
+ * Parse an object like '["item1", "item2", ...]'
+ */
+
+
+function parseArray() {
+  if (tokenType === DELIMITER && token === '[') {
+    processNextToken();
+
+    if (tokenType === DELIMITER && token === ']') {
+      // empty array
+      processNextToken();
+      return;
+    }
+
+    while (true) {
+      // parse item
+      parseObject(); // parse comma (item separator)
+
+      if (tokenType === DELIMITER && token === ',') {
+        processNextToken();
+
+        if (tokenType === DELIMITER && token === ']') {
+          // we've just passed a trailing comma -> remove the trailing comma
+          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
+          break;
+        }
+
+        if (token === '') {
+          // end of json reached, but missing ]
+          // Strip the missing comma (the closing bracket will be added later)
+          output = (0, _stringUtils.stripLastOccurrence)(output, ',');
+          break;
+        }
+      } else {
+        if (tokenIsStartOfValue()) {
+          // we expect a comma here, but got the start of a new item
+          // -> insert a comma before any inserted whitespaces at the end of output
+          output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ',');
+        } else {
+          break;
+        }
+      }
+    }
+
+    if (tokenType === DELIMITER && token === ']') {
+      processNextToken();
+    } else {
+      // missing end bracket -> insert the missing bracket
+      output = (0, _stringUtils.insertBeforeLastWhitespace)(output, ']');
+    }
+
+    return;
+  }
+
+  parseString();
+}
+/**
+ * Parse a string enclosed by double quotes "...". Can contain escaped quotes
+ */
+
+
+function parseString() {
+  if (tokenType === STRING) {
+    processNextToken();
+
+    while (tokenType === DELIMITER && token === '+') {
+      // string concatenation like "hello" + "world"
+      token = ''; // don't output the concatenation
+
+      processNextToken();
+
+      if (tokenType === STRING) {
+        // concatenate with the previous string
+        var endIndex = output.lastIndexOf('"');
+        output = output.substring(0, endIndex) + token.substring(1);
+        token = '';
+        processNextToken();
+      }
+    }
+
+    return;
+  }
+
+  parseNumber();
+}
+/**
+ * Parse a number
+ */
+
+
+function parseNumber() {
+  if (tokenType === NUMBER) {
+    processNextToken();
+    return;
+  }
+
+  parseSymbol();
+}
+/**
+ * Parse constants true, false, null
+ */
+
+
+function parseSymbol() {
+  if (tokenType === SYMBOL) {
+    // a supported symbol: true, false, null
+    if (SYMBOLS[token]) {
+      processNextToken();
+      return;
+    } // for example replace None with null
+
+
+    if (PYTHON_SYMBOLS[token]) {
+      token = PYTHON_SYMBOLS[token];
+      processNextToken();
+      return;
+    } // make a copy of the symbol, let's see what comes next
+
+
+    var symbol = token;
+    var symbolIndex = output.length;
+    token = '';
+    processNextToken(); // if (tokenType === DELIMITER && token === '(') {
+
+    if (tokenType === DELIMITER && token === '(') {
+      // a MongoDB function call or JSONP call
+      // Can be a MongoDB data type like in {"_id": ObjectId("123")}
+      // token = '' // do not output the function name
+      // processNextToken()
+      // next()
+      token = ''; // do not output the ( character
+
+      processNextToken(); // process the part inside the brackets
+
+      parseObject(); // skip the closing bracket ")" and ");"
+
+      if (tokenType === DELIMITER && token === ')') {
+        token = ''; // do not output the ) character
+
+        processNextToken();
+
+        if (tokenType === DELIMITER && token === ';') {
+          token = ''; // do not output the semicolon character
+
+          processNextToken();
+        }
+      }
+
+      return;
+    } // unknown symbol => turn into in a string
+    // it is possible that by reading the next token we already inserted
+    // extra spaces in the output which should be inside the string,
+    // hence the symbolIndex
+
+
+    output = (0, _stringUtils.insertAtIndex)(output, "\"".concat(symbol), symbolIndex);
+
+    while (tokenType === SYMBOL || tokenType === NUMBER) {
+      processNextToken();
+    }
+
+    output += '"';
+    return;
+  }
+
+  parseEnd();
+}
+/**
+ * Evaluated when the expression is not yet ended but expected to end
+ */
+
+
+function parseEnd() {
+  if (token === '') {
+    // syntax error or unexpected end of expression
+    throw new _JsonRepairError.default('Unexpected end of json string', index - token.length);
+  } else {
+    throw new _JsonRepairError.default('Value expected', index - token.length);
+  }
+}
+
+
+/***/ }),
+
+/***/ 9422:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.isAlpha = isAlpha;
+exports.isHex = isHex;
+exports.isDigit = isDigit;
+exports.isWhitespace = isWhitespace;
+exports.isSpecialWhitespace = isSpecialWhitespace;
+exports.normalizeWhitespace = normalizeWhitespace;
+exports.isQuote = isQuote;
+exports.isSingleQuote = isSingleQuote;
+exports.isDoubleQuote = isDoubleQuote;
+exports.normalizeQuote = normalizeQuote;
+exports.stripLastOccurrence = stripLastOccurrence;
+exports.insertBeforeLastWhitespace = insertBeforeLastWhitespace;
+exports.insertAtIndex = insertAtIndex;
+var SINGLE_QUOTES = {
+  '\'': true,
+  // quote
+  "\u2018": true,
+  // quote left
+  "\u2019": true,
+  // quote right
+  "`": true,
+  // grave accent
+  "\xB4": true // acute accent
+
+};
+var DOUBLE_QUOTES = {
+  '"': true,
+  "\u201C": true,
+  // double quote left
+  "\u201D": true // double quote right
+
+};
+/**
+ * Check if the given character contains an alpha character, a-z, A-Z, _
+ * @param {string} c
+ * @return {boolean}
+ */
+
+function isAlpha(c) {
+  return ALPHA_REGEX.test(c);
+}
+
+var ALPHA_REGEX = /^[a-zA-Z_]$/;
+/**
+ * Check if the given character contains a hexadecimal character 0-9, a-f, A-F
+ * @param {string} c
+ * @return {boolean}
+ */
+
+function isHex(c) {
+  return HEX_REGEX.test(c);
+}
+
+var HEX_REGEX = /^[0-9a-fA-F]$/;
+/**
+ * checks if the given char c is a digit
+ * @param {string} c
+ * @return {boolean}
+ */
+
+function isDigit(c) {
+  return DIGIT_REGEX.test(c);
+}
+
+var DIGIT_REGEX = /^[0-9]$/;
+/**
+ * Check if the given character is a whitespace character like space, tab, or
+ * newline
+ * @param {string} c
+ * @return {boolean}
+ */
+
+function isWhitespace(c) {
+  return c === ' ' || c === '\t' || c === '\n' || c === '\r';
+}
+/**
+ * Check if the given character is a special whitespace character, some
+ * unicode variant
+ * @param {string} c
+ * @return {boolean}
+ */
+
+
+function isSpecialWhitespace(c) {
+  return c === "\xA0" || c >= "\u2000" && c <= "\u200A" || c === "\u202F" || c === "\u205F" || c === "\u3000";
+}
+/**
+ * Replace speical whitespace characters with regular spaces
+ * @param {string} text
+ * @returns {string}
+ */
+
+
+function normalizeWhitespace(text) {
+  var normalized = '';
+
+  for (var i = 0; i < text.length; i++) {
+    var char = text[i];
+    normalized += isSpecialWhitespace(char) ? ' ' : char;
+  }
+
+  return normalized;
+}
+/**
+ * Test whether the given character is a quote or double quote character.
+ * Also tests for special variants of quotes.
+ * @param {string} c
+ * @returns {boolean}
+ */
+
+
+function isQuote(c) {
+  return SINGLE_QUOTES[c] === true || DOUBLE_QUOTES[c] === true;
+}
+/**
+ * Test whether the given character is a single quote character.
+ * Also tests for special variants of single quotes.
+ * @param {string} c
+ * @returns {boolean}
+ */
+
+
+function isSingleQuote(c) {
+  return SINGLE_QUOTES[c] === true;
+}
+/**
+ * Test whether the given character is a double quote character.
+ * Also tests for special variants of double quotes.
+ * @param {string} c
+ * @returns {boolean}
+ */
+
+
+function isDoubleQuote(c) {
+  return DOUBLE_QUOTES[c] === true;
+}
+/**
+ * Normalize special double or single quote characters to their regular
+ * variant ' or "
+ * @param {string} c
+ * @returns {string}
+ */
+
+
+function normalizeQuote(c) {
+  if (SINGLE_QUOTES[c] === true) {
+    return '\'';
+  }
+
+  if (DOUBLE_QUOTES[c] === true) {
+    return '"';
+  }
+
+  return c;
+}
+/**
+ * Strip last occurrence of textToStrip from text
+ * @param {string} text
+ * @param {string} textToStrip
+ * @returns {string}
+ */
+
+
+function stripLastOccurrence(text, textToStrip) {
+  var index = text.lastIndexOf(textToStrip);
+  return index !== -1 ? text.substring(0, index) + text.substring(index + 1) : text;
+}
+/**
+ * Insert textToInsert into text before the last whitespace in text
+ * @param {string} text
+ * @param {string} textToInsert
+ * @returns {string}
+ */
+
+
+function insertBeforeLastWhitespace(text, textToInsert) {
+  var index = text.length;
+
+  if (!isWhitespace(text[index - 1])) {
+    // no trailing whitespaces
+    return text + textToInsert;
+  }
+
+  while (isWhitespace(text[index - 1])) {
+    index--;
+  }
+
+  return text.substring(0, index) + textToInsert + text.substring(index);
+}
+/**
+ * Insert textToInsert at index in text
+ * @param {string} text
+ * @param {string} textToInsert
+ * @param {number} index
+ * @returns {string}
+ */
+
+
+function insertAtIndex(text, textToInsert, index) {
+  return text.substring(0, index) + textToInsert + text.substring(index);
+}
+
+
+/***/ }),
+
+/***/ 894:
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-07/schema#","$id":"https://raw.githubusercontent.com/ajv-validator/ajv/master/lib/refs/data.json#","description":"Meta-schema for $data reference (JSON Schema extension proposal)","type":"object","required":["$data"],"properties":{"$data":{"type":"string","anyOf":[{"format":"relative-json-pointer"},{"format":"json-pointer"}]}},"additionalProperties":false}');
+
+/***/ }),
+
+/***/ 7171:
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"id":"http://json-schema.org/draft-04/schema#","$schema":"http://json-schema.org/draft-04/schema#","description":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"positiveInteger":{"type":"integer","minimum":0},"positiveIntegerDefault0":{"allOf":[{"$ref":"#/definitions/positiveInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"minItems":1,"uniqueItems":true}},"type":"object","properties":{"id":{"type":"string"},"$schema":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"default":{},"multipleOf":{"type":"number","minimum":0,"exclusiveMinimum":true},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"boolean","default":false},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"boolean","default":false},"maxLength":{"$ref":"#/definitions/positiveInteger"},"minLength":{"$ref":"#/definitions/positiveIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"anyOf":[{"type":"boolean"},{"$ref":"#"}],"default":{}},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":{}},"maxItems":{"$ref":"#/definitions/positiveInteger"},"minItems":{"$ref":"#/definitions/positiveIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"maxProperties":{"$ref":"#/definitions/positiveInteger"},"minProperties":{"$ref":"#/definitions/positiveIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"anyOf":[{"type":"boolean"},{"$ref":"#"}],"default":{}},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"enum":{"type":"array","minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"dependencies":{"exclusiveMaximum":["maximum"],"exclusiveMinimum":["minimum"]},"default":{}}');
+
+/***/ }),
+
+/***/ 6273:
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-06/schema#","$id":"http://json-schema.org/draft-06/schema#","title":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"nonNegativeInteger":{"type":"integer","minimum":0},"nonNegativeIntegerDefault0":{"allOf":[{"$ref":"#/definitions/nonNegativeInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"uniqueItems":true,"default":[]}},"type":["object","boolean"],"properties":{"$id":{"type":"string","format":"uri-reference"},"$schema":{"type":"string","format":"uri"},"$ref":{"type":"string","format":"uri-reference"},"title":{"type":"string"},"description":{"type":"string"},"default":{},"examples":{"type":"array","items":{}},"multipleOf":{"type":"number","exclusiveMinimum":0},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"number"},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"number"},"maxLength":{"$ref":"#/definitions/nonNegativeInteger"},"minLength":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"$ref":"#"},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":{}},"maxItems":{"$ref":"#/definitions/nonNegativeInteger"},"minItems":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"contains":{"$ref":"#"},"maxProperties":{"$ref":"#/definitions/nonNegativeInteger"},"minProperties":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"$ref":"#"},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"propertyNames":{"$ref":"#"},"const":{},"enum":{"type":"array","minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"default":{}}');
+
+/***/ }),
+
+/***/ 6680:
+/***/ (function(module) {
+
+"use strict";
+module.exports = JSON.parse('{"$schema":"http://json-schema.org/draft-07/schema#","$id":"http://json-schema.org/draft-07/schema#","title":"Core schema meta-schema","definitions":{"schemaArray":{"type":"array","minItems":1,"items":{"$ref":"#"}},"nonNegativeInteger":{"type":"integer","minimum":0},"nonNegativeIntegerDefault0":{"allOf":[{"$ref":"#/definitions/nonNegativeInteger"},{"default":0}]},"simpleTypes":{"enum":["array","boolean","integer","null","number","object","string"]},"stringArray":{"type":"array","items":{"type":"string"},"uniqueItems":true,"default":[]}},"type":["object","boolean"],"properties":{"$id":{"type":"string","format":"uri-reference"},"$schema":{"type":"string","format":"uri"},"$ref":{"type":"string","format":"uri-reference"},"$comment":{"type":"string"},"title":{"type":"string"},"description":{"type":"string"},"default":true,"readOnly":{"type":"boolean","default":false},"examples":{"type":"array","items":true},"multipleOf":{"type":"number","exclusiveMinimum":0},"maximum":{"type":"number"},"exclusiveMaximum":{"type":"number"},"minimum":{"type":"number"},"exclusiveMinimum":{"type":"number"},"maxLength":{"$ref":"#/definitions/nonNegativeInteger"},"minLength":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"pattern":{"type":"string","format":"regex"},"additionalItems":{"$ref":"#"},"items":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/schemaArray"}],"default":true},"maxItems":{"$ref":"#/definitions/nonNegativeInteger"},"minItems":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"uniqueItems":{"type":"boolean","default":false},"contains":{"$ref":"#"},"maxProperties":{"$ref":"#/definitions/nonNegativeInteger"},"minProperties":{"$ref":"#/definitions/nonNegativeIntegerDefault0"},"required":{"$ref":"#/definitions/stringArray"},"additionalProperties":{"$ref":"#"},"definitions":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"properties":{"type":"object","additionalProperties":{"$ref":"#"},"default":{}},"patternProperties":{"type":"object","additionalProperties":{"$ref":"#"},"propertyNames":{"format":"regex"},"default":{}},"dependencies":{"type":"object","additionalProperties":{"anyOf":[{"$ref":"#"},{"$ref":"#/definitions/stringArray"}]}},"propertyNames":{"$ref":"#"},"const":true,"enum":{"type":"array","items":true,"minItems":1,"uniqueItems":true},"type":{"anyOf":[{"$ref":"#/definitions/simpleTypes"},{"type":"array","items":{"$ref":"#/definitions/simpleTypes"},"minItems":1,"uniqueItems":true}]},"format":{"type":"string"},"contentMediaType":{"type":"string"},"contentEncoding":{"type":"string"},"if":{"$ref":"#"},"then":{"$ref":"#"},"else":{"$ref":"#"},"allOf":{"$ref":"#/definitions/schemaArray"},"anyOf":{"$ref":"#/definitions/schemaArray"},"oneOf":{"$ref":"#/definitions/schemaArray"},"not":{"$ref":"#"}},"default":true}');
 
 /***/ })
 
