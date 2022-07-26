@@ -32,6 +32,10 @@ const onMessage = (request, {tab}, response) => {
         target,
         files: ['data/view/json-editor/extra.css']
       });
+      await chrome.scripting.insertCSS({
+        target,
+        files: ['data/view/json-editor/dark.css']
+      });
       await chrome.scripting.executeScript({
         target,
         files: ['data/view/json-editor/jsoneditor.js']
@@ -80,6 +84,39 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
       contexts: ['action'],
       id: 'preview'
     });
+    chrome.contextMenus.create({
+      title: 'Theme',
+      contexts: ['action'],
+      id: 'theme'
+    });
+    chrome.storage.local.get({
+      theme: 'system-theme'
+    }, prefs => {
+      chrome.contextMenus.create({
+        title: 'Light',
+        contexts: ['action'],
+        id: 'light-theme',
+        parentId: 'theme',
+        type: 'radio',
+        checked: prefs.theme === 'light-theme'
+      });
+      chrome.contextMenus.create({
+        title: 'Dark',
+        contexts: ['action'],
+        id: 'dark-theme',
+        parentId: 'theme',
+        type: 'radio',
+        checked: prefs.theme === 'dark-theme'
+      });
+      chrome.contextMenus.create({
+        title: 'System',
+        contexts: ['action'],
+        id: 'system-theme',
+        parentId: 'theme',
+        type: 'radio',
+        checked: prefs.theme === 'system-theme'
+      });
+    });
   };
   chrome.runtime.onStartup.addListener(startup);
   chrome.runtime.onInstalled.addListener(startup);
@@ -110,6 +147,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         func: () => alert('Invalid JSON string')
       });
     }
+  }
+  else if (info.menuItemId.endsWith('-theme')) {
+    chrome.storage.local.set({
+      theme: info.menuItemId
+    });
   }
 });
 

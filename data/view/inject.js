@@ -1,6 +1,37 @@
 /* globals JSONEditor */
 'use strict';
 
+// theme
+const theme = () => {
+  theme.alter(theme.m);
+
+  chrome.storage.local.get({
+    theme: 'system-theme'
+  }, prefs => {
+    theme.m.removeListener(theme.alter);
+
+    if (prefs.theme === 'light-theme') {
+      document.body.classList.remove('dark');
+    }
+    else if (prefs.theme === 'dark-theme') {
+      document.body.classList.add('dark');
+    }
+    else if (prefs.theme === 'system-theme') {
+      theme.m.addListener(theme.alter);
+    }
+  });
+};
+theme.m = matchMedia('(prefers-color-scheme: dark)');
+theme.alter = e => {
+  document.body.classList[e.matches ? 'add' : 'remove']('dark');
+};
+theme();
+chrome.storage.onChanged.addListener(ps => {
+  if (ps.theme) {
+    theme();
+  }
+});
+
 // const meta = document.createElement('meta');
 // meta.setAttribute('http-equiv', 'Content-Security-Policy');
 // meta.setAttribute('content', `img-src data: chrome-extension:`);

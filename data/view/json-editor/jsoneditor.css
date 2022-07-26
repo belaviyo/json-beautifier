@@ -1156,7 +1156,7 @@ pre.jsoneditor-preview,
 }
 
 .jsoneditor .jsoneditor-text-errors tr.parse-error {
-  background-color: #ee2e2e70;
+  background-color: rgba(238, 46, 46, 0.4392156863);
 }
 
 .jsoneditor-text-errors .jsoneditor-schema-error {
