@@ -32,10 +32,12 @@ const onMessage = (request, {tab}, response) => {
         target,
         files: ['data/view/json-editor/extra.css']
       });
+      console.log(1);
       await chrome.scripting.insertCSS({
         target,
         files: ['data/view/json-editor/dark.css']
       });
+      console.log(2);
       await chrome.scripting.executeScript({
         target,
         files: ['data/view/json-editor/jsoneditor.js']

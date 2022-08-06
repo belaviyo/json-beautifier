@@ -46,6 +46,7 @@ document.body.classList.add('jsb');
 
 function buttons() {
   const menu = document.querySelector('.jsoneditor-menu');
+  // save
   if (menu) {
     const button = document.createElement('button');
     button.classList.add('save');
@@ -79,6 +80,38 @@ function buttons() {
       a.click();
       URL.revokeObjectURL(href);
     };
+  }
+  // refresh
+  if (menu) {
+    const button = document.createElement('button');
+    button.classList.add('refresh');
+    button.title = 'Refresh JSON from the server';
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 512 512');
+    const p1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p1.setAttribute('d', 'M64,256H34A222,222,0,0,1,430,118.15V85h30V190H355V160h67.27A192.21,192.21,0,0,0,256,64C150.13,64,64,150.13,64,256Zm384,0c0,105.87-86.13,192-192,192A192.21,192.21,0,0,1,89.73,352H157V322H52V427H82V393.85A222,222,0,0,0,478,256Z');
+    svg.appendChild(p1);
+    button.appendChild(svg);
+    button.style.background = 'none';
+    menu.insertBefore(button, menu.firstChild);
+    button.onclick = e => {
+      e.stopPropagation();
+      e.preventDefault();
+
+      const b = e.target.closest('button');
+      b.classList.add('updating');
+      Promise.all([
+        new Promise(resolve => setTimeout(resolve, 1000)),
+        fetch(location.href).then(r => r.json())
+      ]).then(([, json]) => {
+        editor.update(json);
+        b.title = 'Last Update: ' + (new Date()).toString();
+      }).catch(e => {
+        console.warn(e);
+        alert(e.message);
+      }).finally(() => b.classList.remove('updating'));
+    };
+    button.disabled = location.href.startsWith('http') === false;
   }
 }
 

@@ -371,6 +371,7 @@ body.dark .selectr-container :-ms-input-placeholder {
 body.dark .selectr-container ::placeholder {
   color: #6c7a86;
 }
+body.dark .refresh,
 body.dark .save {
   fill: #adadae;
 }
