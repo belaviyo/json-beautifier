@@ -14,9 +14,14 @@ else if (args.has('remote')) {
   chrome.runtime.sendMessage({
     method: 'get-json'
   }, o => {
-    document.querySelector('pre').textContent = JSON.stringify(o.json);
-    document.title = o.title;
-    next();
+    if (o) {
+      document.querySelector('pre').textContent = JSON.stringify(o.json);
+      document.title = o.title;
+      next();
+    }
+    else {
+      location.href = args.get('href');
+    }
   });
 }
 else {

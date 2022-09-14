@@ -1,4 +1,4 @@
-/* globals JSONEditor */
+/* global JSONEditor */
 'use strict';
 
 // theme
@@ -68,7 +68,7 @@ function buttons() {
       e.preventDefault();
       let content = editor.getText();
       if (['text', 'code', 'preview'].some(a => a === editor.mode) === false) {
-        content = JSON.stringify(editor.get(), null, 2);
+        content = self.stringify(editor.get(), null, 2);
       }
       const blob = new Blob([content], {
         type: 'application/json;charset=utf-8'
@@ -118,7 +118,14 @@ function buttons() {
 function render() {
   const content = document.body.textContent.trim();
   try {
-    const json = JSON.parse(content);
+    let json;
+
+    try {
+      json = self.parse(content);
+    }
+    catch (e) {
+      json = JSON.parse(content);
+    }
     const container = document.querySelector('pre');
     container.textContent = '';
 
@@ -130,6 +137,19 @@ function render() {
         chrome.storage.local.set({
           mode
         });
+      },
+      // support for custom "Big Number"
+      onEditable({path, field, value}) {
+        if (field === 'type' && value === 'Big Number') {
+          return false;
+        }
+        if (field === 'value' && typeof value === 'string' && /[-\d.]{10,}n/.test(value)) {
+          return {
+            field: false,
+            value: true
+          };
+        }
+        return true;
       },
       onCreateMenu(items, node) {
         items.push({
@@ -165,7 +185,7 @@ function render() {
             }, {
               path: node.paths[node.paths.length - 1]
             });
-            navigator.clipboard.writeText(nodes.map(node => JSON.stringify(node.value, null, '  ')).join('\n'));
+            navigator.clipboard.writeText(nodes.map(node => self.stringify(node.value, null, '  ')).join('\n'));
           }
         });
         items.push({
@@ -179,7 +199,7 @@ function render() {
             }, {
               path: node.paths[node.paths.length - 1]
             });
-            navigator.clipboard.writeText(nodes.map(node => JSON.stringify(node.value, null, '  ')).join('\n'));
+            navigator.clipboard.writeText(nodes.map(node => self.stringify(node.value, null, '  ')).join('\n'));
           }
         });
 
@@ -221,6 +241,7 @@ function render() {
     });
   }
   catch (e) {
+    console.log(e);
     document.body.classList.remove('jsb');
   }
   document.body.dataset.loaded = true;

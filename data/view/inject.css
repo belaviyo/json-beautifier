@@ -13,6 +13,10 @@ body.jsb[data-loaded="true"] {
 }
 
 body.jsb pre {
+  all: initial;
   margin: 0;
+}
+body.jsb,
+body.jsb > pre {
   height: 100vh;
 }

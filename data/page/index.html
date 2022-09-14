@@ -5,14 +5,28 @@
   <link rel="stylesheet" type="text/css" href="/data/view/inject.css">
   <link rel="stylesheet" type="text/css" href="/data/view/json-editor/jsoneditor.css">
   <link rel="stylesheet" type="text/css" href="/data/view/json-editor/extra.css">
+  <link rel="stylesheet" type="text/css" href="/data/view/json-editor/dark.css">
   <meta charset="utf-8">
 </head>
 <body>
   <pre>{
-  "sample": [1, 2, 3]
+  "number": 123,
+  "string": "sample data",
+  "number string": "8143661439548533232",
+  "array": [1, 2, 3, 8143661439548533232, "8143661439548533232"],
+  "big number": 8143661439548533232,
+  "object": {
+    "complex": [
+      -73.98997899999999,
+      40.668254
+    ],
+    "type": "Point"
+  }
 }</pre>
 
   <script type="text/javascript" src="index.js"></script>
+  <script type="text/javascript" src="/data/view/json/parse.js"></script>
+  <script type="text/javascript" src="/data/view/json/stringify.js"></script>
   <script type="text/javascript" src="/data/view/json-editor/jsoneditor.js"></script>
   <script type="text/javascript" src="/data/view/ace/theme/twilight.js"></script>
 </body>

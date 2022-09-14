@@ -4,10 +4,10 @@ const css = async () => {
   if (css.r) {
     return css.r;
   }
-  const content = await fetch('data/view/json-editor/jsoneditor.css').then(r => r.text());
+  const content = await fetch('/data/view/json-editor/jsoneditor.css').then(r => r.text());
   css.r = content.replaceAll(
     'url("img/jsoneditor-icons.svg")',
-    `url("${chrome.runtime.getURL('data/view/json-editor/img/jsoneditor-icons.svg')}")`
+    `url("${chrome.runtime.getURL('/data/view/json-editor/img/jsoneditor-icons.svg')}")`
   );
   return css.r;
 };
@@ -22,7 +22,7 @@ const onMessage = (request, {tab}, response) => {
     };
     chrome.scripting.insertCSS({
       target,
-      files: ['data/view/inject.css']
+      files: ['/data/view/inject.css']
     }).then(async () => {
       await chrome.scripting.insertCSS({
         target,
@@ -30,32 +30,38 @@ const onMessage = (request, {tab}, response) => {
       });
       await chrome.scripting.insertCSS({
         target,
-        files: ['data/view/json-editor/extra.css']
+        files: ['/data/view/json-editor/extra.css']
       });
-      console.log(1);
       await chrome.scripting.insertCSS({
         target,
-        files: ['data/view/json-editor/dark.css']
-      });
-      console.log(2);
-      await chrome.scripting.executeScript({
-        target,
-        files: ['data/view/json-editor/jsoneditor.js']
+        files: ['/data/view/json-editor/dark.css']
       });
       await chrome.scripting.executeScript({
         target,
-        files: ['data/view/ace/theme/twilight.js']
+        files: ['/data/view/json-editor/jsoneditor.js']
       });
       await chrome.scripting.executeScript({
         target,
-        files: ['data/view/inject.js']
+        files: ['/data/view/ace/theme/twilight.js']
+      });
+      await chrome.scripting.executeScript({
+        target,
+        files: ['/data/view/json/parse.js']
+      });
+      await chrome.scripting.executeScript({
+        target,
+        files: ['/data/view/json/stringify.js']
+      });
+      await chrome.scripting.executeScript({
+        target,
+        files: ['/data/view/inject.js']
       });
     });
   }
   else if (request.method === 'alternative-interface') {
     cache[tab.id] = request;
     chrome.tabs.update(tab.id, {
-      url: '/data/page/index.html?remote'
+      url: '/data/page/index.html?remote&href=' + encodeURIComponent(tab.url)
     });
   }
   else if (request.method === 'get-json') {
