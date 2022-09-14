@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.3.6",
+  "version": "0.3.7",
   "name": "JSON Beautifier & Editor",
   "description": "__MSG_description__",
   "default_locale": "en",
@@ -32,7 +32,7 @@
   "homepage_url": "https://add0n.com/json-beautifier.html",
   "web_accessible_resources": [{
     "resources": [
-      "data/view/json-editor/img/jsoneditor-icons.svg",
+      "data/view/json-editor/img/*.svg",
       "data/view/loading.svg",
       "data/page/index.html"
     ],

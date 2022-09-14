@@ -33,11 +33,6 @@ div.jsoneditor-tree .jsoneditor-button.jsoneditor-schema-error,
 .jsoneditor-contextmenu .jsoneditor-menu button {
   width: 160px;
 }
-.jsoneditor-contextmenu button.jsoneditor-copy-inner .jsoneditor-icon,
-.jsoneditor-contextmenu button.jsoneditor-copy-outer .jsoneditor-icon,
-.jsoneditor-contextmenu button.jsoneditor-copy-path .jsoneditor-icon {
-  background-image: none;
-}
 
 @keyframes rotating {
   from {
@@ -46,4 +41,12 @@ div.jsoneditor-tree .jsoneditor-button.jsoneditor-schema-error,
   to {
     transform: rotate(360deg);
   }
+}
+
+.jsoneditor-contextmenu button.jsoneditor-copy-inner .jsoneditor-icon,
+.jsoneditor-contextmenu button.jsoneditor-copy-outer .jsoneditor-icon {
+  background-image: url(img/copy.svg) !important;
+}
+.jsoneditor-contextmenu button.jsoneditor-copy-path .jsoneditor-icon {
+  background-image: url(img/path.svg) !important;
 }
