@@ -67,9 +67,11 @@ function buttons() {
       e.stopPropagation();
       e.preventDefault();
       let content = editor.getText();
-      if (['text', 'code', 'preview'].some(a => a === editor.mode) === false) {
+      try {
         content = self.stringify(editor.get(), null, 2);
       }
+      catch (e) {}
+
       const blob = new Blob([content], {
         type: 'application/json;charset=utf-8'
       });
@@ -119,7 +121,8 @@ function render() {
   const content = document.body.textContent.trim();
 
   chrome.storage.local.get({
-    'use-big-number': true
+    'use-big-number': true,
+    'mode': 'tree'
   }, prefs => {
     try {
       let json;
@@ -141,6 +144,8 @@ function render() {
           chrome.storage.local.set({
             mode
           });
+
+          console.log(mode);
         },
         // support for custom "Big Number"
         onEditable({path, field, value}) {
@@ -223,25 +228,21 @@ function render() {
       });
       i.src = chrome.runtime.getURL('/data/view/json-editor/img/jsoneditor-icons.svg');
 
+      config.mode = prefs.mode;
+      editor = new JSONEditor(container, config);
+      buttons();
+      editor.set(json);
       chrome.storage.local.get({
-        mode: 'tree'
+        [location.href]: false
       }, prefs => {
-        config.mode = prefs.mode;
-        editor = new JSONEditor(container, config);
-        buttons();
-        editor.set(json);
-        chrome.storage.local.get({
-          [location.href]: false
-        }, prefs => {
-          if (prefs[location.href]) {
-            restore(prefs[location.href].states, editor.node);
-            editor.ready = true;
-            document.querySelector('.jsoneditor-tree').scrollTop = prefs[location.href].top;
-          }
-          else {
-            editor.ready = true;
-          }
-        });
+        if (prefs[location.href]) {
+          restore(prefs[location.href].states, editor.node);
+          editor.ready = true;
+          document.querySelector('.jsoneditor-tree').scrollTop = prefs[location.href].top;
+        }
+        else {
+          editor.ready = true;
+        }
       });
     }
     catch (e) {
@@ -250,7 +251,6 @@ function render() {
     }
     document.body.dataset.loaded = true;
   });
-
 }
 
 if (document.readyState === 'complete') {

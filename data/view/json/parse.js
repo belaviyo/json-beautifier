@@ -129,10 +129,6 @@ const json_parse = function(options) {
       if (!isFinite(number)) {
         error('Bad number');
       } else {
-        console.log(number);
-
-        //if (number > 9007199254740992 || number < -9007199254740992)
-        // Bignumber has stricter check: everything with length > 15 digits disallowed
         if (string === number + '') {
           return number;
         }
