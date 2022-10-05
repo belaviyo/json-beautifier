@@ -117,134 +117,140 @@ function buttons() {
 
 function render() {
   const content = document.body.textContent.trim();
-  try {
-    let json;
 
+  chrome.storage.local.get({
+    'use-big-number': true
+  }, prefs => {
     try {
-      json = self.parse(content);
+      let json;
+
+      try {
+        json = prefs['use-big-number'] ? self.parse(content) : JSON.parse(content);
+      }
+      catch (e) {
+        json = JSON.parse(content);
+      }
+      const container = document.querySelector('pre');
+      container.textContent = '';
+
+      const config = {
+        modes: ['tree', 'code', 'text'],
+        mode: 'code',
+        onModeChange(mode) {
+          buttons();
+          chrome.storage.local.set({
+            mode
+          });
+        },
+        // support for custom "Big Number"
+        onEditable({path, field, value}) {
+          if (field === 'type' && value === 'Big Number') {
+            return false;
+          }
+          if (field === 'value' && typeof value === 'string' && /[-\d.]{10,}n/.test(value)) {
+            return {
+              field: false,
+              value: true
+            };
+          }
+          return true;
+        },
+        onCreateMenu(items, node) {
+          items.push({
+            text: 'Copy Object Path',
+            title: 'Copy object path to the clipboard',
+            className: 'jsoneditor-copy-path',
+            click() {
+              const single = path => {
+                let content = '';
+                for (let i = 0; i < path.length; i++) {
+                  if (typeof path[i] === 'number') {
+                    content = content.substring(0, content.length - 1);
+                    content += '[' + path[i] + ']';
+                  }
+                  else {
+                    content += path[i];
+                  }
+                  if (i !== path.length - 1) content += '.';
+                }
+                return content;
+              };
+
+              navigator.clipboard.writeText(node.paths.map(single).join('\n'));
+            }
+          });
+          items.push({
+            text: 'Copy Inner JSON',
+            title: 'Copy inner JSON object to the clipboard',
+            className: 'jsoneditor-copy-inner',
+            click() {
+              const nodes = editor.getNodesByRange({
+                path: node.paths[0]
+              }, {
+                path: node.paths[node.paths.length - 1]
+              });
+              navigator.clipboard.writeText(nodes.map(node => self.stringify(node.value, null, '  ')).join('\n'));
+            }
+          });
+          items.push({
+            text: 'Copy Outer JSON',
+            title: 'Copy outer JSON object to the clipboard',
+            className: 'jsoneditor-copy-outer',
+            click() {
+              node.paths = node.paths.map(p => p.slice(0, -1));
+              const nodes = editor.getNodesByRange({
+                path: node.paths[0]
+              }, {
+                path: node.paths[node.paths.length - 1]
+              });
+              navigator.clipboard.writeText(nodes.map(node => self.stringify(node.value, null, '  ')).join('\n'));
+            }
+          });
+
+          return items;
+        }
+      };
+      if (matchMedia('(prefers-color-scheme: dark)').matches) {
+        config.theme = 'ace/theme/twilight';
+      }
+
+      // can I load my resources
+      const i = new Image();
+      i.onerror = () => chrome.runtime.sendMessage({
+        method: 'alternative-interface',
+        json,
+        title: document.title || location.href
+      });
+      i.src = chrome.runtime.getURL('/data/view/json-editor/img/jsoneditor-icons.svg');
+
+      chrome.storage.local.get({
+        mode: 'tree'
+      }, prefs => {
+        config.mode = prefs.mode;
+        editor = new JSONEditor(container, config);
+        buttons();
+        editor.set(json);
+        chrome.storage.local.get({
+          [location.href]: false
+        }, prefs => {
+          if (prefs[location.href]) {
+            restore(prefs[location.href].states, editor.node);
+            editor.ready = true;
+            document.querySelector('.jsoneditor-tree').scrollTop = prefs[location.href].top;
+          }
+          else {
+            editor.ready = true;
+          }
+        });
+      });
     }
     catch (e) {
-      json = JSON.parse(content);
+      console.log(e);
+      document.body.classList.remove('jsb');
     }
-    const container = document.querySelector('pre');
-    container.textContent = '';
+    document.body.dataset.loaded = true;
+  });
 
-    const config = {
-      modes: ['tree', 'code', 'text'],
-      mode: 'code',
-      onModeChange(mode) {
-        buttons();
-        chrome.storage.local.set({
-          mode
-        });
-      },
-      // support for custom "Big Number"
-      onEditable({path, field, value}) {
-        if (field === 'type' && value === 'Big Number') {
-          return false;
-        }
-        if (field === 'value' && typeof value === 'string' && /[-\d.]{10,}n/.test(value)) {
-          return {
-            field: false,
-            value: true
-          };
-        }
-        return true;
-      },
-      onCreateMenu(items, node) {
-        items.push({
-          text: 'Copy Object Path',
-          title: 'Copy object path to the clipboard',
-          className: 'jsoneditor-copy-path',
-          click() {
-            const single = path => {
-              let content = '';
-              for (let i = 0; i < path.length; i++) {
-                if (typeof path[i] === 'number') {
-                  content = content.substring(0, content.length - 1);
-                  content += '[' + path[i] + ']';
-                }
-                else {
-                  content += path[i];
-                }
-                if (i !== path.length - 1) content += '.';
-              }
-              return content;
-            };
-
-            navigator.clipboard.writeText(node.paths.map(single).join('\n'));
-          }
-        });
-        items.push({
-          text: 'Copy Inner JSON',
-          title: 'Copy inner JSON object to the clipboard',
-          className: 'jsoneditor-copy-inner',
-          click() {
-            const nodes = editor.getNodesByRange({
-              path: node.paths[0]
-            }, {
-              path: node.paths[node.paths.length - 1]
-            });
-            navigator.clipboard.writeText(nodes.map(node => self.stringify(node.value, null, '  ')).join('\n'));
-          }
-        });
-        items.push({
-          text: 'Copy Outer JSON',
-          title: 'Copy outer JSON object to the clipboard',
-          className: 'jsoneditor-copy-outer',
-          click() {
-            node.paths = node.paths.map(p => p.slice(0, -1));
-            const nodes = editor.getNodesByRange({
-              path: node.paths[0]
-            }, {
-              path: node.paths[node.paths.length - 1]
-            });
-            navigator.clipboard.writeText(nodes.map(node => self.stringify(node.value, null, '  ')).join('\n'));
-          }
-        });
-
-        return items;
-      }
-    };
-    if (matchMedia('(prefers-color-scheme: dark)').matches) {
-      config.theme = 'ace/theme/twilight';
-    }
-
-    // can I load my resources
-    const i = new Image();
-    i.onerror = () => chrome.runtime.sendMessage({
-      method: 'alternative-interface',
-      json,
-      title: document.title || location.href
-    });
-    i.src = chrome.runtime.getURL('/data/view/json-editor/img/jsoneditor-icons.svg');
-
-    chrome.storage.local.get({
-      mode: 'tree'
-    }, prefs => {
-      config.mode = prefs.mode;
-      editor = new JSONEditor(container, config);
-      buttons();
-      editor.set(json);
-      chrome.storage.local.get({
-        [location.href]: false
-      }, prefs => {
-        if (prefs[location.href]) {
-          restore(prefs[location.href].states, editor.node);
-          editor.ready = true;
-          document.querySelector('.jsoneditor-tree').scrollTop = prefs[location.href].top;
-        }
-        else {
-          editor.ready = true;
-        }
-      });
-    });
-  }
-  catch (e) {
-    console.log(e);
-    document.body.classList.remove('jsb');
-  }
-  document.body.dataset.loaded = true;
 }
 
 if (document.readyState === 'complete') {

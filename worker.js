@@ -92,14 +92,23 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
       contexts: ['action'],
       id: 'preview'
     });
-    chrome.contextMenus.create({
-      title: 'Theme',
-      contexts: ['action'],
-      id: 'theme'
-    });
     chrome.storage.local.get({
-      theme: 'system-theme'
+      'theme': 'system-theme',
+      'use-big-number': true
     }, prefs => {
+      chrome.contextMenus.create({
+        title: 'Convert Unsafe Big Numbers',
+        contexts: ['action'],
+        id: 'use-big-number',
+        type: 'checkbox',
+        checked: prefs['use-big-number']
+      });
+
+      chrome.contextMenus.create({
+        title: 'Theme',
+        contexts: ['action'],
+        id: 'theme'
+      });
       chrome.contextMenus.create({
         title: 'Light',
         contexts: ['action'],
@@ -133,6 +142,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === 'sample') {
     chrome.tabs.create({
       url: chrome.runtime.getManifest().homepage_url + '#faq6'
+    });
+  }
+  else if (info.menuItemId === 'use-big-number') {
+    chrome.storage.local.set({
+      'use-big-number': info.checked
     });
   }
   else if (info.menuItemId === 'preview') {

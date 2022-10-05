@@ -133,14 +133,11 @@ const json_parse = function(options) {
 
         //if (number > 9007199254740992 || number < -9007199254740992)
         // Bignumber has stricter check: everything with length > 15 digits disallowed
-        if (string.includes('.') === false && number > Number.MAX_SAFE_INTEGER) {
-          return new BigNumber(string)
-        }
-        if (string.includes('.') && string.length > 15) {
-          return new BigNumber(string)
+        if (string === number + '') {
+          return number;
         }
         else {
-          return number;
+          return new BigNumber(string)
         }
       }
     },
