@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const suspectProtoRx = /(?:_|\\u005[Ff])(?:_|\\u005[Ff])(?:p|\\u0070)(?:r|\\u0072)(?:o|\\u006[Ff])(?:t|\\u0074)(?:o|\\u006[Ff])(?:_|\\u005[Ff])(?:_|\\u005[Ff])/;
 const suspectConstructorRx = /(?:c|\\u0063)(?:o|\\u006[Ff])(?:n|\\u006[Ee])(?:s|\\u0073)(?:t|\\u0074)(?:r|\\u0072)(?:u|\\u0075)(?:c|\\u0063)(?:t|\\u0074)(?:o|\\u006[Ff])(?:r|\\u0072)/;
 
@@ -13,9 +15,6 @@ const json_parse = function(options) {
 
   const _options = {
     strict: false, // not being strict means do not generate syntax errors for "duplicate key"
-    storeAsString: false, // toggles whether the values should be stored as BigNumber (default) or a string
-    alwaysParseAsBig: false, // toggles whether all numbers should be Big
-    useNativeBigInt: false, // toggles whether to use native BigInt instead of bignumber.js
     protoAction: 'error',
     constructorAction: 'error'
   };
@@ -25,13 +24,6 @@ const json_parse = function(options) {
     if (options.strict === true) {
       _options.strict = true;
     }
-    if (options.storeAsString === true) {
-      _options.storeAsString = true;
-    }
-    _options.alwaysParseAsBig =
-      options.alwaysParseAsBig === true ? options.alwaysParseAsBig : false;
-    _options.useNativeBigInt =
-      options.useNativeBigInt === true ? options.useNativeBigInt : false;
 
     if (typeof options.constructorAction !== 'undefined') {
       if (
@@ -137,19 +129,19 @@ const json_parse = function(options) {
       if (!isFinite(number)) {
         error('Bad number');
       } else {
+        console.log(number);
+
         //if (number > 9007199254740992 || number < -9007199254740992)
         // Bignumber has stricter check: everything with length > 15 digits disallowed
-        if (string.length > 15)
-          return _options.storeAsString ?
-            string :
-            _options.useNativeBigInt ?
-            BigInt(string) : new BigNumber(string)
-        else
-          return !_options.alwaysParseAsBig ?
-            number :
-            _options.useNativeBigInt ?
-            BigInt(number) :
-            new BigNumber(number);
+        if (string.includes('.') === false && number > Number.MAX_SAFE_INTEGER) {
+          return new BigNumber(string)
+        }
+        if (string.includes('.') && string.length > 15) {
+          return new BigNumber(string)
+        }
+        else {
+          return number;
+        }
       }
     },
     string = function() {
