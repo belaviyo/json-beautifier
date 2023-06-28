@@ -6,13 +6,13 @@ const json = [
   'application/vnd.api+json',
   'text/x-json',
   'text/plain'
-].indexOf(type) !== -1 || type.endsWith('+json');
+].includes(type) || type.endsWith('+json');
 const js = [
   'application/x-javascript',
   'text/javascript',
   'text/x-javascript',
   'application/javascript'
-].indexOf(type) !== -1;
+].includes(type);
 
 if (json) {
   chrome.runtime.sendMessage({
