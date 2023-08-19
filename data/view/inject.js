@@ -46,6 +46,70 @@ document.body.classList.add('jsb');
 
 function buttons() {
   const menu = document.querySelector('.jsoneditor-menu');
+
+  // refresh
+  if (menu) {
+    const button = document.createElement('button');
+    button.classList.add('refresh');
+    button.title = 'Refresh JSON from the server';
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 60 60');
+    const p1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p1.setAttribute('d', 'M 52.7 31.1 a 21.6 21.6 90 1 1 -24.4865 -21.384 v 5.8198 a 15.8551 15.8551 90 1 0 14.0458 4.3862 l -5.6268 5.629 a 0.72 0.72 90 0 1 -1.229 -0.509 V 10.94 a 1.44 1.44 90 0 1 1.44 -1.44 h 14.099 a 0.72 0.72 90 0 1 0.509 1.229 l -5.0954 5.0954 A 21.5093 21.5093 90 0 1 52.7 31.1 Z');
+    svg.appendChild(p1);
+    button.appendChild(svg);
+    button.style.background = 'none';
+    menu.insertBefore(button, menu.firstChild);
+    button.onclick = e => {
+      e.stopPropagation();
+      e.preventDefault();
+
+      const b = e.target.closest('button');
+      b.classList.add('updating');
+      Promise.all([
+        new Promise(resolve => setTimeout(resolve, 1000)),
+        fetch(location.href).then(r => r.json())
+      ]).then(([, json]) => {
+        editor.update(json);
+        b.title = 'Last Update: ' + (new Date()).toString();
+      }).catch(e => {
+        console.warn(e);
+        alert(e.message);
+      }).finally(() => b.classList.remove('updating'));
+    };
+    button.disabled = location.href.startsWith('http') === false;
+  }
+  // clean
+  if (menu) {
+    const button = document.createElement('button');
+    button.classList.add('clean');
+    button.title = 'Double-click to Clear the Entire JSON Tree';
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '0 0 30 30');
+    const p1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p1.setAttribute('d', 'M19.71,26h-9.42c-1.019,0-1.875-0.766-1.988-1.779L6.5,8h17l-1.802,16.221C21.585,25.234,20.729,26,19.71,26z');
+    const p2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p2.setAttribute('d', 'M24,6H6C5.448,6,5,5.552,5,5v0c0-0.552,0.448-1,1-1h18c0.552,0,1,0.448,1,1v0C25,5.552,24.552,6,24,6z');
+    const p3 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    p3.setAttribute('d', 'M18,5h-6V4c0-0.552,0.448-1,1-1h4c0.552,0,1,0.448,1,1V5z');
+    svg.append(p1, p2, p3);
+    button.appendChild(svg);
+    button.style.background = 'none';
+    menu.insertBefore(button, menu.firstChild);
+    button.onclick = () => {
+      if (button.classList.contains('ready')) {
+        editor.update({});
+        button.classList.remove('ready');
+        clearTimeout(button.timeout);
+      }
+      else {
+        button.timeout = setTimeout(() => {
+          button.classList.remove('ready');
+        }, 2000);
+        button.classList.add('ready');
+      }
+    };
+  }
   // save
   if (menu) {
     const button = document.createElement('button');
@@ -82,38 +146,6 @@ function buttons() {
       a.click();
       URL.revokeObjectURL(href);
     };
-  }
-  // refresh
-  if (menu) {
-    const button = document.createElement('button');
-    button.classList.add('refresh');
-    button.title = 'Refresh JSON from the server';
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    svg.setAttribute('viewBox', '0 0 512 512');
-    const p1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-    p1.setAttribute('d', 'M64,256H34A222,222,0,0,1,430,118.15V85h30V190H355V160h67.27A192.21,192.21,0,0,0,256,64C150.13,64,64,150.13,64,256Zm384,0c0,105.87-86.13,192-192,192A192.21,192.21,0,0,1,89.73,352H157V322H52V427H82V393.85A222,222,0,0,0,478,256Z');
-    svg.appendChild(p1);
-    button.appendChild(svg);
-    button.style.background = 'none';
-    menu.insertBefore(button, menu.firstChild);
-    button.onclick = e => {
-      e.stopPropagation();
-      e.preventDefault();
-
-      const b = e.target.closest('button');
-      b.classList.add('updating');
-      Promise.all([
-        new Promise(resolve => setTimeout(resolve, 1000)),
-        fetch(location.href).then(r => r.json())
-      ]).then(([, json]) => {
-        editor.update(json);
-        b.title = 'Last Update: ' + (new Date()).toString();
-      }).catch(e => {
-        console.warn(e);
-        alert(e.message);
-      }).finally(() => b.classList.remove('updating'));
-    };
-    button.disabled = location.href.startsWith('http') === false;
   }
 }
 

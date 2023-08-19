@@ -162,12 +162,21 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
       });
     }
     catch (e) {
-      chrome.scripting.executeScript({
-        target: {
-          tabId: tab.id
-        },
-        func: () => alert('Invalid JSON string')
-      });
+      // selecting over a link
+      if (info.linkUrl) {
+        chrome.tabs.create({
+          url: info.linkUrl,
+          index: tab.index + 1
+        });
+      }
+      else {
+        chrome.scripting.executeScript({
+          target: {
+            tabId: tab.id
+          },
+          func: () => alert('Invalid JSON string')
+        });
+      }
     }
   }
   else if (info.menuItemId.endsWith('-theme')) {

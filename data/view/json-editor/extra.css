@@ -19,9 +19,15 @@ div.jsoneditor-tree .jsoneditor-button.jsoneditor-schema-error,
   opacity: 0.3;
 }
 
+.clean,
 .refresh,
 .save {
-  fill: #bad2fe;
+  fill: #fff;
+}
+.clean *,
+.refresh *,
+.save * {
+  pointer-events: none;
 }
 .refresh.updating {
   border: none !important;
@@ -36,11 +42,15 @@ div.jsoneditor-tree .jsoneditor-button.jsoneditor-schema-error,
 
 @keyframes rotating {
   from {
-    transform: rotate(0deg);
-  }
-  to {
     transform: rotate(360deg);
   }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.clean.ready {
+  fill: #ffcf00;
 }
 
 .jsoneditor-contextmenu button.jsoneditor-copy-inner .jsoneditor-icon,
