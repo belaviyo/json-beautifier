@@ -144,8 +144,6 @@ function render() {
           chrome.storage.local.set({
             mode
           });
-
-          console.log(mode);
         },
         // support for custom "Big Number"
         onEditable({path, field, value}) {
@@ -232,6 +230,8 @@ function render() {
       editor = new JSONEditor(container, config);
       buttons();
       editor.set(json);
+      editor.focus();
+
       chrome.storage.local.get({
         [location.href]: false
       }, prefs => {
