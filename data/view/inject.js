@@ -157,11 +157,10 @@ async function render() {
   // browser may have altered the content, so try to fetch a new copy
   try {
     JSON.parse(content);
-    console.log('looks good');
   }
   catch (e) {
     content = await fetch(location.href).then(r => r.text());
-    console.log('re-fetch a fresh copy');
+    console.info('re-fetch a fresh copy', e);
   }
 
   chrome.storage.local.get({
