@@ -150,7 +150,7 @@ function buttons() {
 }
 
 function render() {
-  const content = document.body.textContent.trim();
+  const content = document.querySelector("body > pre").innerText;
 
   chrome.storage.local.get({
     'use-big-number': true,
