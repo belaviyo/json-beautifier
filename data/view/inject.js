@@ -149,11 +149,20 @@ function buttons() {
   }
 }
 
-function render() {
+async function render() {
   // https://github.com/belaviyo/json-beautifier/issues/16
-  const content = (
-    document.querySelector('body > pre') || document.body
-  ).innerText.trim();
+  const container = document.querySelector('body > pre') || document.body;
+  let content = container.innerText.trim();
+
+  // browser may have altered the content, so try to fetch a new copy
+  try {
+    JSON.parse(content);
+    console.log('looks good');
+  }
+  catch (e) {
+    content = await fetch(location.href).then(r => r.text());
+    console.log('re-fetch a fresh copy');
+  }
 
   chrome.storage.local.get({
     'use-big-number': true,
@@ -168,7 +177,6 @@ function render() {
       catch (e) {
         json = JSON.parse(content);
       }
-      const container = document.querySelector('pre');
       container.textContent = '';
 
       const config = {
