@@ -150,7 +150,10 @@ function buttons() {
 }
 
 function render() {
-  const content = document.querySelector("body > pre").innerText;
+  // https://github.com/belaviyo/json-beautifier/issues/16
+  const content = (
+    document.querySelector('body > pre') || document.body
+  ).innerText.trim();
 
   chrome.storage.local.get({
     'use-big-number': true,
