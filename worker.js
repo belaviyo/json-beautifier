@@ -81,17 +81,17 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
       contexts: ['selection'],
       id: 'open-editor',
       documentUrlPatterns: ['*://*/*']
-    });
+    }, () => chrome.runtime.lastError);
     chrome.contextMenus.create({
       title: 'Open a Sample JSON',
       contexts: ['action'],
       id: 'sample'
-    });
+    }, () => chrome.runtime.lastError);
     chrome.contextMenus.create({
       title: 'Usage Preview',
       contexts: ['action'],
       id: 'preview'
-    });
+    }, () => chrome.runtime.lastError);
     chrome.storage.local.get({
       'theme': 'system-theme',
       'use-big-number': true
@@ -102,13 +102,13 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
         id: 'use-big-number',
         type: 'checkbox',
         checked: prefs['use-big-number']
-      });
+      }, () => chrome.runtime.lastError);
 
       chrome.contextMenus.create({
         title: 'Theme',
         contexts: ['action'],
         id: 'theme'
-      });
+      }, () => chrome.runtime.lastError);
       chrome.contextMenus.create({
         title: 'Light',
         contexts: ['action'],
@@ -116,7 +116,7 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
         parentId: 'theme',
         type: 'radio',
         checked: prefs.theme === 'light-theme'
-      });
+      }, () => chrome.runtime.lastError);
       chrome.contextMenus.create({
         title: 'Dark',
         contexts: ['action'],
@@ -124,7 +124,7 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
         parentId: 'theme',
         type: 'radio',
         checked: prefs.theme === 'dark-theme'
-      });
+      }, () => chrome.runtime.lastError);
       chrome.contextMenus.create({
         title: 'System',
         contexts: ['action'],
@@ -132,7 +132,7 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
         parentId: 'theme',
         type: 'radio',
         checked: prefs.theme === 'system-theme'
-      });
+      }, () => chrome.runtime.lastError);
     });
   };
   chrome.runtime.onStartup.addListener(startup);

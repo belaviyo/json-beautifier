@@ -1,6 +1,18 @@
 /* global JSONEditor */
 'use strict';
 
+const run = c => {
+  if (document.readyState === 'loading') {
+    document.removeEventListener('DOMContentLoaded', c);
+    document.addEventListener('DOMContentLoaded', c, {
+      once: true
+    });
+  }
+  else {
+    c();
+  }
+};
+
 // theme
 const theme = () => {
   theme.alter(theme.m);
@@ -25,10 +37,10 @@ theme.m = matchMedia('(prefers-color-scheme: dark)');
 theme.alter = e => {
   document.body.classList[e.matches ? 'add' : 'remove']('dark');
 };
-theme();
+run(theme);
 chrome.storage.onChanged.addListener(ps => {
   if (ps.theme) {
-    theme();
+    run(theme);
   }
 });
 
@@ -40,9 +52,10 @@ chrome.storage.onChanged.addListener(ps => {
 let editor;
 const base = document.createElement('base');
 base.href = chrome.runtime.getURL('/data/view/ace/theme/');
-document.head.appendChild(base);
-
-document.body.classList.add('jsb');
+run(() => {
+  document.head.appendChild(base);
+});
+document.documentElement.classList.add('jsb');
 
 function buttons() {
   const menu = document.querySelector('.jsoneditor-menu');
@@ -288,19 +301,14 @@ async function render() {
       });
     }
     catch (e) {
-      console.log(e);
-      document.body.classList.remove('jsb');
+      console.error(e);
+      document.documentElement.classList.remove('jsb');
     }
-    document.body.dataset.loaded = true;
+    document.documentElement.dataset.loaded = true;
   });
 }
 
-if (document.readyState === 'complete') {
-  render();
-}
-else {
-  window.addEventListener('load', render);
-}
+run(render);
 
 /* backup and restore */
 function backup() {

@@ -1,4 +1,4 @@
-body.jsb:not([data-loaded=true])::after {
+html.jsb:not([data-loaded=true]) body::after {
   content: '';
   display: block;
   position: fixed;
@@ -8,15 +8,15 @@ body.jsb:not([data-loaded=true])::after {
   height: 100vh;
   background: rgba(0, 0, 0, 0.7) url(chrome-extension://__MSG_@@extension_id__/data/view/loading.svg) center center no-repeat;
 }
-body.jsb[data-loaded="true"] {
+html.jsb[data-loaded="true"] body {
   margin: 0 !important;
 }
 
-body.jsb pre {
+html.jsb body pre {
   all: initial;
   margin: 0;
 }
-body.jsb,
-body.jsb > pre {
+html.jsb body,
+html.jsb body > pre {
   height: 100vh;
 }

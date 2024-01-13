@@ -362,3 +362,7 @@ self.parse = content => {
 
   return r;
 };
+
+// Firefox
+// eslint-disable-next-line semi
+''

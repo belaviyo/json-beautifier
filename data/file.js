@@ -14,16 +14,15 @@ const js = [
   'application/javascript'
 ].includes(type);
 
+const next = () => chrome.runtime.sendMessage({
+  method: 'convert',
+  type
+});
+
 if (json) {
-  chrome.runtime.sendMessage({
-    method: 'convert',
-    type
-  });
+  next();
 }
 // e.g.: https://api.coindesk.com/v1/bpi/currentprice.json
-else if (js && location.pathname.includes('.json')) {
-  chrome.runtime.sendMessage({
-    method: 'convert',
-    type
-  });
+else if (js && location.pathname.endsWith('.json')) {
+  next();
 }

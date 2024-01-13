@@ -6,7 +6,7 @@
  * It has various modes such as a tree editor, a code editor, and a plain text
  * editor.
  *
- * Supported browsers: Chrome, Firefox, Safari, Opera, Internet Explorer 8+
+ * Supported browsers: Chrome, Firefox, Safari, Edge
  *
  * @license
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,8 +24,8 @@
  * Copyright (c) 2011-2023 Jos de Jong, http://jsoneditoronline.org
  *
  * @author  Jos de Jong, <wjosdejong@gmail.com>
- * @version 9.10.2
- * @date    2023-05-15
+ * @version 10.0.0
+ * @date    2023-12-21
  */
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -46,19 +46,19 @@ return /******/ (function() { // webpackBootstrap
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": function() { return /* binding */ ContextMenu; }
+/* harmony export */   x: function() { return /* binding */ ContextMenu; }
 /* harmony export */ });
 /* harmony import */ var _createAbsoluteAnchor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2602);
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9791);
 /* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7907);
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 
@@ -248,7 +248,6 @@ var ContextMenu = /*#__PURE__*/function () {
           });
         }
       });
-
       return buttons;
     }
 
@@ -512,14 +511,14 @@ ContextMenu.visibleMenu = undefined;
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Q": function() { return /* binding */ ErrorTable; }
+/* harmony export */   Q: function() { return /* binding */ ErrorTable; }
 /* harmony export */ });
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 /**
  * Show errors and schema warnings in a clickable table view
  * @param {Object} config
@@ -714,7 +713,7 @@ var ErrorTable = /*#__PURE__*/function () {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "R": function() { return /* binding */ FocusTracker; }
+/* harmony export */   R: function() { return /* binding */ FocusTracker; }
 /* harmony export */ });
 
 
@@ -728,12 +727,12 @@ var ErrorTable = /*#__PURE__*/function () {
  *
  * @return
  */
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var FocusTracker = /*#__PURE__*/function () {
   function FocusTracker(config) {
     _classCallCheck(this, FocusTracker);
@@ -1222,7 +1221,6 @@ JSONEditor.prototype.setSchema = function (schema, schemaRefs) {
     this.validate(); // to clear current error messages
     this.refresh(); // update DOM
   }
-
   if (typeof this._onSchemaChange === 'function') {
     this._onSchemaChange(schema, schemaRefs);
   }
@@ -1320,18 +1318,18 @@ module.exports = JSONEditor;
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "x": function() { return /* binding */ ModeSwitcher; }
+/* harmony export */   x: function() { return /* binding */ ModeSwitcher; }
 /* harmony export */ });
 /* harmony import */ var _ContextMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(897);
 /* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7907);
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 
@@ -2491,7 +2489,6 @@ var createItem = function createItem(option, data) {
   } else {
     elementData.textContent = option.textContent; // treat all as plain text
   }
-
   var opt = util.createElement("li", elementData);
   opt.idx = option.idx;
   this.items.push(opt);
@@ -4318,10 +4315,10 @@ module.exports = Selectr;
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "EX": function() { return /* binding */ SIZE_LARGE; },
-/* harmony export */   "WF": function() { return /* binding */ MAX_PREVIEW_CHARACTERS; },
-/* harmony export */   "oW": function() { return /* binding */ PREVIEW_HISTORY_LIMIT; },
-/* harmony export */   "qD": function() { return /* binding */ DEFAULT_MODAL_ANCHOR; }
+/* harmony export */   EX: function() { return /* binding */ SIZE_LARGE; },
+/* harmony export */   WF: function() { return /* binding */ MAX_PREVIEW_CHARACTERS; },
+/* harmony export */   oW: function() { return /* binding */ PREVIEW_HISTORY_LIMIT; },
+/* harmony export */   qD: function() { return /* binding */ DEFAULT_MODAL_ANCHOR; }
 /* harmony export */ });
 var DEFAULT_MODAL_ANCHOR = document.body;
 var SIZE_LARGE = 10 * 1024 * 1024; // 10 MB
@@ -4335,7 +4332,7 @@ var PREVIEW_HISTORY_LIMIT = 2 * 1024 * 1024 * 1024; // 2 GB
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "w": function() { return /* binding */ createAbsoluteAnchor; }
+/* harmony export */   w: function() { return /* binding */ createAbsoluteAnchor; }
 /* harmony export */ });
 /* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9791);
 
@@ -4430,7 +4427,7 @@ function hasOwnProperty(object, key) {
 /***/ 7923:
 /***/ (function(module) {
 
-module.exports = 'data:application/javascript;base64,Im5vIHVzZSBzdHJpY3QiOwohKGZ1bmN0aW9uKHdpbmRvdykgewppZiAodHlwZW9mIHdpbmRvdy53aW5kb3cgIT0gInVuZGVmaW5lZCIgJiYgd2luZG93LmRvY3VtZW50KQogICAgcmV0dXJuOwppZiAod2luZG93LnJlcXVpcmUgJiYgd2luZG93LmRlZmluZSkKICAgIHJldHVybjsKCmlmICghd2luZG93LmNvbnNvbGUpIHsKICAgIHdpbmRvdy5jb25zb2xlID0gZnVuY3Rpb24oKSB7CiAgICAgICAgdmFyIG1zZ3MgPSBBcnJheS5wcm90b3R5cGUuc2xpY2UuY2FsbChhcmd1bWVudHMsIDApOwogICAgICAgIHBvc3RNZXNzYWdlKHt0eXBlOiAibG9nIiwgZGF0YTogbXNnc30pOwogICAgfTsKICAgIHdpbmRvdy5jb25zb2xlLmVycm9yID0KICAgIHdpbmRvdy5jb25zb2xlLndhcm4gPSAKICAgIHdpbmRvdy5jb25zb2xlLmxvZyA9CiAgICB3aW5kb3cuY29uc29sZS50cmFjZSA9IHdpbmRvdy5jb25zb2xlOwp9CndpbmRvdy53aW5kb3cgPSB3aW5kb3c7CndpbmRvdy5hY2UgPSB3aW5kb3c7Cgp3aW5kb3cub25lcnJvciA9IGZ1bmN0aW9uKG1lc3NhZ2UsIGZpbGUsIGxpbmUsIGNvbCwgZXJyKSB7CiAgICBwb3N0TWVzc2FnZSh7dHlwZTogImVycm9yIiwgZGF0YTogewogICAgICAgIG1lc3NhZ2U6IG1lc3NhZ2UsCiAgICAgICAgZGF0YTogZXJyICYmIGVyci5kYXRhLAogICAgICAgIGZpbGU6IGZpbGUsCiAgICAgICAgbGluZTogbGluZSwgCiAgICAgICAgY29sOiBjb2wsCiAgICAgICAgc3RhY2s6IGVyciAmJiBlcnIuc3RhY2sKICAgIH19KTsKfTsKCndpbmRvdy5ub3JtYWxpemVNb2R1bGUgPSBmdW5jdGlvbihwYXJlbnRJZCwgbW9kdWxlTmFtZSkgewogICAgLy8gbm9ybWFsaXplIHBsdWdpbiByZXF1aXJlcwogICAgaWYgKG1vZHVsZU5hbWUuaW5kZXhPZigiISIpICE9PSAtMSkgewogICAgICAgIHZhciBjaHVua3MgPSBtb2R1bGVOYW1lLnNwbGl0KCIhIik7CiAgICAgICAgcmV0dXJuIHdpbmRvdy5ub3JtYWxpemVNb2R1bGUocGFyZW50SWQsIGNodW5rc1swXSkgKyAiISIgKyB3aW5kb3cubm9ybWFsaXplTW9kdWxlKHBhcmVudElkLCBjaHVua3NbMV0pOwogICAgfQogICAgLy8gbm9ybWFsaXplIHJlbGF0aXZlIHJlcXVpcmVzCiAgICBpZiAobW9kdWxlTmFtZS5jaGFyQXQoMCkgPT0gIi4iKSB7CiAgICAgICAgdmFyIGJhc2UgPSBwYXJlbnRJZC5zcGxpdCgiLyIpLnNsaWNlKDAsIC0xKS5qb2luKCIvIik7CiAgICAgICAgbW9kdWxlTmFtZSA9IChiYXNlID8gYmFzZSArICIvIiA6ICIiKSArIG1vZHVsZU5hbWU7CiAgICAgICAgCiAgICAgICAgd2hpbGUgKG1vZHVsZU5hbWUuaW5kZXhPZigiLiIpICE9PSAtMSAmJiBwcmV2aW91cyAhPSBtb2R1bGVOYW1lKSB7CiAgICAgICAgICAgIHZhciBwcmV2aW91cyA9IG1vZHVsZU5hbWU7CiAgICAgICAgICAgIG1vZHVsZU5hbWUgPSBtb2R1bGVOYW1lLnJlcGxhY2UoL15cLlwvLywgIiIpLnJlcGxhY2UoL1wvXC5cLy8sICIvIikucmVwbGFjZSgvW15cL10rXC9cLlwuXC8vLCAiIik7CiAgICAgICAgfQogICAgfQogICAgCiAgICByZXR1cm4gbW9kdWxlTmFtZTsKfTsKCndpbmRvdy5yZXF1aXJlID0gZnVuY3Rpb24gcmVxdWlyZShwYXJlbnRJZCwgaWQpIHsKICAgIGlmICghaWQpIHsKICAgICAgICBpZCA9IHBhcmVudElkOwogICAgICAgIHBhcmVudElkID0gbnVsbDsKICAgIH0KICAgIGlmICghaWQuY2hhckF0KQogICAgICAgIHRocm93IG5ldyBFcnJvcigid29ya2VyLmpzIHJlcXVpcmUoKSBhY2NlcHRzIG9ubHkgKHBhcmVudElkLCBpZCkgYXMgYXJndW1lbnRzIik7CgogICAgaWQgPSB3aW5kb3cubm9ybWFsaXplTW9kdWxlKHBhcmVudElkLCBpZCk7CgogICAgdmFyIG1vZHVsZSA9IHdpbmRvdy5yZXF1aXJlLm1vZHVsZXNbaWRdOwogICAgaWYgKG1vZHVsZSkgewogICAgICAgIGlmICghbW9kdWxlLmluaXRpYWxpemVkKSB7CiAgICAgICAgICAgIG1vZHVsZS5pbml0aWFsaXplZCA9IHRydWU7CiAgICAgICAgICAgIG1vZHVsZS5leHBvcnRzID0gbW9kdWxlLmZhY3RvcnkoKS5leHBvcnRzOwogICAgICAgIH0KICAgICAgICByZXR1cm4gbW9kdWxlLmV4cG9ydHM7CiAgICB9CiAgIAogICAgaWYgKCF3aW5kb3cucmVxdWlyZS50bG5zKQogICAgICAgIHJldHVybiBjb25zb2xlLmxvZygidW5hYmxlIHRvIGxvYWQgIiArIGlkKTsKICAgIAogICAgdmFyIHBhdGggPSByZXNvbHZlTW9kdWxlSWQoaWQsIHdpbmRvdy5yZXF1aXJlLnRsbnMpOwogICAgaWYgKHBhdGguc2xpY2UoLTMpICE9ICIuanMiKSBwYXRoICs9ICIuanMiOwogICAgCiAgICB3aW5kb3cucmVxdWlyZS5pZCA9IGlkOwogICAgd2luZG93LnJlcXVpcmUubW9kdWxlc1tpZF0gPSB7fTsgLy8gcHJldmVudCBpbmZpbml0ZSBsb29wIG9uIGJyb2tlbiBtb2R1bGVzCiAgICBpbXBvcnRTY3JpcHRzKHBhdGgpOwogICAgcmV0dXJuIHdpbmRvdy5yZXF1aXJlKHBhcmVudElkLCBpZCk7Cn07CmZ1bmN0aW9uIHJlc29sdmVNb2R1bGVJZChpZCwgcGF0aHMpIHsKICAgIHZhciB0ZXN0UGF0aCA9IGlkLCB0YWlsID0gIiI7CiAgICB3aGlsZSAodGVzdFBhdGgpIHsKICAgICAgICB2YXIgYWxpYXMgPSBwYXRoc1t0ZXN0UGF0aF07CiAgICAgICAgaWYgKHR5cGVvZiBhbGlhcyA9PSAic3RyaW5nIikgewogICAgICAgICAgICByZXR1cm4gYWxpYXMgKyB0YWlsOwogICAgICAgIH0gZWxzZSBpZiAoYWxpYXMpIHsKICAgICAgICAgICAgcmV0dXJuICBhbGlhcy5sb2NhdGlvbi5yZXBsYWNlKC9cLyokLywgIi8iKSArICh0YWlsIHx8IGFsaWFzLm1haW4gfHwgYWxpYXMubmFtZSk7CiAgICAgICAgfSBlbHNlIGlmIChhbGlhcyA9PT0gZmFsc2UpIHsKICAgICAgICAgICAgcmV0dXJuICIiOwogICAgICAgIH0KICAgICAgICB2YXIgaSA9IHRlc3RQYXRoLmxhc3RJbmRleE9mKCIvIik7CiAgICAgICAgaWYgKGkgPT09IC0xKSBicmVhazsKICAgICAgICB0YWlsID0gdGVzdFBhdGguc3Vic3RyKGkpICsgdGFpbDsKICAgICAgICB0ZXN0UGF0aCA9IHRlc3RQYXRoLnNsaWNlKDAsIGkpOwogICAgfQogICAgcmV0dXJuIGlkOwp9CndpbmRvdy5yZXF1aXJlLm1vZHVsZXMgPSB7fTsKd2luZG93LnJlcXVpcmUudGxucyA9IHt9OwoKd2luZG93LmRlZmluZSA9IGZ1bmN0aW9uKGlkLCBkZXBzLCBmYWN0b3J5KSB7CiAgICBpZiAoYXJndW1lbnRzLmxlbmd0aCA9PSAyKSB7CiAgICAgICAgZmFjdG9yeSA9IGRlcHM7CiAgICAgICAgaWYgKHR5cGVvZiBpZCAhPSAic3RyaW5nIikgewogICAgICAgICAgICBkZXBzID0gaWQ7CiAgICAgICAgICAgIGlkID0gd2luZG93LnJlcXVpcmUuaWQ7CiAgICAgICAgfQogICAgfSBlbHNlIGlmIChhcmd1bWVudHMubGVuZ3RoID09IDEpIHsKICAgICAgICBmYWN0b3J5ID0gaWQ7CiAgICAgICAgZGVwcyA9IFtdOwogICAgICAgIGlkID0gd2luZG93LnJlcXVpcmUuaWQ7CiAgICB9CiAgICAKICAgIGlmICh0eXBlb2YgZmFjdG9yeSAhPSAiZnVuY3Rpb24iKSB7CiAgICAgICAgd2luZG93LnJlcXVpcmUubW9kdWxlc1tpZF0gPSB7CiAgICAgICAgICAgIGV4cG9ydHM6IGZhY3RvcnksCiAgICAgICAgICAgIGluaXRpYWxpemVkOiB0cnVlCiAgICAgICAgfTsKICAgICAgICByZXR1cm47CiAgICB9CgogICAgaWYgKCFkZXBzLmxlbmd0aCkKICAgICAgICAvLyBJZiB0aGVyZSBpcyBubyBkZXBlbmRlbmNpZXMsIHdlIGluamVjdCAicmVxdWlyZSIsICJleHBvcnRzIiBhbmQKICAgICAgICAvLyAibW9kdWxlIiBhcyBkZXBlbmRlbmNpZXMsIHRvIHByb3ZpZGUgQ29tbW9uSlMgY29tcGF0aWJpbGl0eS4KICAgICAgICBkZXBzID0gWyJyZXF1aXJlIiwgImV4cG9ydHMiLCAibW9kdWxlIl07CgogICAgdmFyIHJlcSA9IGZ1bmN0aW9uKGNoaWxkSWQpIHsKICAgICAgICByZXR1cm4gd2luZG93LnJlcXVpcmUoaWQsIGNoaWxkSWQpOwogICAgfTsKCiAgICB3aW5kb3cucmVxdWlyZS5tb2R1bGVzW2lkXSA9IHsKICAgICAgICBleHBvcnRzOiB7fSwKICAgICAgICBmYWN0b3J5OiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgdmFyIG1vZHVsZSA9IHRoaXM7CiAgICAgICAgICAgIHZhciByZXR1cm5FeHBvcnRzID0gZmFjdG9yeS5hcHBseSh0aGlzLCBkZXBzLnNsaWNlKDAsIGZhY3RvcnkubGVuZ3RoKS5tYXAoZnVuY3Rpb24oZGVwKSB7CiAgICAgICAgICAgICAgICBzd2l0Y2ggKGRlcCkgewogICAgICAgICAgICAgICAgICAgIC8vIEJlY2F1c2UgInJlcXVpcmUiLCAiZXhwb3J0cyIgYW5kICJtb2R1bGUiIGFyZW4ndCBhY3R1YWwKICAgICAgICAgICAgICAgICAgICAvLyBkZXBlbmRlbmNpZXMsIHdlIG11c3QgaGFuZGxlIHRoZW0gc2VwZXJhdGVseS4KICAgICAgICAgICAgICAgICAgICBjYXNlICJyZXF1aXJlIjogcmV0dXJuIHJlcTsKICAgICAgICAgICAgICAgICAgICBjYXNlICJleHBvcnRzIjogcmV0dXJuIG1vZHVsZS5leHBvcnRzOwogICAgICAgICAgICAgICAgICAgIGNhc2UgIm1vZHVsZSI6ICByZXR1cm4gbW9kdWxlOwogICAgICAgICAgICAgICAgICAgIC8vIEJ1dCBmb3IgYWxsIG90aGVyIGRlcGVuZGVuY2llcywgd2UgY2FuIGp1c3QgZ28gYWhlYWQgYW5kCiAgICAgICAgICAgICAgICAgICAgLy8gcmVxdWlyZSB0aGVtLgogICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6ICAgICAgICByZXR1cm4gcmVxKGRlcCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pKTsKICAgICAgICAgICAgaWYgKHJldHVybkV4cG9ydHMpCiAgICAgICAgICAgICAgICBtb2R1bGUuZXhwb3J0cyA9IHJldHVybkV4cG9ydHM7CiAgICAgICAgICAgIHJldHVybiBtb2R1bGU7CiAgICAgICAgfQogICAgfTsKfTsKd2luZG93LmRlZmluZS5hbWQgPSB7fTsKd2luZG93LnJlcXVpcmUudGxucyA9IHt9Owp3aW5kb3cuaW5pdEJhc2VVcmxzICA9IGZ1bmN0aW9uIGluaXRCYXNlVXJscyh0b3BMZXZlbE5hbWVzcGFjZXMpIHsKICAgIGZvciAodmFyIGkgaW4gdG9wTGV2ZWxOYW1lc3BhY2VzKQogICAgICAgIHRoaXMucmVxdWlyZS50bG5zW2ldID0gdG9wTGV2ZWxOYW1lc3BhY2VzW2ldOwp9OwoKd2luZG93LmluaXRTZW5kZXIgPSBmdW5jdGlvbiBpbml0U2VuZGVyKCkgewoKICAgIHZhciBFdmVudEVtaXR0ZXIgPSB3aW5kb3cucmVxdWlyZSgiYWNlL2xpYi9ldmVudF9lbWl0dGVyIikuRXZlbnRFbWl0dGVyOwogICAgdmFyIG9vcCA9IHdpbmRvdy5yZXF1aXJlKCJhY2UvbGliL29vcCIpOwogICAgCiAgICB2YXIgU2VuZGVyID0gZnVuY3Rpb24oKSB7fTsKICAgIAogICAgKGZ1bmN0aW9uKCkgewogICAgICAgIAogICAgICAgIG9vcC5pbXBsZW1lbnQodGhpcywgRXZlbnRFbWl0dGVyKTsKICAgICAgICAgICAgICAgIAogICAgICAgIHRoaXMuY2FsbGJhY2sgPSBmdW5jdGlvbihkYXRhLCBjYWxsYmFja0lkKSB7CiAgICAgICAgICAgIHBvc3RNZXNzYWdlKHsKICAgICAgICAgICAgICAgIHR5cGU6ICJjYWxsIiwKICAgICAgICAgICAgICAgIGlkOiBjYWxsYmFja0lkLAogICAgICAgICAgICAgICAgZGF0YTogZGF0YQogICAgICAgICAgICB9KTsKICAgICAgICB9OwogICAgCiAgICAgICAgdGhpcy5lbWl0ID0gZnVuY3Rpb24obmFtZSwgZGF0YSkgewogICAgICAgICAgICBwb3N0TWVzc2FnZSh7CiAgICAgICAgICAgICAgICB0eXBlOiAiZXZlbnQiLAogICAgICAgICAgICAgICAgbmFtZTogbmFtZSwKICAgICAgICAgICAgICAgIGRhdGE6IGRhdGEKICAgICAgICAgICAgfSk7CiAgICAgICAgfTsKICAgICAgICAKICAgIH0pLmNhbGwoU2VuZGVyLnByb3RvdHlwZSk7CiAgICAKICAgIHJldHVybiBuZXcgU2VuZGVyKCk7Cn07Cgp2YXIgbWFpbiA9IHdpbmRvdy5tYWluID0gbnVsbDsKdmFyIHNlbmRlciA9IHdpbmRvdy5zZW5kZXIgPSBudWxsOwoKd2luZG93Lm9ubWVzc2FnZSA9IGZ1bmN0aW9uKGUpIHsKICAgIHZhciBtc2cgPSBlLmRhdGE7CiAgICBpZiAobXNnLmV2ZW50ICYmIHNlbmRlcikgewogICAgICAgIHNlbmRlci5fc2lnbmFsKG1zZy5ldmVudCwgbXNnLmRhdGEpOwogICAgfQogICAgZWxzZSBpZiAobXNnLmNvbW1hbmQpIHsKICAgICAgICBpZiAobWFpblttc2cuY29tbWFuZF0pCiAgICAgICAgICAgIG1haW5bbXNnLmNvbW1hbmRdLmFwcGx5KG1haW4sIG1zZy5hcmdzKTsKICAgICAgICBlbHNlIGlmICh3aW5kb3dbbXNnLmNvbW1hbmRdKQogICAgICAgICAgICB3aW5kb3dbbXNnLmNvbW1hbmRdLmFwcGx5KHdpbmRvdywgbXNnLmFyZ3MpOwogICAgICAgIGVsc2UKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCJVbmtub3duIGNvbW1hbmQ6IiArIG1zZy5jb21tYW5kKTsKICAgIH0KICAgIGVsc2UgaWYgKG1zZy5pbml0KSB7CiAgICAgICAgd2luZG93LmluaXRCYXNlVXJscyhtc2cudGxucyk7CiAgICAgICAgc2VuZGVyID0gd2luZG93LnNlbmRlciA9IHdpbmRvdy5pbml0U2VuZGVyKCk7CiAgICAgICAgdmFyIGNsYXp6ID0gdGhpcy5yZXF1aXJlKG1zZy5tb2R1bGUpW21zZy5jbGFzc25hbWVdOwogICAgICAgIG1haW4gPSB3aW5kb3cubWFpbiA9IG5ldyBjbGF6eihzZW5kZXIpOwogICAgfQp9Owp9KSh0aGlzKTsKCmFjZS5kZWZpbmUoImFjZS9saWIvb29wIixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKXsidXNlIHN0cmljdCI7CmV4cG9ydHMuaW5oZXJpdHMgPSBmdW5jdGlvbiAoY3Rvciwgc3VwZXJDdG9yKSB7CiAgICBjdG9yLnN1cGVyXyA9IHN1cGVyQ3RvcjsKICAgIGN0b3IucHJvdG90eXBlID0gT2JqZWN0LmNyZWF0ZShzdXBlckN0b3IucHJvdG90eXBlLCB7CiAgICAgICAgY29uc3RydWN0b3I6IHsKICAgICAgICAgICAgdmFsdWU6IGN0b3IsCiAgICAgICAgICAgIGVudW1lcmFibGU6IGZhbHNlLAogICAgICAgICAgICB3cml0YWJsZTogdHJ1ZSwKICAgICAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlCiAgICAgICAgfQogICAgfSk7Cn07CmV4cG9ydHMubWl4aW4gPSBmdW5jdGlvbiAob2JqLCBtaXhpbikgewogICAgZm9yICh2YXIga2V5IGluIG1peGluKSB7CiAgICAgICAgb2JqW2tleV0gPSBtaXhpbltrZXldOwogICAgfQogICAgcmV0dXJuIG9iajsKfTsKZXhwb3J0cy5pbXBsZW1lbnQgPSBmdW5jdGlvbiAocHJvdG8sIG1peGluKSB7CiAgICBleHBvcnRzLm1peGluKHByb3RvLCBtaXhpbik7Cn07Cgp9KTsKCmFjZS5kZWZpbmUoImFjZS9hcHBseV9kZWx0YSIsW10sIGZ1bmN0aW9uKHJlcXVpcmUsIGV4cG9ydHMsIG1vZHVsZSl7InVzZSBzdHJpY3QiOwpmdW5jdGlvbiB0aHJvd0RlbHRhRXJyb3IoZGVsdGEsIGVycm9yVGV4dCkgewogICAgY29uc29sZS5sb2coIkludmFsaWQgRGVsdGE6IiwgZGVsdGEpOwogICAgdGhyb3cgIkludmFsaWQgRGVsdGE6ICIgKyBlcnJvclRleHQ7Cn0KZnVuY3Rpb24gcG9zaXRpb25JbkRvY3VtZW50KGRvY0xpbmVzLCBwb3NpdGlvbikgewogICAgcmV0dXJuIHBvc2l0aW9uLnJvdyA+PSAwICYmIHBvc2l0aW9uLnJvdyA8IGRvY0xpbmVzLmxlbmd0aCAmJgogICAgICAgIHBvc2l0aW9uLmNvbHVtbiA+PSAwICYmIHBvc2l0aW9uLmNvbHVtbiA8PSBkb2NMaW5lc1twb3NpdGlvbi5yb3ddLmxlbmd0aDsKfQpmdW5jdGlvbiB2YWxpZGF0ZURlbHRhKGRvY0xpbmVzLCBkZWx0YSkgewogICAgaWYgKGRlbHRhLmFjdGlvbiAhPSAiaW5zZXJ0IiAmJiBkZWx0YS5hY3Rpb24gIT0gInJlbW92ZSIpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEuYWN0aW9uIG11c3QgYmUgJ2luc2VydCcgb3IgJ3JlbW92ZSciKTsKICAgIGlmICghKGRlbHRhLmxpbmVzIGluc3RhbmNlb2YgQXJyYXkpKQogICAgICAgIHRocm93RGVsdGFFcnJvcihkZWx0YSwgImRlbHRhLmxpbmVzIG11c3QgYmUgYW4gQXJyYXkiKTsKICAgIGlmICghZGVsdGEuc3RhcnQgfHwgIWRlbHRhLmVuZCkKICAgICAgICB0aHJvd0RlbHRhRXJyb3IoZGVsdGEsICJkZWx0YS5zdGFydC9lbmQgbXVzdCBiZSBhbiBwcmVzZW50Iik7CiAgICB2YXIgc3RhcnQgPSBkZWx0YS5zdGFydDsKICAgIGlmICghcG9zaXRpb25JbkRvY3VtZW50KGRvY0xpbmVzLCBkZWx0YS5zdGFydCkpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEuc3RhcnQgbXVzdCBiZSBjb250YWluZWQgaW4gZG9jdW1lbnQiKTsKICAgIHZhciBlbmQgPSBkZWx0YS5lbmQ7CiAgICBpZiAoZGVsdGEuYWN0aW9uID09ICJyZW1vdmUiICYmICFwb3NpdGlvbkluRG9jdW1lbnQoZG9jTGluZXMsIGVuZCkpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEuZW5kIG11c3QgY29udGFpbmVkIGluIGRvY3VtZW50IGZvciAncmVtb3ZlJyBhY3Rpb25zIik7CiAgICB2YXIgbnVtUmFuZ2VSb3dzID0gZW5kLnJvdyAtIHN0YXJ0LnJvdzsKICAgIHZhciBudW1SYW5nZUxhc3RMaW5lQ2hhcnMgPSAoZW5kLmNvbHVtbiAtIChudW1SYW5nZVJvd3MgPT0gMCA/IHN0YXJ0LmNvbHVtbiA6IDApKTsKICAgIGlmIChudW1SYW5nZVJvd3MgIT0gZGVsdGEubGluZXMubGVuZ3RoIC0gMSB8fCBkZWx0YS5saW5lc1tudW1SYW5nZVJvd3NdLmxlbmd0aCAhPSBudW1SYW5nZUxhc3RMaW5lQ2hhcnMpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEucmFuZ2UgbXVzdCBtYXRjaCBkZWx0YSBsaW5lcyIpOwp9CmV4cG9ydHMuYXBwbHlEZWx0YSA9IGZ1bmN0aW9uIChkb2NMaW5lcywgZGVsdGEsIGRvTm90VmFsaWRhdGUpIHsKICAgIHZhciByb3cgPSBkZWx0YS5zdGFydC5yb3c7CiAgICB2YXIgc3RhcnRDb2x1bW4gPSBkZWx0YS5zdGFydC5jb2x1bW47CiAgICB2YXIgbGluZSA9IGRvY0xpbmVzW3Jvd10gfHwgIiI7CiAgICBzd2l0Y2ggKGRlbHRhLmFjdGlvbikgewogICAgICAgIGNhc2UgImluc2VydCI6CiAgICAgICAgICAgIHZhciBsaW5lcyA9IGRlbHRhLmxpbmVzOwogICAgICAgICAgICBpZiAobGluZXMubGVuZ3RoID09PSAxKSB7CiAgICAgICAgICAgICAgICBkb2NMaW5lc1tyb3ddID0gbGluZS5zdWJzdHJpbmcoMCwgc3RhcnRDb2x1bW4pICsgZGVsdGEubGluZXNbMF0gKyBsaW5lLnN1YnN0cmluZyhzdGFydENvbHVtbik7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZSB7CiAgICAgICAgICAgICAgICB2YXIgYXJncyA9IFtyb3csIDFdLmNvbmNhdChkZWx0YS5saW5lcyk7CiAgICAgICAgICAgICAgICBkb2NMaW5lcy5zcGxpY2UuYXBwbHkoZG9jTGluZXMsIGFyZ3MpOwogICAgICAgICAgICAgICAgZG9jTGluZXNbcm93XSA9IGxpbmUuc3Vic3RyaW5nKDAsIHN0YXJ0Q29sdW1uKSArIGRvY0xpbmVzW3Jvd107CiAgICAgICAgICAgICAgICBkb2NMaW5lc1tyb3cgKyBkZWx0YS5saW5lcy5sZW5ndGggLSAxXSArPSBsaW5lLnN1YnN0cmluZyhzdGFydENvbHVtbik7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgY2FzZSAicmVtb3ZlIjoKICAgICAgICAgICAgdmFyIGVuZENvbHVtbiA9IGRlbHRhLmVuZC5jb2x1bW47CiAgICAgICAgICAgIHZhciBlbmRSb3cgPSBkZWx0YS5lbmQucm93OwogICAgICAgICAgICBpZiAocm93ID09PSBlbmRSb3cpIHsKICAgICAgICAgICAgICAgIGRvY0xpbmVzW3Jvd10gPSBsaW5lLnN1YnN0cmluZygwLCBzdGFydENvbHVtbikgKyBsaW5lLnN1YnN0cmluZyhlbmRDb2x1bW4pOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgZG9jTGluZXMuc3BsaWNlKHJvdywgZW5kUm93IC0gcm93ICsgMSwgbGluZS5zdWJzdHJpbmcoMCwgc3RhcnRDb2x1bW4pICsgZG9jTGluZXNbZW5kUm93XS5zdWJzdHJpbmcoZW5kQ29sdW1uKSk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYnJlYWs7CiAgICB9Cn07Cgp9KTsKCmFjZS5kZWZpbmUoImFjZS9saWIvZXZlbnRfZW1pdHRlciIsW10sIGZ1bmN0aW9uKHJlcXVpcmUsIGV4cG9ydHMsIG1vZHVsZSl7InVzZSBzdHJpY3QiOwp2YXIgRXZlbnRFbWl0dGVyID0ge307CnZhciBzdG9wUHJvcGFnYXRpb24gPSBmdW5jdGlvbiAoKSB7IHRoaXMucHJvcGFnYXRpb25TdG9wcGVkID0gdHJ1ZTsgfTsKdmFyIHByZXZlbnREZWZhdWx0ID0gZnVuY3Rpb24gKCkgeyB0aGlzLmRlZmF1bHRQcmV2ZW50ZWQgPSB0cnVlOyB9OwpFdmVudEVtaXR0ZXIuX2VtaXQgPQogICAgRXZlbnRFbWl0dGVyLl9kaXNwYXRjaEV2ZW50ID0gZnVuY3Rpb24gKGV2ZW50TmFtZSwgZSkgewogICAgICAgIHRoaXMuX2V2ZW50UmVnaXN0cnkgfHwgKHRoaXMuX2V2ZW50UmVnaXN0cnkgPSB7fSk7CiAgICAgICAgdGhpcy5fZGVmYXVsdEhhbmRsZXJzIHx8ICh0aGlzLl9kZWZhdWx0SGFuZGxlcnMgPSB7fSk7CiAgICAgICAgdmFyIGxpc3RlbmVycyA9IHRoaXMuX2V2ZW50UmVnaXN0cnlbZXZlbnROYW1lXSB8fCBbXTsKICAgICAgICB2YXIgZGVmYXVsdEhhbmRsZXIgPSB0aGlzLl9kZWZhdWx0SGFuZGxlcnNbZXZlbnROYW1lXTsKICAgICAgICBpZiAoIWxpc3RlbmVycy5sZW5ndGggJiYgIWRlZmF1bHRIYW5kbGVyKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgaWYgKHR5cGVvZiBlICE9ICJvYmplY3QiIHx8ICFlKQogICAgICAgICAgICBlID0ge307CiAgICAgICAgaWYgKCFlLnR5cGUpCiAgICAgICAgICAgIGUudHlwZSA9IGV2ZW50TmFtZTsKICAgICAgICBpZiAoIWUuc3RvcFByb3BhZ2F0aW9uKQogICAgICAgICAgICBlLnN0b3BQcm9wYWdhdGlvbiA9IHN0b3BQcm9wYWdhdGlvbjsKICAgICAgICBpZiAoIWUucHJldmVudERlZmF1bHQpCiAgICAgICAgICAgIGUucHJldmVudERlZmF1bHQgPSBwcmV2ZW50RGVmYXVsdDsKICAgICAgICBsaXN0ZW5lcnMgPSBsaXN0ZW5lcnMuc2xpY2UoKTsKICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IGxpc3RlbmVycy5sZW5ndGg7IGkrKykgewogICAgICAgICAgICBsaXN0ZW5lcnNbaV0oZSwgdGhpcyk7CiAgICAgICAgICAgIGlmIChlLnByb3BhZ2F0aW9uU3RvcHBlZCkKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgIH0KICAgICAgICBpZiAoZGVmYXVsdEhhbmRsZXIgJiYgIWUuZGVmYXVsdFByZXZlbnRlZCkKICAgICAgICAgICAgcmV0dXJuIGRlZmF1bHRIYW5kbGVyKGUsIHRoaXMpOwogICAgfTsKRXZlbnRFbWl0dGVyLl9zaWduYWwgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBlKSB7CiAgICB2YXIgbGlzdGVuZXJzID0gKHRoaXMuX2V2ZW50UmVnaXN0cnkgfHwge30pW2V2ZW50TmFtZV07CiAgICBpZiAoIWxpc3RlbmVycykKICAgICAgICByZXR1cm47CiAgICBsaXN0ZW5lcnMgPSBsaXN0ZW5lcnMuc2xpY2UoKTsKICAgIGZvciAodmFyIGkgPSAwOyBpIDwgbGlzdGVuZXJzLmxlbmd0aDsgaSsrKQogICAgICAgIGxpc3RlbmVyc1tpXShlLCB0aGlzKTsKfTsKRXZlbnRFbWl0dGVyLm9uY2UgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBjYWxsYmFjaykgewogICAgdmFyIF9zZWxmID0gdGhpczsKICAgIHRoaXMub24oZXZlbnROYW1lLCBmdW5jdGlvbiBuZXdDYWxsYmFjaygpIHsKICAgICAgICBfc2VsZi5vZmYoZXZlbnROYW1lLCBuZXdDYWxsYmFjayk7CiAgICAgICAgY2FsbGJhY2suYXBwbHkobnVsbCwgYXJndW1lbnRzKTsKICAgIH0pOwogICAgaWYgKCFjYWxsYmFjaykgewogICAgICAgIHJldHVybiBuZXcgUHJvbWlzZShmdW5jdGlvbiAocmVzb2x2ZSkgewogICAgICAgICAgICBjYWxsYmFjayA9IHJlc29sdmU7CiAgICAgICAgfSk7CiAgICB9Cn07CkV2ZW50RW1pdHRlci5zZXREZWZhdWx0SGFuZGxlciA9IGZ1bmN0aW9uIChldmVudE5hbWUsIGNhbGxiYWNrKSB7CiAgICB2YXIgaGFuZGxlcnMgPSB0aGlzLl9kZWZhdWx0SGFuZGxlcnM7CiAgICBpZiAoIWhhbmRsZXJzKQogICAgICAgIGhhbmRsZXJzID0gdGhpcy5fZGVmYXVsdEhhbmRsZXJzID0geyBfZGlzYWJsZWRfOiB7fSB9OwogICAgaWYgKGhhbmRsZXJzW2V2ZW50TmFtZV0pIHsKICAgICAgICB2YXIgb2xkID0gaGFuZGxlcnNbZXZlbnROYW1lXTsKICAgICAgICB2YXIgZGlzYWJsZWQgPSBoYW5kbGVycy5fZGlzYWJsZWRfW2V2ZW50TmFtZV07CiAgICAgICAgaWYgKCFkaXNhYmxlZCkKICAgICAgICAgICAgaGFuZGxlcnMuX2Rpc2FibGVkX1tldmVudE5hbWVdID0gZGlzYWJsZWQgPSBbXTsKICAgICAgICBkaXNhYmxlZC5wdXNoKG9sZCk7CiAgICAgICAgdmFyIGkgPSBkaXNhYmxlZC5pbmRleE9mKGNhbGxiYWNrKTsKICAgICAgICBpZiAoaSAhPSAtMSkKICAgICAgICAgICAgZGlzYWJsZWQuc3BsaWNlKGksIDEpOwogICAgfQogICAgaGFuZGxlcnNbZXZlbnROYW1lXSA9IGNhbGxiYWNrOwp9OwpFdmVudEVtaXR0ZXIucmVtb3ZlRGVmYXVsdEhhbmRsZXIgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBjYWxsYmFjaykgewogICAgdmFyIGhhbmRsZXJzID0gdGhpcy5fZGVmYXVsdEhhbmRsZXJzOwogICAgaWYgKCFoYW5kbGVycykKICAgICAgICByZXR1cm47CiAgICB2YXIgZGlzYWJsZWQgPSBoYW5kbGVycy5fZGlzYWJsZWRfW2V2ZW50TmFtZV07CiAgICBpZiAoaGFuZGxlcnNbZXZlbnROYW1lXSA9PSBjYWxsYmFjaykgewogICAgICAgIGlmIChkaXNhYmxlZCkKICAgICAgICAgICAgdGhpcy5zZXREZWZhdWx0SGFuZGxlcihldmVudE5hbWUsIGRpc2FibGVkLnBvcCgpKTsKICAgIH0KICAgIGVsc2UgaWYgKGRpc2FibGVkKSB7CiAgICAgICAgdmFyIGkgPSBkaXNhYmxlZC5pbmRleE9mKGNhbGxiYWNrKTsKICAgICAgICBpZiAoaSAhPSAtMSkKICAgICAgICAgICAgZGlzYWJsZWQuc3BsaWNlKGksIDEpOwogICAgfQp9OwpFdmVudEVtaXR0ZXIub24gPQogICAgRXZlbnRFbWl0dGVyLmFkZEV2ZW50TGlzdGVuZXIgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBjYWxsYmFjaywgY2FwdHVyaW5nKSB7CiAgICAgICAgdGhpcy5fZXZlbnRSZWdpc3RyeSA9IHRoaXMuX2V2ZW50UmVnaXN0cnkgfHwge307CiAgICAgICAgdmFyIGxpc3RlbmVycyA9IHRoaXMuX2V2ZW50UmVnaXN0cnlbZXZlbnROYW1lXTsKICAgICAgICBpZiAoIWxpc3RlbmVycykKICAgICAgICAgICAgbGlzdGVuZXJzID0gdGhpcy5fZXZlbnRSZWdpc3RyeVtldmVudE5hbWVdID0gW107CiAgICAgICAgaWYgKGxpc3RlbmVycy5pbmRleE9mKGNhbGxiYWNrKSA9PSAtMSkKICAgICAgICAgICAgbGlzdGVuZXJzW2NhcHR1cmluZyA/ICJ1bnNoaWZ0IiA6ICJwdXNoIl0oY2FsbGJhY2spOwogICAgICAgIHJldHVybiBjYWxsYmFjazsKICAgIH07CkV2ZW50RW1pdHRlci5vZmYgPQogICAgRXZlbnRFbWl0dGVyLnJlbW92ZUxpc3RlbmVyID0KICAgICAgICBFdmVudEVtaXR0ZXIucmVtb3ZlRXZlbnRMaXN0ZW5lciA9IGZ1bmN0aW9uIChldmVudE5hbWUsIGNhbGxiYWNrKSB7CiAgICAgICAgICAgIHRoaXMuX2V2ZW50UmVnaXN0cnkgPSB0aGlzLl9ldmVudFJlZ2lzdHJ5IHx8IHt9OwogICAgICAgICAgICB2YXIgbGlzdGVuZXJzID0gdGhpcy5fZXZlbnRSZWdpc3RyeVtldmVudE5hbWVdOwogICAgICAgICAgICBpZiAoIWxpc3RlbmVycykKICAgICAgICAgICAgICAgIHJldHVybjsKICAgICAgICAgICAgdmFyIGluZGV4ID0gbGlzdGVuZXJzLmluZGV4T2YoY2FsbGJhY2spOwogICAgICAgICAgICBpZiAoaW5kZXggIT09IC0xKQogICAgICAgICAgICAgICAgbGlzdGVuZXJzLnNwbGljZShpbmRleCwgMSk7CiAgICAgICAgfTsKRXZlbnRFbWl0dGVyLnJlbW92ZUFsbExpc3RlbmVycyA9IGZ1bmN0aW9uIChldmVudE5hbWUpIHsKICAgIGlmICghZXZlbnROYW1lKQogICAgICAgIHRoaXMuX2V2ZW50UmVnaXN0cnkgPSB0aGlzLl9kZWZhdWx0SGFuZGxlcnMgPSB1bmRlZmluZWQ7CiAgICBpZiAodGhpcy5fZXZlbnRSZWdpc3RyeSkKICAgICAgICB0aGlzLl9ldmVudFJlZ2lzdHJ5W2V2ZW50TmFtZV0gPSB1bmRlZmluZWQ7CiAgICBpZiAodGhpcy5fZGVmYXVsdEhhbmRsZXJzKQogICAgICAgIHRoaXMuX2RlZmF1bHRIYW5kbGVyc1tldmVudE5hbWVdID0gdW5kZWZpbmVkOwp9OwpleHBvcnRzLkV2ZW50RW1pdHRlciA9IEV2ZW50RW1pdHRlcjsKCn0pOwoKYWNlLmRlZmluZSgiYWNlL3JhbmdlIixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKXsidXNlIHN0cmljdCI7CnZhciBjb21wYXJlUG9pbnRzID0gZnVuY3Rpb24gKHAxLCBwMikgewogICAgcmV0dXJuIHAxLnJvdyAtIHAyLnJvdyB8fCBwMS5jb2x1bW4gLSBwMi5jb2x1bW47Cn07CnZhciBSYW5nZSA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uICgpIHsKICAgIGZ1bmN0aW9uIFJhbmdlKHN0YXJ0Um93LCBzdGFydENvbHVtbiwgZW5kUm93LCBlbmRDb2x1bW4pIHsKICAgICAgICB0aGlzLnN0YXJ0ID0gewogICAgICAgICAgICByb3c6IHN0YXJ0Um93LAogICAgICAgICAgICBjb2x1bW46IHN0YXJ0Q29sdW1uCiAgICAgICAgfTsKICAgICAgICB0aGlzLmVuZCA9IHsKICAgICAgICAgICAgcm93OiBlbmRSb3csCiAgICAgICAgICAgIGNvbHVtbjogZW5kQ29sdW1uCiAgICAgICAgfTsKICAgIH0KICAgIFJhbmdlLnByb3RvdHlwZS5pc0VxdWFsID0gZnVuY3Rpb24gKHJhbmdlKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuc3RhcnQucm93ID09PSByYW5nZS5zdGFydC5yb3cgJiYKICAgICAgICAgICAgdGhpcy5lbmQucm93ID09PSByYW5nZS5lbmQucm93ICYmCiAgICAgICAgICAgIHRoaXMuc3RhcnQuY29sdW1uID09PSByYW5nZS5zdGFydC5jb2x1bW4gJiYKICAgICAgICAgICAgdGhpcy5lbmQuY29sdW1uID09PSByYW5nZS5lbmQuY29sdW1uOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS50b1N0cmluZyA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gKCJSYW5nZTogWyIgKyB0aGlzLnN0YXJ0LnJvdyArICIvIiArIHRoaXMuc3RhcnQuY29sdW1uICsKICAgICAgICAgICAgIl0gLT4gWyIgKyB0aGlzLmVuZC5yb3cgKyAiLyIgKyB0aGlzLmVuZC5jb2x1bW4gKyAiXSIpOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jb250YWlucyA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHJldHVybiB0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pID09IDA7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNvbXBhcmVSYW5nZSA9IGZ1bmN0aW9uIChyYW5nZSkgewogICAgICAgIHZhciBjbXAsIGVuZCA9IHJhbmdlLmVuZCwgc3RhcnQgPSByYW5nZS5zdGFydDsKICAgICAgICBjbXAgPSB0aGlzLmNvbXBhcmUoZW5kLnJvdywgZW5kLmNvbHVtbik7CiAgICAgICAgaWYgKGNtcCA9PSAxKSB7CiAgICAgICAgICAgIGNtcCA9IHRoaXMuY29tcGFyZShzdGFydC5yb3csIHN0YXJ0LmNvbHVtbik7CiAgICAgICAgICAgIGlmIChjbXAgPT0gMSkgewogICAgICAgICAgICAgICAgcmV0dXJuIDI7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZSBpZiAoY21wID09IDApIHsKICAgICAgICAgICAgICAgIHJldHVybiAxOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgcmV0dXJuIDA7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoY21wID09IC0xKSB7CiAgICAgICAgICAgIHJldHVybiAtMjsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIGNtcCA9IHRoaXMuY29tcGFyZShzdGFydC5yb3csIHN0YXJ0LmNvbHVtbik7CiAgICAgICAgICAgIGlmIChjbXAgPT0gLTEpIHsKICAgICAgICAgICAgICAgIHJldHVybiAtMTsKICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIGlmIChjbXAgPT0gMSkgewogICAgICAgICAgICAgICAgcmV0dXJuIDQyOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgcmV0dXJuIDA7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNvbXBhcmVQb2ludCA9IGZ1bmN0aW9uIChwKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZShwLnJvdywgcC5jb2x1bW4pOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jb250YWluc1JhbmdlID0gZnVuY3Rpb24gKHJhbmdlKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZVBvaW50KHJhbmdlLnN0YXJ0KSA9PSAwICYmIHRoaXMuY29tcGFyZVBvaW50KHJhbmdlLmVuZCkgPT0gMDsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuaW50ZXJzZWN0cyA9IGZ1bmN0aW9uIChyYW5nZSkgewogICAgICAgIHZhciBjbXAgPSB0aGlzLmNvbXBhcmVSYW5nZShyYW5nZSk7CiAgICAgICAgcmV0dXJuIChjbXAgPT0gLTEgfHwgY21wID09IDAgfHwgY21wID09IDEpOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5pc0VuZCA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHJldHVybiB0aGlzLmVuZC5yb3cgPT0gcm93ICYmIHRoaXMuZW5kLmNvbHVtbiA9PSBjb2x1bW47CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmlzU3RhcnQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICByZXR1cm4gdGhpcy5zdGFydC5yb3cgPT0gcm93ICYmIHRoaXMuc3RhcnQuY29sdW1uID09IGNvbHVtbjsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuc2V0U3RhcnQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAodHlwZW9mIHJvdyA9PSAib2JqZWN0IikgewogICAgICAgICAgICB0aGlzLnN0YXJ0LmNvbHVtbiA9IHJvdy5jb2x1bW47CiAgICAgICAgICAgIHRoaXMuc3RhcnQucm93ID0gcm93LnJvdzsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIHRoaXMuc3RhcnQucm93ID0gcm93OwogICAgICAgICAgICB0aGlzLnN0YXJ0LmNvbHVtbiA9IGNvbHVtbjsKICAgICAgICB9CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLnNldEVuZCA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIGlmICh0eXBlb2Ygcm93ID09ICJvYmplY3QiKSB7CiAgICAgICAgICAgIHRoaXMuZW5kLmNvbHVtbiA9IHJvdy5jb2x1bW47CiAgICAgICAgICAgIHRoaXMuZW5kLnJvdyA9IHJvdy5yb3c7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICB0aGlzLmVuZC5yb3cgPSByb3c7CiAgICAgICAgICAgIHRoaXMuZW5kLmNvbHVtbiA9IGNvbHVtbjsKICAgICAgICB9CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmluc2lkZSA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIGlmICh0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pID09IDApIHsKICAgICAgICAgICAgaWYgKHRoaXMuaXNFbmQocm93LCBjb2x1bW4pIHx8IHRoaXMuaXNTdGFydChyb3csIGNvbHVtbikpIHsKICAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIHsKICAgICAgICAgICAgICAgIHJldHVybiB0cnVlOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuaW5zaWRlU3RhcnQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAodGhpcy5jb21wYXJlKHJvdywgY29sdW1uKSA9PSAwKSB7CiAgICAgICAgICAgIGlmICh0aGlzLmlzRW5kKHJvdywgY29sdW1uKSkgewogICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5pbnNpZGVFbmQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAodGhpcy5jb21wYXJlKHJvdywgY29sdW1uKSA9PSAwKSB7CiAgICAgICAgICAgIGlmICh0aGlzLmlzU3RhcnQocm93LCBjb2x1bW4pKSB7CiAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZSB7CiAgICAgICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNvbXBhcmUgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAoIXRoaXMuaXNNdWx0aUxpbmUoKSkgewogICAgICAgICAgICBpZiAocm93ID09PSB0aGlzLnN0YXJ0LnJvdykgewogICAgICAgICAgICAgICAgcmV0dXJuIGNvbHVtbiA8IHRoaXMuc3RhcnQuY29sdW1uID8gLTEgOiAoY29sdW1uID4gdGhpcy5lbmQuY29sdW1uID8gMSA6IDApOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGlmIChyb3cgPCB0aGlzLnN0YXJ0LnJvdykKICAgICAgICAgICAgcmV0dXJuIC0xOwogICAgICAgIGlmIChyb3cgPiB0aGlzLmVuZC5yb3cpCiAgICAgICAgICAgIHJldHVybiAxOwogICAgICAgIGlmICh0aGlzLnN0YXJ0LnJvdyA9PT0gcm93KQogICAgICAgICAgICByZXR1cm4gY29sdW1uID49IHRoaXMuc3RhcnQuY29sdW1uID8gMCA6IC0xOwogICAgICAgIGlmICh0aGlzLmVuZC5yb3cgPT09IHJvdykKICAgICAgICAgICAgcmV0dXJuIGNvbHVtbiA8PSB0aGlzLmVuZC5jb2x1bW4gPyAwIDogMTsKICAgICAgICByZXR1cm4gMDsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuY29tcGFyZVN0YXJ0ID0gZnVuY3Rpb24gKHJvdywgY29sdW1uKSB7CiAgICAgICAgaWYgKHRoaXMuc3RhcnQucm93ID09IHJvdyAmJiB0aGlzLnN0YXJ0LmNvbHVtbiA9PSBjb2x1bW4pIHsKICAgICAgICAgICAgcmV0dXJuIC0xOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZShyb3csIGNvbHVtbik7CiAgICAgICAgfQogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jb21wYXJlRW5kID0gZnVuY3Rpb24gKHJvdywgY29sdW1uKSB7CiAgICAgICAgaWYgKHRoaXMuZW5kLnJvdyA9PSByb3cgJiYgdGhpcy5lbmQuY29sdW1uID09IGNvbHVtbikgewogICAgICAgICAgICByZXR1cm4gMTsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIHJldHVybiB0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pOwogICAgICAgIH0KICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuY29tcGFyZUluc2lkZSA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIGlmICh0aGlzLmVuZC5yb3cgPT0gcm93ICYmIHRoaXMuZW5kLmNvbHVtbiA9PSBjb2x1bW4pIHsKICAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKHRoaXMuc3RhcnQucm93ID09IHJvdyAmJiB0aGlzLnN0YXJ0LmNvbHVtbiA9PSBjb2x1bW4pIHsKICAgICAgICAgICAgcmV0dXJuIC0xOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZShyb3csIGNvbHVtbik7CiAgICAgICAgfQogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jbGlwUm93cyA9IGZ1bmN0aW9uIChmaXJzdFJvdywgbGFzdFJvdykgewogICAgICAgIGlmICh0aGlzLmVuZC5yb3cgPiBsYXN0Um93KQogICAgICAgICAgICB2YXIgZW5kID0geyByb3c6IGxhc3RSb3cgKyAxLCBjb2x1bW46IDAgfTsKICAgICAgICBlbHNlIGlmICh0aGlzLmVuZC5yb3cgPCBmaXJzdFJvdykKICAgICAgICAgICAgdmFyIGVuZCA9IHsgcm93OiBmaXJzdFJvdywgY29sdW1uOiAwIH07CiAgICAgICAgaWYgKHRoaXMuc3RhcnQucm93ID4gbGFzdFJvdykKICAgICAgICAgICAgdmFyIHN0YXJ0ID0geyByb3c6IGxhc3RSb3cgKyAxLCBjb2x1bW46IDAgfTsKICAgICAgICBlbHNlIGlmICh0aGlzLnN0YXJ0LnJvdyA8IGZpcnN0Um93KQogICAgICAgICAgICB2YXIgc3RhcnQgPSB7IHJvdzogZmlyc3RSb3csIGNvbHVtbjogMCB9OwogICAgICAgIHJldHVybiBSYW5nZS5mcm9tUG9pbnRzKHN0YXJ0IHx8IHRoaXMuc3RhcnQsIGVuZCB8fCB0aGlzLmVuZCk7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmV4dGVuZCA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHZhciBjbXAgPSB0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pOwogICAgICAgIGlmIChjbXAgPT0gMCkKICAgICAgICAgICAgcmV0dXJuIHRoaXM7CiAgICAgICAgZWxzZSBpZiAoY21wID09IC0xKQogICAgICAgICAgICB2YXIgc3RhcnQgPSB7IHJvdzogcm93LCBjb2x1bW46IGNvbHVtbiB9OwogICAgICAgIGVsc2UKICAgICAgICAgICAgdmFyIGVuZCA9IHsgcm93OiByb3csIGNvbHVtbjogY29sdW1uIH07CiAgICAgICAgcmV0dXJuIFJhbmdlLmZyb21Qb2ludHMoc3RhcnQgfHwgdGhpcy5zdGFydCwgZW5kIHx8IHRoaXMuZW5kKTsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuaXNFbXB0eSA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gKHRoaXMuc3RhcnQucm93ID09PSB0aGlzLmVuZC5yb3cgJiYgdGhpcy5zdGFydC5jb2x1bW4gPT09IHRoaXMuZW5kLmNvbHVtbik7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmlzTXVsdGlMaW5lID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiAodGhpcy5zdGFydC5yb3cgIT09IHRoaXMuZW5kLnJvdyk7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNsb25lID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiBSYW5nZS5mcm9tUG9pbnRzKHRoaXMuc3RhcnQsIHRoaXMuZW5kKTsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuY29sbGFwc2VSb3dzID0gZnVuY3Rpb24gKCkgewogICAgICAgIGlmICh0aGlzLmVuZC5jb2x1bW4gPT0gMCkKICAgICAgICAgICAgcmV0dXJuIG5ldyBSYW5nZSh0aGlzLnN0YXJ0LnJvdywgMCwgTWF0aC5tYXgodGhpcy5zdGFydC5yb3csIHRoaXMuZW5kLnJvdyAtIDEpLCAwKTsKICAgICAgICBlbHNlCiAgICAgICAgICAgIHJldHVybiBuZXcgUmFuZ2UodGhpcy5zdGFydC5yb3csIDAsIHRoaXMuZW5kLnJvdywgMCk7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLnRvU2NyZWVuUmFuZ2UgPSBmdW5jdGlvbiAoc2Vzc2lvbikgewogICAgICAgIHZhciBzY3JlZW5Qb3NTdGFydCA9IHNlc3Npb24uZG9jdW1lbnRUb1NjcmVlblBvc2l0aW9uKHRoaXMuc3RhcnQpOwogICAgICAgIHZhciBzY3JlZW5Qb3NFbmQgPSBzZXNzaW9uLmRvY3VtZW50VG9TY3JlZW5Qb3NpdGlvbih0aGlzLmVuZCk7CiAgICAgICAgcmV0dXJuIG5ldyBSYW5nZShzY3JlZW5Qb3NTdGFydC5yb3csIHNjcmVlblBvc1N0YXJ0LmNvbHVtbiwgc2NyZWVuUG9zRW5kLnJvdywgc2NyZWVuUG9zRW5kLmNvbHVtbik7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLm1vdmVCeSA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHRoaXMuc3RhcnQucm93ICs9IHJvdzsKICAgICAgICB0aGlzLnN0YXJ0LmNvbHVtbiArPSBjb2x1bW47CiAgICAgICAgdGhpcy5lbmQucm93ICs9IHJvdzsKICAgICAgICB0aGlzLmVuZC5jb2x1bW4gKz0gY29sdW1uOwogICAgfTsKICAgIHJldHVybiBSYW5nZTsKfSgpKTsKUmFuZ2UuZnJvbVBvaW50cyA9IGZ1bmN0aW9uIChzdGFydCwgZW5kKSB7CiAgICByZXR1cm4gbmV3IFJhbmdlKHN0YXJ0LnJvdywgc3RhcnQuY29sdW1uLCBlbmQucm93LCBlbmQuY29sdW1uKTsKfTsKUmFuZ2UuY29tcGFyZVBvaW50cyA9IGNvbXBhcmVQb2ludHM7ClJhbmdlLmNvbXBhcmVQb2ludHMgPSBmdW5jdGlvbiAocDEsIHAyKSB7CiAgICByZXR1cm4gcDEucm93IC0gcDIucm93IHx8IHAxLmNvbHVtbiAtIHAyLmNvbHVtbjsKfTsKZXhwb3J0cy5SYW5nZSA9IFJhbmdlOwoKfSk7CgphY2UuZGVmaW5lKCJhY2UvYW5jaG9yIixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKXsidXNlIHN0cmljdCI7CnZhciBvb3AgPSByZXF1aXJlKCIuL2xpYi9vb3AiKTsKdmFyIEV2ZW50RW1pdHRlciA9IHJlcXVpcmUoIi4vbGliL2V2ZW50X2VtaXR0ZXIiKS5FdmVudEVtaXR0ZXI7CnZhciBBbmNob3IgPSAvKiogQGNsYXNzICovIChmdW5jdGlvbiAoKSB7CiAgICBmdW5jdGlvbiBBbmNob3IoZG9jLCByb3csIGNvbHVtbikgewogICAgICAgIHRoaXMuJG9uQ2hhbmdlID0gdGhpcy5vbkNoYW5nZS5iaW5kKHRoaXMpOwogICAgICAgIHRoaXMuYXR0YWNoKGRvYyk7CiAgICAgICAgaWYgKHR5cGVvZiBjb2x1bW4gPT0gInVuZGVmaW5lZCIpCiAgICAgICAgICAgIHRoaXMuc2V0UG9zaXRpb24ocm93LnJvdywgcm93LmNvbHVtbik7CiAgICAgICAgZWxzZQogICAgICAgICAgICB0aGlzLnNldFBvc2l0aW9uKHJvdywgY29sdW1uKTsKICAgIH0KICAgIEFuY2hvci5wcm90b3R5cGUuZ2V0UG9zaXRpb24gPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuJGNsaXBQb3NpdGlvblRvRG9jdW1lbnQodGhpcy5yb3csIHRoaXMuY29sdW1uKTsKICAgIH07CiAgICBBbmNob3IucHJvdG90eXBlLmdldERvY3VtZW50ID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiB0aGlzLmRvY3VtZW50OwogICAgfTsKICAgIEFuY2hvci5wcm90b3R5cGUub25DaGFuZ2UgPSBmdW5jdGlvbiAoZGVsdGEpIHsKICAgICAgICBpZiAoZGVsdGEuc3RhcnQucm93ID09IGRlbHRhLmVuZC5yb3cgJiYgZGVsdGEuc3RhcnQucm93ICE9IHRoaXMucm93KQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgaWYgKGRlbHRhLnN0YXJ0LnJvdyA+IHRoaXMucm93KQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgdmFyIHBvaW50ID0gJGdldFRyYW5zZm9ybWVkUG9pbnQoZGVsdGEsIHsgcm93OiB0aGlzLnJvdywgY29sdW1uOiB0aGlzLmNvbHVtbiB9LCB0aGlzLiRpbnNlcnRSaWdodCk7CiAgICAgICAgdGhpcy5zZXRQb3NpdGlvbihwb2ludC5yb3csIHBvaW50LmNvbHVtbiwgdHJ1ZSk7CiAgICB9OwogICAgQW5jaG9yLnByb3RvdHlwZS5zZXRQb3NpdGlvbiA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbiwgbm9DbGlwKSB7CiAgICAgICAgdmFyIHBvczsKICAgICAgICBpZiAobm9DbGlwKSB7CiAgICAgICAgICAgIHBvcyA9IHsKICAgICAgICAgICAgICAgIHJvdzogcm93LAogICAgICAgICAgICAgICAgY29sdW1uOiBjb2x1bW4KICAgICAgICAgICAgfTsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIHBvcyA9IHRoaXMuJGNsaXBQb3NpdGlvblRvRG9jdW1lbnQocm93LCBjb2x1bW4pOwogICAgICAgIH0KICAgICAgICBpZiAodGhpcy5yb3cgPT0gcG9zLnJvdyAmJiB0aGlzLmNvbHVtbiA9PSBwb3MuY29sdW1uKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgdmFyIG9sZCA9IHsKICAgICAgICAgICAgcm93OiB0aGlzLnJvdywKICAgICAgICAgICAgY29sdW1uOiB0aGlzLmNvbHVtbgogICAgICAgIH07CiAgICAgICAgdGhpcy5yb3cgPSBwb3Mucm93OwogICAgICAgIHRoaXMuY29sdW1uID0gcG9zLmNvbHVtbjsKICAgICAgICB0aGlzLl9zaWduYWwoImNoYW5nZSIsIHsKICAgICAgICAgICAgb2xkOiBvbGQsCiAgICAgICAgICAgIHZhbHVlOiBwb3MKICAgICAgICB9KTsKICAgIH07CiAgICBBbmNob3IucHJvdG90eXBlLmRldGFjaCA9IGZ1bmN0aW9uICgpIHsKICAgICAgICB0aGlzLmRvY3VtZW50Lm9mZigiY2hhbmdlIiwgdGhpcy4kb25DaGFuZ2UpOwogICAgfTsKICAgIEFuY2hvci5wcm90b3R5cGUuYXR0YWNoID0gZnVuY3Rpb24gKGRvYykgewogICAgICAgIHRoaXMuZG9jdW1lbnQgPSBkb2MgfHwgdGhpcy5kb2N1bWVudDsKICAgICAgICB0aGlzLmRvY3VtZW50Lm9uKCJjaGFuZ2UiLCB0aGlzLiRvbkNoYW5nZSk7CiAgICB9OwogICAgQW5jaG9yLnByb3RvdHlwZS4kY2xpcFBvc2l0aW9uVG9Eb2N1bWVudCA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHZhciBwb3MgPSB7fTsKICAgICAgICBpZiAocm93ID49IHRoaXMuZG9jdW1lbnQuZ2V0TGVuZ3RoKCkpIHsKICAgICAgICAgICAgcG9zLnJvdyA9IE1hdGgubWF4KDAsIHRoaXMuZG9jdW1lbnQuZ2V0TGVuZ3RoKCkgLSAxKTsKICAgICAgICAgICAgcG9zLmNvbHVtbiA9IHRoaXMuZG9jdW1lbnQuZ2V0TGluZShwb3Mucm93KS5sZW5ndGg7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKHJvdyA8IDApIHsKICAgICAgICAgICAgcG9zLnJvdyA9IDA7CiAgICAgICAgICAgIHBvcy5jb2x1bW4gPSAwOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgcG9zLnJvdyA9IHJvdzsKICAgICAgICAgICAgcG9zLmNvbHVtbiA9IE1hdGgubWluKHRoaXMuZG9jdW1lbnQuZ2V0TGluZShwb3Mucm93KS5sZW5ndGgsIE1hdGgubWF4KDAsIGNvbHVtbikpOwogICAgICAgIH0KICAgICAgICBpZiAoY29sdW1uIDwgMCkKICAgICAgICAgICAgcG9zLmNvbHVtbiA9IDA7CiAgICAgICAgcmV0dXJuIHBvczsKICAgIH07CiAgICByZXR1cm4gQW5jaG9yOwp9KCkpOwpBbmNob3IucHJvdG90eXBlLiRpbnNlcnRSaWdodCA9IGZhbHNlOwpvb3AuaW1wbGVtZW50KEFuY2hvci5wcm90b3R5cGUsIEV2ZW50RW1pdHRlcik7CmZ1bmN0aW9uICRwb2ludHNJbk9yZGVyKHBvaW50MSwgcG9pbnQyLCBlcXVhbFBvaW50c0luT3JkZXIpIHsKICAgIHZhciBiQ29sSXNBZnRlciA9IGVxdWFsUG9pbnRzSW5PcmRlciA/IHBvaW50MS5jb2x1bW4gPD0gcG9pbnQyLmNvbHVtbiA6IHBvaW50MS5jb2x1bW4gPCBwb2ludDIuY29sdW1uOwogICAgcmV0dXJuIChwb2ludDEucm93IDwgcG9pbnQyLnJvdykgfHwgKHBvaW50MS5yb3cgPT0gcG9pbnQyLnJvdyAmJiBiQ29sSXNBZnRlcik7Cn0KZnVuY3Rpb24gJGdldFRyYW5zZm9ybWVkUG9pbnQoZGVsdGEsIHBvaW50LCBtb3ZlSWZFcXVhbCkgewogICAgdmFyIGRlbHRhSXNJbnNlcnQgPSBkZWx0YS5hY3Rpb24gPT0gImluc2VydCI7CiAgICB2YXIgZGVsdGFSb3dTaGlmdCA9IChkZWx0YUlzSW5zZXJ0ID8gMSA6IC0xKSAqIChkZWx0YS5lbmQucm93IC0gZGVsdGEuc3RhcnQucm93KTsKICAgIHZhciBkZWx0YUNvbFNoaWZ0ID0gKGRlbHRhSXNJbnNlcnQgPyAxIDogLTEpICogKGRlbHRhLmVuZC5jb2x1bW4gLSBkZWx0YS5zdGFydC5jb2x1bW4pOwogICAgdmFyIGRlbHRhU3RhcnQgPSBkZWx0YS5zdGFydDsKICAgIHZhciBkZWx0YUVuZCA9IGRlbHRhSXNJbnNlcnQgPyBkZWx0YVN0YXJ0IDogZGVsdGEuZW5kOyAvLyBDb2xsYXBzZSBpbnNlcnQgcmFuZ2UuCiAgICBpZiAoJHBvaW50c0luT3JkZXIocG9pbnQsIGRlbHRhU3RhcnQsIG1vdmVJZkVxdWFsKSkgewogICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIHJvdzogcG9pbnQucm93LAogICAgICAgICAgICBjb2x1bW46IHBvaW50LmNvbHVtbgogICAgICAgIH07CiAgICB9CiAgICBpZiAoJHBvaW50c0luT3JkZXIoZGVsdGFFbmQsIHBvaW50LCAhbW92ZUlmRXF1YWwpKSB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgcm93OiBwb2ludC5yb3cgKyBkZWx0YVJvd1NoaWZ0LAogICAgICAgICAgICBjb2x1bW46IHBvaW50LmNvbHVtbiArIChwb2ludC5yb3cgPT0gZGVsdGFFbmQucm93ID8gZGVsdGFDb2xTaGlmdCA6IDApCiAgICAgICAgfTsKICAgIH0KICAgIHJldHVybiB7CiAgICAgICAgcm93OiBkZWx0YVN0YXJ0LnJvdywKICAgICAgICBjb2x1bW46IGRlbHRhU3RhcnQuY29sdW1uCiAgICB9Owp9CmV4cG9ydHMuQW5jaG9yID0gQW5jaG9yOwoKfSk7CgphY2UuZGVmaW5lKCJhY2UvZG9jdW1lbnQiLFtdLCBmdW5jdGlvbihyZXF1aXJlLCBleHBvcnRzLCBtb2R1bGUpeyJ1c2Ugc3RyaWN0IjsKdmFyIG9vcCA9IHJlcXVpcmUoIi4vbGliL29vcCIpOwp2YXIgYXBwbHlEZWx0YSA9IHJlcXVpcmUoIi4vYXBwbHlfZGVsdGEiKS5hcHBseURlbHRhOwp2YXIgRXZlbnRFbWl0dGVyID0gcmVxdWlyZSgiLi9saWIvZXZlbnRfZW1pdHRlciIpLkV2ZW50RW1pdHRlcjsKdmFyIFJhbmdlID0gcmVxdWlyZSgiLi9yYW5nZSIpLlJhbmdlOwp2YXIgQW5jaG9yID0gcmVxdWlyZSgiLi9hbmNob3IiKS5BbmNob3I7CnZhciBEb2N1bWVudCA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uICgpIHsKICAgIGZ1bmN0aW9uIERvY3VtZW50KHRleHRPckxpbmVzKSB7CiAgICAgICAgdGhpcy4kbGluZXMgPSBbIiJdOwogICAgICAgIGlmICh0ZXh0T3JMaW5lcy5sZW5ndGggPT09IDApIHsKICAgICAgICAgICAgdGhpcy4kbGluZXMgPSBbIiJdOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChBcnJheS5pc0FycmF5KHRleHRPckxpbmVzKSkgewogICAgICAgICAgICB0aGlzLmluc2VydE1lcmdlZExpbmVzKHsgcm93OiAwLCBjb2x1bW46IDAgfSwgdGV4dE9yTGluZXMpOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgdGhpcy5pbnNlcnQoeyByb3c6IDAsIGNvbHVtbjogMCB9LCB0ZXh0T3JMaW5lcyk7CiAgICAgICAgfQogICAgfQogICAgRG9jdW1lbnQucHJvdG90eXBlLnNldFZhbHVlID0gZnVuY3Rpb24gKHRleHQpIHsKICAgICAgICB2YXIgbGVuID0gdGhpcy5nZXRMZW5ndGgoKSAtIDE7CiAgICAgICAgdGhpcy5yZW1vdmUobmV3IFJhbmdlKDAsIDAsIGxlbiwgdGhpcy5nZXRMaW5lKGxlbikubGVuZ3RoKSk7CiAgICAgICAgdGhpcy5pbnNlcnQoeyByb3c6IDAsIGNvbHVtbjogMCB9LCB0ZXh0IHx8ICIiKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuZ2V0VmFsdWUgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuZ2V0QWxsTGluZXMoKS5qb2luKHRoaXMuZ2V0TmV3TGluZUNoYXJhY3RlcigpKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuY3JlYXRlQW5jaG9yID0gZnVuY3Rpb24gKHJvdywgY29sdW1uKSB7CiAgICAgICAgcmV0dXJuIG5ldyBBbmNob3IodGhpcywgcm93LCBjb2x1bW4pOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS4kZGV0ZWN0TmV3TGluZSA9IGZ1bmN0aW9uICh0ZXh0KSB7CiAgICAgICAgdmFyIG1hdGNoID0gdGV4dC5tYXRjaCgvXi4qPyhcclxufFxyfFxuKS9tKTsKICAgICAgICB0aGlzLiRhdXRvTmV3TGluZSA9IG1hdGNoID8gbWF0Y2hbMV0gOiAiXG4iOwogICAgICAgIHRoaXMuX3NpZ25hbCgiY2hhbmdlTmV3TGluZU1vZGUiKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuZ2V0TmV3TGluZUNoYXJhY3RlciA9IGZ1bmN0aW9uICgpIHsKICAgICAgICBzd2l0Y2ggKHRoaXMuJG5ld0xpbmVNb2RlKSB7CiAgICAgICAgICAgIGNhc2UgIndpbmRvd3MiOgogICAgICAgICAgICAgICAgcmV0dXJuICJcclxuIjsKICAgICAgICAgICAgY2FzZSAidW5peCI6CiAgICAgICAgICAgICAgICByZXR1cm4gIlxuIjsKICAgICAgICAgICAgZGVmYXVsdDoKICAgICAgICAgICAgICAgIHJldHVybiB0aGlzLiRhdXRvTmV3TGluZSB8fCAiXG4iOwogICAgICAgIH0KICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuc2V0TmV3TGluZU1vZGUgPSBmdW5jdGlvbiAobmV3TGluZU1vZGUpIHsKICAgICAgICBpZiAodGhpcy4kbmV3TGluZU1vZGUgPT09IG5ld0xpbmVNb2RlKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgdGhpcy4kbmV3TGluZU1vZGUgPSBuZXdMaW5lTW9kZTsKICAgICAgICB0aGlzLl9zaWduYWwoImNoYW5nZU5ld0xpbmVNb2RlIik7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmdldE5ld0xpbmVNb2RlID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiB0aGlzLiRuZXdMaW5lTW9kZTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuaXNOZXdMaW5lID0gZnVuY3Rpb24gKHRleHQpIHsKICAgICAgICByZXR1cm4gKHRleHQgPT0gIlxyXG4iIHx8IHRleHQgPT0gIlxyIiB8fCB0ZXh0ID09ICJcbiIpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5nZXRMaW5lID0gZnVuY3Rpb24gKHJvdykgewogICAgICAgIHJldHVybiB0aGlzLiRsaW5lc1tyb3ddIHx8ICIiOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5nZXRMaW5lcyA9IGZ1bmN0aW9uIChmaXJzdFJvdywgbGFzdFJvdykgewogICAgICAgIHJldHVybiB0aGlzLiRsaW5lcy5zbGljZShmaXJzdFJvdywgbGFzdFJvdyArIDEpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5nZXRBbGxMaW5lcyA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gdGhpcy5nZXRMaW5lcygwLCB0aGlzLmdldExlbmd0aCgpKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuZ2V0TGVuZ3RoID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiB0aGlzLiRsaW5lcy5sZW5ndGg7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmdldFRleHRSYW5nZSA9IGZ1bmN0aW9uIChyYW5nZSkgewogICAgICAgIHJldHVybiB0aGlzLmdldExpbmVzRm9yUmFuZ2UocmFuZ2UpLmpvaW4odGhpcy5nZXROZXdMaW5lQ2hhcmFjdGVyKCkpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5nZXRMaW5lc0ZvclJhbmdlID0gZnVuY3Rpb24gKHJhbmdlKSB7CiAgICAgICAgdmFyIGxpbmVzOwogICAgICAgIGlmIChyYW5nZS5zdGFydC5yb3cgPT09IHJhbmdlLmVuZC5yb3cpIHsKICAgICAgICAgICAgbGluZXMgPSBbdGhpcy5nZXRMaW5lKHJhbmdlLnN0YXJ0LnJvdykuc3Vic3RyaW5nKHJhbmdlLnN0YXJ0LmNvbHVtbiwgcmFuZ2UuZW5kLmNvbHVtbildOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgbGluZXMgPSB0aGlzLmdldExpbmVzKHJhbmdlLnN0YXJ0LnJvdywgcmFuZ2UuZW5kLnJvdyk7CiAgICAgICAgICAgIGxpbmVzWzBdID0gKGxpbmVzWzBdIHx8ICIiKS5zdWJzdHJpbmcocmFuZ2Uuc3RhcnQuY29sdW1uKTsKICAgICAgICAgICAgdmFyIGwgPSBsaW5lcy5sZW5ndGggLSAxOwogICAgICAgICAgICBpZiAocmFuZ2UuZW5kLnJvdyAtIHJhbmdlLnN0YXJ0LnJvdyA9PSBsKQogICAgICAgICAgICAgICAgbGluZXNbbF0gPSBsaW5lc1tsXS5zdWJzdHJpbmcoMCwgcmFuZ2UuZW5kLmNvbHVtbik7CiAgICAgICAgfQogICAgICAgIHJldHVybiBsaW5lczsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuaW5zZXJ0TGluZXMgPSBmdW5jdGlvbiAocm93LCBsaW5lcykgewogICAgICAgIGNvbnNvbGUud2FybigiVXNlIG9mIGRvY3VtZW50Lmluc2VydExpbmVzIGlzIGRlcHJlY2F0ZWQuIFVzZSB0aGUgaW5zZXJ0RnVsbExpbmVzIG1ldGhvZCBpbnN0ZWFkLiIpOwogICAgICAgIHJldHVybiB0aGlzLmluc2VydEZ1bGxMaW5lcyhyb3csIGxpbmVzKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucmVtb3ZlTGluZXMgPSBmdW5jdGlvbiAoZmlyc3RSb3csIGxhc3RSb3cpIHsKICAgICAgICBjb25zb2xlLndhcm4oIlVzZSBvZiBkb2N1bWVudC5yZW1vdmVMaW5lcyBpcyBkZXByZWNhdGVkLiBVc2UgdGhlIHJlbW92ZUZ1bGxMaW5lcyBtZXRob2QgaW5zdGVhZC4iKTsKICAgICAgICByZXR1cm4gdGhpcy5yZW1vdmVGdWxsTGluZXMoZmlyc3RSb3csIGxhc3RSb3cpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5pbnNlcnROZXdMaW5lID0gZnVuY3Rpb24gKHBvc2l0aW9uKSB7CiAgICAgICAgY29uc29sZS53YXJuKCJVc2Ugb2YgZG9jdW1lbnQuaW5zZXJ0TmV3TGluZSBpcyBkZXByZWNhdGVkLiBVc2UgaW5zZXJ0TWVyZ2VkTGluZXMocG9zaXRpb24sIFsnJywgJyddKSBpbnN0ZWFkLiIpOwogICAgICAgIHJldHVybiB0aGlzLmluc2VydE1lcmdlZExpbmVzKHBvc2l0aW9uLCBbIiIsICIiXSk7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmluc2VydCA9IGZ1bmN0aW9uIChwb3NpdGlvbiwgdGV4dCkgewogICAgICAgIGlmICh0aGlzLmdldExlbmd0aCgpIDw9IDEpCiAgICAgICAgICAgIHRoaXMuJGRldGVjdE5ld0xpbmUodGV4dCk7CiAgICAgICAgcmV0dXJuIHRoaXMuaW5zZXJ0TWVyZ2VkTGluZXMocG9zaXRpb24sIHRoaXMuJHNwbGl0KHRleHQpKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuaW5zZXJ0SW5MaW5lID0gZnVuY3Rpb24gKHBvc2l0aW9uLCB0ZXh0KSB7CiAgICAgICAgdmFyIHN0YXJ0ID0gdGhpcy5jbGlwcGVkUG9zKHBvc2l0aW9uLnJvdywgcG9zaXRpb24uY29sdW1uKTsKICAgICAgICB2YXIgZW5kID0gdGhpcy5wb3MocG9zaXRpb24ucm93LCBwb3NpdGlvbi5jb2x1bW4gKyB0ZXh0Lmxlbmd0aCk7CiAgICAgICAgdGhpcy5hcHBseURlbHRhKHsKICAgICAgICAgICAgc3RhcnQ6IHN0YXJ0LAogICAgICAgICAgICBlbmQ6IGVuZCwKICAgICAgICAgICAgYWN0aW9uOiAiaW5zZXJ0IiwKICAgICAgICAgICAgbGluZXM6IFt0ZXh0XQogICAgICAgIH0sIHRydWUpOwogICAgICAgIHJldHVybiB0aGlzLmNsb25lUG9zKGVuZCk7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmNsaXBwZWRQb3MgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICB2YXIgbGVuZ3RoID0gdGhpcy5nZXRMZW5ndGgoKTsKICAgICAgICBpZiAocm93ID09PSB1bmRlZmluZWQpIHsKICAgICAgICAgICAgcm93ID0gbGVuZ3RoOwogICAgICAgIH0KICAgICAgICBlbHNlIGlmIChyb3cgPCAwKSB7CiAgICAgICAgICAgIHJvdyA9IDA7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKHJvdyA+PSBsZW5ndGgpIHsKICAgICAgICAgICAgcm93ID0gbGVuZ3RoIC0gMTsKICAgICAgICAgICAgY29sdW1uID0gdW5kZWZpbmVkOwogICAgICAgIH0KICAgICAgICB2YXIgbGluZSA9IHRoaXMuZ2V0TGluZShyb3cpOwogICAgICAgIGlmIChjb2x1bW4gPT0gdW5kZWZpbmVkKQogICAgICAgICAgICBjb2x1bW4gPSBsaW5lLmxlbmd0aDsKICAgICAgICBjb2x1bW4gPSBNYXRoLm1pbihNYXRoLm1heChjb2x1bW4sIDApLCBsaW5lLmxlbmd0aCk7CiAgICAgICAgcmV0dXJuIHsgcm93OiByb3csIGNvbHVtbjogY29sdW1uIH07CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmNsb25lUG9zID0gZnVuY3Rpb24gKHBvcykgewogICAgICAgIHJldHVybiB7IHJvdzogcG9zLnJvdywgY29sdW1uOiBwb3MuY29sdW1uIH07CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLnBvcyA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHJldHVybiB7IHJvdzogcm93LCBjb2x1bW46IGNvbHVtbiB9OwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS4kY2xpcFBvc2l0aW9uID0gZnVuY3Rpb24gKHBvc2l0aW9uKSB7CiAgICAgICAgdmFyIGxlbmd0aCA9IHRoaXMuZ2V0TGVuZ3RoKCk7CiAgICAgICAgaWYgKHBvc2l0aW9uLnJvdyA+PSBsZW5ndGgpIHsKICAgICAgICAgICAgcG9zaXRpb24ucm93ID0gTWF0aC5tYXgoMCwgbGVuZ3RoIC0gMSk7CiAgICAgICAgICAgIHBvc2l0aW9uLmNvbHVtbiA9IHRoaXMuZ2V0TGluZShsZW5ndGggLSAxKS5sZW5ndGg7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICBwb3NpdGlvbi5yb3cgPSBNYXRoLm1heCgwLCBwb3NpdGlvbi5yb3cpOwogICAgICAgICAgICBwb3NpdGlvbi5jb2x1bW4gPSBNYXRoLm1pbihNYXRoLm1heChwb3NpdGlvbi5jb2x1bW4sIDApLCB0aGlzLmdldExpbmUocG9zaXRpb24ucm93KS5sZW5ndGgpOwogICAgICAgIH0KICAgICAgICByZXR1cm4gcG9zaXRpb247CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmluc2VydEZ1bGxMaW5lcyA9IGZ1bmN0aW9uIChyb3csIGxpbmVzKSB7CiAgICAgICAgcm93ID0gTWF0aC5taW4oTWF0aC5tYXgocm93LCAwKSwgdGhpcy5nZXRMZW5ndGgoKSk7CiAgICAgICAgdmFyIGNvbHVtbiA9IDA7CiAgICAgICAgaWYgKHJvdyA8IHRoaXMuZ2V0TGVuZ3RoKCkpIHsKICAgICAgICAgICAgbGluZXMgPSBsaW5lcy5jb25jYXQoWyIiXSk7CiAgICAgICAgICAgIGNvbHVtbiA9IDA7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICBsaW5lcyA9IFsiIl0uY29uY2F0KGxpbmVzKTsKICAgICAgICAgICAgcm93LS07CiAgICAgICAgICAgIGNvbHVtbiA9IHRoaXMuJGxpbmVzW3Jvd10ubGVuZ3RoOwogICAgICAgIH0KICAgICAgICB0aGlzLmluc2VydE1lcmdlZExpbmVzKHsgcm93OiByb3csIGNvbHVtbjogY29sdW1uIH0sIGxpbmVzKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuaW5zZXJ0TWVyZ2VkTGluZXMgPSBmdW5jdGlvbiAocG9zaXRpb24sIGxpbmVzKSB7CiAgICAgICAgdmFyIHN0YXJ0ID0gdGhpcy5jbGlwcGVkUG9zKHBvc2l0aW9uLnJvdywgcG9zaXRpb24uY29sdW1uKTsKICAgICAgICB2YXIgZW5kID0gewogICAgICAgICAgICByb3c6IHN0YXJ0LnJvdyArIGxpbmVzLmxlbmd0aCAtIDEsCiAgICAgICAgICAgIGNvbHVtbjogKGxpbmVzLmxlbmd0aCA9PSAxID8gc3RhcnQuY29sdW1uIDogMCkgKyBsaW5lc1tsaW5lcy5sZW5ndGggLSAxXS5sZW5ndGgKICAgICAgICB9OwogICAgICAgIHRoaXMuYXBwbHlEZWx0YSh7CiAgICAgICAgICAgIHN0YXJ0OiBzdGFydCwKICAgICAgICAgICAgZW5kOiBlbmQsCiAgICAgICAgICAgIGFjdGlvbjogImluc2VydCIsCiAgICAgICAgICAgIGxpbmVzOiBsaW5lcwogICAgICAgIH0pOwogICAgICAgIHJldHVybiB0aGlzLmNsb25lUG9zKGVuZCk7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLnJlbW92ZSA9IGZ1bmN0aW9uIChyYW5nZSkgewogICAgICAgIHZhciBzdGFydCA9IHRoaXMuY2xpcHBlZFBvcyhyYW5nZS5zdGFydC5yb3csIHJhbmdlLnN0YXJ0LmNvbHVtbik7CiAgICAgICAgdmFyIGVuZCA9IHRoaXMuY2xpcHBlZFBvcyhyYW5nZS5lbmQucm93LCByYW5nZS5lbmQuY29sdW1uKTsKICAgICAgICB0aGlzLmFwcGx5RGVsdGEoewogICAgICAgICAgICBzdGFydDogc3RhcnQsCiAgICAgICAgICAgIGVuZDogZW5kLAogICAgICAgICAgICBhY3Rpb246ICJyZW1vdmUiLAogICAgICAgICAgICBsaW5lczogdGhpcy5nZXRMaW5lc0ZvclJhbmdlKHsgc3RhcnQ6IHN0YXJ0LCBlbmQ6IGVuZCB9KQogICAgICAgIH0pOwogICAgICAgIHJldHVybiB0aGlzLmNsb25lUG9zKHN0YXJ0KTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucmVtb3ZlSW5MaW5lID0gZnVuY3Rpb24gKHJvdywgc3RhcnRDb2x1bW4sIGVuZENvbHVtbikgewogICAgICAgIHZhciBzdGFydCA9IHRoaXMuY2xpcHBlZFBvcyhyb3csIHN0YXJ0Q29sdW1uKTsKICAgICAgICB2YXIgZW5kID0gdGhpcy5jbGlwcGVkUG9zKHJvdywgZW5kQ29sdW1uKTsKICAgICAgICB0aGlzLmFwcGx5RGVsdGEoewogICAgICAgICAgICBzdGFydDogc3RhcnQsCiAgICAgICAgICAgIGVuZDogZW5kLAogICAgICAgICAgICBhY3Rpb246ICJyZW1vdmUiLAogICAgICAgICAgICBsaW5lczogdGhpcy5nZXRMaW5lc0ZvclJhbmdlKHsgc3RhcnQ6IHN0YXJ0LCBlbmQ6IGVuZCB9KQogICAgICAgIH0sIHRydWUpOwogICAgICAgIHJldHVybiB0aGlzLmNsb25lUG9zKHN0YXJ0KTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucmVtb3ZlRnVsbExpbmVzID0gZnVuY3Rpb24gKGZpcnN0Um93LCBsYXN0Um93KSB7CiAgICAgICAgZmlyc3RSb3cgPSBNYXRoLm1pbihNYXRoLm1heCgwLCBmaXJzdFJvdyksIHRoaXMuZ2V0TGVuZ3RoKCkgLSAxKTsKICAgICAgICBsYXN0Um93ID0gTWF0aC5taW4oTWF0aC5tYXgoMCwgbGFzdFJvdyksIHRoaXMuZ2V0TGVuZ3RoKCkgLSAxKTsKICAgICAgICB2YXIgZGVsZXRlRmlyc3ROZXdMaW5lID0gbGFzdFJvdyA9PSB0aGlzLmdldExlbmd0aCgpIC0gMSAmJiBmaXJzdFJvdyA+IDA7CiAgICAgICAgdmFyIGRlbGV0ZUxhc3ROZXdMaW5lID0gbGFzdFJvdyA8IHRoaXMuZ2V0TGVuZ3RoKCkgLSAxOwogICAgICAgIHZhciBzdGFydFJvdyA9IChkZWxldGVGaXJzdE5ld0xpbmUgPyBmaXJzdFJvdyAtIDEgOiBmaXJzdFJvdyk7CiAgICAgICAgdmFyIHN0YXJ0Q29sID0gKGRlbGV0ZUZpcnN0TmV3TGluZSA/IHRoaXMuZ2V0TGluZShzdGFydFJvdykubGVuZ3RoIDogMCk7CiAgICAgICAgdmFyIGVuZFJvdyA9IChkZWxldGVMYXN0TmV3TGluZSA/IGxhc3RSb3cgKyAxIDogbGFzdFJvdyk7CiAgICAgICAgdmFyIGVuZENvbCA9IChkZWxldGVMYXN0TmV3TGluZSA/IDAgOiB0aGlzLmdldExpbmUoZW5kUm93KS5sZW5ndGgpOwogICAgICAgIHZhciByYW5nZSA9IG5ldyBSYW5nZShzdGFydFJvdywgc3RhcnRDb2wsIGVuZFJvdywgZW5kQ29sKTsKICAgICAgICB2YXIgZGVsZXRlZExpbmVzID0gdGhpcy4kbGluZXMuc2xpY2UoZmlyc3RSb3csIGxhc3RSb3cgKyAxKTsKICAgICAgICB0aGlzLmFwcGx5RGVsdGEoewogICAgICAgICAgICBzdGFydDogcmFuZ2Uuc3RhcnQsCiAgICAgICAgICAgIGVuZDogcmFuZ2UuZW5kLAogICAgICAgICAgICBhY3Rpb246ICJyZW1vdmUiLAogICAgICAgICAgICBsaW5lczogdGhpcy5nZXRMaW5lc0ZvclJhbmdlKHJhbmdlKQogICAgICAgIH0pOwogICAgICAgIHJldHVybiBkZWxldGVkTGluZXM7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLnJlbW92ZU5ld0xpbmUgPSBmdW5jdGlvbiAocm93KSB7CiAgICAgICAgaWYgKHJvdyA8IHRoaXMuZ2V0TGVuZ3RoKCkgLSAxICYmIHJvdyA+PSAwKSB7CiAgICAgICAgICAgIHRoaXMuYXBwbHlEZWx0YSh7CiAgICAgICAgICAgICAgICBzdGFydDogdGhpcy5wb3Mocm93LCB0aGlzLmdldExpbmUocm93KS5sZW5ndGgpLAogICAgICAgICAgICAgICAgZW5kOiB0aGlzLnBvcyhyb3cgKyAxLCAwKSwKICAgICAgICAgICAgICAgIGFjdGlvbjogInJlbW92ZSIsCiAgICAgICAgICAgICAgICBsaW5lczogWyIiLCAiIl0KICAgICAgICAgICAgfSk7CiAgICAgICAgfQogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5yZXBsYWNlID0gZnVuY3Rpb24gKHJhbmdlLCB0ZXh0KSB7CiAgICAgICAgaWYgKCEocmFuZ2UgaW5zdGFuY2VvZiBSYW5nZSkpCiAgICAgICAgICAgIHJhbmdlID0gUmFuZ2UuZnJvbVBvaW50cyhyYW5nZS5zdGFydCwgcmFuZ2UuZW5kKTsKICAgICAgICBpZiAodGV4dC5sZW5ndGggPT09IDAgJiYgcmFuZ2UuaXNFbXB0eSgpKQogICAgICAgICAgICByZXR1cm4gcmFuZ2Uuc3RhcnQ7CiAgICAgICAgaWYgKHRleHQgPT0gdGhpcy5nZXRUZXh0UmFuZ2UocmFuZ2UpKQogICAgICAgICAgICByZXR1cm4gcmFuZ2UuZW5kOwogICAgICAgIHRoaXMucmVtb3ZlKHJhbmdlKTsKICAgICAgICB2YXIgZW5kOwogICAgICAgIGlmICh0ZXh0KSB7CiAgICAgICAgICAgIGVuZCA9IHRoaXMuaW5zZXJ0KHJhbmdlLnN0YXJ0LCB0ZXh0KTsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIGVuZCA9IHJhbmdlLnN0YXJ0OwogICAgICAgIH0KICAgICAgICByZXR1cm4gZW5kOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5hcHBseURlbHRhcyA9IGZ1bmN0aW9uIChkZWx0YXMpIHsKICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IGRlbHRhcy5sZW5ndGg7IGkrKykgewogICAgICAgICAgICB0aGlzLmFwcGx5RGVsdGEoZGVsdGFzW2ldKTsKICAgICAgICB9CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLnJldmVydERlbHRhcyA9IGZ1bmN0aW9uIChkZWx0YXMpIHsKICAgICAgICBmb3IgKHZhciBpID0gZGVsdGFzLmxlbmd0aCAtIDE7IGkgPj0gMDsgaS0tKSB7CiAgICAgICAgICAgIHRoaXMucmV2ZXJ0RGVsdGEoZGVsdGFzW2ldKTsKICAgICAgICB9CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmFwcGx5RGVsdGEgPSBmdW5jdGlvbiAoZGVsdGEsIGRvTm90VmFsaWRhdGUpIHsKICAgICAgICB2YXIgaXNJbnNlcnQgPSBkZWx0YS5hY3Rpb24gPT0gImluc2VydCI7CiAgICAgICAgaWYgKGlzSW5zZXJ0ID8gZGVsdGEubGluZXMubGVuZ3RoIDw9IDEgJiYgIWRlbHRhLmxpbmVzWzBdCiAgICAgICAgICAgIDogIVJhbmdlLmNvbXBhcmVQb2ludHMoZGVsdGEuc3RhcnQsIGRlbHRhLmVuZCkpIHsKICAgICAgICAgICAgcmV0dXJuOwogICAgICAgIH0KICAgICAgICBpZiAoaXNJbnNlcnQgJiYgZGVsdGEubGluZXMubGVuZ3RoID4gMjAwMDApIHsKICAgICAgICAgICAgdGhpcy4kc3BsaXRBbmRhcHBseUxhcmdlRGVsdGEoZGVsdGEsIDIwMDAwKTsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIGFwcGx5RGVsdGEodGhpcy4kbGluZXMsIGRlbHRhLCBkb05vdFZhbGlkYXRlKTsKICAgICAgICAgICAgdGhpcy5fc2lnbmFsKCJjaGFuZ2UiLCBkZWx0YSk7CiAgICAgICAgfQogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS4kc2FmZUFwcGx5RGVsdGEgPSBmdW5jdGlvbiAoZGVsdGEpIHsKICAgICAgICB2YXIgZG9jTGVuZ3RoID0gdGhpcy4kbGluZXMubGVuZ3RoOwogICAgICAgIGlmIChkZWx0YS5hY3Rpb24gPT0gInJlbW92ZSIgJiYgZGVsdGEuc3RhcnQucm93IDwgZG9jTGVuZ3RoICYmIGRlbHRhLmVuZC5yb3cgPCBkb2NMZW5ndGgKICAgICAgICAgICAgfHwgZGVsdGEuYWN0aW9uID09ICJpbnNlcnQiICYmIGRlbHRhLnN0YXJ0LnJvdyA8PSBkb2NMZW5ndGgpIHsKICAgICAgICAgICAgdGhpcy5hcHBseURlbHRhKGRlbHRhKTsKICAgICAgICB9CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLiRzcGxpdEFuZGFwcGx5TGFyZ2VEZWx0YSA9IGZ1bmN0aW9uIChkZWx0YSwgTUFYKSB7CiAgICAgICAgdmFyIGxpbmVzID0gZGVsdGEubGluZXM7CiAgICAgICAgdmFyIGwgPSBsaW5lcy5sZW5ndGggLSBNQVggKyAxOwogICAgICAgIHZhciByb3cgPSBkZWx0YS5zdGFydC5yb3c7CiAgICAgICAgdmFyIGNvbHVtbiA9IGRlbHRhLnN0YXJ0LmNvbHVtbjsKICAgICAgICBmb3IgKHZhciBmcm9tID0gMCwgdG8gPSAwOyBmcm9tIDwgbDsgZnJvbSA9IHRvKSB7CiAgICAgICAgICAgIHRvICs9IE1BWCAtIDE7CiAgICAgICAgICAgIHZhciBjaHVuayA9IGxpbmVzLnNsaWNlKGZyb20sIHRvKTsKICAgICAgICAgICAgY2h1bmsucHVzaCgiIik7CiAgICAgICAgICAgIHRoaXMuYXBwbHlEZWx0YSh7CiAgICAgICAgICAgICAgICBzdGFydDogdGhpcy5wb3Mocm93ICsgZnJvbSwgY29sdW1uKSwKICAgICAgICAgICAgICAgIGVuZDogdGhpcy5wb3Mocm93ICsgdG8sIGNvbHVtbiA9IDApLAogICAgICAgICAgICAgICAgYWN0aW9uOiBkZWx0YS5hY3Rpb24sCiAgICAgICAgICAgICAgICBsaW5lczogY2h1bmsKICAgICAgICAgICAgfSwgdHJ1ZSk7CiAgICAgICAgfQogICAgICAgIGRlbHRhLmxpbmVzID0gbGluZXMuc2xpY2UoZnJvbSk7CiAgICAgICAgZGVsdGEuc3RhcnQucm93ID0gcm93ICsgZnJvbTsKICAgICAgICBkZWx0YS5zdGFydC5jb2x1bW4gPSBjb2x1bW47CiAgICAgICAgdGhpcy5hcHBseURlbHRhKGRlbHRhLCB0cnVlKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucmV2ZXJ0RGVsdGEgPSBmdW5jdGlvbiAoZGVsdGEpIHsKICAgICAgICB0aGlzLiRzYWZlQXBwbHlEZWx0YSh7CiAgICAgICAgICAgIHN0YXJ0OiB0aGlzLmNsb25lUG9zKGRlbHRhLnN0YXJ0KSwKICAgICAgICAgICAgZW5kOiB0aGlzLmNsb25lUG9zKGRlbHRhLmVuZCksCiAgICAgICAgICAgIGFjdGlvbjogKGRlbHRhLmFjdGlvbiA9PSAiaW5zZXJ0IiA/ICJyZW1vdmUiIDogImluc2VydCIpLAogICAgICAgICAgICBsaW5lczogZGVsdGEubGluZXMuc2xpY2UoKQogICAgICAgIH0pOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5pbmRleFRvUG9zaXRpb24gPSBmdW5jdGlvbiAoaW5kZXgsIHN0YXJ0Um93KSB7CiAgICAgICAgdmFyIGxpbmVzID0gdGhpcy4kbGluZXMgfHwgdGhpcy5nZXRBbGxMaW5lcygpOwogICAgICAgIHZhciBuZXdsaW5lTGVuZ3RoID0gdGhpcy5nZXROZXdMaW5lQ2hhcmFjdGVyKCkubGVuZ3RoOwogICAgICAgIGZvciAodmFyIGkgPSBzdGFydFJvdyB8fCAwLCBsID0gbGluZXMubGVuZ3RoOyBpIDwgbDsgaSsrKSB7CiAgICAgICAgICAgIGluZGV4IC09IGxpbmVzW2ldLmxlbmd0aCArIG5ld2xpbmVMZW5ndGg7CiAgICAgICAgICAgIGlmIChpbmRleCA8IDApCiAgICAgICAgICAgICAgICByZXR1cm4geyByb3c6IGksIGNvbHVtbjogaW5kZXggKyBsaW5lc1tpXS5sZW5ndGggKyBuZXdsaW5lTGVuZ3RoIH07CiAgICAgICAgfQogICAgICAgIHJldHVybiB7IHJvdzogbCAtIDEsIGNvbHVtbjogaW5kZXggKyBsaW5lc1tsIC0gMV0ubGVuZ3RoICsgbmV3bGluZUxlbmd0aCB9OwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5wb3NpdGlvblRvSW5kZXggPSBmdW5jdGlvbiAocG9zLCBzdGFydFJvdykgewogICAgICAgIHZhciBsaW5lcyA9IHRoaXMuJGxpbmVzIHx8IHRoaXMuZ2V0QWxsTGluZXMoKTsKICAgICAgICB2YXIgbmV3bGluZUxlbmd0aCA9IHRoaXMuZ2V0TmV3TGluZUNoYXJhY3RlcigpLmxlbmd0aDsKICAgICAgICB2YXIgaW5kZXggPSAwOwogICAgICAgIHZhciByb3cgPSBNYXRoLm1pbihwb3Mucm93LCBsaW5lcy5sZW5ndGgpOwogICAgICAgIGZvciAodmFyIGkgPSBzdGFydFJvdyB8fCAwOyBpIDwgcm93OyArK2kpCiAgICAgICAgICAgIGluZGV4ICs9IGxpbmVzW2ldLmxlbmd0aCArIG5ld2xpbmVMZW5ndGg7CiAgICAgICAgcmV0dXJuIGluZGV4ICsgcG9zLmNvbHVtbjsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuJHNwbGl0ID0gZnVuY3Rpb24gKHRleHQpIHsKICAgICAgICByZXR1cm4gdGV4dC5zcGxpdCgvXHJcbnxccnxcbi8pOwogICAgfTsKICAgIHJldHVybiBEb2N1bWVudDsKfSgpKTsKRG9jdW1lbnQucHJvdG90eXBlLiRhdXRvTmV3TGluZSA9ICIiOwpEb2N1bWVudC5wcm90b3R5cGUuJG5ld0xpbmVNb2RlID0gImF1dG8iOwpvb3AuaW1wbGVtZW50KERvY3VtZW50LnByb3RvdHlwZSwgRXZlbnRFbWl0dGVyKTsKZXhwb3J0cy5Eb2N1bWVudCA9IERvY3VtZW50OwoKfSk7CgphY2UuZGVmaW5lKCJhY2UvbGliL2xhbmciLFtdLCBmdW5jdGlvbihyZXF1aXJlLCBleHBvcnRzLCBtb2R1bGUpeyJ1c2Ugc3RyaWN0IjsKZXhwb3J0cy5sYXN0ID0gZnVuY3Rpb24gKGEpIHsKICAgIHJldHVybiBhW2EubGVuZ3RoIC0gMV07Cn07CmV4cG9ydHMuc3RyaW5nUmV2ZXJzZSA9IGZ1bmN0aW9uIChzdHJpbmcpIHsKICAgIHJldHVybiBzdHJpbmcuc3BsaXQoIiIpLnJldmVyc2UoKS5qb2luKCIiKTsKfTsKZXhwb3J0cy5zdHJpbmdSZXBlYXQgPSBmdW5jdGlvbiAoc3RyaW5nLCBjb3VudCkgewogICAgdmFyIHJlc3VsdCA9ICcnOwogICAgd2hpbGUgKGNvdW50ID4gMCkgewogICAgICAgIGlmIChjb3VudCAmIDEpCiAgICAgICAgICAgIHJlc3VsdCArPSBzdHJpbmc7CiAgICAgICAgaWYgKGNvdW50ID4+PSAxKQogICAgICAgICAgICBzdHJpbmcgKz0gc3RyaW5nOwogICAgfQogICAgcmV0dXJuIHJlc3VsdDsKfTsKdmFyIHRyaW1CZWdpblJlZ2V4cCA9IC9eXHNccyovOwp2YXIgdHJpbUVuZFJlZ2V4cCA9IC9cc1xzKiQvOwpleHBvcnRzLnN0cmluZ1RyaW1MZWZ0ID0gZnVuY3Rpb24gKHN0cmluZykgewogICAgcmV0dXJuIHN0cmluZy5yZXBsYWNlKHRyaW1CZWdpblJlZ2V4cCwgJycpOwp9OwpleHBvcnRzLnN0cmluZ1RyaW1SaWdodCA9IGZ1bmN0aW9uIChzdHJpbmcpIHsKICAgIHJldHVybiBzdHJpbmcucmVwbGFjZSh0cmltRW5kUmVnZXhwLCAnJyk7Cn07CmV4cG9ydHMuY29weU9iamVjdCA9IGZ1bmN0aW9uIChvYmopIHsKICAgIHZhciBjb3B5ID0ge307CiAgICBmb3IgKHZhciBrZXkgaW4gb2JqKSB7CiAgICAgICAgY29weVtrZXldID0gb2JqW2tleV07CiAgICB9CiAgICByZXR1cm4gY29weTsKfTsKZXhwb3J0cy5jb3B5QXJyYXkgPSBmdW5jdGlvbiAoYXJyYXkpIHsKICAgIHZhciBjb3B5ID0gW107CiAgICBmb3IgKHZhciBpID0gMCwgbCA9IGFycmF5Lmxlbmd0aDsgaSA8IGw7IGkrKykgewogICAgICAgIGlmIChhcnJheVtpXSAmJiB0eXBlb2YgYXJyYXlbaV0gPT0gIm9iamVjdCIpCiAgICAgICAgICAgIGNvcHlbaV0gPSB0aGlzLmNvcHlPYmplY3QoYXJyYXlbaV0pOwogICAgICAgIGVsc2UKICAgICAgICAgICAgY29weVtpXSA9IGFycmF5W2ldOwogICAgfQogICAgcmV0dXJuIGNvcHk7Cn07CmV4cG9ydHMuZGVlcENvcHkgPSBmdW5jdGlvbiBkZWVwQ29weShvYmopIHsKICAgIGlmICh0eXBlb2Ygb2JqICE9PSAib2JqZWN0IiB8fCAhb2JqKQogICAgICAgIHJldHVybiBvYmo7CiAgICB2YXIgY29weTsKICAgIGlmIChBcnJheS5pc0FycmF5KG9iaikpIHsKICAgICAgICBjb3B5ID0gW107CiAgICAgICAgZm9yICh2YXIga2V5ID0gMDsga2V5IDwgb2JqLmxlbmd0aDsga2V5KyspIHsKICAgICAgICAgICAgY29weVtrZXldID0gZGVlcENvcHkob2JqW2tleV0pOwogICAgICAgIH0KICAgICAgICByZXR1cm4gY29weTsKICAgIH0KICAgIGlmIChPYmplY3QucHJvdG90eXBlLnRvU3RyaW5nLmNhbGwob2JqKSAhPT0gIltvYmplY3QgT2JqZWN0XSIpCiAgICAgICAgcmV0dXJuIG9iajsKICAgIGNvcHkgPSB7fTsKICAgIGZvciAodmFyIGtleSBpbiBvYmopCiAgICAgICAgY29weVtrZXldID0gZGVlcENvcHkob2JqW2tleV0pOwogICAgcmV0dXJuIGNvcHk7Cn07CmV4cG9ydHMuYXJyYXlUb01hcCA9IGZ1bmN0aW9uIChhcnIpIHsKICAgIHZhciBtYXAgPSB7fTsKICAgIGZvciAodmFyIGkgPSAwOyBpIDwgYXJyLmxlbmd0aDsgaSsrKSB7CiAgICAgICAgbWFwW2FycltpXV0gPSAxOwogICAgfQogICAgcmV0dXJuIG1hcDsKfTsKZXhwb3J0cy5jcmVhdGVNYXAgPSBmdW5jdGlvbiAocHJvcHMpIHsKICAgIHZhciBtYXAgPSBPYmplY3QuY3JlYXRlKG51bGwpOwogICAgZm9yICh2YXIgaSBpbiBwcm9wcykgewogICAgICAgIG1hcFtpXSA9IHByb3BzW2ldOwogICAgfQogICAgcmV0dXJuIG1hcDsKfTsKZXhwb3J0cy5hcnJheVJlbW92ZSA9IGZ1bmN0aW9uIChhcnJheSwgdmFsdWUpIHsKICAgIGZvciAodmFyIGkgPSAwOyBpIDw9IGFycmF5Lmxlbmd0aDsgaSsrKSB7CiAgICAgICAgaWYgKHZhbHVlID09PSBhcnJheVtpXSkgewogICAgICAgICAgICBhcnJheS5zcGxpY2UoaSwgMSk7CiAgICAgICAgfQogICAgfQp9OwpleHBvcnRzLmVzY2FwZVJlZ0V4cCA9IGZ1bmN0aW9uIChzdHIpIHsKICAgIHJldHVybiBzdHIucmVwbGFjZSgvKFsuKis/XiR7fSgpfFtcXVwvXFxdKS9nLCAnXFwkMScpOwp9OwpleHBvcnRzLmVzY2FwZUhUTUwgPSBmdW5jdGlvbiAoc3RyKSB7CiAgICByZXR1cm4gKCIiICsgc3RyKS5yZXBsYWNlKC8mL2csICImIzM4OyIpLnJlcGxhY2UoLyIvZywgIiYjMzQ7IikucmVwbGFjZSgvJy9nLCAiJiMzOTsiKS5yZXBsYWNlKC88L2csICImIzYwOyIpOwp9OwpleHBvcnRzLmdldE1hdGNoT2Zmc2V0cyA9IGZ1bmN0aW9uIChzdHJpbmcsIHJlZ0V4cCkgewogICAgdmFyIG1hdGNoZXMgPSBbXTsKICAgIHN0cmluZy5yZXBsYWNlKHJlZ0V4cCwgZnVuY3Rpb24gKHN0cikgewogICAgICAgIG1hdGNoZXMucHVzaCh7CiAgICAgICAgICAgIG9mZnNldDogYXJndW1lbnRzW2FyZ3VtZW50cy5sZW5ndGggLSAyXSwKICAgICAgICAgICAgbGVuZ3RoOiBzdHIubGVuZ3RoCiAgICAgICAgfSk7CiAgICB9KTsKICAgIHJldHVybiBtYXRjaGVzOwp9OwpleHBvcnRzLmRlZmVycmVkQ2FsbCA9IGZ1bmN0aW9uIChmY24pIHsKICAgIHZhciB0aW1lciA9IG51bGw7CiAgICB2YXIgY2FsbGJhY2sgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgdGltZXIgPSBudWxsOwogICAgICAgIGZjbigpOwogICAgfTsKICAgIHZhciBkZWZlcnJlZCA9IGZ1bmN0aW9uICh0aW1lb3V0KSB7CiAgICAgICAgZGVmZXJyZWQuY2FuY2VsKCk7CiAgICAgICAgdGltZXIgPSBzZXRUaW1lb3V0KGNhbGxiYWNrLCB0aW1lb3V0IHx8IDApOwogICAgICAgIHJldHVybiBkZWZlcnJlZDsKICAgIH07CiAgICBkZWZlcnJlZC5zY2hlZHVsZSA9IGRlZmVycmVkOwogICAgZGVmZXJyZWQuY2FsbCA9IGZ1bmN0aW9uICgpIHsKICAgICAgICB0aGlzLmNhbmNlbCgpOwogICAgICAgIGZjbigpOwogICAgICAgIHJldHVybiBkZWZlcnJlZDsKICAgIH07CiAgICBkZWZlcnJlZC5jYW5jZWwgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgY2xlYXJUaW1lb3V0KHRpbWVyKTsKICAgICAgICB0aW1lciA9IG51bGw7CiAgICAgICAgcmV0dXJuIGRlZmVycmVkOwogICAgfTsKICAgIGRlZmVycmVkLmlzUGVuZGluZyA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gdGltZXI7CiAgICB9OwogICAgcmV0dXJuIGRlZmVycmVkOwp9OwpleHBvcnRzLmRlbGF5ZWRDYWxsID0gZnVuY3Rpb24gKGZjbiwgZGVmYXVsdFRpbWVvdXQpIHsKICAgIHZhciB0aW1lciA9IG51bGw7CiAgICB2YXIgY2FsbGJhY2sgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgdGltZXIgPSBudWxsOwogICAgICAgIGZjbigpOwogICAgfTsKICAgIHZhciBfc2VsZiA9IGZ1bmN0aW9uICh0aW1lb3V0KSB7CiAgICAgICAgaWYgKHRpbWVyID09IG51bGwpCiAgICAgICAgICAgIHRpbWVyID0gc2V0VGltZW91dChjYWxsYmFjaywgdGltZW91dCB8fCBkZWZhdWx0VGltZW91dCk7CiAgICB9OwogICAgX3NlbGYuZGVsYXkgPSBmdW5jdGlvbiAodGltZW91dCkgewogICAgICAgIHRpbWVyICYmIGNsZWFyVGltZW91dCh0aW1lcik7CiAgICAgICAgdGltZXIgPSBzZXRUaW1lb3V0KGNhbGxiYWNrLCB0aW1lb3V0IHx8IGRlZmF1bHRUaW1lb3V0KTsKICAgIH07CiAgICBfc2VsZi5zY2hlZHVsZSA9IF9zZWxmOwogICAgX3NlbGYuY2FsbCA9IGZ1bmN0aW9uICgpIHsKICAgICAgICB0aGlzLmNhbmNlbCgpOwogICAgICAgIGZjbigpOwogICAgfTsKICAgIF9zZWxmLmNhbmNlbCA9IGZ1bmN0aW9uICgpIHsKICAgICAgICB0aW1lciAmJiBjbGVhclRpbWVvdXQodGltZXIpOwogICAgICAgIHRpbWVyID0gbnVsbDsKICAgIH07CiAgICBfc2VsZi5pc1BlbmRpbmcgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHRpbWVyOwogICAgfTsKICAgIHJldHVybiBfc2VsZjsKfTsKCn0pOwoKYWNlLmRlZmluZSgiYWNlL3dvcmtlci9taXJyb3IiLFtdLCBmdW5jdGlvbihyZXF1aXJlLCBleHBvcnRzLCBtb2R1bGUpIHsKInVzZSBzdHJpY3QiOwoKdmFyIERvY3VtZW50ID0gcmVxdWlyZSgiLi4vZG9jdW1lbnQiKS5Eb2N1bWVudDsKdmFyIGxhbmcgPSByZXF1aXJlKCIuLi9saWIvbGFuZyIpOwogICAgCnZhciBNaXJyb3IgPSBleHBvcnRzLk1pcnJvciA9IGZ1bmN0aW9uKHNlbmRlcikgewogICAgdGhpcy5zZW5kZXIgPSBzZW5kZXI7CiAgICB2YXIgZG9jID0gdGhpcy5kb2MgPSBuZXcgRG9jdW1lbnQoIiIpOwogICAgCiAgICB2YXIgZGVmZXJyZWRVcGRhdGUgPSB0aGlzLmRlZmVycmVkVXBkYXRlID0gbGFuZy5kZWxheWVkQ2FsbCh0aGlzLm9uVXBkYXRlLmJpbmQodGhpcykpOwogICAgCiAgICB2YXIgX3NlbGYgPSB0aGlzOwogICAgc2VuZGVyLm9uKCJjaGFuZ2UiLCBmdW5jdGlvbihlKSB7CiAgICAgICAgdmFyIGRhdGEgPSBlLmRhdGE7CiAgICAgICAgaWYgKGRhdGFbMF0uc3RhcnQpIHsKICAgICAgICAgICAgZG9jLmFwcGx5RGVsdGFzKGRhdGEpOwogICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgZGF0YS5sZW5ndGg7IGkgKz0gMikgewogICAgICAgICAgICAgICAgdmFyIGQsIGVycjsgCiAgICAgICAgICAgICAgICBpZiAoQXJyYXkuaXNBcnJheShkYXRhW2krMV0pKSB7CiAgICAgICAgICAgICAgICAgICAgZCA9IHthY3Rpb246ICJpbnNlcnQiLCBzdGFydDogZGF0YVtpXSwgbGluZXM6IGRhdGFbaSsxXX07CiAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgIGQgPSB7YWN0aW9uOiAicmVtb3ZlIiwgc3RhcnQ6IGRhdGFbaV0sIGVuZDogZGF0YVtpKzFdfTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgaWYgKChkLmFjdGlvbiA9PSAiaW5zZXJ0IiA/IGQuc3RhcnQgOiBkLmVuZCkucm93ID49IGRvYy4kbGluZXMubGVuZ3RoKSB7CiAgICAgICAgICAgICAgICAgICAgZXJyID0gbmV3IEVycm9yKCJJbnZhbGlkIGRlbHRhIik7CiAgICAgICAgICAgICAgICAgICAgZXJyLmRhdGEgPSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHBhdGg6IF9zZWxmLiRwYXRoLAogICAgICAgICAgICAgICAgICAgICAgICBsaW5lc0xlbmd0aDogZG9jLiRsaW5lcy5sZW5ndGgsCiAgICAgICAgICAgICAgICAgICAgICAgIHN0YXJ0OiBkLnN0YXJ0LAogICAgICAgICAgICAgICAgICAgICAgICBlbmQ6IGQuZW5kCiAgICAgICAgICAgICAgICAgICAgfTsKICAgICAgICAgICAgICAgICAgICB0aHJvdyBlcnI7CiAgICAgICAgICAgICAgICB9CgogICAgICAgICAgICAgICAgZG9jLmFwcGx5RGVsdGEoZCwgdHJ1ZSk7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgaWYgKF9zZWxmLiR0aW1lb3V0KQogICAgICAgICAgICByZXR1cm4gZGVmZXJyZWRVcGRhdGUuc2NoZWR1bGUoX3NlbGYuJHRpbWVvdXQpOwogICAgICAgIF9zZWxmLm9uVXBkYXRlKCk7CiAgICB9KTsKfTsKCihmdW5jdGlvbigpIHsKICAgIAogICAgdGhpcy4kdGltZW91dCA9IDUwMDsKICAgIAogICAgdGhpcy5zZXRUaW1lb3V0ID0gZnVuY3Rpb24odGltZW91dCkgewogICAgICAgIHRoaXMuJHRpbWVvdXQgPSB0aW1lb3V0OwogICAgfTsKICAgIAogICAgdGhpcy5zZXRWYWx1ZSA9IGZ1bmN0aW9uKHZhbHVlKSB7CiAgICAgICAgdGhpcy5kb2Muc2V0VmFsdWUodmFsdWUpOwogICAgICAgIHRoaXMuZGVmZXJyZWRVcGRhdGUuc2NoZWR1bGUodGhpcy4kdGltZW91dCk7CiAgICB9OwogICAgCiAgICB0aGlzLmdldFZhbHVlID0gZnVuY3Rpb24oY2FsbGJhY2tJZCkgewogICAgICAgIHRoaXMuc2VuZGVyLmNhbGxiYWNrKHRoaXMuZG9jLmdldFZhbHVlKCksIGNhbGxiYWNrSWQpOwogICAgfTsKICAgIAogICAgdGhpcy5vblVwZGF0ZSA9IGZ1bmN0aW9uKCkgewogICAgfTsKICAgIAogICAgdGhpcy5pc1BlbmRpbmcgPSBmdW5jdGlvbigpIHsKICAgICAgICByZXR1cm4gdGhpcy5kZWZlcnJlZFVwZGF0ZS5pc1BlbmRpbmcoKTsKICAgIH07CiAgICAKfSkuY2FsbChNaXJyb3IucHJvdG90eXBlKTsKCn0pOwoKYWNlLmRlZmluZSgiYWNlL21vZGUvanNvbi9qc29uX3BhcnNlIixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKSB7CiJ1c2Ugc3RyaWN0IjsKCiAgICB2YXIgYXQsICAgICAvLyBUaGUgaW5kZXggb2YgdGhlIGN1cnJlbnQgY2hhcmFjdGVyCiAgICAgICAgY2gsICAgICAvLyBUaGUgY3VycmVudCBjaGFyYWN0ZXIKICAgICAgICBlc2NhcGVlID0gewogICAgICAgICAgICAnIic6ICAnIicsCiAgICAgICAgICAgICdcXCc6ICdcXCcsCiAgICAgICAgICAgICcvJzogICcvJywKICAgICAgICAgICAgYjogICAgJ1xiJywKICAgICAgICAgICAgZjogICAgJ1xmJywKICAgICAgICAgICAgbjogICAgJ1xuJywKICAgICAgICAgICAgcjogICAgJ1xyJywKICAgICAgICAgICAgdDogICAgJ1x0JwogICAgICAgIH0sCiAgICAgICAgdGV4dCwKCiAgICAgICAgZXJyb3IgPSBmdW5jdGlvbiAobSkgewoKICAgICAgICAgICAgdGhyb3cgewogICAgICAgICAgICAgICAgbmFtZTogICAgJ1N5bnRheEVycm9yJywKICAgICAgICAgICAgICAgIG1lc3NhZ2U6IG0sCiAgICAgICAgICAgICAgICBhdDogICAgICBhdCwKICAgICAgICAgICAgICAgIHRleHQ6ICAgIHRleHQKICAgICAgICAgICAgfTsKICAgICAgICB9LAoKICAgICAgICBuZXh0ID0gZnVuY3Rpb24gKGMpIHsKCiAgICAgICAgICAgIGlmIChjICYmIGMgIT09IGNoKSB7CiAgICAgICAgICAgICAgICBlcnJvcigiRXhwZWN0ZWQgJyIgKyBjICsgIicgaW5zdGVhZCBvZiAnIiArIGNoICsgIiciKTsKICAgICAgICAgICAgfQoKICAgICAgICAgICAgY2ggPSB0ZXh0LmNoYXJBdChhdCk7CiAgICAgICAgICAgIGF0ICs9IDE7CiAgICAgICAgICAgIHJldHVybiBjaDsKICAgICAgICB9LAoKICAgICAgICBudW1iZXIgPSBmdW5jdGlvbiAoKSB7CgogICAgICAgICAgICB2YXIgbnVtYmVyLAogICAgICAgICAgICAgICAgc3RyaW5nID0gJyc7CgogICAgICAgICAgICBpZiAoY2ggPT09ICctJykgewogICAgICAgICAgICAgICAgc3RyaW5nID0gJy0nOwogICAgICAgICAgICAgICAgbmV4dCgnLScpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIHdoaWxlIChjaCA+PSAnMCcgJiYgY2ggPD0gJzknKSB7CiAgICAgICAgICAgICAgICBzdHJpbmcgKz0gY2g7CiAgICAgICAgICAgICAgICBuZXh0KCk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgaWYgKGNoID09PSAnLicpIHsKICAgICAgICAgICAgICAgIHN0cmluZyArPSAnLic7CiAgICAgICAgICAgICAgICB3aGlsZSAobmV4dCgpICYmIGNoID49ICcwJyAmJiBjaCA8PSAnOScpIHsKICAgICAgICAgICAgICAgICAgICBzdHJpbmcgKz0gY2g7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgaWYgKGNoID09PSAnZScgfHwgY2ggPT09ICdFJykgewogICAgICAgICAgICAgICAgc3RyaW5nICs9IGNoOwogICAgICAgICAgICAgICAgbmV4dCgpOwogICAgICAgICAgICAgICAgaWYgKGNoID09PSAnLScgfHwgY2ggPT09ICcrJykgewogICAgICAgICAgICAgICAgICAgIHN0cmluZyArPSBjaDsKICAgICAgICAgICAgICAgICAgICBuZXh0KCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB3aGlsZSAoY2ggPj0gJzAnICYmIGNoIDw9ICc5JykgewogICAgICAgICAgICAgICAgICAgIHN0cmluZyArPSBjaDsKICAgICAgICAgICAgICAgICAgICBuZXh0KCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgbnVtYmVyID0gK3N0cmluZzsKICAgICAgICAgICAgaWYgKGlzTmFOKG51bWJlcikpIHsKICAgICAgICAgICAgICAgIGVycm9yKCJCYWQgbnVtYmVyIik7CiAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICByZXR1cm4gbnVtYmVyOwogICAgICAgICAgICB9CiAgICAgICAgfSwKCiAgICAgICAgc3RyaW5nID0gZnVuY3Rpb24gKCkgewoKICAgICAgICAgICAgdmFyIGhleCwKICAgICAgICAgICAgICAgIGksCiAgICAgICAgICAgICAgICBzdHJpbmcgPSAnJywKICAgICAgICAgICAgICAgIHVmZmZmOwoKICAgICAgICAgICAgaWYgKGNoID09PSAnIicpIHsKICAgICAgICAgICAgICAgIHdoaWxlIChuZXh0KCkpIHsKICAgICAgICAgICAgICAgICAgICBpZiAoY2ggPT09ICciJykgewogICAgICAgICAgICAgICAgICAgICAgICBuZXh0KCk7CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBzdHJpbmc7CiAgICAgICAgICAgICAgICAgICAgfSBlbHNlIGlmIChjaCA9PT0gJ1xcJykgewogICAgICAgICAgICAgICAgICAgICAgICBuZXh0KCk7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIChjaCA9PT0gJ3UnKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB1ZmZmZiA9IDA7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBmb3IgKGkgPSAwOyBpIDwgNDsgaSArPSAxKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaGV4ID0gcGFyc2VJbnQobmV4dCgpLCAxNik7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKCFpc0Zpbml0ZShoZXgpKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB1ZmZmZiA9IHVmZmZmICogMTYgKyBoZXg7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHJpbmcgKz0gU3RyaW5nLmZyb21DaGFyQ29kZSh1ZmZmZik7CiAgICAgICAgICAgICAgICAgICAgICAgIH0gZWxzZSBpZiAodHlwZW9mIGVzY2FwZWVbY2hdID09PSAnc3RyaW5nJykgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgc3RyaW5nICs9IGVzY2FwZWVbY2hdOwogICAgICAgICAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9IGVsc2UgaWYgKGNoID09ICJcbiIgfHwgY2ggPT0gIlxyIikgewogICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgICAgICAgICB9IGVsc2UgewogICAgICAgICAgICAgICAgICAgICAgICBzdHJpbmcgKz0gY2g7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVycm9yKCJCYWQgc3RyaW5nIik7CiAgICAgICAgfSwKCiAgICAgICAgd2hpdGUgPSBmdW5jdGlvbiAoKSB7CgogICAgICAgICAgICB3aGlsZSAoY2ggJiYgY2ggPD0gJyAnKSB7CiAgICAgICAgICAgICAgICBuZXh0KCk7CiAgICAgICAgICAgIH0KICAgICAgICB9LAoKICAgICAgICB3b3JkID0gZnVuY3Rpb24gKCkgewoKICAgICAgICAgICAgc3dpdGNoIChjaCkgewogICAgICAgICAgICBjYXNlICd0JzoKICAgICAgICAgICAgICAgIG5leHQoJ3QnKTsKICAgICAgICAgICAgICAgIG5leHQoJ3InKTsKICAgICAgICAgICAgICAgIG5leHQoJ3UnKTsKICAgICAgICAgICAgICAgIG5leHQoJ2UnKTsKICAgICAgICAgICAgICAgIHJldHVybiB0cnVlOwogICAgICAgICAgICBjYXNlICdmJzoKICAgICAgICAgICAgICAgIG5leHQoJ2YnKTsKICAgICAgICAgICAgICAgIG5leHQoJ2EnKTsKICAgICAgICAgICAgICAgIG5leHQoJ2wnKTsKICAgICAgICAgICAgICAgIG5leHQoJ3MnKTsKICAgICAgICAgICAgICAgIG5leHQoJ2UnKTsKICAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICAgICAgY2FzZSAnbic6CiAgICAgICAgICAgICAgICBuZXh0KCduJyk7CiAgICAgICAgICAgICAgICBuZXh0KCd1Jyk7CiAgICAgICAgICAgICAgICBuZXh0KCdsJyk7CiAgICAgICAgICAgICAgICBuZXh0KCdsJyk7CiAgICAgICAgICAgICAgICByZXR1cm4gbnVsbDsKICAgICAgICAgICAgfQogICAgICAgICAgICBlcnJvcigiVW5leHBlY3RlZCAnIiArIGNoICsgIiciKTsKICAgICAgICB9LAoKICAgICAgICB2YWx1ZSwgIC8vIFBsYWNlIGhvbGRlciBmb3IgdGhlIHZhbHVlIGZ1bmN0aW9uLgoKICAgICAgICBhcnJheSA9IGZ1bmN0aW9uICgpIHsKCiAgICAgICAgICAgIHZhciBhcnJheSA9IFtdOwoKICAgICAgICAgICAgaWYgKGNoID09PSAnWycpIHsKICAgICAgICAgICAgICAgIG5leHQoJ1snKTsKICAgICAgICAgICAgICAgIHdoaXRlKCk7CiAgICAgICAgICAgICAgICBpZiAoY2ggPT09ICddJykgewogICAgICAgICAgICAgICAgICAgIG5leHQoJ10nKTsKICAgICAgICAgICAgICAgICAgICByZXR1cm4gYXJyYXk7ICAgLy8gZW1wdHkgYXJyYXkKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIHdoaWxlIChjaCkgewogICAgICAgICAgICAgICAgICAgIGFycmF5LnB1c2godmFsdWUoKSk7CiAgICAgICAgICAgICAgICAgICAgd2hpdGUoKTsKICAgICAgICAgICAgICAgICAgICBpZiAoY2ggPT09ICddJykgewogICAgICAgICAgICAgICAgICAgICAgICBuZXh0KCddJyk7CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBhcnJheTsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgbmV4dCgnLCcpOwogICAgICAgICAgICAgICAgICAgIHdoaXRlKCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZXJyb3IoIkJhZCBhcnJheSIpOwogICAgICAgIH0sCgogICAgICAgIG9iamVjdCA9IGZ1bmN0aW9uICgpIHsKCiAgICAgICAgICAgIHZhciBrZXksCiAgICAgICAgICAgICAgICBvYmplY3QgPSB7fTsKCiAgICAgICAgICAgIGlmIChjaCA9PT0gJ3snKSB7CiAgICAgICAgICAgICAgICBuZXh0KCd7Jyk7CiAgICAgICAgICAgICAgICB3aGl0ZSgpOwogICAgICAgICAgICAgICAgaWYgKGNoID09PSAnfScpIHsKICAgICAgICAgICAgICAgICAgICBuZXh0KCd9Jyk7CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIG9iamVjdDsgICAvLyBlbXB0eSBvYmplY3QKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIHdoaWxlIChjaCkgewogICAgICAgICAgICAgICAgICAgIGtleSA9IHN0cmluZygpOwogICAgICAgICAgICAgICAgICAgIHdoaXRlKCk7CiAgICAgICAgICAgICAgICAgICAgbmV4dCgnOicpOwogICAgICAgICAgICAgICAgICAgIGlmIChPYmplY3QuaGFzT3duUHJvcGVydHkuY2FsbChvYmplY3QsIGtleSkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgZXJyb3IoJ0R1cGxpY2F0ZSBrZXkgIicgKyBrZXkgKyAnIicpOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBvYmplY3Rba2V5XSA9IHZhbHVlKCk7CiAgICAgICAgICAgICAgICAgICAgd2hpdGUoKTsKICAgICAgICAgICAgICAgICAgICBpZiAoY2ggPT09ICd9JykgewogICAgICAgICAgICAgICAgICAgICAgICBuZXh0KCd9Jyk7CiAgICAgICAgICAgICAgICAgICAgICAgIHJldHVybiBvYmplY3Q7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIG5leHQoJywnKTsKICAgICAgICAgICAgICAgICAgICB3aGl0ZSgpOwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICB9CiAgICAgICAgICAgIGVycm9yKCJCYWQgb2JqZWN0Iik7CiAgICAgICAgfTsKCiAgICB2YWx1ZSA9IGZ1bmN0aW9uICgpIHsKCiAgICAgICAgd2hpdGUoKTsKICAgICAgICBzd2l0Y2ggKGNoKSB7CiAgICAgICAgY2FzZSAneyc6CiAgICAgICAgICAgIHJldHVybiBvYmplY3QoKTsKICAgICAgICBjYXNlICdbJzoKICAgICAgICAgICAgcmV0dXJuIGFycmF5KCk7CiAgICAgICAgY2FzZSAnIic6CiAgICAgICAgICAgIHJldHVybiBzdHJpbmcoKTsKICAgICAgICBjYXNlICctJzoKICAgICAgICAgICAgcmV0dXJuIG51bWJlcigpOwogICAgICAgIGRlZmF1bHQ6CiAgICAgICAgICAgIHJldHVybiBjaCA+PSAnMCcgJiYgY2ggPD0gJzknID8gbnVtYmVyKCkgOiB3b3JkKCk7CiAgICAgICAgfQogICAgfTsKCiAgICByZXR1cm4gZnVuY3Rpb24gKHNvdXJjZSwgcmV2aXZlcikgewogICAgICAgIHZhciByZXN1bHQ7CgogICAgICAgIHRleHQgPSBzb3VyY2U7CiAgICAgICAgYXQgPSAwOwogICAgICAgIGNoID0gJyAnOwogICAgICAgIHJlc3VsdCA9IHZhbHVlKCk7CiAgICAgICAgd2hpdGUoKTsKICAgICAgICBpZiAoY2gpIHsKICAgICAgICAgICAgZXJyb3IoIlN5bnRheCBlcnJvciIpOwogICAgICAgIH0KCiAgICAgICAgcmV0dXJuIHR5cGVvZiByZXZpdmVyID09PSAnZnVuY3Rpb24nID8gZnVuY3Rpb24gd2Fsayhob2xkZXIsIGtleSkgewogICAgICAgICAgICB2YXIgaywgdiwgdmFsdWUgPSBob2xkZXJba2V5XTsKICAgICAgICAgICAgaWYgKHZhbHVlICYmIHR5cGVvZiB2YWx1ZSA9PT0gJ29iamVjdCcpIHsKICAgICAgICAgICAgICAgIGZvciAoayBpbiB2YWx1ZSkgewogICAgICAgICAgICAgICAgICAgIGlmIChPYmplY3QuaGFzT3duUHJvcGVydHkuY2FsbCh2YWx1ZSwgaykpIHsKICAgICAgICAgICAgICAgICAgICAgICAgdiA9IHdhbGsodmFsdWUsIGspOwogICAgICAgICAgICAgICAgICAgICAgICBpZiAodiAhPT0gdW5kZWZpbmVkKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YWx1ZVtrXSA9IHY7CiAgICAgICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBkZWxldGUgdmFsdWVba107CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgcmV0dXJuIHJldml2ZXIuY2FsbChob2xkZXIsIGtleSwgdmFsdWUpOwogICAgICAgIH0oeycnOiByZXN1bHR9LCAnJykgOiByZXN1bHQ7CiAgICB9Owp9KTsKCmFjZS5kZWZpbmUoImFjZS9tb2RlL2pzb25fd29ya2VyIixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKSB7CiJ1c2Ugc3RyaWN0IjsKCnZhciBvb3AgPSByZXF1aXJlKCIuLi9saWIvb29wIik7CnZhciBNaXJyb3IgPSByZXF1aXJlKCIuLi93b3JrZXIvbWlycm9yIikuTWlycm9yOwp2YXIgcGFyc2UgPSByZXF1aXJlKCIuL2pzb24vanNvbl9wYXJzZSIpOwoKdmFyIEpzb25Xb3JrZXIgPSBleHBvcnRzLkpzb25Xb3JrZXIgPSBmdW5jdGlvbihzZW5kZXIpIHsKICAgIE1pcnJvci5jYWxsKHRoaXMsIHNlbmRlcik7CiAgICB0aGlzLnNldFRpbWVvdXQoMjAwKTsKfTsKCm9vcC5pbmhlcml0cyhKc29uV29ya2VyLCBNaXJyb3IpOwoKKGZ1bmN0aW9uKCkgewoKICAgIHRoaXMub25VcGRhdGUgPSBmdW5jdGlvbigpIHsKICAgICAgICB2YXIgdmFsdWUgPSB0aGlzLmRvYy5nZXRWYWx1ZSgpOwogICAgICAgIHZhciBlcnJvcnMgPSBbXTsKICAgICAgICB0cnkgewogICAgICAgICAgICBpZiAodmFsdWUpCiAgICAgICAgICAgICAgICBwYXJzZSh2YWx1ZSk7CiAgICAgICAgfSBjYXRjaCAoZSkgewogICAgICAgICAgICB2YXIgcG9zID0gdGhpcy5kb2MuaW5kZXhUb1Bvc2l0aW9uKGUuYXQtMSk7CiAgICAgICAgICAgIGVycm9ycy5wdXNoKHsKICAgICAgICAgICAgICAgIHJvdzogcG9zLnJvdywKICAgICAgICAgICAgICAgIGNvbHVtbjogcG9zLmNvbHVtbiwKICAgICAgICAgICAgICAgIHRleHQ6IGUubWVzc2FnZSwKICAgICAgICAgICAgICAgIHR5cGU6ICJlcnJvciIKICAgICAgICAgICAgfSk7CiAgICAgICAgfQogICAgICAgIHRoaXMuc2VuZGVyLmVtaXQoImFubm90YXRlIiwgZXJyb3JzKTsKICAgIH07Cgp9KS5jYWxsKEpzb25Xb3JrZXIucHJvdG90eXBlKTsKCn0pOwo=';
+module.exports = 'data:application/javascript;base64,Im5vIHVzZSBzdHJpY3QiOwohKGZ1bmN0aW9uKHdpbmRvdykgewppZiAodHlwZW9mIHdpbmRvdy53aW5kb3cgIT0gInVuZGVmaW5lZCIgJiYgd2luZG93LmRvY3VtZW50KQogICAgcmV0dXJuOwppZiAod2luZG93LnJlcXVpcmUgJiYgd2luZG93LmRlZmluZSkKICAgIHJldHVybjsKCmlmICghd2luZG93LmNvbnNvbGUpIHsKICAgIHdpbmRvdy5jb25zb2xlID0gZnVuY3Rpb24oKSB7CiAgICAgICAgdmFyIG1zZ3MgPSBBcnJheS5wcm90b3R5cGUuc2xpY2UuY2FsbChhcmd1bWVudHMsIDApOwogICAgICAgIHBvc3RNZXNzYWdlKHt0eXBlOiAibG9nIiwgZGF0YTogbXNnc30pOwogICAgfTsKICAgIHdpbmRvdy5jb25zb2xlLmVycm9yID0KICAgIHdpbmRvdy5jb25zb2xlLndhcm4gPSAKICAgIHdpbmRvdy5jb25zb2xlLmxvZyA9CiAgICB3aW5kb3cuY29uc29sZS50cmFjZSA9IHdpbmRvdy5jb25zb2xlOwp9CndpbmRvdy53aW5kb3cgPSB3aW5kb3c7CndpbmRvdy5hY2UgPSB3aW5kb3c7Cgp3aW5kb3cub25lcnJvciA9IGZ1bmN0aW9uKG1lc3NhZ2UsIGZpbGUsIGxpbmUsIGNvbCwgZXJyKSB7CiAgICBwb3N0TWVzc2FnZSh7dHlwZTogImVycm9yIiwgZGF0YTogewogICAgICAgIG1lc3NhZ2U6IG1lc3NhZ2UsCiAgICAgICAgZGF0YTogZXJyICYmIGVyci5kYXRhLAogICAgICAgIGZpbGU6IGZpbGUsCiAgICAgICAgbGluZTogbGluZSwgCiAgICAgICAgY29sOiBjb2wsCiAgICAgICAgc3RhY2s6IGVyciAmJiBlcnIuc3RhY2sKICAgIH19KTsKfTsKCndpbmRvdy5ub3JtYWxpemVNb2R1bGUgPSBmdW5jdGlvbihwYXJlbnRJZCwgbW9kdWxlTmFtZSkgewogICAgLy8gbm9ybWFsaXplIHBsdWdpbiByZXF1aXJlcwogICAgaWYgKG1vZHVsZU5hbWUuaW5kZXhPZigiISIpICE9PSAtMSkgewogICAgICAgIHZhciBjaHVua3MgPSBtb2R1bGVOYW1lLnNwbGl0KCIhIik7CiAgICAgICAgcmV0dXJuIHdpbmRvdy5ub3JtYWxpemVNb2R1bGUocGFyZW50SWQsIGNodW5rc1swXSkgKyAiISIgKyB3aW5kb3cubm9ybWFsaXplTW9kdWxlKHBhcmVudElkLCBjaHVua3NbMV0pOwogICAgfQogICAgLy8gbm9ybWFsaXplIHJlbGF0aXZlIHJlcXVpcmVzCiAgICBpZiAobW9kdWxlTmFtZS5jaGFyQXQoMCkgPT0gIi4iKSB7CiAgICAgICAgdmFyIGJhc2UgPSBwYXJlbnRJZC5zcGxpdCgiLyIpLnNsaWNlKDAsIC0xKS5qb2luKCIvIik7CiAgICAgICAgbW9kdWxlTmFtZSA9IChiYXNlID8gYmFzZSArICIvIiA6ICIiKSArIG1vZHVsZU5hbWU7CiAgICAgICAgCiAgICAgICAgd2hpbGUgKG1vZHVsZU5hbWUuaW5kZXhPZigiLiIpICE9PSAtMSAmJiBwcmV2aW91cyAhPSBtb2R1bGVOYW1lKSB7CiAgICAgICAgICAgIHZhciBwcmV2aW91cyA9IG1vZHVsZU5hbWU7CiAgICAgICAgICAgIG1vZHVsZU5hbWUgPSBtb2R1bGVOYW1lLnJlcGxhY2UoL15cLlwvLywgIiIpLnJlcGxhY2UoL1wvXC5cLy8sICIvIikucmVwbGFjZSgvW15cL10rXC9cLlwuXC8vLCAiIik7CiAgICAgICAgfQogICAgfQogICAgCiAgICByZXR1cm4gbW9kdWxlTmFtZTsKfTsKCndpbmRvdy5yZXF1aXJlID0gZnVuY3Rpb24gcmVxdWlyZShwYXJlbnRJZCwgaWQpIHsKICAgIGlmICghaWQpIHsKICAgICAgICBpZCA9IHBhcmVudElkOwogICAgICAgIHBhcmVudElkID0gbnVsbDsKICAgIH0KICAgIGlmICghaWQuY2hhckF0KQogICAgICAgIHRocm93IG5ldyBFcnJvcigid29ya2VyLmpzIHJlcXVpcmUoKSBhY2NlcHRzIG9ubHkgKHBhcmVudElkLCBpZCkgYXMgYXJndW1lbnRzIik7CgogICAgaWQgPSB3aW5kb3cubm9ybWFsaXplTW9kdWxlKHBhcmVudElkLCBpZCk7CgogICAgdmFyIG1vZHVsZSA9IHdpbmRvdy5yZXF1aXJlLm1vZHVsZXNbaWRdOwogICAgaWYgKG1vZHVsZSkgewogICAgICAgIGlmICghbW9kdWxlLmluaXRpYWxpemVkKSB7CiAgICAgICAgICAgIG1vZHVsZS5pbml0aWFsaXplZCA9IHRydWU7CiAgICAgICAgICAgIG1vZHVsZS5leHBvcnRzID0gbW9kdWxlLmZhY3RvcnkoKS5leHBvcnRzOwogICAgICAgIH0KICAgICAgICByZXR1cm4gbW9kdWxlLmV4cG9ydHM7CiAgICB9CiAgIAogICAgaWYgKCF3aW5kb3cucmVxdWlyZS50bG5zKQogICAgICAgIHJldHVybiBjb25zb2xlLmxvZygidW5hYmxlIHRvIGxvYWQgIiArIGlkKTsKICAgIAogICAgdmFyIHBhdGggPSByZXNvbHZlTW9kdWxlSWQoaWQsIHdpbmRvdy5yZXF1aXJlLnRsbnMpOwogICAgaWYgKHBhdGguc2xpY2UoLTMpICE9ICIuanMiKSBwYXRoICs9ICIuanMiOwogICAgCiAgICB3aW5kb3cucmVxdWlyZS5pZCA9IGlkOwogICAgd2luZG93LnJlcXVpcmUubW9kdWxlc1tpZF0gPSB7fTsgLy8gcHJldmVudCBpbmZpbml0ZSBsb29wIG9uIGJyb2tlbiBtb2R1bGVzCiAgICBpbXBvcnRTY3JpcHRzKHBhdGgpOwogICAgcmV0dXJuIHdpbmRvdy5yZXF1aXJlKHBhcmVudElkLCBpZCk7Cn07CmZ1bmN0aW9uIHJlc29sdmVNb2R1bGVJZChpZCwgcGF0aHMpIHsKICAgIHZhciB0ZXN0UGF0aCA9IGlkLCB0YWlsID0gIiI7CiAgICB3aGlsZSAodGVzdFBhdGgpIHsKICAgICAgICB2YXIgYWxpYXMgPSBwYXRoc1t0ZXN0UGF0aF07CiAgICAgICAgaWYgKHR5cGVvZiBhbGlhcyA9PSAic3RyaW5nIikgewogICAgICAgICAgICByZXR1cm4gYWxpYXMgKyB0YWlsOwogICAgICAgIH0gZWxzZSBpZiAoYWxpYXMpIHsKICAgICAgICAgICAgcmV0dXJuICBhbGlhcy5sb2NhdGlvbi5yZXBsYWNlKC9cLyokLywgIi8iKSArICh0YWlsIHx8IGFsaWFzLm1haW4gfHwgYWxpYXMubmFtZSk7CiAgICAgICAgfSBlbHNlIGlmIChhbGlhcyA9PT0gZmFsc2UpIHsKICAgICAgICAgICAgcmV0dXJuICIiOwogICAgICAgIH0KICAgICAgICB2YXIgaSA9IHRlc3RQYXRoLmxhc3RJbmRleE9mKCIvIik7CiAgICAgICAgaWYgKGkgPT09IC0xKSBicmVhazsKICAgICAgICB0YWlsID0gdGVzdFBhdGguc3Vic3RyKGkpICsgdGFpbDsKICAgICAgICB0ZXN0UGF0aCA9IHRlc3RQYXRoLnNsaWNlKDAsIGkpOwogICAgfQogICAgcmV0dXJuIGlkOwp9CndpbmRvdy5yZXF1aXJlLm1vZHVsZXMgPSB7fTsKd2luZG93LnJlcXVpcmUudGxucyA9IHt9OwoKd2luZG93LmRlZmluZSA9IGZ1bmN0aW9uKGlkLCBkZXBzLCBmYWN0b3J5KSB7CiAgICBpZiAoYXJndW1lbnRzLmxlbmd0aCA9PSAyKSB7CiAgICAgICAgZmFjdG9yeSA9IGRlcHM7CiAgICAgICAgaWYgKHR5cGVvZiBpZCAhPSAic3RyaW5nIikgewogICAgICAgICAgICBkZXBzID0gaWQ7CiAgICAgICAgICAgIGlkID0gd2luZG93LnJlcXVpcmUuaWQ7CiAgICAgICAgfQogICAgfSBlbHNlIGlmIChhcmd1bWVudHMubGVuZ3RoID09IDEpIHsKICAgICAgICBmYWN0b3J5ID0gaWQ7CiAgICAgICAgZGVwcyA9IFtdOwogICAgICAgIGlkID0gd2luZG93LnJlcXVpcmUuaWQ7CiAgICB9CiAgICAKICAgIGlmICh0eXBlb2YgZmFjdG9yeSAhPSAiZnVuY3Rpb24iKSB7CiAgICAgICAgd2luZG93LnJlcXVpcmUubW9kdWxlc1tpZF0gPSB7CiAgICAgICAgICAgIGV4cG9ydHM6IGZhY3RvcnksCiAgICAgICAgICAgIGluaXRpYWxpemVkOiB0cnVlCiAgICAgICAgfTsKICAgICAgICByZXR1cm47CiAgICB9CgogICAgaWYgKCFkZXBzLmxlbmd0aCkKICAgICAgICAvLyBJZiB0aGVyZSBpcyBubyBkZXBlbmRlbmNpZXMsIHdlIGluamVjdCAicmVxdWlyZSIsICJleHBvcnRzIiBhbmQKICAgICAgICAvLyAibW9kdWxlIiBhcyBkZXBlbmRlbmNpZXMsIHRvIHByb3ZpZGUgQ29tbW9uSlMgY29tcGF0aWJpbGl0eS4KICAgICAgICBkZXBzID0gWyJyZXF1aXJlIiwgImV4cG9ydHMiLCAibW9kdWxlIl07CgogICAgdmFyIHJlcSA9IGZ1bmN0aW9uKGNoaWxkSWQpIHsKICAgICAgICByZXR1cm4gd2luZG93LnJlcXVpcmUoaWQsIGNoaWxkSWQpOwogICAgfTsKCiAgICB3aW5kb3cucmVxdWlyZS5tb2R1bGVzW2lkXSA9IHsKICAgICAgICBleHBvcnRzOiB7fSwKICAgICAgICBmYWN0b3J5OiBmdW5jdGlvbigpIHsKICAgICAgICAgICAgdmFyIG1vZHVsZSA9IHRoaXM7CiAgICAgICAgICAgIHZhciByZXR1cm5FeHBvcnRzID0gZmFjdG9yeS5hcHBseSh0aGlzLCBkZXBzLnNsaWNlKDAsIGZhY3RvcnkubGVuZ3RoKS5tYXAoZnVuY3Rpb24oZGVwKSB7CiAgICAgICAgICAgICAgICBzd2l0Y2ggKGRlcCkgewogICAgICAgICAgICAgICAgICAgIC8vIEJlY2F1c2UgInJlcXVpcmUiLCAiZXhwb3J0cyIgYW5kICJtb2R1bGUiIGFyZW4ndCBhY3R1YWwKICAgICAgICAgICAgICAgICAgICAvLyBkZXBlbmRlbmNpZXMsIHdlIG11c3QgaGFuZGxlIHRoZW0gc2VwZXJhdGVseS4KICAgICAgICAgICAgICAgICAgICBjYXNlICJyZXF1aXJlIjogcmV0dXJuIHJlcTsKICAgICAgICAgICAgICAgICAgICBjYXNlICJleHBvcnRzIjogcmV0dXJuIG1vZHVsZS5leHBvcnRzOwogICAgICAgICAgICAgICAgICAgIGNhc2UgIm1vZHVsZSI6ICByZXR1cm4gbW9kdWxlOwogICAgICAgICAgICAgICAgICAgIC8vIEJ1dCBmb3IgYWxsIG90aGVyIGRlcGVuZGVuY2llcywgd2UgY2FuIGp1c3QgZ28gYWhlYWQgYW5kCiAgICAgICAgICAgICAgICAgICAgLy8gcmVxdWlyZSB0aGVtLgogICAgICAgICAgICAgICAgICAgIGRlZmF1bHQ6ICAgICAgICByZXR1cm4gcmVxKGRlcCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0pKTsKICAgICAgICAgICAgaWYgKHJldHVybkV4cG9ydHMpCiAgICAgICAgICAgICAgICBtb2R1bGUuZXhwb3J0cyA9IHJldHVybkV4cG9ydHM7CiAgICAgICAgICAgIHJldHVybiBtb2R1bGU7CiAgICAgICAgfQogICAgfTsKfTsKd2luZG93LmRlZmluZS5hbWQgPSB7fTsKd2luZG93LnJlcXVpcmUudGxucyA9IHt9Owp3aW5kb3cuaW5pdEJhc2VVcmxzICA9IGZ1bmN0aW9uIGluaXRCYXNlVXJscyh0b3BMZXZlbE5hbWVzcGFjZXMpIHsKICAgIGZvciAodmFyIGkgaW4gdG9wTGV2ZWxOYW1lc3BhY2VzKQogICAgICAgIHRoaXMucmVxdWlyZS50bG5zW2ldID0gdG9wTGV2ZWxOYW1lc3BhY2VzW2ldOwp9OwoKd2luZG93LmluaXRTZW5kZXIgPSBmdW5jdGlvbiBpbml0U2VuZGVyKCkgewoKICAgIHZhciBFdmVudEVtaXR0ZXIgPSB3aW5kb3cucmVxdWlyZSgiYWNlL2xpYi9ldmVudF9lbWl0dGVyIikuRXZlbnRFbWl0dGVyOwogICAgdmFyIG9vcCA9IHdpbmRvdy5yZXF1aXJlKCJhY2UvbGliL29vcCIpOwogICAgCiAgICB2YXIgU2VuZGVyID0gZnVuY3Rpb24oKSB7fTsKICAgIAogICAgKGZ1bmN0aW9uKCkgewogICAgICAgIAogICAgICAgIG9vcC5pbXBsZW1lbnQodGhpcywgRXZlbnRFbWl0dGVyKTsKICAgICAgICAgICAgICAgIAogICAgICAgIHRoaXMuY2FsbGJhY2sgPSBmdW5jdGlvbihkYXRhLCBjYWxsYmFja0lkKSB7CiAgICAgICAgICAgIHBvc3RNZXNzYWdlKHsKICAgICAgICAgICAgICAgIHR5cGU6ICJjYWxsIiwKICAgICAgICAgICAgICAgIGlkOiBjYWxsYmFja0lkLAogICAgICAgICAgICAgICAgZGF0YTogZGF0YQogICAgICAgICAgICB9KTsKICAgICAgICB9OwogICAgCiAgICAgICAgdGhpcy5lbWl0ID0gZnVuY3Rpb24obmFtZSwgZGF0YSkgewogICAgICAgICAgICBwb3N0TWVzc2FnZSh7CiAgICAgICAgICAgICAgICB0eXBlOiAiZXZlbnQiLAogICAgICAgICAgICAgICAgbmFtZTogbmFtZSwKICAgICAgICAgICAgICAgIGRhdGE6IGRhdGEKICAgICAgICAgICAgfSk7CiAgICAgICAgfTsKICAgICAgICAKICAgIH0pLmNhbGwoU2VuZGVyLnByb3RvdHlwZSk7CiAgICAKICAgIHJldHVybiBuZXcgU2VuZGVyKCk7Cn07Cgp2YXIgbWFpbiA9IHdpbmRvdy5tYWluID0gbnVsbDsKdmFyIHNlbmRlciA9IHdpbmRvdy5zZW5kZXIgPSBudWxsOwoKd2luZG93Lm9ubWVzc2FnZSA9IGZ1bmN0aW9uKGUpIHsKICAgIHZhciBtc2cgPSBlLmRhdGE7CiAgICBpZiAobXNnLmV2ZW50ICYmIHNlbmRlcikgewogICAgICAgIHNlbmRlci5fc2lnbmFsKG1zZy5ldmVudCwgbXNnLmRhdGEpOwogICAgfQogICAgZWxzZSBpZiAobXNnLmNvbW1hbmQpIHsKICAgICAgICBpZiAobWFpblttc2cuY29tbWFuZF0pCiAgICAgICAgICAgIG1haW5bbXNnLmNvbW1hbmRdLmFwcGx5KG1haW4sIG1zZy5hcmdzKTsKICAgICAgICBlbHNlIGlmICh3aW5kb3dbbXNnLmNvbW1hbmRdKQogICAgICAgICAgICB3aW5kb3dbbXNnLmNvbW1hbmRdLmFwcGx5KHdpbmRvdywgbXNnLmFyZ3MpOwogICAgICAgIGVsc2UKICAgICAgICAgICAgdGhyb3cgbmV3IEVycm9yKCJVbmtub3duIGNvbW1hbmQ6IiArIG1zZy5jb21tYW5kKTsKICAgIH0KICAgIGVsc2UgaWYgKG1zZy5pbml0KSB7CiAgICAgICAgd2luZG93LmluaXRCYXNlVXJscyhtc2cudGxucyk7CiAgICAgICAgc2VuZGVyID0gd2luZG93LnNlbmRlciA9IHdpbmRvdy5pbml0U2VuZGVyKCk7CiAgICAgICAgdmFyIGNsYXp6ID0gdGhpcy5yZXF1aXJlKG1zZy5tb2R1bGUpW21zZy5jbGFzc25hbWVdOwogICAgICAgIG1haW4gPSB3aW5kb3cubWFpbiA9IG5ldyBjbGF6eihzZW5kZXIpOwogICAgfQp9Owp9KSh0aGlzKTsKCmFjZS5kZWZpbmUoImFjZS9saWIvb29wIixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKXsidXNlIHN0cmljdCI7CmV4cG9ydHMuaW5oZXJpdHMgPSBmdW5jdGlvbiAoY3Rvciwgc3VwZXJDdG9yKSB7CiAgICBjdG9yLnN1cGVyXyA9IHN1cGVyQ3RvcjsKICAgIGN0b3IucHJvdG90eXBlID0gT2JqZWN0LmNyZWF0ZShzdXBlckN0b3IucHJvdG90eXBlLCB7CiAgICAgICAgY29uc3RydWN0b3I6IHsKICAgICAgICAgICAgdmFsdWU6IGN0b3IsCiAgICAgICAgICAgIGVudW1lcmFibGU6IGZhbHNlLAogICAgICAgICAgICB3cml0YWJsZTogdHJ1ZSwKICAgICAgICAgICAgY29uZmlndXJhYmxlOiB0cnVlCiAgICAgICAgfQogICAgfSk7Cn07CmV4cG9ydHMubWl4aW4gPSBmdW5jdGlvbiAob2JqLCBtaXhpbikgewogICAgZm9yICh2YXIga2V5IGluIG1peGluKSB7CiAgICAgICAgb2JqW2tleV0gPSBtaXhpbltrZXldOwogICAgfQogICAgcmV0dXJuIG9iajsKfTsKZXhwb3J0cy5pbXBsZW1lbnQgPSBmdW5jdGlvbiAocHJvdG8sIG1peGluKSB7CiAgICBleHBvcnRzLm1peGluKHByb3RvLCBtaXhpbik7Cn07Cgp9KTsKCmFjZS5kZWZpbmUoImFjZS9hcHBseV9kZWx0YSIsW10sIGZ1bmN0aW9uKHJlcXVpcmUsIGV4cG9ydHMsIG1vZHVsZSl7InVzZSBzdHJpY3QiOwpmdW5jdGlvbiB0aHJvd0RlbHRhRXJyb3IoZGVsdGEsIGVycm9yVGV4dCkgewogICAgY29uc29sZS5sb2coIkludmFsaWQgRGVsdGE6IiwgZGVsdGEpOwogICAgdGhyb3cgIkludmFsaWQgRGVsdGE6ICIgKyBlcnJvclRleHQ7Cn0KZnVuY3Rpb24gcG9zaXRpb25JbkRvY3VtZW50KGRvY0xpbmVzLCBwb3NpdGlvbikgewogICAgcmV0dXJuIHBvc2l0aW9uLnJvdyA+PSAwICYmIHBvc2l0aW9uLnJvdyA8IGRvY0xpbmVzLmxlbmd0aCAmJgogICAgICAgIHBvc2l0aW9uLmNvbHVtbiA+PSAwICYmIHBvc2l0aW9uLmNvbHVtbiA8PSBkb2NMaW5lc1twb3NpdGlvbi5yb3ddLmxlbmd0aDsKfQpmdW5jdGlvbiB2YWxpZGF0ZURlbHRhKGRvY0xpbmVzLCBkZWx0YSkgewogICAgaWYgKGRlbHRhLmFjdGlvbiAhPSAiaW5zZXJ0IiAmJiBkZWx0YS5hY3Rpb24gIT0gInJlbW92ZSIpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEuYWN0aW9uIG11c3QgYmUgJ2luc2VydCcgb3IgJ3JlbW92ZSciKTsKICAgIGlmICghKGRlbHRhLmxpbmVzIGluc3RhbmNlb2YgQXJyYXkpKQogICAgICAgIHRocm93RGVsdGFFcnJvcihkZWx0YSwgImRlbHRhLmxpbmVzIG11c3QgYmUgYW4gQXJyYXkiKTsKICAgIGlmICghZGVsdGEuc3RhcnQgfHwgIWRlbHRhLmVuZCkKICAgICAgICB0aHJvd0RlbHRhRXJyb3IoZGVsdGEsICJkZWx0YS5zdGFydC9lbmQgbXVzdCBiZSBhbiBwcmVzZW50Iik7CiAgICB2YXIgc3RhcnQgPSBkZWx0YS5zdGFydDsKICAgIGlmICghcG9zaXRpb25JbkRvY3VtZW50KGRvY0xpbmVzLCBkZWx0YS5zdGFydCkpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEuc3RhcnQgbXVzdCBiZSBjb250YWluZWQgaW4gZG9jdW1lbnQiKTsKICAgIHZhciBlbmQgPSBkZWx0YS5lbmQ7CiAgICBpZiAoZGVsdGEuYWN0aW9uID09ICJyZW1vdmUiICYmICFwb3NpdGlvbkluRG9jdW1lbnQoZG9jTGluZXMsIGVuZCkpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEuZW5kIG11c3QgY29udGFpbmVkIGluIGRvY3VtZW50IGZvciAncmVtb3ZlJyBhY3Rpb25zIik7CiAgICB2YXIgbnVtUmFuZ2VSb3dzID0gZW5kLnJvdyAtIHN0YXJ0LnJvdzsKICAgIHZhciBudW1SYW5nZUxhc3RMaW5lQ2hhcnMgPSAoZW5kLmNvbHVtbiAtIChudW1SYW5nZVJvd3MgPT0gMCA/IHN0YXJ0LmNvbHVtbiA6IDApKTsKICAgIGlmIChudW1SYW5nZVJvd3MgIT0gZGVsdGEubGluZXMubGVuZ3RoIC0gMSB8fCBkZWx0YS5saW5lc1tudW1SYW5nZVJvd3NdLmxlbmd0aCAhPSBudW1SYW5nZUxhc3RMaW5lQ2hhcnMpCiAgICAgICAgdGhyb3dEZWx0YUVycm9yKGRlbHRhLCAiZGVsdGEucmFuZ2UgbXVzdCBtYXRjaCBkZWx0YSBsaW5lcyIpOwp9CmV4cG9ydHMuYXBwbHlEZWx0YSA9IGZ1bmN0aW9uIChkb2NMaW5lcywgZGVsdGEsIGRvTm90VmFsaWRhdGUpIHsKICAgIHZhciByb3cgPSBkZWx0YS5zdGFydC5yb3c7CiAgICB2YXIgc3RhcnRDb2x1bW4gPSBkZWx0YS5zdGFydC5jb2x1bW47CiAgICB2YXIgbGluZSA9IGRvY0xpbmVzW3Jvd10gfHwgIiI7CiAgICBzd2l0Y2ggKGRlbHRhLmFjdGlvbikgewogICAgICAgIGNhc2UgImluc2VydCI6CiAgICAgICAgICAgIHZhciBsaW5lcyA9IGRlbHRhLmxpbmVzOwogICAgICAgICAgICBpZiAobGluZXMubGVuZ3RoID09PSAxKSB7CiAgICAgICAgICAgICAgICBkb2NMaW5lc1tyb3ddID0gbGluZS5zdWJzdHJpbmcoMCwgc3RhcnRDb2x1bW4pICsgZGVsdGEubGluZXNbMF0gKyBsaW5lLnN1YnN0cmluZyhzdGFydENvbHVtbik7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZSB7CiAgICAgICAgICAgICAgICB2YXIgYXJncyA9IFtyb3csIDFdLmNvbmNhdChkZWx0YS5saW5lcyk7CiAgICAgICAgICAgICAgICBkb2NMaW5lcy5zcGxpY2UuYXBwbHkoZG9jTGluZXMsIGFyZ3MpOwogICAgICAgICAgICAgICAgZG9jTGluZXNbcm93XSA9IGxpbmUuc3Vic3RyaW5nKDAsIHN0YXJ0Q29sdW1uKSArIGRvY0xpbmVzW3Jvd107CiAgICAgICAgICAgICAgICBkb2NMaW5lc1tyb3cgKyBkZWx0YS5saW5lcy5sZW5ndGggLSAxXSArPSBsaW5lLnN1YnN0cmluZyhzdGFydENvbHVtbik7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgY2FzZSAicmVtb3ZlIjoKICAgICAgICAgICAgdmFyIGVuZENvbHVtbiA9IGRlbHRhLmVuZC5jb2x1bW47CiAgICAgICAgICAgIHZhciBlbmRSb3cgPSBkZWx0YS5lbmQucm93OwogICAgICAgICAgICBpZiAocm93ID09PSBlbmRSb3cpIHsKICAgICAgICAgICAgICAgIGRvY0xpbmVzW3Jvd10gPSBsaW5lLnN1YnN0cmluZygwLCBzdGFydENvbHVtbikgKyBsaW5lLnN1YnN0cmluZyhlbmRDb2x1bW4pOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgZG9jTGluZXMuc3BsaWNlKHJvdywgZW5kUm93IC0gcm93ICsgMSwgbGluZS5zdWJzdHJpbmcoMCwgc3RhcnRDb2x1bW4pICsgZG9jTGluZXNbZW5kUm93XS5zdWJzdHJpbmcoZW5kQ29sdW1uKSk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYnJlYWs7CiAgICB9Cn07Cgp9KTsKCmFjZS5kZWZpbmUoImFjZS9saWIvZXZlbnRfZW1pdHRlciIsW10sIGZ1bmN0aW9uKHJlcXVpcmUsIGV4cG9ydHMsIG1vZHVsZSl7InVzZSBzdHJpY3QiOwp2YXIgRXZlbnRFbWl0dGVyID0ge307CnZhciBzdG9wUHJvcGFnYXRpb24gPSBmdW5jdGlvbiAoKSB7IHRoaXMucHJvcGFnYXRpb25TdG9wcGVkID0gdHJ1ZTsgfTsKdmFyIHByZXZlbnREZWZhdWx0ID0gZnVuY3Rpb24gKCkgeyB0aGlzLmRlZmF1bHRQcmV2ZW50ZWQgPSB0cnVlOyB9OwpFdmVudEVtaXR0ZXIuX2VtaXQgPQogICAgRXZlbnRFbWl0dGVyLl9kaXNwYXRjaEV2ZW50ID0gZnVuY3Rpb24gKGV2ZW50TmFtZSwgZSkgewogICAgICAgIHRoaXMuX2V2ZW50UmVnaXN0cnkgfHwgKHRoaXMuX2V2ZW50UmVnaXN0cnkgPSB7fSk7CiAgICAgICAgdGhpcy5fZGVmYXVsdEhhbmRsZXJzIHx8ICh0aGlzLl9kZWZhdWx0SGFuZGxlcnMgPSB7fSk7CiAgICAgICAgdmFyIGxpc3RlbmVycyA9IHRoaXMuX2V2ZW50UmVnaXN0cnlbZXZlbnROYW1lXSB8fCBbXTsKICAgICAgICB2YXIgZGVmYXVsdEhhbmRsZXIgPSB0aGlzLl9kZWZhdWx0SGFuZGxlcnNbZXZlbnROYW1lXTsKICAgICAgICBpZiAoIWxpc3RlbmVycy5sZW5ndGggJiYgIWRlZmF1bHRIYW5kbGVyKQogICAgICAgICAgICByZXR1cm47CiAgICAgICAgaWYgKHR5cGVvZiBlICE9ICJvYmplY3QiIHx8ICFlKQogICAgICAgICAgICBlID0ge307CiAgICAgICAgaWYgKCFlLnR5cGUpCiAgICAgICAgICAgIGUudHlwZSA9IGV2ZW50TmFtZTsKICAgICAgICBpZiAoIWUuc3RvcFByb3BhZ2F0aW9uKQogICAgICAgICAgICBlLnN0b3BQcm9wYWdhdGlvbiA9IHN0b3BQcm9wYWdhdGlvbjsKICAgICAgICBpZiAoIWUucHJldmVudERlZmF1bHQpCiAgICAgICAgICAgIGUucHJldmVudERlZmF1bHQgPSBwcmV2ZW50RGVmYXVsdDsKICAgICAgICBsaXN0ZW5lcnMgPSBsaXN0ZW5lcnMuc2xpY2UoKTsKICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IGxpc3RlbmVycy5sZW5ndGg7IGkrKykgewogICAgICAgICAgICBsaXN0ZW5lcnNbaV0oZSwgdGhpcyk7CiAgICAgICAgICAgIGlmIChlLnByb3BhZ2F0aW9uU3RvcHBlZCkKICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgIH0KICAgICAgICBpZiAoZGVmYXVsdEhhbmRsZXIgJiYgIWUuZGVmYXVsdFByZXZlbnRlZCkKICAgICAgICAgICAgcmV0dXJuIGRlZmF1bHRIYW5kbGVyKGUsIHRoaXMpOwogICAgfTsKRXZlbnRFbWl0dGVyLl9zaWduYWwgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBlKSB7CiAgICB2YXIgbGlzdGVuZXJzID0gKHRoaXMuX2V2ZW50UmVnaXN0cnkgfHwge30pW2V2ZW50TmFtZV07CiAgICBpZiAoIWxpc3RlbmVycykKICAgICAgICByZXR1cm47CiAgICBsaXN0ZW5lcnMgPSBsaXN0ZW5lcnMuc2xpY2UoKTsKICAgIGZvciAodmFyIGkgPSAwOyBpIDwgbGlzdGVuZXJzLmxlbmd0aDsgaSsrKQogICAgICAgIGxpc3RlbmVyc1tpXShlLCB0aGlzKTsKfTsKRXZlbnRFbWl0dGVyLm9uY2UgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBjYWxsYmFjaykgewogICAgdmFyIF9zZWxmID0gdGhpczsKICAgIHRoaXMub24oZXZlbnROYW1lLCBmdW5jdGlvbiBuZXdDYWxsYmFjaygpIHsKICAgICAgICBfc2VsZi5vZmYoZXZlbnROYW1lLCBuZXdDYWxsYmFjayk7CiAgICAgICAgY2FsbGJhY2suYXBwbHkobnVsbCwgYXJndW1lbnRzKTsKICAgIH0pOwogICAgaWYgKCFjYWxsYmFjaykgewogICAgICAgIHJldHVybiBuZXcgUHJvbWlzZShmdW5jdGlvbiAocmVzb2x2ZSkgewogICAgICAgICAgICBjYWxsYmFjayA9IHJlc29sdmU7CiAgICAgICAgfSk7CiAgICB9Cn07CkV2ZW50RW1pdHRlci5zZXREZWZhdWx0SGFuZGxlciA9IGZ1bmN0aW9uIChldmVudE5hbWUsIGNhbGxiYWNrKSB7CiAgICB2YXIgaGFuZGxlcnMgPSB0aGlzLl9kZWZhdWx0SGFuZGxlcnM7CiAgICBpZiAoIWhhbmRsZXJzKQogICAgICAgIGhhbmRsZXJzID0gdGhpcy5fZGVmYXVsdEhhbmRsZXJzID0geyBfZGlzYWJsZWRfOiB7fSB9OwogICAgaWYgKGhhbmRsZXJzW2V2ZW50TmFtZV0pIHsKICAgICAgICB2YXIgb2xkID0gaGFuZGxlcnNbZXZlbnROYW1lXTsKICAgICAgICB2YXIgZGlzYWJsZWQgPSBoYW5kbGVycy5fZGlzYWJsZWRfW2V2ZW50TmFtZV07CiAgICAgICAgaWYgKCFkaXNhYmxlZCkKICAgICAgICAgICAgaGFuZGxlcnMuX2Rpc2FibGVkX1tldmVudE5hbWVdID0gZGlzYWJsZWQgPSBbXTsKICAgICAgICBkaXNhYmxlZC5wdXNoKG9sZCk7CiAgICAgICAgdmFyIGkgPSBkaXNhYmxlZC5pbmRleE9mKGNhbGxiYWNrKTsKICAgICAgICBpZiAoaSAhPSAtMSkKICAgICAgICAgICAgZGlzYWJsZWQuc3BsaWNlKGksIDEpOwogICAgfQogICAgaGFuZGxlcnNbZXZlbnROYW1lXSA9IGNhbGxiYWNrOwp9OwpFdmVudEVtaXR0ZXIucmVtb3ZlRGVmYXVsdEhhbmRsZXIgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBjYWxsYmFjaykgewogICAgdmFyIGhhbmRsZXJzID0gdGhpcy5fZGVmYXVsdEhhbmRsZXJzOwogICAgaWYgKCFoYW5kbGVycykKICAgICAgICByZXR1cm47CiAgICB2YXIgZGlzYWJsZWQgPSBoYW5kbGVycy5fZGlzYWJsZWRfW2V2ZW50TmFtZV07CiAgICBpZiAoaGFuZGxlcnNbZXZlbnROYW1lXSA9PSBjYWxsYmFjaykgewogICAgICAgIGlmIChkaXNhYmxlZCkKICAgICAgICAgICAgdGhpcy5zZXREZWZhdWx0SGFuZGxlcihldmVudE5hbWUsIGRpc2FibGVkLnBvcCgpKTsKICAgIH0KICAgIGVsc2UgaWYgKGRpc2FibGVkKSB7CiAgICAgICAgdmFyIGkgPSBkaXNhYmxlZC5pbmRleE9mKGNhbGxiYWNrKTsKICAgICAgICBpZiAoaSAhPSAtMSkKICAgICAgICAgICAgZGlzYWJsZWQuc3BsaWNlKGksIDEpOwogICAgfQp9OwpFdmVudEVtaXR0ZXIub24gPQogICAgRXZlbnRFbWl0dGVyLmFkZEV2ZW50TGlzdGVuZXIgPSBmdW5jdGlvbiAoZXZlbnROYW1lLCBjYWxsYmFjaywgY2FwdHVyaW5nKSB7CiAgICAgICAgdGhpcy5fZXZlbnRSZWdpc3RyeSA9IHRoaXMuX2V2ZW50UmVnaXN0cnkgfHwge307CiAgICAgICAgdmFyIGxpc3RlbmVycyA9IHRoaXMuX2V2ZW50UmVnaXN0cnlbZXZlbnROYW1lXTsKICAgICAgICBpZiAoIWxpc3RlbmVycykKICAgICAgICAgICAgbGlzdGVuZXJzID0gdGhpcy5fZXZlbnRSZWdpc3RyeVtldmVudE5hbWVdID0gW107CiAgICAgICAgaWYgKGxpc3RlbmVycy5pbmRleE9mKGNhbGxiYWNrKSA9PSAtMSkKICAgICAgICAgICAgbGlzdGVuZXJzW2NhcHR1cmluZyA/ICJ1bnNoaWZ0IiA6ICJwdXNoIl0oY2FsbGJhY2spOwogICAgICAgIHJldHVybiBjYWxsYmFjazsKICAgIH07CkV2ZW50RW1pdHRlci5vZmYgPQogICAgRXZlbnRFbWl0dGVyLnJlbW92ZUxpc3RlbmVyID0KICAgICAgICBFdmVudEVtaXR0ZXIucmVtb3ZlRXZlbnRMaXN0ZW5lciA9IGZ1bmN0aW9uIChldmVudE5hbWUsIGNhbGxiYWNrKSB7CiAgICAgICAgICAgIHRoaXMuX2V2ZW50UmVnaXN0cnkgPSB0aGlzLl9ldmVudFJlZ2lzdHJ5IHx8IHt9OwogICAgICAgICAgICB2YXIgbGlzdGVuZXJzID0gdGhpcy5fZXZlbnRSZWdpc3RyeVtldmVudE5hbWVdOwogICAgICAgICAgICBpZiAoIWxpc3RlbmVycykKICAgICAgICAgICAgICAgIHJldHVybjsKICAgICAgICAgICAgdmFyIGluZGV4ID0gbGlzdGVuZXJzLmluZGV4T2YoY2FsbGJhY2spOwogICAgICAgICAgICBpZiAoaW5kZXggIT09IC0xKQogICAgICAgICAgICAgICAgbGlzdGVuZXJzLnNwbGljZShpbmRleCwgMSk7CiAgICAgICAgfTsKRXZlbnRFbWl0dGVyLnJlbW92ZUFsbExpc3RlbmVycyA9IGZ1bmN0aW9uIChldmVudE5hbWUpIHsKICAgIGlmICghZXZlbnROYW1lKQogICAgICAgIHRoaXMuX2V2ZW50UmVnaXN0cnkgPSB0aGlzLl9kZWZhdWx0SGFuZGxlcnMgPSB1bmRlZmluZWQ7CiAgICBpZiAodGhpcy5fZXZlbnRSZWdpc3RyeSkKICAgICAgICB0aGlzLl9ldmVudFJlZ2lzdHJ5W2V2ZW50TmFtZV0gPSB1bmRlZmluZWQ7CiAgICBpZiAodGhpcy5fZGVmYXVsdEhhbmRsZXJzKQogICAgICAgIHRoaXMuX2RlZmF1bHRIYW5kbGVyc1tldmVudE5hbWVdID0gdW5kZWZpbmVkOwp9OwpleHBvcnRzLkV2ZW50RW1pdHRlciA9IEV2ZW50RW1pdHRlcjsKCn0pOwoKYWNlLmRlZmluZSgiYWNlL3JhbmdlIixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKXsidXNlIHN0cmljdCI7CnZhciBSYW5nZSA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uICgpIHsKICAgIGZ1bmN0aW9uIFJhbmdlKHN0YXJ0Um93LCBzdGFydENvbHVtbiwgZW5kUm93LCBlbmRDb2x1bW4pIHsKICAgICAgICB0aGlzLnN0YXJ0ID0gewogICAgICAgICAgICByb3c6IHN0YXJ0Um93LAogICAgICAgICAgICBjb2x1bW46IHN0YXJ0Q29sdW1uCiAgICAgICAgfTsKICAgICAgICB0aGlzLmVuZCA9IHsKICAgICAgICAgICAgcm93OiBlbmRSb3csCiAgICAgICAgICAgIGNvbHVtbjogZW5kQ29sdW1uCiAgICAgICAgfTsKICAgIH0KICAgIFJhbmdlLnByb3RvdHlwZS5pc0VxdWFsID0gZnVuY3Rpb24gKHJhbmdlKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuc3RhcnQucm93ID09PSByYW5nZS5zdGFydC5yb3cgJiYKICAgICAgICAgICAgdGhpcy5lbmQucm93ID09PSByYW5nZS5lbmQucm93ICYmCiAgICAgICAgICAgIHRoaXMuc3RhcnQuY29sdW1uID09PSByYW5nZS5zdGFydC5jb2x1bW4gJiYKICAgICAgICAgICAgdGhpcy5lbmQuY29sdW1uID09PSByYW5nZS5lbmQuY29sdW1uOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS50b1N0cmluZyA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gKCJSYW5nZTogWyIgKyB0aGlzLnN0YXJ0LnJvdyArICIvIiArIHRoaXMuc3RhcnQuY29sdW1uICsKICAgICAgICAgICAgIl0gLT4gWyIgKyB0aGlzLmVuZC5yb3cgKyAiLyIgKyB0aGlzLmVuZC5jb2x1bW4gKyAiXSIpOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jb250YWlucyA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHJldHVybiB0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pID09IDA7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNvbXBhcmVSYW5nZSA9IGZ1bmN0aW9uIChyYW5nZSkgewogICAgICAgIHZhciBjbXAsIGVuZCA9IHJhbmdlLmVuZCwgc3RhcnQgPSByYW5nZS5zdGFydDsKICAgICAgICBjbXAgPSB0aGlzLmNvbXBhcmUoZW5kLnJvdywgZW5kLmNvbHVtbik7CiAgICAgICAgaWYgKGNtcCA9PSAxKSB7CiAgICAgICAgICAgIGNtcCA9IHRoaXMuY29tcGFyZShzdGFydC5yb3csIHN0YXJ0LmNvbHVtbik7CiAgICAgICAgICAgIGlmIChjbXAgPT0gMSkgewogICAgICAgICAgICAgICAgcmV0dXJuIDI7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZSBpZiAoY21wID09IDApIHsKICAgICAgICAgICAgICAgIHJldHVybiAxOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgcmV0dXJuIDA7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAoY21wID09IC0xKSB7CiAgICAgICAgICAgIHJldHVybiAtMjsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIGNtcCA9IHRoaXMuY29tcGFyZShzdGFydC5yb3csIHN0YXJ0LmNvbHVtbik7CiAgICAgICAgICAgIGlmIChjbXAgPT0gLTEpIHsKICAgICAgICAgICAgICAgIHJldHVybiAtMTsKICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIGlmIChjbXAgPT0gMSkgewogICAgICAgICAgICAgICAgcmV0dXJuIDQyOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgcmV0dXJuIDA7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNvbXBhcmVQb2ludCA9IGZ1bmN0aW9uIChwKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZShwLnJvdywgcC5jb2x1bW4pOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jb250YWluc1JhbmdlID0gZnVuY3Rpb24gKHJhbmdlKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZVBvaW50KHJhbmdlLnN0YXJ0KSA9PSAwICYmIHRoaXMuY29tcGFyZVBvaW50KHJhbmdlLmVuZCkgPT0gMDsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuaW50ZXJzZWN0cyA9IGZ1bmN0aW9uIChyYW5nZSkgewogICAgICAgIHZhciBjbXAgPSB0aGlzLmNvbXBhcmVSYW5nZShyYW5nZSk7CiAgICAgICAgcmV0dXJuIChjbXAgPT0gLTEgfHwgY21wID09IDAgfHwgY21wID09IDEpOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5pc0VuZCA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHJldHVybiB0aGlzLmVuZC5yb3cgPT0gcm93ICYmIHRoaXMuZW5kLmNvbHVtbiA9PSBjb2x1bW47CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmlzU3RhcnQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICByZXR1cm4gdGhpcy5zdGFydC5yb3cgPT0gcm93ICYmIHRoaXMuc3RhcnQuY29sdW1uID09IGNvbHVtbjsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuc2V0U3RhcnQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAodHlwZW9mIHJvdyA9PSAib2JqZWN0IikgewogICAgICAgICAgICB0aGlzLnN0YXJ0LmNvbHVtbiA9IHJvdy5jb2x1bW47CiAgICAgICAgICAgIHRoaXMuc3RhcnQucm93ID0gcm93LnJvdzsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIHRoaXMuc3RhcnQucm93ID0gcm93OwogICAgICAgICAgICB0aGlzLnN0YXJ0LmNvbHVtbiA9IGNvbHVtbjsKICAgICAgICB9CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLnNldEVuZCA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIGlmICh0eXBlb2Ygcm93ID09ICJvYmplY3QiKSB7CiAgICAgICAgICAgIHRoaXMuZW5kLmNvbHVtbiA9IHJvdy5jb2x1bW47CiAgICAgICAgICAgIHRoaXMuZW5kLnJvdyA9IHJvdy5yb3c7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICB0aGlzLmVuZC5yb3cgPSByb3c7CiAgICAgICAgICAgIHRoaXMuZW5kLmNvbHVtbiA9IGNvbHVtbjsKICAgICAgICB9CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmluc2lkZSA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIGlmICh0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pID09IDApIHsKICAgICAgICAgICAgaWYgKHRoaXMuaXNFbmQocm93LCBjb2x1bW4pIHx8IHRoaXMuaXNTdGFydChyb3csIGNvbHVtbikpIHsKICAgICAgICAgICAgICAgIHJldHVybiBmYWxzZTsKICAgICAgICAgICAgfQogICAgICAgICAgICBlbHNlIHsKICAgICAgICAgICAgICAgIHJldHVybiB0cnVlOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIHJldHVybiBmYWxzZTsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuaW5zaWRlU3RhcnQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAodGhpcy5jb21wYXJlKHJvdywgY29sdW1uKSA9PSAwKSB7CiAgICAgICAgICAgIGlmICh0aGlzLmlzRW5kKHJvdywgY29sdW1uKSkgewogICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsc2UgewogICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5pbnNpZGVFbmQgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAodGhpcy5jb21wYXJlKHJvdywgY29sdW1uKSA9PSAwKSB7CiAgICAgICAgICAgIGlmICh0aGlzLmlzU3RhcnQocm93LCBjb2x1bW4pKSB7CiAgICAgICAgICAgICAgICByZXR1cm4gZmFsc2U7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxzZSB7CiAgICAgICAgICAgICAgICByZXR1cm4gdHJ1ZTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNvbXBhcmUgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICBpZiAoIXRoaXMuaXNNdWx0aUxpbmUoKSkgewogICAgICAgICAgICBpZiAocm93ID09PSB0aGlzLnN0YXJ0LnJvdykgewogICAgICAgICAgICAgICAgcmV0dXJuIGNvbHVtbiA8IHRoaXMuc3RhcnQuY29sdW1uID8gLTEgOiAoY29sdW1uID4gdGhpcy5lbmQuY29sdW1uID8gMSA6IDApOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGlmIChyb3cgPCB0aGlzLnN0YXJ0LnJvdykKICAgICAgICAgICAgcmV0dXJuIC0xOwogICAgICAgIGlmIChyb3cgPiB0aGlzLmVuZC5yb3cpCiAgICAgICAgICAgIHJldHVybiAxOwogICAgICAgIGlmICh0aGlzLnN0YXJ0LnJvdyA9PT0gcm93KQogICAgICAgICAgICByZXR1cm4gY29sdW1uID49IHRoaXMuc3RhcnQuY29sdW1uID8gMCA6IC0xOwogICAgICAgIGlmICh0aGlzLmVuZC5yb3cgPT09IHJvdykKICAgICAgICAgICAgcmV0dXJuIGNvbHVtbiA8PSB0aGlzLmVuZC5jb2x1bW4gPyAwIDogMTsKICAgICAgICByZXR1cm4gMDsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuY29tcGFyZVN0YXJ0ID0gZnVuY3Rpb24gKHJvdywgY29sdW1uKSB7CiAgICAgICAgaWYgKHRoaXMuc3RhcnQucm93ID09IHJvdyAmJiB0aGlzLnN0YXJ0LmNvbHVtbiA9PSBjb2x1bW4pIHsKICAgICAgICAgICAgcmV0dXJuIC0xOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZShyb3csIGNvbHVtbik7CiAgICAgICAgfQogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jb21wYXJlRW5kID0gZnVuY3Rpb24gKHJvdywgY29sdW1uKSB7CiAgICAgICAgaWYgKHRoaXMuZW5kLnJvdyA9PSByb3cgJiYgdGhpcy5lbmQuY29sdW1uID09IGNvbHVtbikgewogICAgICAgICAgICByZXR1cm4gMTsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIHJldHVybiB0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pOwogICAgICAgIH0KICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuY29tcGFyZUluc2lkZSA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIGlmICh0aGlzLmVuZC5yb3cgPT0gcm93ICYmIHRoaXMuZW5kLmNvbHVtbiA9PSBjb2x1bW4pIHsKICAgICAgICAgICAgcmV0dXJuIDE7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKHRoaXMuc3RhcnQucm93ID09IHJvdyAmJiB0aGlzLnN0YXJ0LmNvbHVtbiA9PSBjb2x1bW4pIHsKICAgICAgICAgICAgcmV0dXJuIC0xOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgcmV0dXJuIHRoaXMuY29tcGFyZShyb3csIGNvbHVtbik7CiAgICAgICAgfQogICAgfTsKICAgIFJhbmdlLnByb3RvdHlwZS5jbGlwUm93cyA9IGZ1bmN0aW9uIChmaXJzdFJvdywgbGFzdFJvdykgewogICAgICAgIGlmICh0aGlzLmVuZC5yb3cgPiBsYXN0Um93KQogICAgICAgICAgICB2YXIgZW5kID0geyByb3c6IGxhc3RSb3cgKyAxLCBjb2x1bW46IDAgfTsKICAgICAgICBlbHNlIGlmICh0aGlzLmVuZC5yb3cgPCBmaXJzdFJvdykKICAgICAgICAgICAgdmFyIGVuZCA9IHsgcm93OiBmaXJzdFJvdywgY29sdW1uOiAwIH07CiAgICAgICAgaWYgKHRoaXMuc3RhcnQucm93ID4gbGFzdFJvdykKICAgICAgICAgICAgdmFyIHN0YXJ0ID0geyByb3c6IGxhc3RSb3cgKyAxLCBjb2x1bW46IDAgfTsKICAgICAgICBlbHNlIGlmICh0aGlzLnN0YXJ0LnJvdyA8IGZpcnN0Um93KQogICAgICAgICAgICB2YXIgc3RhcnQgPSB7IHJvdzogZmlyc3RSb3csIGNvbHVtbjogMCB9OwogICAgICAgIHJldHVybiBSYW5nZS5mcm9tUG9pbnRzKHN0YXJ0IHx8IHRoaXMuc3RhcnQsIGVuZCB8fCB0aGlzLmVuZCk7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmV4dGVuZCA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHZhciBjbXAgPSB0aGlzLmNvbXBhcmUocm93LCBjb2x1bW4pOwogICAgICAgIGlmIChjbXAgPT0gMCkKICAgICAgICAgICAgcmV0dXJuIHRoaXM7CiAgICAgICAgZWxzZSBpZiAoY21wID09IC0xKQogICAgICAgICAgICB2YXIgc3RhcnQgPSB7IHJvdzogcm93LCBjb2x1bW46IGNvbHVtbiB9OwogICAgICAgIGVsc2UKICAgICAgICAgICAgdmFyIGVuZCA9IHsgcm93OiByb3csIGNvbHVtbjogY29sdW1uIH07CiAgICAgICAgcmV0dXJuIFJhbmdlLmZyb21Qb2ludHMoc3RhcnQgfHwgdGhpcy5zdGFydCwgZW5kIHx8IHRoaXMuZW5kKTsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuaXNFbXB0eSA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gKHRoaXMuc3RhcnQucm93ID09PSB0aGlzLmVuZC5yb3cgJiYgdGhpcy5zdGFydC5jb2x1bW4gPT09IHRoaXMuZW5kLmNvbHVtbik7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmlzTXVsdGlMaW5lID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiAodGhpcy5zdGFydC5yb3cgIT09IHRoaXMuZW5kLnJvdyk7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLmNsb25lID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiBSYW5nZS5mcm9tUG9pbnRzKHRoaXMuc3RhcnQsIHRoaXMuZW5kKTsKICAgIH07CiAgICBSYW5nZS5wcm90b3R5cGUuY29sbGFwc2VSb3dzID0gZnVuY3Rpb24gKCkgewogICAgICAgIGlmICh0aGlzLmVuZC5jb2x1bW4gPT0gMCkKICAgICAgICAgICAgcmV0dXJuIG5ldyBSYW5nZSh0aGlzLnN0YXJ0LnJvdywgMCwgTWF0aC5tYXgodGhpcy5zdGFydC5yb3csIHRoaXMuZW5kLnJvdyAtIDEpLCAwKTsKICAgICAgICBlbHNlCiAgICAgICAgICAgIHJldHVybiBuZXcgUmFuZ2UodGhpcy5zdGFydC5yb3csIDAsIHRoaXMuZW5kLnJvdywgMCk7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLnRvU2NyZWVuUmFuZ2UgPSBmdW5jdGlvbiAoc2Vzc2lvbikgewogICAgICAgIHZhciBzY3JlZW5Qb3NTdGFydCA9IHNlc3Npb24uZG9jdW1lbnRUb1NjcmVlblBvc2l0aW9uKHRoaXMuc3RhcnQpOwogICAgICAgIHZhciBzY3JlZW5Qb3NFbmQgPSBzZXNzaW9uLmRvY3VtZW50VG9TY3JlZW5Qb3NpdGlvbih0aGlzLmVuZCk7CiAgICAgICAgcmV0dXJuIG5ldyBSYW5nZShzY3JlZW5Qb3NTdGFydC5yb3csIHNjcmVlblBvc1N0YXJ0LmNvbHVtbiwgc2NyZWVuUG9zRW5kLnJvdywgc2NyZWVuUG9zRW5kLmNvbHVtbik7CiAgICB9OwogICAgUmFuZ2UucHJvdG90eXBlLm1vdmVCeSA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHRoaXMuc3RhcnQucm93ICs9IHJvdzsKICAgICAgICB0aGlzLnN0YXJ0LmNvbHVtbiArPSBjb2x1bW47CiAgICAgICAgdGhpcy5lbmQucm93ICs9IHJvdzsKICAgICAgICB0aGlzLmVuZC5jb2x1bW4gKz0gY29sdW1uOwogICAgfTsKICAgIHJldHVybiBSYW5nZTsKfSgpKTsKUmFuZ2UuZnJvbVBvaW50cyA9IGZ1bmN0aW9uIChzdGFydCwgZW5kKSB7CiAgICByZXR1cm4gbmV3IFJhbmdlKHN0YXJ0LnJvdywgc3RhcnQuY29sdW1uLCBlbmQucm93LCBlbmQuY29sdW1uKTsKfTsKUmFuZ2UuY29tcGFyZVBvaW50cyA9IGZ1bmN0aW9uIChwMSwgcDIpIHsKICAgIHJldHVybiBwMS5yb3cgLSBwMi5yb3cgfHwgcDEuY29sdW1uIC0gcDIuY29sdW1uOwp9OwpleHBvcnRzLlJhbmdlID0gUmFuZ2U7Cgp9KTsKCmFjZS5kZWZpbmUoImFjZS9hbmNob3IiLFtdLCBmdW5jdGlvbihyZXF1aXJlLCBleHBvcnRzLCBtb2R1bGUpeyJ1c2Ugc3RyaWN0IjsKdmFyIG9vcCA9IHJlcXVpcmUoIi4vbGliL29vcCIpOwp2YXIgRXZlbnRFbWl0dGVyID0gcmVxdWlyZSgiLi9saWIvZXZlbnRfZW1pdHRlciIpLkV2ZW50RW1pdHRlcjsKdmFyIEFuY2hvciA9IC8qKiBAY2xhc3MgKi8gKGZ1bmN0aW9uICgpIHsKICAgIGZ1bmN0aW9uIEFuY2hvcihkb2MsIHJvdywgY29sdW1uKSB7CiAgICAgICAgdGhpcy4kb25DaGFuZ2UgPSB0aGlzLm9uQ2hhbmdlLmJpbmQodGhpcyk7CiAgICAgICAgdGhpcy5hdHRhY2goZG9jKTsKICAgICAgICBpZiAodHlwZW9mIHJvdyAhPSAibnVtYmVyIikKICAgICAgICAgICAgdGhpcy5zZXRQb3NpdGlvbihyb3cucm93LCByb3cuY29sdW1uKTsKICAgICAgICBlbHNlCiAgICAgICAgICAgIHRoaXMuc2V0UG9zaXRpb24ocm93LCBjb2x1bW4pOwogICAgfQogICAgQW5jaG9yLnByb3RvdHlwZS5nZXRQb3NpdGlvbiA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gdGhpcy4kY2xpcFBvc2l0aW9uVG9Eb2N1bWVudCh0aGlzLnJvdywgdGhpcy5jb2x1bW4pOwogICAgfTsKICAgIEFuY2hvci5wcm90b3R5cGUuZ2V0RG9jdW1lbnQgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuZG9jdW1lbnQ7CiAgICB9OwogICAgQW5jaG9yLnByb3RvdHlwZS5vbkNoYW5nZSA9IGZ1bmN0aW9uIChkZWx0YSkgewogICAgICAgIGlmIChkZWx0YS5zdGFydC5yb3cgPT0gZGVsdGEuZW5kLnJvdyAmJiBkZWx0YS5zdGFydC5yb3cgIT0gdGhpcy5yb3cpCiAgICAgICAgICAgIHJldHVybjsKICAgICAgICBpZiAoZGVsdGEuc3RhcnQucm93ID4gdGhpcy5yb3cpCiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB2YXIgcG9pbnQgPSAkZ2V0VHJhbnNmb3JtZWRQb2ludChkZWx0YSwgeyByb3c6IHRoaXMucm93LCBjb2x1bW46IHRoaXMuY29sdW1uIH0sIHRoaXMuJGluc2VydFJpZ2h0KTsKICAgICAgICB0aGlzLnNldFBvc2l0aW9uKHBvaW50LnJvdywgcG9pbnQuY29sdW1uLCB0cnVlKTsKICAgIH07CiAgICBBbmNob3IucHJvdG90eXBlLnNldFBvc2l0aW9uID0gZnVuY3Rpb24gKHJvdywgY29sdW1uLCBub0NsaXApIHsKICAgICAgICB2YXIgcG9zOwogICAgICAgIGlmIChub0NsaXApIHsKICAgICAgICAgICAgcG9zID0gewogICAgICAgICAgICAgICAgcm93OiByb3csCiAgICAgICAgICAgICAgICBjb2x1bW46IGNvbHVtbgogICAgICAgICAgICB9OwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgcG9zID0gdGhpcy4kY2xpcFBvc2l0aW9uVG9Eb2N1bWVudChyb3csIGNvbHVtbik7CiAgICAgICAgfQogICAgICAgIGlmICh0aGlzLnJvdyA9PSBwb3Mucm93ICYmIHRoaXMuY29sdW1uID09IHBvcy5jb2x1bW4pCiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB2YXIgb2xkID0gewogICAgICAgICAgICByb3c6IHRoaXMucm93LAogICAgICAgICAgICBjb2x1bW46IHRoaXMuY29sdW1uCiAgICAgICAgfTsKICAgICAgICB0aGlzLnJvdyA9IHBvcy5yb3c7CiAgICAgICAgdGhpcy5jb2x1bW4gPSBwb3MuY29sdW1uOwogICAgICAgIHRoaXMuX3NpZ25hbCgiY2hhbmdlIiwgewogICAgICAgICAgICBvbGQ6IG9sZCwKICAgICAgICAgICAgdmFsdWU6IHBvcwogICAgICAgIH0pOwogICAgfTsKICAgIEFuY2hvci5wcm90b3R5cGUuZGV0YWNoID0gZnVuY3Rpb24gKCkgewogICAgICAgIHRoaXMuZG9jdW1lbnQub2ZmKCJjaGFuZ2UiLCB0aGlzLiRvbkNoYW5nZSk7CiAgICB9OwogICAgQW5jaG9yLnByb3RvdHlwZS5hdHRhY2ggPSBmdW5jdGlvbiAoZG9jKSB7CiAgICAgICAgdGhpcy5kb2N1bWVudCA9IGRvYyB8fCB0aGlzLmRvY3VtZW50OwogICAgICAgIHRoaXMuZG9jdW1lbnQub24oImNoYW5nZSIsIHRoaXMuJG9uQ2hhbmdlKTsKICAgIH07CiAgICBBbmNob3IucHJvdG90eXBlLiRjbGlwUG9zaXRpb25Ub0RvY3VtZW50ID0gZnVuY3Rpb24gKHJvdywgY29sdW1uKSB7CiAgICAgICAgdmFyIHBvcyA9IHt9OwogICAgICAgIGlmIChyb3cgPj0gdGhpcy5kb2N1bWVudC5nZXRMZW5ndGgoKSkgewogICAgICAgICAgICBwb3Mucm93ID0gTWF0aC5tYXgoMCwgdGhpcy5kb2N1bWVudC5nZXRMZW5ndGgoKSAtIDEpOwogICAgICAgICAgICBwb3MuY29sdW1uID0gdGhpcy5kb2N1bWVudC5nZXRMaW5lKHBvcy5yb3cpLmxlbmd0aDsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAocm93IDwgMCkgewogICAgICAgICAgICBwb3Mucm93ID0gMDsKICAgICAgICAgICAgcG9zLmNvbHVtbiA9IDA7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICBwb3Mucm93ID0gcm93OwogICAgICAgICAgICBwb3MuY29sdW1uID0gTWF0aC5taW4odGhpcy5kb2N1bWVudC5nZXRMaW5lKHBvcy5yb3cpLmxlbmd0aCwgTWF0aC5tYXgoMCwgY29sdW1uKSk7CiAgICAgICAgfQogICAgICAgIGlmIChjb2x1bW4gPCAwKQogICAgICAgICAgICBwb3MuY29sdW1uID0gMDsKICAgICAgICByZXR1cm4gcG9zOwogICAgfTsKICAgIHJldHVybiBBbmNob3I7Cn0oKSk7CkFuY2hvci5wcm90b3R5cGUuJGluc2VydFJpZ2h0ID0gZmFsc2U7Cm9vcC5pbXBsZW1lbnQoQW5jaG9yLnByb3RvdHlwZSwgRXZlbnRFbWl0dGVyKTsKZnVuY3Rpb24gJHBvaW50c0luT3JkZXIocG9pbnQxLCBwb2ludDIsIGVxdWFsUG9pbnRzSW5PcmRlcikgewogICAgdmFyIGJDb2xJc0FmdGVyID0gZXF1YWxQb2ludHNJbk9yZGVyID8gcG9pbnQxLmNvbHVtbiA8PSBwb2ludDIuY29sdW1uIDogcG9pbnQxLmNvbHVtbiA8IHBvaW50Mi5jb2x1bW47CiAgICByZXR1cm4gKHBvaW50MS5yb3cgPCBwb2ludDIucm93KSB8fCAocG9pbnQxLnJvdyA9PSBwb2ludDIucm93ICYmIGJDb2xJc0FmdGVyKTsKfQpmdW5jdGlvbiAkZ2V0VHJhbnNmb3JtZWRQb2ludChkZWx0YSwgcG9pbnQsIG1vdmVJZkVxdWFsKSB7CiAgICB2YXIgZGVsdGFJc0luc2VydCA9IGRlbHRhLmFjdGlvbiA9PSAiaW5zZXJ0IjsKICAgIHZhciBkZWx0YVJvd1NoaWZ0ID0gKGRlbHRhSXNJbnNlcnQgPyAxIDogLTEpICogKGRlbHRhLmVuZC5yb3cgLSBkZWx0YS5zdGFydC5yb3cpOwogICAgdmFyIGRlbHRhQ29sU2hpZnQgPSAoZGVsdGFJc0luc2VydCA/IDEgOiAtMSkgKiAoZGVsdGEuZW5kLmNvbHVtbiAtIGRlbHRhLnN0YXJ0LmNvbHVtbik7CiAgICB2YXIgZGVsdGFTdGFydCA9IGRlbHRhLnN0YXJ0OwogICAgdmFyIGRlbHRhRW5kID0gZGVsdGFJc0luc2VydCA/IGRlbHRhU3RhcnQgOiBkZWx0YS5lbmQ7IC8vIENvbGxhcHNlIGluc2VydCByYW5nZS4KICAgIGlmICgkcG9pbnRzSW5PcmRlcihwb2ludCwgZGVsdGFTdGFydCwgbW92ZUlmRXF1YWwpKSB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgcm93OiBwb2ludC5yb3csCiAgICAgICAgICAgIGNvbHVtbjogcG9pbnQuY29sdW1uCiAgICAgICAgfTsKICAgIH0KICAgIGlmICgkcG9pbnRzSW5PcmRlcihkZWx0YUVuZCwgcG9pbnQsICFtb3ZlSWZFcXVhbCkpIHsKICAgICAgICByZXR1cm4gewogICAgICAgICAgICByb3c6IHBvaW50LnJvdyArIGRlbHRhUm93U2hpZnQsCiAgICAgICAgICAgIGNvbHVtbjogcG9pbnQuY29sdW1uICsgKHBvaW50LnJvdyA9PSBkZWx0YUVuZC5yb3cgPyBkZWx0YUNvbFNoaWZ0IDogMCkKICAgICAgICB9OwogICAgfQogICAgcmV0dXJuIHsKICAgICAgICByb3c6IGRlbHRhU3RhcnQucm93LAogICAgICAgIGNvbHVtbjogZGVsdGFTdGFydC5jb2x1bW4KICAgIH07Cn0KZXhwb3J0cy5BbmNob3IgPSBBbmNob3I7Cgp9KTsKCmFjZS5kZWZpbmUoImFjZS9kb2N1bWVudCIsW10sIGZ1bmN0aW9uKHJlcXVpcmUsIGV4cG9ydHMsIG1vZHVsZSl7InVzZSBzdHJpY3QiOwp2YXIgb29wID0gcmVxdWlyZSgiLi9saWIvb29wIik7CnZhciBhcHBseURlbHRhID0gcmVxdWlyZSgiLi9hcHBseV9kZWx0YSIpLmFwcGx5RGVsdGE7CnZhciBFdmVudEVtaXR0ZXIgPSByZXF1aXJlKCIuL2xpYi9ldmVudF9lbWl0dGVyIikuRXZlbnRFbWl0dGVyOwp2YXIgUmFuZ2UgPSByZXF1aXJlKCIuL3JhbmdlIikuUmFuZ2U7CnZhciBBbmNob3IgPSByZXF1aXJlKCIuL2FuY2hvciIpLkFuY2hvcjsKdmFyIERvY3VtZW50ID0gLyoqIEBjbGFzcyAqLyAoZnVuY3Rpb24gKCkgewogICAgZnVuY3Rpb24gRG9jdW1lbnQodGV4dE9yTGluZXMpIHsKICAgICAgICB0aGlzLiRsaW5lcyA9IFsiIl07CiAgICAgICAgaWYgKHRleHRPckxpbmVzLmxlbmd0aCA9PT0gMCkgewogICAgICAgICAgICB0aGlzLiRsaW5lcyA9IFsiIl07CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKEFycmF5LmlzQXJyYXkodGV4dE9yTGluZXMpKSB7CiAgICAgICAgICAgIHRoaXMuaW5zZXJ0TWVyZ2VkTGluZXMoeyByb3c6IDAsIGNvbHVtbjogMCB9LCB0ZXh0T3JMaW5lcyk7CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICB0aGlzLmluc2VydCh7IHJvdzogMCwgY29sdW1uOiAwIH0sIHRleHRPckxpbmVzKTsKICAgICAgICB9CiAgICB9CiAgICBEb2N1bWVudC5wcm90b3R5cGUuc2V0VmFsdWUgPSBmdW5jdGlvbiAodGV4dCkgewogICAgICAgIHZhciBsZW4gPSB0aGlzLmdldExlbmd0aCgpIC0gMTsKICAgICAgICB0aGlzLnJlbW92ZShuZXcgUmFuZ2UoMCwgMCwgbGVuLCB0aGlzLmdldExpbmUobGVuKS5sZW5ndGgpKTsKICAgICAgICB0aGlzLmluc2VydCh7IHJvdzogMCwgY29sdW1uOiAwIH0sIHRleHQgfHwgIiIpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5nZXRWYWx1ZSA9IGZ1bmN0aW9uICgpIHsKICAgICAgICByZXR1cm4gdGhpcy5nZXRBbGxMaW5lcygpLmpvaW4odGhpcy5nZXROZXdMaW5lQ2hhcmFjdGVyKCkpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5jcmVhdGVBbmNob3IgPSBmdW5jdGlvbiAocm93LCBjb2x1bW4pIHsKICAgICAgICByZXR1cm4gbmV3IEFuY2hvcih0aGlzLCByb3csIGNvbHVtbik7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLiRkZXRlY3ROZXdMaW5lID0gZnVuY3Rpb24gKHRleHQpIHsKICAgICAgICB2YXIgbWF0Y2ggPSB0ZXh0Lm1hdGNoKC9eLio/KFxyXG58XHJ8XG4pL20pOwogICAgICAgIHRoaXMuJGF1dG9OZXdMaW5lID0gbWF0Y2ggPyBtYXRjaFsxXSA6ICJcbiI7CiAgICAgICAgdGhpcy5fc2lnbmFsKCJjaGFuZ2VOZXdMaW5lTW9kZSIpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5nZXROZXdMaW5lQ2hhcmFjdGVyID0gZnVuY3Rpb24gKCkgewogICAgICAgIHN3aXRjaCAodGhpcy4kbmV3TGluZU1vZGUpIHsKICAgICAgICAgICAgY2FzZSAid2luZG93cyI6CiAgICAgICAgICAgICAgICByZXR1cm4gIlxyXG4iOwogICAgICAgICAgICBjYXNlICJ1bml4IjoKICAgICAgICAgICAgICAgIHJldHVybiAiXG4iOwogICAgICAgICAgICBkZWZhdWx0OgogICAgICAgICAgICAgICAgcmV0dXJuIHRoaXMuJGF1dG9OZXdMaW5lIHx8ICJcbiI7CiAgICAgICAgfQogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5zZXROZXdMaW5lTW9kZSA9IGZ1bmN0aW9uIChuZXdMaW5lTW9kZSkgewogICAgICAgIGlmICh0aGlzLiRuZXdMaW5lTW9kZSA9PT0gbmV3TGluZU1vZGUpCiAgICAgICAgICAgIHJldHVybjsKICAgICAgICB0aGlzLiRuZXdMaW5lTW9kZSA9IG5ld0xpbmVNb2RlOwogICAgICAgIHRoaXMuX3NpZ25hbCgiY2hhbmdlTmV3TGluZU1vZGUiKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuZ2V0TmV3TGluZU1vZGUgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuJG5ld0xpbmVNb2RlOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5pc05ld0xpbmUgPSBmdW5jdGlvbiAodGV4dCkgewogICAgICAgIHJldHVybiAodGV4dCA9PSAiXHJcbiIgfHwgdGV4dCA9PSAiXHIiIHx8IHRleHQgPT0gIlxuIik7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmdldExpbmUgPSBmdW5jdGlvbiAocm93KSB7CiAgICAgICAgcmV0dXJuIHRoaXMuJGxpbmVzW3Jvd10gfHwgIiI7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmdldExpbmVzID0gZnVuY3Rpb24gKGZpcnN0Um93LCBsYXN0Um93KSB7CiAgICAgICAgcmV0dXJuIHRoaXMuJGxpbmVzLnNsaWNlKGZpcnN0Um93LCBsYXN0Um93ICsgMSk7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmdldEFsbExpbmVzID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiB0aGlzLmdldExpbmVzKDAsIHRoaXMuZ2V0TGVuZ3RoKCkpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5nZXRMZW5ndGggPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuJGxpbmVzLmxlbmd0aDsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuZ2V0VGV4dFJhbmdlID0gZnVuY3Rpb24gKHJhbmdlKSB7CiAgICAgICAgcmV0dXJuIHRoaXMuZ2V0TGluZXNGb3JSYW5nZShyYW5nZSkuam9pbih0aGlzLmdldE5ld0xpbmVDaGFyYWN0ZXIoKSk7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmdldExpbmVzRm9yUmFuZ2UgPSBmdW5jdGlvbiAocmFuZ2UpIHsKICAgICAgICB2YXIgbGluZXM7CiAgICAgICAgaWYgKHJhbmdlLnN0YXJ0LnJvdyA9PT0gcmFuZ2UuZW5kLnJvdykgewogICAgICAgICAgICBsaW5lcyA9IFt0aGlzLmdldExpbmUocmFuZ2Uuc3RhcnQucm93KS5zdWJzdHJpbmcocmFuZ2Uuc3RhcnQuY29sdW1uLCByYW5nZS5lbmQuY29sdW1uKV07CiAgICAgICAgfQogICAgICAgIGVsc2UgewogICAgICAgICAgICBsaW5lcyA9IHRoaXMuZ2V0TGluZXMocmFuZ2Uuc3RhcnQucm93LCByYW5nZS5lbmQucm93KTsKICAgICAgICAgICAgbGluZXNbMF0gPSAobGluZXNbMF0gfHwgIiIpLnN1YnN0cmluZyhyYW5nZS5zdGFydC5jb2x1bW4pOwogICAgICAgICAgICB2YXIgbCA9IGxpbmVzLmxlbmd0aCAtIDE7CiAgICAgICAgICAgIGlmIChyYW5nZS5lbmQucm93IC0gcmFuZ2Uuc3RhcnQucm93ID09IGwpCiAgICAgICAgICAgICAgICBsaW5lc1tsXSA9IGxpbmVzW2xdLnN1YnN0cmluZygwLCByYW5nZS5lbmQuY29sdW1uKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGxpbmVzOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5pbnNlcnRMaW5lcyA9IGZ1bmN0aW9uIChyb3csIGxpbmVzKSB7CiAgICAgICAgY29uc29sZS53YXJuKCJVc2Ugb2YgZG9jdW1lbnQuaW5zZXJ0TGluZXMgaXMgZGVwcmVjYXRlZC4gVXNlIHRoZSBpbnNlcnRGdWxsTGluZXMgbWV0aG9kIGluc3RlYWQuIik7CiAgICAgICAgcmV0dXJuIHRoaXMuaW5zZXJ0RnVsbExpbmVzKHJvdywgbGluZXMpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5yZW1vdmVMaW5lcyA9IGZ1bmN0aW9uIChmaXJzdFJvdywgbGFzdFJvdykgewogICAgICAgIGNvbnNvbGUud2FybigiVXNlIG9mIGRvY3VtZW50LnJlbW92ZUxpbmVzIGlzIGRlcHJlY2F0ZWQuIFVzZSB0aGUgcmVtb3ZlRnVsbExpbmVzIG1ldGhvZCBpbnN0ZWFkLiIpOwogICAgICAgIHJldHVybiB0aGlzLnJlbW92ZUZ1bGxMaW5lcyhmaXJzdFJvdywgbGFzdFJvdyk7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmluc2VydE5ld0xpbmUgPSBmdW5jdGlvbiAocG9zaXRpb24pIHsKICAgICAgICBjb25zb2xlLndhcm4oIlVzZSBvZiBkb2N1bWVudC5pbnNlcnROZXdMaW5lIGlzIGRlcHJlY2F0ZWQuIFVzZSBpbnNlcnRNZXJnZWRMaW5lcyhwb3NpdGlvbiwgWycnLCAnJ10pIGluc3RlYWQuIik7CiAgICAgICAgcmV0dXJuIHRoaXMuaW5zZXJ0TWVyZ2VkTGluZXMocG9zaXRpb24sIFsiIiwgIiJdKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuaW5zZXJ0ID0gZnVuY3Rpb24gKHBvc2l0aW9uLCB0ZXh0KSB7CiAgICAgICAgaWYgKHRoaXMuZ2V0TGVuZ3RoKCkgPD0gMSkKICAgICAgICAgICAgdGhpcy4kZGV0ZWN0TmV3TGluZSh0ZXh0KTsKICAgICAgICByZXR1cm4gdGhpcy5pbnNlcnRNZXJnZWRMaW5lcyhwb3NpdGlvbiwgdGhpcy4kc3BsaXQodGV4dCkpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5pbnNlcnRJbkxpbmUgPSBmdW5jdGlvbiAocG9zaXRpb24sIHRleHQpIHsKICAgICAgICB2YXIgc3RhcnQgPSB0aGlzLmNsaXBwZWRQb3MocG9zaXRpb24ucm93LCBwb3NpdGlvbi5jb2x1bW4pOwogICAgICAgIHZhciBlbmQgPSB0aGlzLnBvcyhwb3NpdGlvbi5yb3csIHBvc2l0aW9uLmNvbHVtbiArIHRleHQubGVuZ3RoKTsKICAgICAgICB0aGlzLmFwcGx5RGVsdGEoewogICAgICAgICAgICBzdGFydDogc3RhcnQsCiAgICAgICAgICAgIGVuZDogZW5kLAogICAgICAgICAgICBhY3Rpb246ICJpbnNlcnQiLAogICAgICAgICAgICBsaW5lczogW3RleHRdCiAgICAgICAgfSwgdHJ1ZSk7CiAgICAgICAgcmV0dXJuIHRoaXMuY2xvbmVQb3MoZW5kKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuY2xpcHBlZFBvcyA9IGZ1bmN0aW9uIChyb3csIGNvbHVtbikgewogICAgICAgIHZhciBsZW5ndGggPSB0aGlzLmdldExlbmd0aCgpOwogICAgICAgIGlmIChyb3cgPT09IHVuZGVmaW5lZCkgewogICAgICAgICAgICByb3cgPSBsZW5ndGg7CiAgICAgICAgfQogICAgICAgIGVsc2UgaWYgKHJvdyA8IDApIHsKICAgICAgICAgICAgcm93ID0gMDsKICAgICAgICB9CiAgICAgICAgZWxzZSBpZiAocm93ID49IGxlbmd0aCkgewogICAgICAgICAgICByb3cgPSBsZW5ndGggLSAxOwogICAgICAgICAgICBjb2x1bW4gPSB1bmRlZmluZWQ7CiAgICAgICAgfQogICAgICAgIHZhciBsaW5lID0gdGhpcy5nZXRMaW5lKHJvdyk7CiAgICAgICAgaWYgKGNvbHVtbiA9PSB1bmRlZmluZWQpCiAgICAgICAgICAgIGNvbHVtbiA9IGxpbmUubGVuZ3RoOwogICAgICAgIGNvbHVtbiA9IE1hdGgubWluKE1hdGgubWF4KGNvbHVtbiwgMCksIGxpbmUubGVuZ3RoKTsKICAgICAgICByZXR1cm4geyByb3c6IHJvdywgY29sdW1uOiBjb2x1bW4gfTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuY2xvbmVQb3MgPSBmdW5jdGlvbiAocG9zKSB7CiAgICAgICAgcmV0dXJuIHsgcm93OiBwb3Mucm93LCBjb2x1bW46IHBvcy5jb2x1bW4gfTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucG9zID0gZnVuY3Rpb24gKHJvdywgY29sdW1uKSB7CiAgICAgICAgcmV0dXJuIHsgcm93OiByb3csIGNvbHVtbjogY29sdW1uIH07CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLiRjbGlwUG9zaXRpb24gPSBmdW5jdGlvbiAocG9zaXRpb24pIHsKICAgICAgICB2YXIgbGVuZ3RoID0gdGhpcy5nZXRMZW5ndGgoKTsKICAgICAgICBpZiAocG9zaXRpb24ucm93ID49IGxlbmd0aCkgewogICAgICAgICAgICBwb3NpdGlvbi5yb3cgPSBNYXRoLm1heCgwLCBsZW5ndGggLSAxKTsKICAgICAgICAgICAgcG9zaXRpb24uY29sdW1uID0gdGhpcy5nZXRMaW5lKGxlbmd0aCAtIDEpLmxlbmd0aDsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIHBvc2l0aW9uLnJvdyA9IE1hdGgubWF4KDAsIHBvc2l0aW9uLnJvdyk7CiAgICAgICAgICAgIHBvc2l0aW9uLmNvbHVtbiA9IE1hdGgubWluKE1hdGgubWF4KHBvc2l0aW9uLmNvbHVtbiwgMCksIHRoaXMuZ2V0TGluZShwb3NpdGlvbi5yb3cpLmxlbmd0aCk7CiAgICAgICAgfQogICAgICAgIHJldHVybiBwb3NpdGlvbjsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuaW5zZXJ0RnVsbExpbmVzID0gZnVuY3Rpb24gKHJvdywgbGluZXMpIHsKICAgICAgICByb3cgPSBNYXRoLm1pbihNYXRoLm1heChyb3csIDApLCB0aGlzLmdldExlbmd0aCgpKTsKICAgICAgICB2YXIgY29sdW1uID0gMDsKICAgICAgICBpZiAocm93IDwgdGhpcy5nZXRMZW5ndGgoKSkgewogICAgICAgICAgICBsaW5lcyA9IGxpbmVzLmNvbmNhdChbIiJdKTsKICAgICAgICAgICAgY29sdW1uID0gMDsKICAgICAgICB9CiAgICAgICAgZWxzZSB7CiAgICAgICAgICAgIGxpbmVzID0gWyIiXS5jb25jYXQobGluZXMpOwogICAgICAgICAgICByb3ctLTsKICAgICAgICAgICAgY29sdW1uID0gdGhpcy4kbGluZXNbcm93XS5sZW5ndGg7CiAgICAgICAgfQogICAgICAgIHRoaXMuaW5zZXJ0TWVyZ2VkTGluZXMoeyByb3c6IHJvdywgY29sdW1uOiBjb2x1bW4gfSwgbGluZXMpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5pbnNlcnRNZXJnZWRMaW5lcyA9IGZ1bmN0aW9uIChwb3NpdGlvbiwgbGluZXMpIHsKICAgICAgICB2YXIgc3RhcnQgPSB0aGlzLmNsaXBwZWRQb3MocG9zaXRpb24ucm93LCBwb3NpdGlvbi5jb2x1bW4pOwogICAgICAgIHZhciBlbmQgPSB7CiAgICAgICAgICAgIHJvdzogc3RhcnQucm93ICsgbGluZXMubGVuZ3RoIC0gMSwKICAgICAgICAgICAgY29sdW1uOiAobGluZXMubGVuZ3RoID09IDEgPyBzdGFydC5jb2x1bW4gOiAwKSArIGxpbmVzW2xpbmVzLmxlbmd0aCAtIDFdLmxlbmd0aAogICAgICAgIH07CiAgICAgICAgdGhpcy5hcHBseURlbHRhKHsKICAgICAgICAgICAgc3RhcnQ6IHN0YXJ0LAogICAgICAgICAgICBlbmQ6IGVuZCwKICAgICAgICAgICAgYWN0aW9uOiAiaW5zZXJ0IiwKICAgICAgICAgICAgbGluZXM6IGxpbmVzCiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIHRoaXMuY2xvbmVQb3MoZW5kKTsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucmVtb3ZlID0gZnVuY3Rpb24gKHJhbmdlKSB7CiAgICAgICAgdmFyIHN0YXJ0ID0gdGhpcy5jbGlwcGVkUG9zKHJhbmdlLnN0YXJ0LnJvdywgcmFuZ2Uuc3RhcnQuY29sdW1uKTsKICAgICAgICB2YXIgZW5kID0gdGhpcy5jbGlwcGVkUG9zKHJhbmdlLmVuZC5yb3csIHJhbmdlLmVuZC5jb2x1bW4pOwogICAgICAgIHRoaXMuYXBwbHlEZWx0YSh7CiAgICAgICAgICAgIHN0YXJ0OiBzdGFydCwKICAgICAgICAgICAgZW5kOiBlbmQsCiAgICAgICAgICAgIGFjdGlvbjogInJlbW92ZSIsCiAgICAgICAgICAgIGxpbmVzOiB0aGlzLmdldExpbmVzRm9yUmFuZ2UoeyBzdGFydDogc3RhcnQsIGVuZDogZW5kIH0pCiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIHRoaXMuY2xvbmVQb3Moc3RhcnQpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5yZW1vdmVJbkxpbmUgPSBmdW5jdGlvbiAocm93LCBzdGFydENvbHVtbiwgZW5kQ29sdW1uKSB7CiAgICAgICAgdmFyIHN0YXJ0ID0gdGhpcy5jbGlwcGVkUG9zKHJvdywgc3RhcnRDb2x1bW4pOwogICAgICAgIHZhciBlbmQgPSB0aGlzLmNsaXBwZWRQb3Mocm93LCBlbmRDb2x1bW4pOwogICAgICAgIHRoaXMuYXBwbHlEZWx0YSh7CiAgICAgICAgICAgIHN0YXJ0OiBzdGFydCwKICAgICAgICAgICAgZW5kOiBlbmQsCiAgICAgICAgICAgIGFjdGlvbjogInJlbW92ZSIsCiAgICAgICAgICAgIGxpbmVzOiB0aGlzLmdldExpbmVzRm9yUmFuZ2UoeyBzdGFydDogc3RhcnQsIGVuZDogZW5kIH0pCiAgICAgICAgfSwgdHJ1ZSk7CiAgICAgICAgcmV0dXJuIHRoaXMuY2xvbmVQb3Moc3RhcnQpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5yZW1vdmVGdWxsTGluZXMgPSBmdW5jdGlvbiAoZmlyc3RSb3csIGxhc3RSb3cpIHsKICAgICAgICBmaXJzdFJvdyA9IE1hdGgubWluKE1hdGgubWF4KDAsIGZpcnN0Um93KSwgdGhpcy5nZXRMZW5ndGgoKSAtIDEpOwogICAgICAgIGxhc3RSb3cgPSBNYXRoLm1pbihNYXRoLm1heCgwLCBsYXN0Um93KSwgdGhpcy5nZXRMZW5ndGgoKSAtIDEpOwogICAgICAgIHZhciBkZWxldGVGaXJzdE5ld0xpbmUgPSBsYXN0Um93ID09IHRoaXMuZ2V0TGVuZ3RoKCkgLSAxICYmIGZpcnN0Um93ID4gMDsKICAgICAgICB2YXIgZGVsZXRlTGFzdE5ld0xpbmUgPSBsYXN0Um93IDwgdGhpcy5nZXRMZW5ndGgoKSAtIDE7CiAgICAgICAgdmFyIHN0YXJ0Um93ID0gKGRlbGV0ZUZpcnN0TmV3TGluZSA/IGZpcnN0Um93IC0gMSA6IGZpcnN0Um93KTsKICAgICAgICB2YXIgc3RhcnRDb2wgPSAoZGVsZXRlRmlyc3ROZXdMaW5lID8gdGhpcy5nZXRMaW5lKHN0YXJ0Um93KS5sZW5ndGggOiAwKTsKICAgICAgICB2YXIgZW5kUm93ID0gKGRlbGV0ZUxhc3ROZXdMaW5lID8gbGFzdFJvdyArIDEgOiBsYXN0Um93KTsKICAgICAgICB2YXIgZW5kQ29sID0gKGRlbGV0ZUxhc3ROZXdMaW5lID8gMCA6IHRoaXMuZ2V0TGluZShlbmRSb3cpLmxlbmd0aCk7CiAgICAgICAgdmFyIHJhbmdlID0gbmV3IFJhbmdlKHN0YXJ0Um93LCBzdGFydENvbCwgZW5kUm93LCBlbmRDb2wpOwogICAgICAgIHZhciBkZWxldGVkTGluZXMgPSB0aGlzLiRsaW5lcy5zbGljZShmaXJzdFJvdywgbGFzdFJvdyArIDEpOwogICAgICAgIHRoaXMuYXBwbHlEZWx0YSh7CiAgICAgICAgICAgIHN0YXJ0OiByYW5nZS5zdGFydCwKICAgICAgICAgICAgZW5kOiByYW5nZS5lbmQsCiAgICAgICAgICAgIGFjdGlvbjogInJlbW92ZSIsCiAgICAgICAgICAgIGxpbmVzOiB0aGlzLmdldExpbmVzRm9yUmFuZ2UocmFuZ2UpCiAgICAgICAgfSk7CiAgICAgICAgcmV0dXJuIGRlbGV0ZWRMaW5lczsKICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucmVtb3ZlTmV3TGluZSA9IGZ1bmN0aW9uIChyb3cpIHsKICAgICAgICBpZiAocm93IDwgdGhpcy5nZXRMZW5ndGgoKSAtIDEgJiYgcm93ID49IDApIHsKICAgICAgICAgICAgdGhpcy5hcHBseURlbHRhKHsKICAgICAgICAgICAgICAgIHN0YXJ0OiB0aGlzLnBvcyhyb3csIHRoaXMuZ2V0TGluZShyb3cpLmxlbmd0aCksCiAgICAgICAgICAgICAgICBlbmQ6IHRoaXMucG9zKHJvdyArIDEsIDApLAogICAgICAgICAgICAgICAgYWN0aW9uOiAicmVtb3ZlIiwKICAgICAgICAgICAgICAgIGxpbmVzOiBbIiIsICIiXQogICAgICAgICAgICB9KTsKICAgICAgICB9CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLnJlcGxhY2UgPSBmdW5jdGlvbiAocmFuZ2UsIHRleHQpIHsKICAgICAgICBpZiAoIShyYW5nZSBpbnN0YW5jZW9mIFJhbmdlKSkKICAgICAgICAgICAgcmFuZ2UgPSBSYW5nZS5mcm9tUG9pbnRzKHJhbmdlLnN0YXJ0LCByYW5nZS5lbmQpOwogICAgICAgIGlmICh0ZXh0Lmxlbmd0aCA9PT0gMCAmJiByYW5nZS5pc0VtcHR5KCkpCiAgICAgICAgICAgIHJldHVybiByYW5nZS5zdGFydDsKICAgICAgICBpZiAodGV4dCA9PSB0aGlzLmdldFRleHRSYW5nZShyYW5nZSkpCiAgICAgICAgICAgIHJldHVybiByYW5nZS5lbmQ7CiAgICAgICAgdGhpcy5yZW1vdmUocmFuZ2UpOwogICAgICAgIHZhciBlbmQ7CiAgICAgICAgaWYgKHRleHQpIHsKICAgICAgICAgICAgZW5kID0gdGhpcy5pbnNlcnQocmFuZ2Uuc3RhcnQsIHRleHQpOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgZW5kID0gcmFuZ2Uuc3RhcnQ7CiAgICAgICAgfQogICAgICAgIHJldHVybiBlbmQ7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmFwcGx5RGVsdGFzID0gZnVuY3Rpb24gKGRlbHRhcykgewogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgZGVsdGFzLmxlbmd0aDsgaSsrKSB7CiAgICAgICAgICAgIHRoaXMuYXBwbHlEZWx0YShkZWx0YXNbaV0pOwogICAgICAgIH0KICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUucmV2ZXJ0RGVsdGFzID0gZnVuY3Rpb24gKGRlbHRhcykgewogICAgICAgIGZvciAodmFyIGkgPSBkZWx0YXMubGVuZ3RoIC0gMTsgaSA+PSAwOyBpLS0pIHsKICAgICAgICAgICAgdGhpcy5yZXZlcnREZWx0YShkZWx0YXNbaV0pOwogICAgICAgIH0KICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuYXBwbHlEZWx0YSA9IGZ1bmN0aW9uIChkZWx0YSwgZG9Ob3RWYWxpZGF0ZSkgewogICAgICAgIHZhciBpc0luc2VydCA9IGRlbHRhLmFjdGlvbiA9PSAiaW5zZXJ0IjsKICAgICAgICBpZiAoaXNJbnNlcnQgPyBkZWx0YS5saW5lcy5sZW5ndGggPD0gMSAmJiAhZGVsdGEubGluZXNbMF0KICAgICAgICAgICAgOiAhUmFuZ2UuY29tcGFyZVBvaW50cyhkZWx0YS5zdGFydCwgZGVsdGEuZW5kKSkgewogICAgICAgICAgICByZXR1cm47CiAgICAgICAgfQogICAgICAgIGlmIChpc0luc2VydCAmJiBkZWx0YS5saW5lcy5sZW5ndGggPiAyMDAwMCkgewogICAgICAgICAgICB0aGlzLiRzcGxpdEFuZGFwcGx5TGFyZ2VEZWx0YShkZWx0YSwgMjAwMDApOwogICAgICAgIH0KICAgICAgICBlbHNlIHsKICAgICAgICAgICAgYXBwbHlEZWx0YSh0aGlzLiRsaW5lcywgZGVsdGEsIGRvTm90VmFsaWRhdGUpOwogICAgICAgICAgICB0aGlzLl9zaWduYWwoImNoYW5nZSIsIGRlbHRhKTsKICAgICAgICB9CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLiRzYWZlQXBwbHlEZWx0YSA9IGZ1bmN0aW9uIChkZWx0YSkgewogICAgICAgIHZhciBkb2NMZW5ndGggPSB0aGlzLiRsaW5lcy5sZW5ndGg7CiAgICAgICAgaWYgKGRlbHRhLmFjdGlvbiA9PSAicmVtb3ZlIiAmJiBkZWx0YS5zdGFydC5yb3cgPCBkb2NMZW5ndGggJiYgZGVsdGEuZW5kLnJvdyA8IGRvY0xlbmd0aAogICAgICAgICAgICB8fCBkZWx0YS5hY3Rpb24gPT0gImluc2VydCIgJiYgZGVsdGEuc3RhcnQucm93IDw9IGRvY0xlbmd0aCkgewogICAgICAgICAgICB0aGlzLmFwcGx5RGVsdGEoZGVsdGEpOwogICAgICAgIH0KICAgIH07CiAgICBEb2N1bWVudC5wcm90b3R5cGUuJHNwbGl0QW5kYXBwbHlMYXJnZURlbHRhID0gZnVuY3Rpb24gKGRlbHRhLCBNQVgpIHsKICAgICAgICB2YXIgbGluZXMgPSBkZWx0YS5saW5lczsKICAgICAgICB2YXIgbCA9IGxpbmVzLmxlbmd0aCAtIE1BWCArIDE7CiAgICAgICAgdmFyIHJvdyA9IGRlbHRhLnN0YXJ0LnJvdzsKICAgICAgICB2YXIgY29sdW1uID0gZGVsdGEuc3RhcnQuY29sdW1uOwogICAgICAgIGZvciAodmFyIGZyb20gPSAwLCB0byA9IDA7IGZyb20gPCBsOyBmcm9tID0gdG8pIHsKICAgICAgICAgICAgdG8gKz0gTUFYIC0gMTsKICAgICAgICAgICAgdmFyIGNodW5rID0gbGluZXMuc2xpY2UoZnJvbSwgdG8pOwogICAgICAgICAgICBjaHVuay5wdXNoKCIiKTsKICAgICAgICAgICAgdGhpcy5hcHBseURlbHRhKHsKICAgICAgICAgICAgICAgIHN0YXJ0OiB0aGlzLnBvcyhyb3cgKyBmcm9tLCBjb2x1bW4pLAogICAgICAgICAgICAgICAgZW5kOiB0aGlzLnBvcyhyb3cgKyB0bywgY29sdW1uID0gMCksCiAgICAgICAgICAgICAgICBhY3Rpb246IGRlbHRhLmFjdGlvbiwKICAgICAgICAgICAgICAgIGxpbmVzOiBjaHVuawogICAgICAgICAgICB9LCB0cnVlKTsKICAgICAgICB9CiAgICAgICAgZGVsdGEubGluZXMgPSBsaW5lcy5zbGljZShmcm9tKTsKICAgICAgICBkZWx0YS5zdGFydC5yb3cgPSByb3cgKyBmcm9tOwogICAgICAgIGRlbHRhLnN0YXJ0LmNvbHVtbiA9IGNvbHVtbjsKICAgICAgICB0aGlzLmFwcGx5RGVsdGEoZGVsdGEsIHRydWUpOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS5yZXZlcnREZWx0YSA9IGZ1bmN0aW9uIChkZWx0YSkgewogICAgICAgIHRoaXMuJHNhZmVBcHBseURlbHRhKHsKICAgICAgICAgICAgc3RhcnQ6IHRoaXMuY2xvbmVQb3MoZGVsdGEuc3RhcnQpLAogICAgICAgICAgICBlbmQ6IHRoaXMuY2xvbmVQb3MoZGVsdGEuZW5kKSwKICAgICAgICAgICAgYWN0aW9uOiAoZGVsdGEuYWN0aW9uID09ICJpbnNlcnQiID8gInJlbW92ZSIgOiAiaW5zZXJ0IiksCiAgICAgICAgICAgIGxpbmVzOiBkZWx0YS5saW5lcy5zbGljZSgpCiAgICAgICAgfSk7CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLmluZGV4VG9Qb3NpdGlvbiA9IGZ1bmN0aW9uIChpbmRleCwgc3RhcnRSb3cpIHsKICAgICAgICB2YXIgbGluZXMgPSB0aGlzLiRsaW5lcyB8fCB0aGlzLmdldEFsbExpbmVzKCk7CiAgICAgICAgdmFyIG5ld2xpbmVMZW5ndGggPSB0aGlzLmdldE5ld0xpbmVDaGFyYWN0ZXIoKS5sZW5ndGg7CiAgICAgICAgZm9yICh2YXIgaSA9IHN0YXJ0Um93IHx8IDAsIGwgPSBsaW5lcy5sZW5ndGg7IGkgPCBsOyBpKyspIHsKICAgICAgICAgICAgaW5kZXggLT0gbGluZXNbaV0ubGVuZ3RoICsgbmV3bGluZUxlbmd0aDsKICAgICAgICAgICAgaWYgKGluZGV4IDwgMCkKICAgICAgICAgICAgICAgIHJldHVybiB7IHJvdzogaSwgY29sdW1uOiBpbmRleCArIGxpbmVzW2ldLmxlbmd0aCArIG5ld2xpbmVMZW5ndGggfTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIHsgcm93OiBsIC0gMSwgY29sdW1uOiBpbmRleCArIGxpbmVzW2wgLSAxXS5sZW5ndGggKyBuZXdsaW5lTGVuZ3RoIH07CiAgICB9OwogICAgRG9jdW1lbnQucHJvdG90eXBlLnBvc2l0aW9uVG9JbmRleCA9IGZ1bmN0aW9uIChwb3MsIHN0YXJ0Um93KSB7CiAgICAgICAgdmFyIGxpbmVzID0gdGhpcy4kbGluZXMgfHwgdGhpcy5nZXRBbGxMaW5lcygpOwogICAgICAgIHZhciBuZXdsaW5lTGVuZ3RoID0gdGhpcy5nZXROZXdMaW5lQ2hhcmFjdGVyKCkubGVuZ3RoOwogICAgICAgIHZhciBpbmRleCA9IDA7CiAgICAgICAgdmFyIHJvdyA9IE1hdGgubWluKHBvcy5yb3csIGxpbmVzLmxlbmd0aCk7CiAgICAgICAgZm9yICh2YXIgaSA9IHN0YXJ0Um93IHx8IDA7IGkgPCByb3c7ICsraSkKICAgICAgICAgICAgaW5kZXggKz0gbGluZXNbaV0ubGVuZ3RoICsgbmV3bGluZUxlbmd0aDsKICAgICAgICByZXR1cm4gaW5kZXggKyBwb3MuY29sdW1uOwogICAgfTsKICAgIERvY3VtZW50LnByb3RvdHlwZS4kc3BsaXQgPSBmdW5jdGlvbiAodGV4dCkgewogICAgICAgIHJldHVybiB0ZXh0LnNwbGl0KC9cclxufFxyfFxuLyk7CiAgICB9OwogICAgcmV0dXJuIERvY3VtZW50Owp9KCkpOwpEb2N1bWVudC5wcm90b3R5cGUuJGF1dG9OZXdMaW5lID0gIiI7CkRvY3VtZW50LnByb3RvdHlwZS4kbmV3TGluZU1vZGUgPSAiYXV0byI7Cm9vcC5pbXBsZW1lbnQoRG9jdW1lbnQucHJvdG90eXBlLCBFdmVudEVtaXR0ZXIpOwpleHBvcnRzLkRvY3VtZW50ID0gRG9jdW1lbnQ7Cgp9KTsKCmFjZS5kZWZpbmUoImFjZS9saWIvZGVlcF9jb3B5IixbXSwgZnVuY3Rpb24ocmVxdWlyZSwgZXhwb3J0cywgbW9kdWxlKXtleHBvcnRzLmRlZXBDb3B5ID0gZnVuY3Rpb24gZGVlcENvcHkob2JqKSB7CiAgICBpZiAodHlwZW9mIG9iaiAhPT0gIm9iamVjdCIgfHwgIW9iaikKICAgICAgICByZXR1cm4gb2JqOwogICAgdmFyIGNvcHk7CiAgICBpZiAoQXJyYXkuaXNBcnJheShvYmopKSB7CiAgICAgICAgY29weSA9IFtdOwogICAgICAgIGZvciAodmFyIGtleSA9IDA7IGtleSA8IG9iai5sZW5ndGg7IGtleSsrKSB7CiAgICAgICAgICAgIGNvcHlba2V5XSA9IGRlZXBDb3B5KG9ialtrZXldKTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGNvcHk7CiAgICB9CiAgICBpZiAoT2JqZWN0LnByb3RvdHlwZS50b1N0cmluZy5jYWxsKG9iaikgIT09ICJbb2JqZWN0IE9iamVjdF0iKQogICAgICAgIHJldHVybiBvYmo7CiAgICBjb3B5ID0ge307CiAgICBmb3IgKHZhciBrZXkgaW4gb2JqKQogICAgICAgIGNvcHlba2V5XSA9IGRlZXBDb3B5KG9ialtrZXldKTsKICAgIHJldHVybiBjb3B5Owp9OwoKfSk7CgphY2UuZGVmaW5lKCJhY2UvbGliL2xhbmciLFtdLCBmdW5jdGlvbihyZXF1aXJlLCBleHBvcnRzLCBtb2R1bGUpeyJ1c2Ugc3RyaWN0IjsKZXhwb3J0cy5sYXN0ID0gZnVuY3Rpb24gKGEpIHsKICAgIHJldHVybiBhW2EubGVuZ3RoIC0gMV07Cn07CmV4cG9ydHMuc3RyaW5nUmV2ZXJzZSA9IGZ1bmN0aW9uIChzdHJpbmcpIHsKICAgIHJldHVybiBzdHJpbmcuc3BsaXQoIiIpLnJldmVyc2UoKS5qb2luKCIiKTsKfTsKZXhwb3J0cy5zdHJpbmdSZXBlYXQgPSBmdW5jdGlvbiAoc3RyaW5nLCBjb3VudCkgewogICAgdmFyIHJlc3VsdCA9ICcnOwogICAgd2hpbGUgKGNvdW50ID4gMCkgewogICAgICAgIGlmIChjb3VudCAmIDEpCiAgICAgICAgICAgIHJlc3VsdCArPSBzdHJpbmc7CiAgICAgICAgaWYgKGNvdW50ID4+PSAxKQogICAgICAgICAgICBzdHJpbmcgKz0gc3RyaW5nOwogICAgfQogICAgcmV0dXJuIHJlc3VsdDsKfTsKdmFyIHRyaW1CZWdpblJlZ2V4cCA9IC9eXHNccyovOwp2YXIgdHJpbUVuZFJlZ2V4cCA9IC9cc1xzKiQvOwpleHBvcnRzLnN0cmluZ1RyaW1MZWZ0ID0gZnVuY3Rpb24gKHN0cmluZykgewogICAgcmV0dXJuIHN0cmluZy5yZXBsYWNlKHRyaW1CZWdpblJlZ2V4cCwgJycpOwp9OwpleHBvcnRzLnN0cmluZ1RyaW1SaWdodCA9IGZ1bmN0aW9uIChzdHJpbmcpIHsKICAgIHJldHVybiBzdHJpbmcucmVwbGFjZSh0cmltRW5kUmVnZXhwLCAnJyk7Cn07CmV4cG9ydHMuY29weU9iamVjdCA9IGZ1bmN0aW9uIChvYmopIHsKICAgIHZhciBjb3B5ID0ge307CiAgICBmb3IgKHZhciBrZXkgaW4gb2JqKSB7CiAgICAgICAgY29weVtrZXldID0gb2JqW2tleV07CiAgICB9CiAgICByZXR1cm4gY29weTsKfTsKZXhwb3J0cy5jb3B5QXJyYXkgPSBmdW5jdGlvbiAoYXJyYXkpIHsKICAgIHZhciBjb3B5ID0gW107CiAgICBmb3IgKHZhciBpID0gMCwgbCA9IGFycmF5Lmxlbmd0aDsgaSA8IGw7IGkrKykgewogICAgICAgIGlmIChhcnJheVtpXSAmJiB0eXBlb2YgYXJyYXlbaV0gPT0gIm9iamVjdCIpCiAgICAgICAgICAgIGNvcHlbaV0gPSB0aGlzLmNvcHlPYmplY3QoYXJyYXlbaV0pOwogICAgICAgIGVsc2UKICAgICAgICAgICAgY29weVtpXSA9IGFycmF5W2ldOwogICAgfQogICAgcmV0dXJuIGNvcHk7Cn07CmV4cG9ydHMuZGVlcENvcHkgPSByZXF1aXJlKCIuL2RlZXBfY29weSIpLmRlZXBDb3B5OwpleHBvcnRzLmFycmF5VG9NYXAgPSBmdW5jdGlvbiAoYXJyKSB7CiAgICB2YXIgbWFwID0ge307CiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGFyci5sZW5ndGg7IGkrKykgewogICAgICAgIG1hcFthcnJbaV1dID0gMTsKICAgIH0KICAgIHJldHVybiBtYXA7Cn07CmV4cG9ydHMuY3JlYXRlTWFwID0gZnVuY3Rpb24gKHByb3BzKSB7CiAgICB2YXIgbWFwID0gT2JqZWN0LmNyZWF0ZShudWxsKTsKICAgIGZvciAodmFyIGkgaW4gcHJvcHMpIHsKICAgICAgICBtYXBbaV0gPSBwcm9wc1tpXTsKICAgIH0KICAgIHJldHVybiBtYXA7Cn07CmV4cG9ydHMuYXJyYXlSZW1vdmUgPSBmdW5jdGlvbiAoYXJyYXksIHZhbHVlKSB7CiAgICBmb3IgKHZhciBpID0gMDsgaSA8PSBhcnJheS5sZW5ndGg7IGkrKykgewogICAgICAgIGlmICh2YWx1ZSA9PT0gYXJyYXlbaV0pIHsKICAgICAgICAgICAgYXJyYXkuc3BsaWNlKGksIDEpOwogICAgICAgIH0KICAgIH0KfTsKZXhwb3J0cy5lc2NhcGVSZWdFeHAgPSBmdW5jdGlvbiAoc3RyKSB7CiAgICByZXR1cm4gc3RyLnJlcGxhY2UoLyhbLiorP14ke30oKXxbXF1cL1xcXSkvZywgJ1xcJDEnKTsKfTsKZXhwb3J0cy5lc2NhcGVIVE1MID0gZnVuY3Rpb24gKHN0cikgewogICAgcmV0dXJuICgiIiArIHN0cikucmVwbGFjZSgvJi9nLCAiJiMzODsiKS5yZXBsYWNlKC8iL2csICImIzM0OyIpLnJlcGxhY2UoLycvZywgIiYjMzk7IikucmVwbGFjZSgvPC9nLCAiJiM2MDsiKTsKfTsKZXhwb3J0cy5nZXRNYXRjaE9mZnNldHMgPSBmdW5jdGlvbiAoc3RyaW5nLCByZWdFeHApIHsKICAgIHZhciBtYXRjaGVzID0gW107CiAgICBzdHJpbmcucmVwbGFjZShyZWdFeHAsIGZ1bmN0aW9uIChzdHIpIHsKICAgICAgICBtYXRjaGVzLnB1c2goewogICAgICAgICAgICBvZmZzZXQ6IGFyZ3VtZW50c1thcmd1bWVudHMubGVuZ3RoIC0gMl0sCiAgICAgICAgICAgIGxlbmd0aDogc3RyLmxlbmd0aAogICAgICAgIH0pOwogICAgfSk7CiAgICByZXR1cm4gbWF0Y2hlczsKfTsKZXhwb3J0cy5kZWZlcnJlZENhbGwgPSBmdW5jdGlvbiAoZmNuKSB7CiAgICB2YXIgdGltZXIgPSBudWxsOwogICAgdmFyIGNhbGxiYWNrID0gZnVuY3Rpb24gKCkgewogICAgICAgIHRpbWVyID0gbnVsbDsKICAgICAgICBmY24oKTsKICAgIH07CiAgICB2YXIgZGVmZXJyZWQgPSBmdW5jdGlvbiAodGltZW91dCkgewogICAgICAgIGRlZmVycmVkLmNhbmNlbCgpOwogICAgICAgIHRpbWVyID0gc2V0VGltZW91dChjYWxsYmFjaywgdGltZW91dCB8fCAwKTsKICAgICAgICByZXR1cm4gZGVmZXJyZWQ7CiAgICB9OwogICAgZGVmZXJyZWQuc2NoZWR1bGUgPSBkZWZlcnJlZDsKICAgIGRlZmVycmVkLmNhbGwgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgdGhpcy5jYW5jZWwoKTsKICAgICAgICBmY24oKTsKICAgICAgICByZXR1cm4gZGVmZXJyZWQ7CiAgICB9OwogICAgZGVmZXJyZWQuY2FuY2VsID0gZnVuY3Rpb24gKCkgewogICAgICAgIGNsZWFyVGltZW91dCh0aW1lcik7CiAgICAgICAgdGltZXIgPSBudWxsOwogICAgICAgIHJldHVybiBkZWZlcnJlZDsKICAgIH07CiAgICBkZWZlcnJlZC5pc1BlbmRpbmcgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgcmV0dXJuIHRpbWVyOwogICAgfTsKICAgIHJldHVybiBkZWZlcnJlZDsKfTsKZXhwb3J0cy5kZWxheWVkQ2FsbCA9IGZ1bmN0aW9uIChmY24sIGRlZmF1bHRUaW1lb3V0KSB7CiAgICB2YXIgdGltZXIgPSBudWxsOwogICAgdmFyIGNhbGxiYWNrID0gZnVuY3Rpb24gKCkgewogICAgICAgIHRpbWVyID0gbnVsbDsKICAgICAgICBmY24oKTsKICAgIH07CiAgICB2YXIgX3NlbGYgPSBmdW5jdGlvbiAodGltZW91dCkgewogICAgICAgIGlmICh0aW1lciA9PSBudWxsKQogICAgICAgICAgICB0aW1lciA9IHNldFRpbWVvdXQoY2FsbGJhY2ssIHRpbWVvdXQgfHwgZGVmYXVsdFRpbWVvdXQpOwogICAgfTsKICAgIF9zZWxmLmRlbGF5ID0gZnVuY3Rpb24gKHRpbWVvdXQpIHsKICAgICAgICB0aW1lciAmJiBjbGVhclRpbWVvdXQodGltZXIpOwogICAgICAgIHRpbWVyID0gc2V0VGltZW91dChjYWxsYmFjaywgdGltZW91dCB8fCBkZWZhdWx0VGltZW91dCk7CiAgICB9OwogICAgX3NlbGYuc2NoZWR1bGUgPSBfc2VsZjsKICAgIF9zZWxmLmNhbGwgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgdGhpcy5jYW5jZWwoKTsKICAgICAgICBmY24oKTsKICAgIH07CiAgICBfc2VsZi5jYW5jZWwgPSBmdW5jdGlvbiAoKSB7CiAgICAgICAgdGltZXIgJiYgY2xlYXJUaW1lb3V0KHRpbWVyKTsKICAgICAgICB0aW1lciA9IG51bGw7CiAgICB9OwogICAgX3NlbGYuaXNQZW5kaW5nID0gZnVuY3Rpb24gKCkgewogICAgICAgIHJldHVybiB0aW1lcjsKICAgIH07CiAgICByZXR1cm4gX3NlbGY7Cn07CmV4cG9ydHMuc3VwcG9ydHNMb29rYmVoaW5kID0gZnVuY3Rpb24gKCkgewogICAgdHJ5IHsKICAgICAgICBuZXcgUmVnRXhwKCcoPzw9LiknKTsKICAgIH0KICAgIGNhdGNoIChlKSB7CiAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgfQogICAgcmV0dXJuIHRydWU7Cn07CmV4cG9ydHMuc2tpcEVtcHR5TWF0Y2ggPSBmdW5jdGlvbiAobGluZSwgbGFzdCwgc3VwcG9ydHNVbmljb2RlRmxhZykgewogICAgcmV0dXJuIHN1cHBvcnRzVW5pY29kZUZsYWcgJiYgbGluZS5jb2RlUG9pbnRBdChsYXN0KSA+IDB4ZmZmZiA/IDIgOiAxOwp9OwoKfSk7CgphY2UuZGVmaW5lKCJhY2Uvd29ya2VyL21pcnJvciIsW10sIGZ1bmN0aW9uKHJlcXVpcmUsIGV4cG9ydHMsIG1vZHVsZSkgewoidXNlIHN0cmljdCI7Cgp2YXIgRG9jdW1lbnQgPSByZXF1aXJlKCIuLi9kb2N1bWVudCIpLkRvY3VtZW50Owp2YXIgbGFuZyA9IHJlcXVpcmUoIi4uL2xpYi9sYW5nIik7CiAgICAKdmFyIE1pcnJvciA9IGV4cG9ydHMuTWlycm9yID0gZnVuY3Rpb24oc2VuZGVyKSB7CiAgICB0aGlzLnNlbmRlciA9IHNlbmRlcjsKICAgIHZhciBkb2MgPSB0aGlzLmRvYyA9IG5ldyBEb2N1bWVudCgiIik7CiAgICAKICAgIHZhciBkZWZlcnJlZFVwZGF0ZSA9IHRoaXMuZGVmZXJyZWRVcGRhdGUgPSBsYW5nLmRlbGF5ZWRDYWxsKHRoaXMub25VcGRhdGUuYmluZCh0aGlzKSk7CiAgICAKICAgIHZhciBfc2VsZiA9IHRoaXM7CiAgICBzZW5kZXIub24oImNoYW5nZSIsIGZ1bmN0aW9uKGUpIHsKICAgICAgICB2YXIgZGF0YSA9IGUuZGF0YTsKICAgICAgICBpZiAoZGF0YVswXS5zdGFydCkgewogICAgICAgICAgICBkb2MuYXBwbHlEZWx0YXMoZGF0YSk7CiAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBkYXRhLmxlbmd0aDsgaSArPSAyKSB7CiAgICAgICAgICAgICAgICB2YXIgZCwgZXJyOyAKICAgICAgICAgICAgICAgIGlmIChBcnJheS5pc0FycmF5KGRhdGFbaSsxXSkpIHsKICAgICAgICAgICAgICAgICAgICBkID0ge2FjdGlvbjogImluc2VydCIsIHN0YXJ0OiBkYXRhW2ldLCBsaW5lczogZGF0YVtpKzFdfTsKICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgZCA9IHthY3Rpb246ICJyZW1vdmUiLCBzdGFydDogZGF0YVtpXSwgZW5kOiBkYXRhW2krMV19OwogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBpZiAoKGQuYWN0aW9uID09ICJpbnNlcnQiID8gZC5zdGFydCA6IGQuZW5kKS5yb3cgPj0gZG9jLiRsaW5lcy5sZW5ndGgpIHsKICAgICAgICAgICAgICAgICAgICBlcnIgPSBuZXcgRXJyb3IoIkludmFsaWQgZGVsdGEiKTsKICAgICAgICAgICAgICAgICAgICBlcnIuZGF0YSA9IHsKICAgICAgICAgICAgICAgICAgICAgICAgcGF0aDogX3NlbGYuJHBhdGgsCiAgICAgICAgICAgICAgICAgICAgICAgIGxpbmVzTGVuZ3RoOiBkb2MuJGxpbmVzLmxlbmd0aCwKICAgICAgICAgICAgICAgICAgICAgICAgc3RhcnQ6IGQuc3RhcnQsCiAgICAgICAgICAgICAgICAgICAgICAgIGVuZDogZC5lbmQKICAgICAgICAgICAgICAgICAgICB9OwogICAgICAgICAgICAgICAgICAgIHRocm93IGVycjsKICAgICAgICAgICAgICAgIH0KCiAgICAgICAgICAgICAgICBkb2MuYXBwbHlEZWx0YShkLCB0cnVlKTsKICAgICAgICAgICAgfQogICAgICAgIH0KICAgICAgICBpZiAoX3NlbGYuJHRpbWVvdXQpCiAgICAgICAgICAgIHJldHVybiBkZWZlcnJlZFVwZGF0ZS5zY2hlZHVsZShfc2VsZi4kdGltZW91dCk7CiAgICAgICAgX3NlbGYub25VcGRhdGUoKTsKICAgIH0pOwp9OwoKKGZ1bmN0aW9uKCkgewogICAgCiAgICB0aGlzLiR0aW1lb3V0ID0gNTAwOwogICAgCiAgICB0aGlzLnNldFRpbWVvdXQgPSBmdW5jdGlvbih0aW1lb3V0KSB7CiAgICAgICAgdGhpcy4kdGltZW91dCA9IHRpbWVvdXQ7CiAgICB9OwogICAgCiAgICB0aGlzLnNldFZhbHVlID0gZnVuY3Rpb24odmFsdWUpIHsKICAgICAgICB0aGlzLmRvYy5zZXRWYWx1ZSh2YWx1ZSk7CiAgICAgICAgdGhpcy5kZWZlcnJlZFVwZGF0ZS5zY2hlZHVsZSh0aGlzLiR0aW1lb3V0KTsKICAgIH07CiAgICAKICAgIHRoaXMuZ2V0VmFsdWUgPSBmdW5jdGlvbihjYWxsYmFja0lkKSB7CiAgICAgICAgdGhpcy5zZW5kZXIuY2FsbGJhY2sodGhpcy5kb2MuZ2V0VmFsdWUoKSwgY2FsbGJhY2tJZCk7CiAgICB9OwogICAgCiAgICB0aGlzLm9uVXBkYXRlID0gZnVuY3Rpb24oKSB7CiAgICB9OwogICAgCiAgICB0aGlzLmlzUGVuZGluZyA9IGZ1bmN0aW9uKCkgewogICAgICAgIHJldHVybiB0aGlzLmRlZmVycmVkVXBkYXRlLmlzUGVuZGluZygpOwogICAgfTsKICAgIAp9KS5jYWxsKE1pcnJvci5wcm90b3R5cGUpOwoKfSk7CgphY2UuZGVmaW5lKCJhY2UvbW9kZS9qc29uL2pzb25fcGFyc2UiLFtdLCBmdW5jdGlvbihyZXF1aXJlLCBleHBvcnRzLCBtb2R1bGUpIHsKInVzZSBzdHJpY3QiOwoKICAgIHZhciBhdCwgICAgIC8vIFRoZSBpbmRleCBvZiB0aGUgY3VycmVudCBjaGFyYWN0ZXIKICAgICAgICBjaCwgICAgIC8vIFRoZSBjdXJyZW50IGNoYXJhY3RlcgogICAgICAgIGVzY2FwZWUgPSB7CiAgICAgICAgICAgICciJzogICciJywKICAgICAgICAgICAgJ1xcJzogJ1xcJywKICAgICAgICAgICAgJy8nOiAgJy8nLAogICAgICAgICAgICBiOiAgICAnXGInLAogICAgICAgICAgICBmOiAgICAnXGYnLAogICAgICAgICAgICBuOiAgICAnXG4nLAogICAgICAgICAgICByOiAgICAnXHInLAogICAgICAgICAgICB0OiAgICAnXHQnCiAgICAgICAgfSwKICAgICAgICB0ZXh0LAoKICAgICAgICBlcnJvciA9IGZ1bmN0aW9uIChtKSB7CgogICAgICAgICAgICB0aHJvdyB7CiAgICAgICAgICAgICAgICBuYW1lOiAgICAnU3ludGF4RXJyb3InLAogICAgICAgICAgICAgICAgbWVzc2FnZTogbSwKICAgICAgICAgICAgICAgIGF0OiAgICAgIGF0LAogICAgICAgICAgICAgICAgdGV4dDogICAgdGV4dAogICAgICAgICAgICB9OwogICAgICAgIH0sCgogICAgICAgIG5leHQgPSBmdW5jdGlvbiAoYykgewoKICAgICAgICAgICAgaWYgKGMgJiYgYyAhPT0gY2gpIHsKICAgICAgICAgICAgICAgIGVycm9yKCJFeHBlY3RlZCAnIiArIGMgKyAiJyBpbnN0ZWFkIG9mICciICsgY2ggKyAiJyIpOwogICAgICAgICAgICB9CgogICAgICAgICAgICBjaCA9IHRleHQuY2hhckF0KGF0KTsKICAgICAgICAgICAgYXQgKz0gMTsKICAgICAgICAgICAgcmV0dXJuIGNoOwogICAgICAgIH0sCgogICAgICAgIG51bWJlciA9IGZ1bmN0aW9uICgpIHsKCiAgICAgICAgICAgIHZhciBudW1iZXIsCiAgICAgICAgICAgICAgICBzdHJpbmcgPSAnJzsKCiAgICAgICAgICAgIGlmIChjaCA9PT0gJy0nKSB7CiAgICAgICAgICAgICAgICBzdHJpbmcgPSAnLSc7CiAgICAgICAgICAgICAgICBuZXh0KCctJyk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgd2hpbGUgKGNoID49ICcwJyAmJiBjaCA8PSAnOScpIHsKICAgICAgICAgICAgICAgIHN0cmluZyArPSBjaDsKICAgICAgICAgICAgICAgIG5leHQoKTsKICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoY2ggPT09ICcuJykgewogICAgICAgICAgICAgICAgc3RyaW5nICs9ICcuJzsKICAgICAgICAgICAgICAgIHdoaWxlIChuZXh0KCkgJiYgY2ggPj0gJzAnICYmIGNoIDw9ICc5JykgewogICAgICAgICAgICAgICAgICAgIHN0cmluZyArPSBjaDsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICBpZiAoY2ggPT09ICdlJyB8fCBjaCA9PT0gJ0UnKSB7CiAgICAgICAgICAgICAgICBzdHJpbmcgKz0gY2g7CiAgICAgICAgICAgICAgICBuZXh0KCk7CiAgICAgICAgICAgICAgICBpZiAoY2ggPT09ICctJyB8fCBjaCA9PT0gJysnKSB7CiAgICAgICAgICAgICAgICAgICAgc3RyaW5nICs9IGNoOwogICAgICAgICAgICAgICAgICAgIG5leHQoKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIHdoaWxlIChjaCA+PSAnMCcgJiYgY2ggPD0gJzknKSB7CiAgICAgICAgICAgICAgICAgICAgc3RyaW5nICs9IGNoOwogICAgICAgICAgICAgICAgICAgIG5leHQoKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICBudW1iZXIgPSArc3RyaW5nOwogICAgICAgICAgICBpZiAoaXNOYU4obnVtYmVyKSkgewogICAgICAgICAgICAgICAgZXJyb3IoIkJhZCBudW1iZXIiKTsKICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgIHJldHVybiBudW1iZXI7CiAgICAgICAgICAgIH0KICAgICAgICB9LAoKICAgICAgICBzdHJpbmcgPSBmdW5jdGlvbiAoKSB7CgogICAgICAgICAgICB2YXIgaGV4LAogICAgICAgICAgICAgICAgaSwKICAgICAgICAgICAgICAgIHN0cmluZyA9ICcnLAogICAgICAgICAgICAgICAgdWZmZmY7CgogICAgICAgICAgICBpZiAoY2ggPT09ICciJykgewogICAgICAgICAgICAgICAgd2hpbGUgKG5leHQoKSkgewogICAgICAgICAgICAgICAgICAgIGlmIChjaCA9PT0gJyInKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIG5leHQoKTsKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIHN0cmluZzsKICAgICAgICAgICAgICAgICAgICB9IGVsc2UgaWYgKGNoID09PSAnXFwnKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIG5leHQoKTsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGNoID09PSAndScpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHVmZmZmID0gMDsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoaSA9IDA7IGkgPCA0OyBpICs9IDEpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBoZXggPSBwYXJzZUludChuZXh0KCksIDE2KTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoIWlzRmluaXRlKGhleCkpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHVmZmZmID0gdWZmZmYgKiAxNiArIGhleDsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0cmluZyArPSBTdHJpbmcuZnJvbUNoYXJDb2RlKHVmZmZmKTsKICAgICAgICAgICAgICAgICAgICAgICAgfSBlbHNlIGlmICh0eXBlb2YgZXNjYXBlZVtjaF0gPT09ICdzdHJpbmcnKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHJpbmcgKz0gZXNjYXBlZVtjaF07CiAgICAgICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBicmVhazsKICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIH0gZWxzZSBpZiAoY2ggPT0gIlxuIiB8fCBjaCA9PSAiXHIiKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOwogICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7CiAgICAgICAgICAgICAgICAgICAgICAgIHN0cmluZyArPSBjaDsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZXJyb3IoIkJhZCBzdHJpbmciKTsKICAgICAgICB9LAoKICAgICAgICB3aGl0ZSA9IGZ1bmN0aW9uICgpIHsKCiAgICAgICAgICAgIHdoaWxlIChjaCAmJiBjaCA8PSAnICcpIHsKICAgICAgICAgICAgICAgIG5leHQoKTsKICAgICAgICAgICAgfQogICAgICAgIH0sCgogICAgICAgIHdvcmQgPSBmdW5jdGlvbiAoKSB7CgogICAgICAgICAgICBzd2l0Y2ggKGNoKSB7CiAgICAgICAgICAgIGNhc2UgJ3QnOgogICAgICAgICAgICAgICAgbmV4dCgndCcpOwogICAgICAgICAgICAgICAgbmV4dCgncicpOwogICAgICAgICAgICAgICAgbmV4dCgndScpOwogICAgICAgICAgICAgICAgbmV4dCgnZScpOwogICAgICAgICAgICAgICAgcmV0dXJuIHRydWU7CiAgICAgICAgICAgIGNhc2UgJ2YnOgogICAgICAgICAgICAgICAgbmV4dCgnZicpOwogICAgICAgICAgICAgICAgbmV4dCgnYScpOwogICAgICAgICAgICAgICAgbmV4dCgnbCcpOwogICAgICAgICAgICAgICAgbmV4dCgncycpOwogICAgICAgICAgICAgICAgbmV4dCgnZScpOwogICAgICAgICAgICAgICAgcmV0dXJuIGZhbHNlOwogICAgICAgICAgICBjYXNlICduJzoKICAgICAgICAgICAgICAgIG5leHQoJ24nKTsKICAgICAgICAgICAgICAgIG5leHQoJ3UnKTsKICAgICAgICAgICAgICAgIG5leHQoJ2wnKTsKICAgICAgICAgICAgICAgIG5leHQoJ2wnKTsKICAgICAgICAgICAgICAgIHJldHVybiBudWxsOwogICAgICAgICAgICB9CiAgICAgICAgICAgIGVycm9yKCJVbmV4cGVjdGVkICciICsgY2ggKyAiJyIpOwogICAgICAgIH0sCgogICAgICAgIHZhbHVlLCAgLy8gUGxhY2UgaG9sZGVyIGZvciB0aGUgdmFsdWUgZnVuY3Rpb24uCgogICAgICAgIGFycmF5ID0gZnVuY3Rpb24gKCkgewoKICAgICAgICAgICAgdmFyIGFycmF5ID0gW107CgogICAgICAgICAgICBpZiAoY2ggPT09ICdbJykgewogICAgICAgICAgICAgICAgbmV4dCgnWycpOwogICAgICAgICAgICAgICAgd2hpdGUoKTsKICAgICAgICAgICAgICAgIGlmIChjaCA9PT0gJ10nKSB7CiAgICAgICAgICAgICAgICAgICAgbmV4dCgnXScpOwogICAgICAgICAgICAgICAgICAgIHJldHVybiBhcnJheTsgICAvLyBlbXB0eSBhcnJheQogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgd2hpbGUgKGNoKSB7CiAgICAgICAgICAgICAgICAgICAgYXJyYXkucHVzaCh2YWx1ZSgpKTsKICAgICAgICAgICAgICAgICAgICB3aGl0ZSgpOwogICAgICAgICAgICAgICAgICAgIGlmIChjaCA9PT0gJ10nKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIG5leHQoJ10nKTsKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIGFycmF5OwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBuZXh0KCcsJyk7CiAgICAgICAgICAgICAgICAgICAgd2hpdGUoKTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICBlcnJvcigiQmFkIGFycmF5Iik7CiAgICAgICAgfSwKCiAgICAgICAgb2JqZWN0ID0gZnVuY3Rpb24gKCkgewoKICAgICAgICAgICAgdmFyIGtleSwKICAgICAgICAgICAgICAgIG9iamVjdCA9IHt9OwoKICAgICAgICAgICAgaWYgKGNoID09PSAneycpIHsKICAgICAgICAgICAgICAgIG5leHQoJ3snKTsKICAgICAgICAgICAgICAgIHdoaXRlKCk7CiAgICAgICAgICAgICAgICBpZiAoY2ggPT09ICd9JykgewogICAgICAgICAgICAgICAgICAgIG5leHQoJ30nKTsKICAgICAgICAgICAgICAgICAgICByZXR1cm4gb2JqZWN0OyAgIC8vIGVtcHR5IG9iamVjdAogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgd2hpbGUgKGNoKSB7CiAgICAgICAgICAgICAgICAgICAga2V5ID0gc3RyaW5nKCk7CiAgICAgICAgICAgICAgICAgICAgd2hpdGUoKTsKICAgICAgICAgICAgICAgICAgICBuZXh0KCc6Jyk7CiAgICAgICAgICAgICAgICAgICAgaWYgKE9iamVjdC5oYXNPd25Qcm9wZXJ0eS5jYWxsKG9iamVjdCwga2V5KSkgewogICAgICAgICAgICAgICAgICAgICAgICBlcnJvcignRHVwbGljYXRlIGtleSAiJyArIGtleSArICciJyk7CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIG9iamVjdFtrZXldID0gdmFsdWUoKTsKICAgICAgICAgICAgICAgICAgICB3aGl0ZSgpOwogICAgICAgICAgICAgICAgICAgIGlmIChjaCA9PT0gJ30nKSB7CiAgICAgICAgICAgICAgICAgICAgICAgIG5leHQoJ30nKTsKICAgICAgICAgICAgICAgICAgICAgICAgcmV0dXJuIG9iamVjdDsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgbmV4dCgnLCcpOwogICAgICAgICAgICAgICAgICAgIHdoaXRlKCk7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZXJyb3IoIkJhZCBvYmplY3QiKTsKICAgICAgICB9OwoKICAgIHZhbHVlID0gZnVuY3Rpb24gKCkgewoKICAgICAgICB3aGl0ZSgpOwogICAgICAgIHN3aXRjaCAoY2gpIHsKICAgICAgICBjYXNlICd7JzoKICAgICAgICAgICAgcmV0dXJuIG9iamVjdCgpOwogICAgICAgIGNhc2UgJ1snOgogICAgICAgICAgICByZXR1cm4gYXJyYXkoKTsKICAgICAgICBjYXNlICciJzoKICAgICAgICAgICAgcmV0dXJuIHN0cmluZygpOwogICAgICAgIGNhc2UgJy0nOgogICAgICAgICAgICByZXR1cm4gbnVtYmVyKCk7CiAgICAgICAgZGVmYXVsdDoKICAgICAgICAgICAgcmV0dXJuIGNoID49ICcwJyAmJiBjaCA8PSAnOScgPyBudW1iZXIoKSA6IHdvcmQoKTsKICAgICAgICB9CiAgICB9OwoKICAgIHJldHVybiBmdW5jdGlvbiAoc291cmNlLCByZXZpdmVyKSB7CiAgICAgICAgdmFyIHJlc3VsdDsKCiAgICAgICAgdGV4dCA9IHNvdXJjZTsKICAgICAgICBhdCA9IDA7CiAgICAgICAgY2ggPSAnICc7CiAgICAgICAgcmVzdWx0ID0gdmFsdWUoKTsKICAgICAgICB3aGl0ZSgpOwogICAgICAgIGlmIChjaCkgewogICAgICAgICAgICBlcnJvcigiU3ludGF4IGVycm9yIik7CiAgICAgICAgfQoKICAgICAgICByZXR1cm4gdHlwZW9mIHJldml2ZXIgPT09ICdmdW5jdGlvbicgPyBmdW5jdGlvbiB3YWxrKGhvbGRlciwga2V5KSB7CiAgICAgICAgICAgIHZhciBrLCB2LCB2YWx1ZSA9IGhvbGRlcltrZXldOwogICAgICAgICAgICBpZiAodmFsdWUgJiYgdHlwZW9mIHZhbHVlID09PSAnb2JqZWN0JykgewogICAgICAgICAgICAgICAgZm9yIChrIGluIHZhbHVlKSB7CiAgICAgICAgICAgICAgICAgICAgaWYgKE9iamVjdC5oYXNPd25Qcm9wZXJ0eS5jYWxsKHZhbHVlLCBrKSkgewogICAgICAgICAgICAgICAgICAgICAgICB2ID0gd2Fsayh2YWx1ZSwgayk7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmICh2ICE9PSB1bmRlZmluZWQpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZhbHVlW2tdID0gdjsKICAgICAgICAgICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRlbGV0ZSB2YWx1ZVtrXTsKICAgICAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICByZXR1cm4gcmV2aXZlci5jYWxsKGhvbGRlciwga2V5LCB2YWx1ZSk7CiAgICAgICAgfSh7Jyc6IHJlc3VsdH0sICcnKSA6IHJlc3VsdDsKICAgIH07Cn0pOwoKYWNlLmRlZmluZSgiYWNlL21vZGUvanNvbl93b3JrZXIiLFtdLCBmdW5jdGlvbihyZXF1aXJlLCBleHBvcnRzLCBtb2R1bGUpIHsKInVzZSBzdHJpY3QiOwoKdmFyIG9vcCA9IHJlcXVpcmUoIi4uL2xpYi9vb3AiKTsKdmFyIE1pcnJvciA9IHJlcXVpcmUoIi4uL3dvcmtlci9taXJyb3IiKS5NaXJyb3I7CnZhciBwYXJzZSA9IHJlcXVpcmUoIi4vanNvbi9qc29uX3BhcnNlIik7Cgp2YXIgSnNvbldvcmtlciA9IGV4cG9ydHMuSnNvbldvcmtlciA9IGZ1bmN0aW9uKHNlbmRlcikgewogICAgTWlycm9yLmNhbGwodGhpcywgc2VuZGVyKTsKICAgIHRoaXMuc2V0VGltZW91dCgyMDApOwp9OwoKb29wLmluaGVyaXRzKEpzb25Xb3JrZXIsIE1pcnJvcik7CgooZnVuY3Rpb24oKSB7CgogICAgdGhpcy5vblVwZGF0ZSA9IGZ1bmN0aW9uKCkgewogICAgICAgIHZhciB2YWx1ZSA9IHRoaXMuZG9jLmdldFZhbHVlKCk7CiAgICAgICAgdmFyIGVycm9ycyA9IFtdOwogICAgICAgIHRyeSB7CiAgICAgICAgICAgIGlmICh2YWx1ZSkKICAgICAgICAgICAgICAgIHBhcnNlKHZhbHVlKTsKICAgICAgICB9IGNhdGNoIChlKSB7CiAgICAgICAgICAgIHZhciBwb3MgPSB0aGlzLmRvYy5pbmRleFRvUG9zaXRpb24oZS5hdC0xKTsKICAgICAgICAgICAgZXJyb3JzLnB1c2goewogICAgICAgICAgICAgICAgcm93OiBwb3Mucm93LAogICAgICAgICAgICAgICAgY29sdW1uOiBwb3MuY29sdW1uLAogICAgICAgICAgICAgICAgdGV4dDogZS5tZXNzYWdlLAogICAgICAgICAgICAgICAgdHlwZTogImVycm9yIgogICAgICAgICAgICB9KTsKICAgICAgICB9CiAgICAgICAgdGhpcy5zZW5kZXIuZW1pdCgiYW5ub3RhdGUiLCBlcnJvcnMpOwogICAgfTsKCn0pLmNhbGwoSnNvbldvcmtlci5wcm90b3R5cGUpOwoKfSk7Cg==';
 
 /***/ }),
 
@@ -4439,9 +4436,9 @@ module.exports = 'data:application/javascript;base64,Im5vIHVzZSBzdHJpY3QiOwohKGZ
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Iu": function() { return /* binding */ translate; },
-/* harmony export */   "cC": function() { return /* binding */ setLanguages; },
-/* harmony export */   "m0": function() { return /* binding */ setLanguage; }
+/* harmony export */   Iu: function() { return /* binding */ translate; },
+/* harmony export */   cC: function() { return /* binding */ setLanguages; },
+/* harmony export */   m0: function() { return /* binding */ setLanguage; }
 /* harmony export */ });
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4987);
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_polyfills__WEBPACK_IMPORTED_MODULE_0__);
@@ -5394,8 +5391,8 @@ function translate(key, data, lang) {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "J": function() { return /* binding */ executeQuery; },
-/* harmony export */   "r": function() { return /* binding */ createQuery; }
+/* harmony export */   J: function() { return /* binding */ executeQuery; },
+/* harmony export */   r: function() { return /* binding */ createQuery; }
 /* harmony export */ });
 /* harmony import */ var jmespath__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5156);
 /* harmony import */ var jmespath__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jmespath__WEBPACK_IMPORTED_MODULE_0__);
@@ -5547,11 +5544,11 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "previewModeMixins": function() { return /* binding */ previewModeMixins; }
+  previewModeMixins: function() { return /* binding */ previewModeMixins; }
 });
 
-// EXTERNAL MODULE: ./node_modules/jsonrepair/lib/esm/jsonrepair.js + 2 modules
-var jsonrepair = __webpack_require__(1262);
+// EXTERNAL MODULE: ./node_modules/jsonrepair/lib/esm/regular/jsonrepair.js + 2 modules
+var jsonrepair = __webpack_require__(7304);
 // EXTERNAL MODULE: ./src/js/constants.js
 var constants = __webpack_require__(4188);
 // EXTERNAL MODULE: ./src/js/ErrorTable.js
@@ -5559,12 +5556,12 @@ var ErrorTable = __webpack_require__(6436);
 // EXTERNAL MODULE: ./src/js/FocusTracker.js
 var FocusTracker = __webpack_require__(2474);
 ;// CONCATENATED MODULE: ./src/js/History.js
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 /**
  * Keep track on any history, be able
  * @param {function} onChange
@@ -6165,7 +6162,6 @@ previewmode.get = function () {
     var text = this.getText();
     this.json = (0,util.parse)(text); // this can throw an error
   }
-
   return this.json;
 };
 
@@ -6317,7 +6313,7 @@ var previewModeMixins = [{
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "showSortModal": function() { return /* binding */ showSortModal; }
+/* harmony export */   showSortModal: function() { return /* binding */ showSortModal; }
 /* harmony export */ });
 /* harmony import */ var picomodal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(483);
 /* harmony import */ var picomodal__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(picomodal__WEBPACK_IMPORTED_MODULE_0__);
@@ -6406,7 +6402,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "showTransformModal": function() { return /* binding */ showTransformModal; }
+  showTransformModal: function() { return /* binding */ showTransformModal; }
 });
 
 // EXTERNAL MODULE: ./node_modules/picomodal/src/picoModal.js
@@ -6441,7 +6437,7 @@ var i18n = __webpack_require__(7907);
  *
  * @returns {string | undefined} Returns the string representation of the JSON object.
  */
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function stringifyPartial(value, space, limit) {
   var _space; // undefined by default
   if (typeof space === 'number') {
@@ -6816,11 +6812,11 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "textModeMixins": function() { return /* binding */ textModeMixins; }
+  textModeMixins: function() { return /* binding */ textModeMixins; }
 });
 
-// EXTERNAL MODULE: ./node_modules/jsonrepair/lib/esm/jsonrepair.js + 2 modules
-var jsonrepair = __webpack_require__(1262);
+// EXTERNAL MODULE: ./node_modules/jsonrepair/lib/esm/regular/jsonrepair.js + 2 modules
+var jsonrepair = __webpack_require__(7304);
 // EXTERNAL MODULE: ./src/js/ace/index.js
 var ace = __webpack_require__(8170);
 var ace_default = /*#__PURE__*/__webpack_require__.n(ace);
@@ -6849,12 +6845,12 @@ var util = __webpack_require__(9791);
 ;// CONCATENATED MODULE: ./src/js/SchemaTextCompleter.js
 
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 
@@ -7046,8 +7042,8 @@ var SchemaTextCompleter = /*#__PURE__*/function () {
                 return last;
               });
               if (typeof option === 'string') {
-                var _currentSuggestions$o, _currentSuggestions$o2;
-                if ((_currentSuggestions$o = currentSuggestions[option]) !== null && _currentSuggestions$o !== void 0 && (_currentSuggestions$o2 = _currentSuggestions$o.refs) !== null && _currentSuggestions$o2 !== void 0 && _currentSuggestions$o2.length) {
+                var _currentSuggestions$o;
+                if ((_currentSuggestions$o = currentSuggestions[option]) !== null && _currentSuggestions$o !== void 0 && (_currentSuggestions$o = _currentSuggestions$o.refs) !== null && _currentSuggestions$o !== void 0 && _currentSuggestions$o.length) {
                   var mergedSuggestions = {};
                   for (var idx in currentSuggestions[option].refs) {
                     var refName = currentSuggestions[option].refs[idx];
@@ -7143,7 +7139,7 @@ function validateCustom(json, onValidate) {
 ;// CONCATENATED MODULE: ./src/js/textmode.js
 
 
-function textmode_typeof(obj) { "@babel/helpers - typeof"; return textmode_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, textmode_typeof(obj); }
+function textmode_typeof(o) { "@babel/helpers - typeof"; return textmode_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, textmode_typeof(o); }
 
 
 
@@ -8196,7 +8192,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "treeModeMixins": function() { return /* binding */ treeModeMixins; }
+  treeModeMixins: function() { return /* binding */ treeModeMixins; }
 });
 
 ;// CONCATENATED MODULE: ./src/js/autocomplete.js
@@ -8253,7 +8249,6 @@ function autocomplete(config) {
         elem.style.visibility = 'hidden';
         // rs.hideDropDown();
       },
-
       refresh: function refresh(token, array) {
         elem.style.visibility = 'hidden';
         ix = 0;
@@ -8287,11 +8282,9 @@ function autocomplete(config) {
         if (rows.length === 0) {
           return; // nothing to show.
         }
-
         if (rows.length === 1 && (token.toLowerCase() === rows[0].__hint.toLowerCase() && !config.caseSensitive || token === rows[0].__hint && config.caseSensitive)) {
           return; // do not show the dropDown if it has only one element which matches what we have just displayed.
         }
-
         if (rows.length < 2) return;
         p.highlight(0);
         if (distanceToTop > distanceToBottom * 3) {
@@ -8321,10 +8314,8 @@ function autocomplete(config) {
         p.highlight(ix);
         return rows[ix].__hint; // txtShadow.value = uRows[uIndex].__hint ;
       },
-
       onmouseselection: function onmouseselection() {} // it will be overwritten.
     };
-
     return p;
   };
   function setEndOfContenteditable(contentEditableElement) {
@@ -8345,7 +8336,6 @@ function autocomplete(config) {
       range.select(); // Select the range (make it the visible selection
     }
   }
-
   function calculateWidthForText(text) {
     if (spacer === undefined) {
       // on first call only.
@@ -8573,7 +8563,6 @@ function autocomplete(config) {
     rs.hideDropDown();
     // console.log("Lost focus.");
   };
-
   dropDownController.onmouseselection = function (text, rs) {
     rs.element.innerText = rs.elementHint.innerText = leftSide + text;
     rs.hideDropDown();
@@ -8596,12 +8585,12 @@ var FocusTracker = __webpack_require__(2474);
  * animate the visibility of a context menu.
  * @constructor Highlighter
  */
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 var Highlighter = /*#__PURE__*/function () {
   function Highlighter() {
     _classCallCheck(this, Highlighter);
@@ -8804,7 +8793,6 @@ function appendNodeFactory(Node) {
       tdAppend.style.paddingLeft = this.getLevel() * 24 + 26 + 'px';
       // TODO: not so nice hard coded offset
     }
-
     var domText = dom.text;
     if (domText) {
       domText.firstChild.nodeValue = '(' + (0,i18n/* translate */.Iu)('empty') + ' ' + this.parent.type + ')';
@@ -9102,17 +9090,17 @@ function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symb
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function Node_typeof(obj) { "@babel/helpers - typeof"; return Node_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, Node_typeof(obj); }
+function Node_typeof(o) { "@babel/helpers - typeof"; return Node_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, Node_typeof(o); }
 function Node_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function Node_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, Node_toPropertyKey(descriptor.key), descriptor); } }
 function Node_createClass(Constructor, protoProps, staticProps) { if (protoProps) Node_defineProperties(Constructor.prototype, protoProps); if (staticProps) Node_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function Node_toPropertyKey(arg) { var key = Node_toPrimitive(arg, "string"); return Node_typeof(key) === "symbol" ? key : String(key); }
-function Node_toPrimitive(input, hint) { if (Node_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (Node_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function Node_toPropertyKey(t) { var i = Node_toPrimitive(t, "string"); return "symbol" == Node_typeof(i) ? i : String(i); }
+function Node_toPrimitive(t, r) { if ("object" != Node_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != Node_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 
@@ -9402,7 +9390,6 @@ var Node = /*#__PURE__*/function () {
             _this.dom.popupAnchor.destroy(); // this will trigger the onDestroy callback
           }
         };
-
         var onDestroy = function onDestroy() {
           delete _this.dom.popupAnchor;
         };
@@ -11998,7 +11985,6 @@ var Node = /*#__PURE__*/function () {
             this.editor.select(nodes);
             prevNode.focus('field'); // select field as we know this always exists
           }
-
           handled = true;
         } else if (altKey && shiftKey && editable) {
           // Alt + Shift + Arrow Up
@@ -12101,7 +12087,6 @@ var Node = /*#__PURE__*/function () {
             this.editor.select(nodes);
             nextNode.focus('field'); // select field as we know this always exists
           }
-
           handled = true;
         } else if (altKey && shiftKey && editable) {
           // Alt + Shift + Arrow Down
@@ -13163,7 +13148,6 @@ var Node = /*#__PURE__*/function () {
           if (c === '' || '"\\/bfnrtu'.indexOf(c) === -1) {
             escaped += '\\'; // no valid escape character
           }
-
           escaped += c;
         } else if (c === '"') {
           escaped += '\\"';
@@ -13377,7 +13361,6 @@ Node.onDrag = function (nodes, event) {
             topThis += 27;
             // TODO: dangerous to suppose the height of the appendNode a constant of 27 px.
           }
-
           trNext = trNext.nextSibling;
         }
       } while (trNext && mouseY > topThis + heightNext);
@@ -13813,12 +13796,12 @@ var ShowMoreNode = showMoreNodeFactory(Node);
 ;// CONCATENATED MODULE: ./src/js/NodeHistory.js
 
 
-function NodeHistory_typeof(obj) { "@babel/helpers - typeof"; return NodeHistory_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, NodeHistory_typeof(obj); }
+function NodeHistory_typeof(o) { "@babel/helpers - typeof"; return NodeHistory_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, NodeHistory_typeof(o); }
 function NodeHistory_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function NodeHistory_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, NodeHistory_toPropertyKey(descriptor.key), descriptor); } }
 function NodeHistory_createClass(Constructor, protoProps, staticProps) { if (protoProps) NodeHistory_defineProperties(Constructor.prototype, protoProps); if (staticProps) NodeHistory_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function NodeHistory_toPropertyKey(arg) { var key = NodeHistory_toPrimitive(arg, "string"); return NodeHistory_typeof(key) === "symbol" ? key : String(key); }
-function NodeHistory_toPrimitive(input, hint) { if (NodeHistory_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (NodeHistory_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function NodeHistory_toPropertyKey(t) { var i = NodeHistory_toPrimitive(t, "string"); return "symbol" == NodeHistory_typeof(i) ? i : String(i); }
+function NodeHistory_toPrimitive(t, r) { if ("object" != NodeHistory_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != NodeHistory_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 /**
@@ -14009,7 +13992,6 @@ var NodeHistory = /*#__PURE__*/function () {
 
           // TODO: would be nice to restore the state of the node and childs
         },
-
         redo: function redo(params) {
           findNode(params.path).setInternalValue(params.newValue);
 
@@ -14169,12 +14151,12 @@ var NodeHistory = /*#__PURE__*/function () {
 ;// CONCATENATED MODULE: ./src/js/SearchBox.js
 
 
-function SearchBox_typeof(obj) { "@babel/helpers - typeof"; return SearchBox_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, SearchBox_typeof(obj); }
+function SearchBox_typeof(o) { "@babel/helpers - typeof"; return SearchBox_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, SearchBox_typeof(o); }
 function SearchBox_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function SearchBox_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, SearchBox_toPropertyKey(descriptor.key), descriptor); } }
 function SearchBox_createClass(Constructor, protoProps, staticProps) { if (protoProps) SearchBox_defineProperties(Constructor.prototype, protoProps); if (staticProps) SearchBox_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function SearchBox_toPropertyKey(arg) { var key = SearchBox_toPrimitive(arg, "string"); return SearchBox_typeof(key) === "symbol" ? key : String(key); }
-function SearchBox_toPrimitive(input, hint) { if (SearchBox_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (SearchBox_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function SearchBox_toPropertyKey(t) { var i = SearchBox_toPrimitive(t, "string"); return "symbol" == SearchBox_typeof(i) ? i : String(i); }
+function SearchBox_toPrimitive(t, r) { if ("object" != SearchBox_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != SearchBox_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 /**
@@ -14510,12 +14492,12 @@ var SearchBox = /*#__PURE__*/function () {
 ;// CONCATENATED MODULE: ./src/js/TreePath.js
 
 
-function TreePath_typeof(obj) { "@babel/helpers - typeof"; return TreePath_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, TreePath_typeof(obj); }
+function TreePath_typeof(o) { "@babel/helpers - typeof"; return TreePath_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, TreePath_typeof(o); }
 function TreePath_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 function TreePath_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, TreePath_toPropertyKey(descriptor.key), descriptor); } }
 function TreePath_createClass(Constructor, protoProps, staticProps) { if (protoProps) TreePath_defineProperties(Constructor.prototype, protoProps); if (staticProps) TreePath_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function TreePath_toPropertyKey(arg) { var key = TreePath_toPrimitive(arg, "string"); return TreePath_typeof(key) === "symbol" ? key : String(key); }
-function TreePath_toPrimitive(input, hint) { if (TreePath_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (TreePath_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function TreePath_toPropertyKey(t) { var i = TreePath_toPrimitive(t, "string"); return "symbol" == TreePath_typeof(i) ? i : String(i); }
+function TreePath_toPrimitive(t, r) { if ("object" != TreePath_typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != TreePath_typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
 
 
 
@@ -16456,71 +16438,71 @@ exports.O = function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "addClassName": function() { return /* binding */ addClassName; },
-/* harmony export */   "addEventListener": function() { return /* binding */ addEventListener; },
-/* harmony export */   "asyncExec": function() { return /* binding */ asyncExec; },
-/* harmony export */   "clear": function() { return /* binding */ clear; },
-/* harmony export */   "compileJSONPointer": function() { return /* binding */ compileJSONPointer; },
-/* harmony export */   "contains": function() { return /* binding */ contains; },
-/* harmony export */   "debounce": function() { return /* binding */ debounce; },
-/* harmony export */   "escapeUnicodeChars": function() { return /* binding */ escapeUnicodeChars; },
-/* harmony export */   "extend": function() { return /* binding */ extend; },
-/* harmony export */   "findUniqueName": function() { return /* binding */ findUniqueName; },
-/* harmony export */   "formatSize": function() { return /* binding */ formatSize; },
-/* harmony export */   "get": function() { return /* binding */ get; },
-/* harmony export */   "getAbsoluteLeft": function() { return /* binding */ getAbsoluteLeft; },
-/* harmony export */   "getAbsoluteTop": function() { return /* binding */ getAbsoluteTop; },
-/* harmony export */   "getChildPaths": function() { return /* binding */ getChildPaths; },
-/* harmony export */   "getColorCSS": function() { return /* binding */ getColorCSS; },
-/* harmony export */   "getIndexForPosition": function() { return /* binding */ getIndexForPosition; },
-/* harmony export */   "getInnerText": function() { return /* binding */ getInnerText; },
-/* harmony export */   "getInputSelection": function() { return /* binding */ getInputSelection; },
-/* harmony export */   "getInternetExplorerVersion": function() { return /* binding */ getInternetExplorerVersion; },
-/* harmony export */   "getPositionForPath": function() { return /* binding */ getPositionForPath; },
-/* harmony export */   "getSelection": function() { return /* binding */ getSelection; },
-/* harmony export */   "getSelectionOffset": function() { return /* binding */ getSelectionOffset; },
-/* harmony export */   "getType": function() { return /* binding */ getType; },
-/* harmony export */   "getWindow": function() { return /* binding */ getWindow; },
-/* harmony export */   "hasParentNode": function() { return /* binding */ hasParentNode; },
-/* harmony export */   "improveSchemaError": function() { return /* binding */ improveSchemaError; },
-/* harmony export */   "insideRect": function() { return /* binding */ insideRect; },
-/* harmony export */   "isArray": function() { return /* binding */ isArray; },
-/* harmony export */   "isChildOf": function() { return /* binding */ isChildOf; },
-/* harmony export */   "isFirefox": function() { return /* binding */ isFirefox; },
-/* harmony export */   "isObject": function() { return /* binding */ isObject; },
-/* harmony export */   "isPromise": function() { return /* binding */ isPromise; },
-/* harmony export */   "isTimestamp": function() { return /* binding */ isTimestamp; },
-/* harmony export */   "isUrl": function() { return /* binding */ isUrl; },
-/* harmony export */   "isValidColor": function() { return /* binding */ isValidColor; },
-/* harmony export */   "isValidValidationError": function() { return /* binding */ isValidValidationError; },
-/* harmony export */   "isValidationErrorChanged": function() { return /* binding */ isValidationErrorChanged; },
-/* harmony export */   "limitCharacters": function() { return /* binding */ limitCharacters; },
-/* harmony export */   "makeFieldTooltip": function() { return /* binding */ makeFieldTooltip; },
-/* harmony export */   "parse": function() { return /* binding */ parse; },
-/* harmony export */   "parsePath": function() { return /* binding */ parsePath; },
-/* harmony export */   "parseString": function() { return /* binding */ parseString; },
-/* harmony export */   "removeAllClassNames": function() { return /* binding */ removeAllClassNames; },
-/* harmony export */   "removeClassName": function() { return /* binding */ removeClassName; },
-/* harmony export */   "removeEventListener": function() { return /* binding */ removeEventListener; },
-/* harmony export */   "removeReturnsAndSurroundingWhitespace": function() { return /* binding */ removeReturnsAndSurroundingWhitespace; },
-/* harmony export */   "selectContentEditable": function() { return /* binding */ selectContentEditable; },
-/* harmony export */   "setEndOfContentEditable": function() { return /* binding */ setEndOfContentEditable; },
-/* harmony export */   "setSelection": function() { return /* binding */ setSelection; },
-/* harmony export */   "setSelectionOffset": function() { return /* binding */ setSelectionOffset; },
-/* harmony export */   "sort": function() { return /* binding */ sort; },
-/* harmony export */   "sortObjectKeys": function() { return /* binding */ sortObjectKeys; },
-/* harmony export */   "stringifyPath": function() { return /* binding */ stringifyPath; },
-/* harmony export */   "stripFormatting": function() { return /* binding */ stripFormatting; },
-/* harmony export */   "textDiff": function() { return /* binding */ textDiff; },
-/* harmony export */   "tryJsonRepair": function() { return /* binding */ tryJsonRepair; },
-/* harmony export */   "uniqueMergeArrays": function() { return /* binding */ uniqueMergeArrays; },
-/* harmony export */   "validate": function() { return /* binding */ validate; }
+/* harmony export */   addClassName: function() { return /* binding */ addClassName; },
+/* harmony export */   addEventListener: function() { return /* binding */ addEventListener; },
+/* harmony export */   asyncExec: function() { return /* binding */ asyncExec; },
+/* harmony export */   clear: function() { return /* binding */ clear; },
+/* harmony export */   compileJSONPointer: function() { return /* binding */ compileJSONPointer; },
+/* harmony export */   contains: function() { return /* binding */ contains; },
+/* harmony export */   debounce: function() { return /* binding */ debounce; },
+/* harmony export */   escapeUnicodeChars: function() { return /* binding */ escapeUnicodeChars; },
+/* harmony export */   extend: function() { return /* binding */ extend; },
+/* harmony export */   findUniqueName: function() { return /* binding */ findUniqueName; },
+/* harmony export */   formatSize: function() { return /* binding */ formatSize; },
+/* harmony export */   get: function() { return /* binding */ get; },
+/* harmony export */   getAbsoluteLeft: function() { return /* binding */ getAbsoluteLeft; },
+/* harmony export */   getAbsoluteTop: function() { return /* binding */ getAbsoluteTop; },
+/* harmony export */   getChildPaths: function() { return /* binding */ getChildPaths; },
+/* harmony export */   getColorCSS: function() { return /* binding */ getColorCSS; },
+/* harmony export */   getIndexForPosition: function() { return /* binding */ getIndexForPosition; },
+/* harmony export */   getInnerText: function() { return /* binding */ getInnerText; },
+/* harmony export */   getInputSelection: function() { return /* binding */ getInputSelection; },
+/* harmony export */   getInternetExplorerVersion: function() { return /* binding */ getInternetExplorerVersion; },
+/* harmony export */   getPositionForPath: function() { return /* binding */ getPositionForPath; },
+/* harmony export */   getSelection: function() { return /* binding */ getSelection; },
+/* harmony export */   getSelectionOffset: function() { return /* binding */ getSelectionOffset; },
+/* harmony export */   getType: function() { return /* binding */ getType; },
+/* harmony export */   getWindow: function() { return /* binding */ getWindow; },
+/* harmony export */   hasParentNode: function() { return /* binding */ hasParentNode; },
+/* harmony export */   improveSchemaError: function() { return /* binding */ improveSchemaError; },
+/* harmony export */   insideRect: function() { return /* binding */ insideRect; },
+/* harmony export */   isArray: function() { return /* binding */ isArray; },
+/* harmony export */   isChildOf: function() { return /* binding */ isChildOf; },
+/* harmony export */   isFirefox: function() { return /* binding */ isFirefox; },
+/* harmony export */   isObject: function() { return /* binding */ isObject; },
+/* harmony export */   isPromise: function() { return /* binding */ isPromise; },
+/* harmony export */   isTimestamp: function() { return /* binding */ isTimestamp; },
+/* harmony export */   isUrl: function() { return /* binding */ isUrl; },
+/* harmony export */   isValidColor: function() { return /* binding */ isValidColor; },
+/* harmony export */   isValidValidationError: function() { return /* binding */ isValidValidationError; },
+/* harmony export */   isValidationErrorChanged: function() { return /* binding */ isValidationErrorChanged; },
+/* harmony export */   limitCharacters: function() { return /* binding */ limitCharacters; },
+/* harmony export */   makeFieldTooltip: function() { return /* binding */ makeFieldTooltip; },
+/* harmony export */   parse: function() { return /* binding */ parse; },
+/* harmony export */   parsePath: function() { return /* binding */ parsePath; },
+/* harmony export */   parseString: function() { return /* binding */ parseString; },
+/* harmony export */   removeAllClassNames: function() { return /* binding */ removeAllClassNames; },
+/* harmony export */   removeClassName: function() { return /* binding */ removeClassName; },
+/* harmony export */   removeEventListener: function() { return /* binding */ removeEventListener; },
+/* harmony export */   removeReturnsAndSurroundingWhitespace: function() { return /* binding */ removeReturnsAndSurroundingWhitespace; },
+/* harmony export */   selectContentEditable: function() { return /* binding */ selectContentEditable; },
+/* harmony export */   setEndOfContentEditable: function() { return /* binding */ setEndOfContentEditable; },
+/* harmony export */   setSelection: function() { return /* binding */ setSelection; },
+/* harmony export */   setSelectionOffset: function() { return /* binding */ setSelectionOffset; },
+/* harmony export */   sort: function() { return /* binding */ sort; },
+/* harmony export */   sortObjectKeys: function() { return /* binding */ sortObjectKeys; },
+/* harmony export */   stringifyPath: function() { return /* binding */ stringifyPath; },
+/* harmony export */   stripFormatting: function() { return /* binding */ stripFormatting; },
+/* harmony export */   textDiff: function() { return /* binding */ textDiff; },
+/* harmony export */   tryJsonRepair: function() { return /* binding */ tryJsonRepair; },
+/* harmony export */   uniqueMergeArrays: function() { return /* binding */ uniqueMergeArrays; },
+/* harmony export */   validate: function() { return /* binding */ validate; }
 /* harmony export */ });
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4987);
 /* harmony import */ var _polyfills__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_polyfills__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(233);
 /* harmony import */ var javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(javascript_natural_sort__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jsonrepair__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1262);
+/* harmony import */ var jsonrepair__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7304);
 /* harmony import */ var _assets_jsonlint_jsonlint__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6589);
 /* harmony import */ var json_source_map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7026);
 /* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(7907);
@@ -16532,7 +16514,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 
 
 
@@ -17039,7 +17021,6 @@ function addEventListener(element, action, listener, useCapture) {
     if (action === 'mousewheel' && isFirefox()) {
       action = 'DOMMouseScroll'; // For Firefox
     }
-
     element.addEventListener(action, listener, useCapture);
     return listener;
   } else if (element.attachEvent) {
@@ -17067,7 +17048,6 @@ function removeEventListener(element, action, listener, useCapture) {
     if (action === 'mousewheel' && isFirefox()) {
       action = 'DOMMouseScroll'; // For Firefox
     }
-
     element.removeEventListener(action, listener, useCapture);
   } else if (element.detachEvent) {
     // Old IE browsers
@@ -17602,6 +17582,10 @@ function parseString(str) {
   if (lower === 'false') {
     return false;
   }
+  if (/^0\d+$/.test(str)) {
+    // to treat '001' as a string
+    return str;
+  }
   var num = Number(str); // will nicely fail with '123ab'
   var numFloat = parseFloat(str); // will nicely fail with '  '
   if (!isNaN(num) && !isNaN(numFloat)) {
@@ -17695,25 +17679,26 @@ function isValidationErrorChanged(currErr, prevErr) {
     return true;
   }
   var _loop = function _loop(i) {
-    var pErr;
-    if (currErr[i].type === 'error') {
-      pErr = prevErr.find(function (p) {
-        return p.line === currErr[i].line;
-      });
-    } else {
-      pErr = prevErr.find(function (p) {
-        return p.dataPath === currErr[i].dataPath && p.schemaPath === currErr[i].schemaPath;
-      });
-    }
-    if (!pErr) {
-      return {
-        v: true
-      };
-    }
-  };
+      var pErr;
+      if (currErr[i].type === 'error') {
+        pErr = prevErr.find(function (p) {
+          return p.line === currErr[i].line;
+        });
+      } else {
+        pErr = prevErr.find(function (p) {
+          return p.dataPath === currErr[i].dataPath && p.schemaPath === currErr[i].schemaPath;
+        });
+      }
+      if (!pErr) {
+        return {
+          v: true
+        };
+      }
+    },
+    _ret;
   for (var i = 0; i < currErr.length; ++i) {
-    var _ret = _loop(i);
-    if (_typeof(_ret) === "object") return _ret.v;
+    _ret = _loop(i);
+    if (_ret) return _ret.v;
   }
   return false;
 }
@@ -18067,7 +18052,28 @@ require("./es6-shim");
 
 });
 
-ace.define("ace/lib/lang",["require","exports","module"], function(require, exports, module){"use strict";
+ace.define("ace/lib/deep_copy",["require","exports","module"], function(require, exports, module){exports.deepCopy = function deepCopy(obj) {
+    if (typeof obj !== "object" || !obj)
+        return obj;
+    var copy;
+    if (Array.isArray(obj)) {
+        copy = [];
+        for (var key = 0; key < obj.length; key++) {
+            copy[key] = deepCopy(obj[key]);
+        }
+        return copy;
+    }
+    if (Object.prototype.toString.call(obj) !== "[object Object]")
+        return obj;
+    copy = {};
+    for (var key in obj)
+        copy[key] = deepCopy(obj[key]);
+    return copy;
+};
+
+});
+
+ace.define("ace/lib/lang",["require","exports","module","ace/lib/deep_copy"], function(require, exports, module){"use strict";
 exports.last = function (a) {
     return a[a.length - 1];
 };
@@ -18109,24 +18115,7 @@ exports.copyArray = function (array) {
     }
     return copy;
 };
-exports.deepCopy = function deepCopy(obj) {
-    if (typeof obj !== "object" || !obj)
-        return obj;
-    var copy;
-    if (Array.isArray(obj)) {
-        copy = [];
-        for (var key = 0; key < obj.length; key++) {
-            copy[key] = deepCopy(obj[key]);
-        }
-        return copy;
-    }
-    if (Object.prototype.toString.call(obj) !== "[object Object]")
-        return obj;
-    copy = {};
-    for (var key in obj)
-        copy[key] = deepCopy(obj[key]);
-    return copy;
-};
+exports.deepCopy = require("./deep_copy").deepCopy;
 exports.arrayToMap = function (arr) {
     var map = {};
     for (var i = 0; i < arr.length; i++) {
@@ -18219,6 +18208,18 @@ exports.delayedCall = function (fcn, defaultTimeout) {
     };
     return _self;
 };
+exports.supportsLookbehind = function () {
+    try {
+        new RegExp('(?<=.)');
+    }
+    catch (e) {
+        return false;
+    }
+    return true;
+};
+exports.skipEmptyMatch = function (line, last, supportsUnicodeFlag) {
+    return supportsUnicodeFlag && line.codePointAt(last) > 0xffff ? 2 : 1;
+};
 
 });
 
@@ -18252,14 +18253,15 @@ exports.isIE =
         : parseFloat((ua.match(/(?:Trident\/[0-9]+[\.0-9]+;.*rv:)([0-9]+[\.0-9]+)/) || [])[1]); // for ie
 exports.isOldIE = exports.isIE && exports.isIE < 9;
 exports.isGecko = exports.isMozilla = ua.match(/ Gecko\/\d+/);
-exports.isOpera = typeof opera == "object" && Object.prototype.toString.call(window.opera) == "[object Opera]";
+exports.isOpera = typeof opera == "object" && Object.prototype.toString.call(window["opera"]) == "[object Opera]";
 exports.isWebKit = parseFloat(ua.split("WebKit/")[1]) || undefined;
 exports.isChrome = parseFloat(ua.split(" Chrome/")[1]) || undefined;
+exports.isSafari = parseFloat(ua.split(" Safari/")[1]) && !exports.isChrome || undefined;
 exports.isEdge = parseFloat(ua.split(" Edge/")[1]) || undefined;
 exports.isAIR = ua.indexOf("AdobeAIR") >= 0;
 exports.isAndroid = ua.indexOf("Android") >= 0;
 exports.isChromeOS = ua.indexOf(" CrOS ") >= 0;
-exports.isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+exports.isIOS = /iPad|iPhone|iPod/.test(ua) && !window["MSStream"];
 if (exports.isIOS)
     exports.isMac = true;
 exports.isMobile = exports.isIOS || exports.isAndroid;
@@ -18701,9 +18703,20 @@ exports.EventEmitter = EventEmitter;
 
 });
 
-ace.define("ace/lib/app_config",["require","exports","module","ace/lib/oop","ace/lib/event_emitter"], function(require, exports, module){"no use strict";
+ace.define("ace/lib/report_error",["require","exports","module"], function(require, exports, module){exports.reportError = function reportError(msg, data) {
+    var e = new Error(msg);
+    e["data"] = data;
+    if (typeof console == "object" && console.error)
+        console.error(e);
+    setTimeout(function () { throw e; });
+};
+
+});
+
+ace.define("ace/lib/app_config",["require","exports","module","ace/lib/oop","ace/lib/event_emitter","ace/lib/report_error"], function(require, exports, module){"no use strict";
 var oop = require("./oop");
 var EventEmitter = require("./event_emitter").EventEmitter;
+var reportError = require("./report_error").reportError;
 var optionsProvider = {
     setOptions: function (optList) {
         Object.keys(optList).forEach(function (key) {
@@ -18754,13 +18767,6 @@ var optionsProvider = {
 function warn(message) {
     if (typeof console != "undefined" && console.warn)
         console.warn.apply(console, arguments);
-}
-function reportError(msg, data) {
-    var e = new Error(msg);
-    e.data = data;
-    if (typeof console == "object" && console.error)
-        console.error(e);
-    setTimeout(function () { throw e; });
 }
 var messages;
 var AppConfig = /** @class */ (function () {
@@ -18814,6 +18820,9 @@ var AppConfig = /** @class */ (function () {
         messages = value;
     };
     AppConfig.prototype.nls = function (string, params) {
+        if (messages && !messages[string]) {
+            warn("No message found for '" + string + "' in the provided messages, falling back to default English message.");
+        }
         var translated = messages && messages[string] || string;
         if (params) {
             translated = translated.replace(/\$(\$|[\d]+)/g, function (_, name) {
@@ -18833,14 +18842,14 @@ exports.AppConfig = AppConfig;
 
 });
 
-ace.define("ace/theme/textmate.css",["require","exports","module"], function(require, exports, module){module.exports = ".ace-tm .ace_gutter {\n  background: #f0f0f0;\n  color: #333;\n}\n\n.ace-tm .ace_print-margin {\n  width: 1px;\n  background: #e8e8e8;\n}\n\n.ace-tm .ace_fold {\n    background-color: #6B72E6;\n}\n\n.ace-tm {\n  background-color: #FFFFFF;\n  color: black;\n}\n\n.ace-tm .ace_cursor {\n  color: black;\n}\n        \n.ace-tm .ace_invisible {\n  color: rgb(191, 191, 191);\n}\n\n.ace-tm .ace_storage,\n.ace-tm .ace_keyword {\n  color: blue;\n}\n\n.ace-tm .ace_constant {\n  color: rgb(197, 6, 11);\n}\n\n.ace-tm .ace_constant.ace_buildin {\n  color: rgb(88, 72, 246);\n}\n\n.ace-tm .ace_constant.ace_language {\n  color: rgb(88, 92, 246);\n}\n\n.ace-tm .ace_constant.ace_library {\n  color: rgb(6, 150, 14);\n}\n\n.ace-tm .ace_invalid {\n  background-color: rgba(255, 0, 0, 0.1);\n  color: red;\n}\n\n.ace-tm .ace_support.ace_function {\n  color: rgb(60, 76, 114);\n}\n\n.ace-tm .ace_support.ace_constant {\n  color: rgb(6, 150, 14);\n}\n\n.ace-tm .ace_support.ace_type,\n.ace-tm .ace_support.ace_class {\n  color: rgb(109, 121, 222);\n}\n\n.ace-tm .ace_keyword.ace_operator {\n  color: rgb(104, 118, 135);\n}\n\n.ace-tm .ace_string {\n  color: rgb(3, 106, 7);\n}\n\n.ace-tm .ace_comment {\n  color: rgb(76, 136, 107);\n}\n\n.ace-tm .ace_comment.ace_doc {\n  color: rgb(0, 102, 255);\n}\n\n.ace-tm .ace_comment.ace_doc.ace_tag {\n  color: rgb(128, 159, 191);\n}\n\n.ace-tm .ace_constant.ace_numeric {\n  color: rgb(0, 0, 205);\n}\n\n.ace-tm .ace_variable {\n  color: rgb(49, 132, 149);\n}\n\n.ace-tm .ace_xml-pe {\n  color: rgb(104, 104, 91);\n}\n\n.ace-tm .ace_entity.ace_name.ace_function {\n  color: #0000A2;\n}\n\n\n.ace-tm .ace_heading {\n  color: rgb(12, 7, 255);\n}\n\n.ace-tm .ace_list {\n  color:rgb(185, 6, 144);\n}\n\n.ace-tm .ace_meta.ace_tag {\n  color:rgb(0, 22, 142);\n}\n\n.ace-tm .ace_string.ace_regex {\n  color: rgb(255, 0, 0)\n}\n\n.ace-tm .ace_marker-layer .ace_selection {\n  background: rgb(181, 213, 255);\n}\n.ace-tm.ace_multiselect .ace_selection.ace_start {\n  box-shadow: 0 0 3px 0px white;\n}\n.ace-tm .ace_marker-layer .ace_step {\n  background: rgb(252, 255, 0);\n}\n\n.ace-tm .ace_marker-layer .ace_stack {\n  background: rgb(164, 229, 101);\n}\n\n.ace-tm .ace_marker-layer .ace_bracket {\n  margin: -1px 0 0 -1px;\n  border: 1px solid rgb(192, 192, 192);\n}\n\n.ace-tm .ace_marker-layer .ace_active-line {\n  background: rgba(0, 0, 0, 0.07);\n}\n\n.ace-tm .ace_gutter-active-line {\n    background-color : #dcdcdc;\n}\n\n.ace-tm .ace_marker-layer .ace_selected-word {\n  background: rgb(250, 250, 255);\n  border: 1px solid rgb(200, 200, 250);\n}\n\n.ace-tm .ace_indent-guide {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y;\n}\n\n.ace-tm .ace_indent-guide-active {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAZSURBVHjaYvj///9/hivKyv8BAAAA//8DACLqBhbvk+/eAAAAAElFTkSuQmCC\") right repeat-y;\n}\n";
+ace.define("ace/theme/textmate-css",["require","exports","module"], function(require, exports, module){module.exports = ".ace-tm .ace_gutter {\n  background: #f0f0f0;\n  color: #333;\n}\n\n.ace-tm .ace_print-margin {\n  width: 1px;\n  background: #e8e8e8;\n}\n\n.ace-tm .ace_fold {\n    background-color: #6B72E6;\n}\n\n.ace-tm {\n  background-color: #FFFFFF;\n  color: black;\n}\n\n.ace-tm .ace_cursor {\n  color: black;\n}\n        \n.ace-tm .ace_invisible {\n  color: rgb(191, 191, 191);\n}\n\n.ace-tm .ace_storage,\n.ace-tm .ace_keyword {\n  color: blue;\n}\n\n.ace-tm .ace_constant {\n  color: rgb(197, 6, 11);\n}\n\n.ace-tm .ace_constant.ace_buildin {\n  color: rgb(88, 72, 246);\n}\n\n.ace-tm .ace_constant.ace_language {\n  color: rgb(88, 92, 246);\n}\n\n.ace-tm .ace_constant.ace_library {\n  color: rgb(6, 150, 14);\n}\n\n.ace-tm .ace_invalid {\n  background-color: rgba(255, 0, 0, 0.1);\n  color: red;\n}\n\n.ace-tm .ace_support.ace_function {\n  color: rgb(60, 76, 114);\n}\n\n.ace-tm .ace_support.ace_constant {\n  color: rgb(6, 150, 14);\n}\n\n.ace-tm .ace_support.ace_type,\n.ace-tm .ace_support.ace_class {\n  color: rgb(109, 121, 222);\n}\n\n.ace-tm .ace_keyword.ace_operator {\n  color: rgb(104, 118, 135);\n}\n\n.ace-tm .ace_string {\n  color: rgb(3, 106, 7);\n}\n\n.ace-tm .ace_comment {\n  color: rgb(76, 136, 107);\n}\n\n.ace-tm .ace_comment.ace_doc {\n  color: rgb(0, 102, 255);\n}\n\n.ace-tm .ace_comment.ace_doc.ace_tag {\n  color: rgb(128, 159, 191);\n}\n\n.ace-tm .ace_constant.ace_numeric {\n  color: rgb(0, 0, 205);\n}\n\n.ace-tm .ace_variable {\n  color: rgb(49, 132, 149);\n}\n\n.ace-tm .ace_xml-pe {\n  color: rgb(104, 104, 91);\n}\n\n.ace-tm .ace_entity.ace_name.ace_function {\n  color: #0000A2;\n}\n\n\n.ace-tm .ace_heading {\n  color: rgb(12, 7, 255);\n}\n\n.ace-tm .ace_list {\n  color:rgb(185, 6, 144);\n}\n\n.ace-tm .ace_meta.ace_tag {\n  color:rgb(0, 22, 142);\n}\n\n.ace-tm .ace_string.ace_regex {\n  color: rgb(255, 0, 0)\n}\n\n.ace-tm .ace_marker-layer .ace_selection {\n  background: rgb(181, 213, 255);\n}\n.ace-tm.ace_multiselect .ace_selection.ace_start {\n  box-shadow: 0 0 3px 0px white;\n}\n.ace-tm .ace_marker-layer .ace_step {\n  background: rgb(252, 255, 0);\n}\n\n.ace-tm .ace_marker-layer .ace_stack {\n  background: rgb(164, 229, 101);\n}\n\n.ace-tm .ace_marker-layer .ace_bracket {\n  margin: -1px 0 0 -1px;\n  border: 1px solid rgb(192, 192, 192);\n}\n\n.ace-tm .ace_marker-layer .ace_active-line {\n  background: rgba(0, 0, 0, 0.07);\n}\n\n.ace-tm .ace_gutter-active-line {\n    background-color : #dcdcdc;\n}\n\n.ace-tm .ace_marker-layer .ace_selected-word {\n  background: rgb(250, 250, 255);\n  border: 1px solid rgb(200, 200, 250);\n}\n\n.ace-tm .ace_indent-guide {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==\") right repeat-y;\n}\n\n.ace-tm .ace_indent-guide-active {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAAZSURBVHjaYvj///9/hivKyv8BAAAA//8DACLqBhbvk+/eAAAAAElFTkSuQmCC\") right repeat-y;\n}\n";
 
 });
 
-ace.define("ace/theme/textmate",["require","exports","module","ace/theme/textmate.css","ace/lib/dom"], function(require, exports, module){"use strict";
+ace.define("ace/theme/textmate",["require","exports","module","ace/theme/textmate-css","ace/lib/dom"], function(require, exports, module){"use strict";
 exports.isDark = false;
 exports.cssClass = "ace-tm";
-exports.cssText = require("./textmate.css");
+exports.cssText = require("./textmate-css");
 exports.$id = "ace/theme/textmate";
 var dom = require("../lib/dom");
 dom.importCssString(exports.cssText, exports.cssClass, false);
@@ -18912,18 +18921,25 @@ exports.setModuleUrl = function (name, subst) {
 var loader = function (moduleName, cb) {
     if (moduleName === "ace/theme/textmate" || moduleName === "./theme/textmate")
         return cb(null, require("./theme/textmate"));
-    return console.error("loader is not configured");
+    if (customLoader)
+        return customLoader(moduleName, cb);
+    console.error("loader is not configured");
 };
+var customLoader;
 exports.setLoader = function (cb) {
-    loader = cb;
+    customLoader = cb;
 };
 exports.dynamicModules = Object.create(null);
 exports.$loading = {};
-exports.loadModule = function (moduleName, onLoad) {
-    var module, moduleType;
-    if (Array.isArray(moduleName)) {
-        moduleType = moduleName[0];
-        moduleName = moduleName[1];
+exports.$loaded = {};
+exports.loadModule = function (moduleId, onLoad) {
+    var loadedModule;
+    if (Array.isArray(moduleId)) {
+        var moduleType = moduleId[0];
+        var moduleName = moduleId[1];
+    }
+    else if (typeof moduleId == "string") {
+        var moduleName = moduleId;
     }
     var load = function (module) {
         if (module && !exports.$loading[moduleName])
@@ -18935,6 +18951,8 @@ exports.loadModule = function (moduleName, onLoad) {
             return;
         var afterLoad = function () {
             loader(moduleName, function (err, module) {
+                if (module)
+                    exports.$loaded[moduleName] = module;
                 exports._emit("load.module", { name: moduleName, module: module });
                 var listeners = exports.$loading[moduleName];
                 exports.$loading[moduleName] = null;
@@ -18960,10 +18978,16 @@ exports.loadModule = function (moduleName, onLoad) {
     }
     else {
         try {
-            module = require(moduleName);
+            loadedModule = this.$require(moduleName);
         }
         catch (e) { }
-        load(module);
+        load(loadedModule || exports.$loaded[moduleName]);
+    }
+};
+exports.$require = function (moduleName) {
+    if (typeof module["require"] == "function") {
+        var req = "require";
+        return module[req](moduleName);
     }
 };
 exports.setModuleLoader = function (moduleName, onLoad) {
@@ -18977,7 +19001,7 @@ var reportErrorIfPathIsNotConfigured = function () {
         reportErrorIfPathIsNotConfigured = function () { };
     }
 };
-exports.version = "1.20.0";
+exports.version = "1.32.2";
 
 });
 
@@ -18998,6 +19022,7 @@ var global = (function() {
 
 module.exports = function(ace) {
     config.init = init;
+    config.$require = require;
     ace.require = require;
 
     if (true)
@@ -19062,9 +19087,6 @@ function deHyphenate(str) {
 });
 
 ace.define("ace/range",["require","exports","module"], function(require, exports, module){"use strict";
-var comparePoints = function (p1, p2) {
-    return p1.row - p2.row || p1.column - p2.column;
-};
 var Range = /** @class */ (function () {
     function Range(startRow, startColumn, endRow, endColumn) {
         this.start = {
@@ -19284,7 +19306,6 @@ var Range = /** @class */ (function () {
 Range.fromPoints = function (start, end) {
     return new Range(start.row, start.column, end.row, end.column);
 };
-Range.comparePoints = comparePoints;
 Range.comparePoints = function (p1, p2) {
     return p1.row - p2.row || p1.column - p2.column;
 };
@@ -19419,6 +19440,7 @@ var Keys = (function () {
     return ret;
 })();
 oop.mixin(exports, Keys);
+exports.default = exports;
 exports.keyCodeToString = function (keyCode) {
     var keyString = Keys[keyCode];
     if (typeof keyString != "string")
@@ -19428,8 +19450,7 @@ exports.keyCodeToString = function (keyCode) {
 
 });
 
-ace.define("ace/lib/event",["require","exports","module","ace/lib/keys","ace/lib/useragent"], function(require, exports, module){"use strict";
-var keys = require("./keys");
+ace.define("ace/lib/event",["require","exports","module","ace/lib/keys","ace/lib/useragent"], function(require, exports, module){"use strict"; var keys = require("./keys");
 var useragent = require("./useragent");
 var pressedKeys = null;
 var ts = 0;
@@ -19440,6 +19461,7 @@ function detectListenerOptionsSupport() {
         document.createComment("").addEventListener("test", function () { }, {
             get passive() {
                 activeListenerOptions = { passive: false };
+                return true;
             }
         });
     }
@@ -19459,7 +19481,7 @@ EventListener.prototype.destroy = function () {
     removeListener(this.elem, this.type, this.callback);
     this.elem = this.type = this.callback = undefined;
 };
-var addListener = exports.addListener = function (elem, type, callback, destroyer) {
+var addListener = exports.addListener = function (elem, type, callback, /**@type{any?}*/ destroyer) {
     elem.addEventListener(type, callback, getListenerOptions());
     if (destroyer)
         destroyer.$toDestroy.push(new EventListener(elem, type, callback));
@@ -19624,36 +19646,25 @@ function normalizeCommandKeys(callback, e, keyCode) {
     return callback(e, hashId, keyCode);
 }
 exports.addCommandKeyListener = function (el, callback, destroyer) {
-    if (useragent.isOldGecko || (useragent.isOpera && !("KeyboardEvent" in window))) {
-        var lastKeyDownKeyCode = null;
-        addListener(el, "keydown", function (e) {
-            lastKeyDownKeyCode = e.keyCode;
-        }, destroyer);
-        addListener(el, "keypress", function (e) {
-            return normalizeCommandKeys(callback, e, lastKeyDownKeyCode);
-        }, destroyer);
-    }
-    else {
-        var lastDefaultPrevented = null;
-        addListener(el, "keydown", function (e) {
-            pressedKeys[e.keyCode] = (pressedKeys[e.keyCode] || 0) + 1;
-            var result = normalizeCommandKeys(callback, e, e.keyCode);
-            lastDefaultPrevented = e.defaultPrevented;
-            return result;
-        }, destroyer);
-        addListener(el, "keypress", function (e) {
-            if (lastDefaultPrevented && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey)) {
-                exports.stopEvent(e);
-                lastDefaultPrevented = null;
-            }
-        }, destroyer);
-        addListener(el, "keyup", function (e) {
-            pressedKeys[e.keyCode] = null;
-        }, destroyer);
-        if (!pressedKeys) {
-            resetPressedKeys();
-            addListener(window, "focus", resetPressedKeys);
+    var lastDefaultPrevented = null;
+    addListener(el, "keydown", function (e) {
+        pressedKeys[e.keyCode] = (pressedKeys[e.keyCode] || 0) + 1;
+        var result = normalizeCommandKeys(callback, e, e.keyCode);
+        lastDefaultPrevented = e.defaultPrevented;
+        return result;
+    }, destroyer);
+    addListener(el, "keypress", function (e) {
+        if (lastDefaultPrevented && (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey)) {
+            exports.stopEvent(e);
+            lastDefaultPrevented = null;
         }
+    }, destroyer);
+    addListener(el, "keyup", function (e) {
+        pressedKeys[e.keyCode] = null;
+    }, destroyer);
+    if (!pressedKeys) {
+        resetPressedKeys();
+        addListener(window, "focus", resetPressedKeys);
     }
 };
 function resetPressedKeys() {
@@ -19696,10 +19707,10 @@ exports.blockIdle = function (delay) {
     }, delay || 100);
 };
 exports.nextFrame = typeof window == "object" && (window.requestAnimationFrame
-    || window.mozRequestAnimationFrame
-    || window.webkitRequestAnimationFrame
-    || window.msRequestAnimationFrame
-    || window.oRequestAnimationFrame);
+    || window["mozRequestAnimationFrame"]
+    || window["webkitRequestAnimationFrame"]
+    || window["msRequestAnimationFrame"]
+    || window["oRequestAnimationFrame"]);
 if (exports.nextFrame)
     exports.nextFrame = exports.nextFrame.bind(window);
 else
@@ -19741,13 +19752,14 @@ var MODS = KEYS.KEY_MODS;
 var isIOS = useragent.isIOS;
 var valueResetRegex = isIOS ? /\s/ : /\n/;
 var isMobile = useragent.isMobile;
-var TextInput = function (parentNode, host) {
+var TextInput;
+TextInput = function (parentNode, host) {
     var text = dom.createElement("textarea");
     text.className = "ace_text-input";
     text.setAttribute("wrap", "off");
     text.setAttribute("autocorrect", "off");
     text.setAttribute("autocapitalize", "off");
-    text.setAttribute("spellcheck", false);
+    text.setAttribute("spellcheck", "false");
     text.style.opacity = "0";
     parentNode.insertBefore(text, parentNode.firstChild);
     var copied = false;
@@ -19763,10 +19775,22 @@ var TextInput = function (parentNode, host) {
     var lastSelectionStart = 0;
     var lastSelectionEnd = 0;
     var lastRestoreEnd = 0;
+    var rowStart = Number.MAX_SAFE_INTEGER;
+    var rowEnd = Number.MIN_SAFE_INTEGER;
+    var numberOfExtraLines = 0;
     try {
         var isFocused = document.activeElement === text;
     }
     catch (e) { }
+    this.setNumberOfExtraLines = function (number) {
+        rowStart = Number.MAX_SAFE_INTEGER;
+        rowEnd = Number.MIN_SAFE_INTEGER;
+        if (number < 0) {
+            numberOfExtraLines = 0;
+            return;
+        }
+        numberOfExtraLines = number;
+    };
     this.setAriaOptions = function (options) {
         if (options.activeDescendant) {
             text.setAttribute("aria-haspopup", "true");
@@ -19781,27 +19805,20 @@ var TextInput = function (parentNode, host) {
         if (options.role) {
             text.setAttribute("role", options.role);
         }
-    };
-    this.setAriaLabel = function () {
-        if (host.session && host.renderer.enableKeyboardAccessibility) {
-            var row = host.session.selection.cursor.row;
+        if (options.setLabel) {
             text.setAttribute("aria-roledescription", nls("editor"));
-            text.setAttribute("aria-label", nls("Cursor at row $0", [row + 1]));
-        }
-        else {
-            text.removeAttribute("aria-roledescription");
-            text.removeAttribute("aria-label");
+            if (host.session) {
+                var row = host.session.selection.cursor.row;
+                text.setAttribute("aria-label", nls("Cursor at row $0", [row + 1]));
+            }
         }
     };
     this.setAriaOptions({ role: "textbox" });
-    this.setAriaLabel();
     event.addListener(text, "blur", function (e) {
         if (ignoreFocusEvents)
             return;
         host.onBlur(e);
         isFocused = false;
-        if (isMobile && !isIOS)
-            document.removeEventListener("selectionchange", detectSelectionChange);
     }, host);
     event.addListener(text, "focus", function (e) {
         if (ignoreFocusEvents)
@@ -19819,12 +19836,12 @@ var TextInput = function (parentNode, host) {
             setTimeout(resetSelection);
         else
             resetSelection();
-        if (isMobile && !isIOS)
-            document.addEventListener("selectionchange", detectSelectionChange);
     }, host);
     this.$focusScroll = false;
     this.focus = function () {
-        this.setAriaLabel();
+        this.setAriaOptions({
+            setLabel: host.renderer.enableKeyboardAccessibility
+        });
         if (tempStyle || HAS_FOCUS_ARGS || this.$focusScroll == "browser")
             return text.focus({ preventScroll: true });
         var top = text.style.top;
@@ -19841,9 +19858,9 @@ var TextInput = function (parentNode, host) {
             var t = text.parentElement;
             while (t && t.nodeType == 1) {
                 ancestors.push(t);
-                t.setAttribute("ace_nocontext", true);
+                t.setAttribute("ace_nocontext", "true");
                 if (!t.parentElement && t.getRootNode)
-                    t = t.getRootNode().host;
+                    t = t.getRootNode()["host"];
                 else
                     t = t.parentElement;
             }
@@ -19878,6 +19895,13 @@ var TextInput = function (parentNode, host) {
         }
         resetSelection();
     });
+    var positionToSelection = function (row, column) {
+        var selection = column;
+        for (var i = 1; i <= row - rowStart && i < 2 * numberOfExtraLines + 1; i++) {
+            selection += host.session.getLine(row - i).length + 1;
+        }
+        return selection;
+    };
     var resetSelection = isIOS
         ? function (value) {
             if (!isFocused || (copied && !value) || sendingText)
@@ -19908,18 +19932,34 @@ var TextInput = function (parentNode, host) {
                 var selection = host.selection;
                 var range = selection.getRange();
                 var row = selection.cursor.row;
-                selectionStart = range.start.column;
-                selectionEnd = range.end.column;
-                line = host.session.getLine(row);
-                if (range.start.row != row) {
-                    var prevLine = host.session.getLine(row - 1);
-                    selectionStart = range.start.row < row - 1 ? 0 : selectionStart;
+                if (row === rowEnd + 1) {
+                    rowStart = rowEnd + 1;
+                    rowEnd = rowStart + 2 * numberOfExtraLines;
+                }
+                else if (row === rowStart - 1) {
+                    rowEnd = rowStart - 1;
+                    rowStart = rowEnd - 2 * numberOfExtraLines;
+                }
+                else if (row < rowStart - 1 || row > rowEnd + 1) {
+                    rowStart = row > numberOfExtraLines ? row - numberOfExtraLines : 0;
+                    rowEnd = row > numberOfExtraLines ? row + numberOfExtraLines : 2 * numberOfExtraLines;
+                }
+                var lines = [];
+                for (var i = rowStart; i <= rowEnd; i++) {
+                    lines.push(host.session.getLine(i));
+                }
+                line = lines.join('\n');
+                selectionStart = positionToSelection(range.start.row, range.start.column);
+                selectionEnd = positionToSelection(range.end.row, range.end.column);
+                if (range.start.row < rowStart) {
+                    var prevLine = host.session.getLine(rowStart - 1);
+                    selectionStart = range.start.row < rowStart - 1 ? 0 : selectionStart;
                     selectionEnd += prevLine.length + 1;
                     line = prevLine + "\n" + line;
                 }
-                else if (range.end.row != row) {
-                    var nextLine = host.session.getLine(row + 1);
-                    selectionEnd = range.end.row > row + 1 ? nextLine.length : selectionEnd;
+                else if (range.end.row > rowEnd) {
+                    var nextLine = host.session.getLine(rowEnd + 1);
+                    selectionEnd = range.end.row > rowEnd + 1 ? nextLine.length : range.end.column;
                     selectionEnd += line.length + 1;
                     line = line + "\n" + nextLine;
                 }
@@ -19943,11 +19983,11 @@ var TextInput = function (parentNode, host) {
                         }
                     }
                 }
-            }
-            var newValue = line + "\n\n";
-            if (newValue != lastValue) {
-                text.value = lastValue = newValue;
-                lastSelectionStart = lastSelectionEnd = newValue.length;
+                var newValue = line + "\n\n";
+                if (newValue != lastValue) {
+                    text.value = lastValue = newValue;
+                    lastSelectionStart = lastSelectionEnd = newValue.length;
+                }
             }
             if (afterContextMenu) {
                 lastSelectionStart = text.selectionStart;
@@ -19988,27 +20028,6 @@ var TextInput = function (parentNode, host) {
             resetSelection();
         }
     };
-    function detectSelectionChange(e) {
-        if (!text || !text.parentNode)
-            document.removeEventListener("selectionchange", detectSelectionChange);
-        if (inComposition)
-            return;
-        if (text.selectionStart !== text.selectionEnd)
-            return;
-        var startDiff = text.selectionStart - lastSelectionStart;
-        var oldLenght = lastSelectionEnd - lastSelectionStart;
-        if (startDiff > 0) {
-            startDiff = Math.max(startDiff - oldLenght, 1);
-        }
-        else if (startDiff === 0 && oldLenght) {
-            startDiff = -1;
-        }
-        var repeat = Math.abs(startDiff);
-        var key = startDiff > 0 ? KEYS.right : KEYS.left;
-        for (var i = 0; i < repeat; i++) {
-            host.onCommandKey({}, 0, key);
-        }
-    }
     var inputHandler = null;
     this.setInputHandler = function (cb) { inputHandler = cb; };
     this.getInputHandler = function () { return inputHandler; };
@@ -20095,7 +20114,7 @@ var TextInput = function (parentNode, host) {
         }
     };
     var handleClipboardData = function (e, data, forceIEMime) {
-        var clipboardData = e.clipboardData || window.clipboardData;
+        var clipboardData = e.clipboardData || window["clipboardData"];
         if (!clipboardData || BROKEN_SETDATA)
             return;
         var mime = USE_IE_MIME_TYPE || forceIEMime ? "Text" : "text/plain";
@@ -20439,8 +20458,8 @@ var DefaultHandlers = /** @class */ (function () {
         exports.forEach(function (x) {
             mouseHandler[x] = this[x];
         }, this);
-        mouseHandler.selectByLines = this.extendSelectionBy.bind(mouseHandler, "getLineRange");
-        mouseHandler.selectByWords = this.extendSelectionBy.bind(mouseHandler, "getWordRange");
+        mouseHandler["selectByLines"] = this.extendSelectionBy.bind(mouseHandler, "getLineRange");
+        mouseHandler["selectByWords"] = this.extendSelectionBy.bind(mouseHandler, "getWordRange");
     }
     DefaultHandlers.prototype.onMouseDown = function (ev) {
         var inSelection = ev.inSelection();
@@ -20659,7 +20678,18 @@ function calcRangeOrientation(range, cursor) {
 
 });
 
-ace.define("ace/tooltip",["require","exports","module","ace/lib/dom","ace/range"], function(require, exports, module){"use strict";
+ace.define("ace/lib/scroll",["require","exports","module"], function(require, exports, module){exports.preventParentScroll = function preventParentScroll(event) {
+    event.stopPropagation();
+    var target = event.currentTarget;
+    var contentOverflows = target.scrollHeight > target.clientHeight;
+    if (!contentOverflows) {
+        event.preventDefault();
+    }
+};
+
+});
+
+ace.define("ace/tooltip",["require","exports","module","ace/lib/dom","ace/lib/event","ace/range","ace/lib/scroll"], function(require, exports, module){"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -20687,7 +20717,9 @@ var __values = (this && this.__values) || function(o) {
     throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
 };
 var dom = require("./lib/dom");
+var event = require("./lib/event");
 var Range = require("./range").Range;
+var preventParentScroll = require("./lib/scroll").preventParentScroll;
 var CLASSNAME = "ace_tooltip";
 var Tooltip = /** @class */ (function () {
     function Tooltip(parentNode) {
@@ -20732,7 +20764,7 @@ var Tooltip = /** @class */ (function () {
             this.isOpen = true;
         }
     };
-    Tooltip.prototype.hide = function () {
+    Tooltip.prototype.hide = function (e) {
         if (this.isOpen) {
             this.getElement().style.display = "none";
             this.getElement().className = CLASSNAME;
@@ -20841,6 +20873,7 @@ var HoverTooltip = /** @class */ (function (_super) {
             if (!el.contains(document.activeElement))
                 this.hide();
         }.bind(_this));
+        el.addEventListener("wheel", preventParentScroll);
         return _this;
     }
     HoverTooltip.prototype.addToEditor = function (editor) {
@@ -20906,6 +20939,7 @@ var HoverTooltip = /** @class */ (function (_super) {
         this.$gatherData = value;
     };
     HoverTooltip.prototype.showForRange = function (editor, range, domNode, startingEvent) {
+        var MARGIN = 10;
         if (startingEvent && startingEvent != this.lastEvent)
             return;
         if (this.isOpen && document.activeElement == this.getElement())
@@ -20919,35 +20953,26 @@ var HoverTooltip = /** @class */ (function (_super) {
         this.isOpen = true;
         this.addMarker(range, editor.session);
         this.range = Range.fromPoints(range.start, range.end);
+        var position = renderer.textToScreenCoordinates(range.start.row, range.start.column);
+        var rect = renderer.scroller.getBoundingClientRect();
+        if (position.pageX < rect.left)
+            position.pageX = rect.left;
         var element = this.getElement();
         element.innerHTML = "";
         element.appendChild(domNode);
+        element.style.maxHeight = "";
         element.style.display = "block";
-        var position = renderer.textToScreenCoordinates(range.start.row, range.start.column);
-        var cursorPos = editor.getCursorPosition();
         var labelHeight = element.clientHeight;
-        var rect = renderer.scroller.getBoundingClientRect();
-        var isTopdown = true;
-        if (this.row > cursorPos.row) {
-            isTopdown = true;
+        var labelWidth = element.clientWidth;
+        var spaceBelow = window.innerHeight - position.pageY - renderer.lineHeight;
+        var isAbove = true;
+        if (position.pageY - labelHeight < 0 && position.pageY < spaceBelow) {
+            isAbove = false;
         }
-        else if (this.row < cursorPos.row) {
-            isTopdown = false;
-        }
-        if (position.pageY - labelHeight + renderer.lineHeight < rect.top) {
-            isTopdown = true;
-        }
-        else if (position.pageY + labelHeight > rect.bottom) {
-            isTopdown = false;
-        }
-        if (!isTopdown) {
-            position.pageY -= labelHeight;
-        }
-        else {
-            position.pageY += renderer.lineHeight;
-        }
-        element.style.maxWidth = rect.width - (position.pageX - rect.left) + "px";
-        this.setPosition(position.pageX, position.pageY);
+        element.style.maxHeight = (isAbove ? position.pageY : spaceBelow) - MARGIN + "px";
+        element.style.top = isAbove ? "" : position.pageY + renderer.lineHeight + "px";
+        element.style.bottom = isAbove ? window.innerHeight - position.pageY + "px" : "";
+        element.style.left = Math.min(position.pageX, window.innerWidth - labelWidth - MARGIN) + "px";
     };
     HoverTooltip.prototype.addMarker = function (range, session) {
         if (this.marker) {
@@ -20975,12 +21000,12 @@ var HoverTooltip = /** @class */ (function (_super) {
     };
     HoverTooltip.prototype.$registerCloseEvents = function () {
         window.addEventListener("keydown", this.hide, true);
-        window.addEventListener("mousewheel", this.hide, true);
+        window.addEventListener("wheel", this.hide, true);
         window.addEventListener("mousedown", this.hide, true);
     };
     HoverTooltip.prototype.$removeCloseEvents = function () {
         window.removeEventListener("keydown", this.hide, true);
-        window.removeEventListener("mousewheel", this.hide, true);
+        window.removeEventListener("wheel", this.hide, true);
         window.removeEventListener("mousedown", this.hide, true);
     };
     HoverTooltip.prototype.onMouseOut = function (e) {
@@ -20991,7 +21016,7 @@ var HoverTooltip = /** @class */ (function (_super) {
         this.lastEvent = null;
         if (!this.isOpen)
             return;
-        if (!e.relatedTarget || e.relatedTarget == this.getElement())
+        if (!e.relatedTarget || this.getElement().contains(e.relatedTarget))
             return;
         if (e && e.currentTarget.contains(e.relatedTarget))
             return;
@@ -21071,24 +21096,32 @@ function GutterHandler(mouseHandler) {
                 return hideTooltip();
         }
         tooltip.showTooltip(row);
+        if (!tooltip.isOpen)
+            return;
         editor.on("mousewheel", hideTooltip);
         if (mouseHandler.$tooltipFollowsMouse) {
             moveTooltip(mouseEvent);
         }
         else {
-            var gutterElement = gutter.$lines.cells[row].element.querySelector("[class*=ace_icon]");
-            var rect = gutterElement.getBoundingClientRect();
-            var style = tooltip.getElement().style;
-            style.left = rect.right + "px";
-            style.top = rect.bottom + "px";
+            var gutterRow = mouseEvent.getGutterRow();
+            var gutterCell = gutter.$lines.get(gutterRow);
+            if (gutterCell) {
+                var gutterElement = gutterCell.element.querySelector(".ace_gutter_annotation");
+                var rect = gutterElement.getBoundingClientRect();
+                var style = tooltip.getElement().style;
+                style.left = rect.right + "px";
+                style.top = rect.bottom + "px";
+            }
+            else {
+                moveTooltip(mouseEvent);
+            }
         }
     }
     function hideTooltip() {
         if (tooltipTimeout)
             tooltipTimeout = clearTimeout(tooltipTimeout);
         if (tooltip.isOpen) {
-            tooltip.hide();
-            editor._signal("hideGutterTooltip", tooltip);
+            tooltip.hideTooltip();
             editor.off("mousewheel", hideTooltip);
         }
     }
@@ -21122,6 +21155,7 @@ function GutterHandler(mouseHandler) {
         }, 50);
     }, editor);
     editor.on("changeSession", hideTooltip);
+    editor.on("input", hideTooltip);
 }
 exports.GutterHandler = GutterHandler;
 var GutterTooltip = /** @class */ (function (_super) {
@@ -21201,13 +21235,18 @@ var GutterTooltip = /** @class */ (function (_super) {
         }
         var tooltipContent = [].concat(annotationMessages.error, annotationMessages.warning, annotationMessages.info).join("<br>");
         this.setHtml(tooltipContent);
-        this.setClassName("ace_gutter-tooltip");
         this.$element.setAttribute("aria-live", "polite");
         if (!this.isOpen) {
             this.setTheme(this.editor.renderer.theme);
+            this.setClassName("ace_gutter-tooltip");
         }
-        this.editor._signal("showGutterTooltip", this);
         this.show();
+        this.editor._signal("showGutterTooltip", this);
+    };
+    GutterTooltip.prototype.hideTooltip = function () {
+        this.$element.removeAttribute("aria-live");
+        this.hide();
+        this.editor._signal("hideGutterTooltip", this);
     };
     GutterTooltip.annotationsToSummaryString = function (annotations) {
         var e_1, _a;
@@ -21241,7 +21280,7 @@ ace.define("ace/mouse/mouse_event",["require","exports","module","ace/lib/event"
 var event = require("../lib/event");
 var useragent = require("../lib/useragent");
 var MouseEvent = /** @class */ (function () {
-    function MouseEvent(domEvent, editor) {
+    function MouseEvent(domEvent, editor) { this.speed; this.wheelX; this.wheelY;
         this.domEvent = domEvent;
         this.editor = editor;
         this.x = this.clientX = domEvent.clientX;
@@ -21268,6 +21307,12 @@ var MouseEvent = /** @class */ (function () {
             return this.$pos;
         this.$pos = this.editor.renderer.screenToTextCoordinates(this.clientX, this.clientY);
         return this.$pos;
+    };
+    MouseEvent.prototype.getGutterRow = function () {
+        var documentRow = this.getDocumentPosition().row;
+        var screenRow = this.editor.session.documentToScreenRow(documentRow, 0);
+        var screenTopRow = this.editor.session.documentToScreenRow(this.editor.renderer.$gutterLayer.$lines.get(0).row, 0);
+        return screenRow - screenTopRow;
     };
     MouseEvent.prototype.inSelection = function () {
         if (this.$inSelection !== null)
@@ -21668,7 +21713,7 @@ exports.addTouchListeners = function (el, editor) {
                 clipboard && ["span", { class: "ace_mobile-button", action: "paste" }, "Paste"],
                 hasUndo && ["span", { class: "ace_mobile-button", action: "undo" }, "Undo"],
                 ["span", { class: "ace_mobile-button", action: "find" }, "Find"],
-                ["span", { class: "ace_mobile-button", action: "openCommandPallete" }, "Palette"]
+                ["span", { class: "ace_mobile-button", action: "openCommandPalette" }, "Palette"]
             ] : ["span"]), contextMenu.firstChild);
         };
         var handleClick = function (e) {
@@ -21693,7 +21738,7 @@ exports.addTouchListeners = function (el, editor) {
             }
             contextMenu.firstChild.style.display = "none";
             isOpen = false;
-            if (action != "openCommandPallete")
+            if (action != "openCommandPalette")
                 editor.focus();
         };
         contextMenu = dom.buildDom(["div",
@@ -21948,7 +21993,7 @@ var DragdropHandler = require("./dragdrop_handler").DragdropHandler;
 var addTouchListeners = require("./touch_handler").addTouchListeners;
 var config = require("../config");
 var MouseHandler = /** @class */ (function () {
-    function MouseHandler(editor) {
+    function MouseHandler(editor) { this.$dragDelay; this.$dragEnabled; this.$mouseMoved; this.mouseEvent; this.$focusTimeout;
         var _self = this;
         this.editor = editor;
         new DefaultHandlers(this);
@@ -21999,7 +22044,8 @@ var MouseHandler = /** @class */ (function () {
             else {
                 renderer.setCursorStyle("");
             }
-        }, editor);
+        }, //@ts-expect-error TODO: seems mistyping - should be boolean
+        editor);
     }
     MouseHandler.prototype.onMouseEvent = function (name, e) {
         if (!this.editor.session)
@@ -22230,7 +22276,8 @@ var KeyBinding = /** @class */ (function () {
         var success = false;
         var commands = this.$editor.commands;
         for (var i = this.$handlers.length; i--;) {
-            toExecute = this.$handlers[i].handleKeyboard(this.$data, hashId, keyString, keyCode, e);
+            toExecute = this.$handlers[i].handleKeyboard(
+            this.$data, hashId, keyString, keyCode, e);
             if (!toExecute || !toExecute.command)
                 continue;
             if (toExecute.command == "null") {
@@ -22240,7 +22287,7 @@ var KeyBinding = /** @class */ (function () {
                 success = commands.exec(toExecute.command, this.$editor, toExecute.args, e);
             }
             if (success && e && hashId != -1 &&
-                toExecute.passEvent != true && toExecute.command.passEvent != true) {
+                toExecute["passEvent"] != true && toExecute.command["passEvent"] != true) {
                 event.stopEvent(e);
             }
             if (success)
@@ -22844,61 +22891,58 @@ var oop = require("./lib/oop");
 var lang = require("./lib/lang");
 var EventEmitter = require("./lib/event_emitter").EventEmitter;
 var Range = require("./range").Range;
-var Selection = function (session) {
-    this.session = session;
-    this.doc = session.getDocument();
-    this.clearSelection();
-    this.cursor = this.lead = this.doc.createAnchor(0, 0);
-    this.anchor = this.doc.createAnchor(0, 0);
-    this.$silent = false;
-    var self = this;
-    this.cursor.on("change", function (e) {
-        self.$cursorChanged = true;
-        if (!self.$silent)
-            self._emit("changeCursor");
-        if (!self.$isEmpty && !self.$silent)
-            self._emit("changeSelection");
-        if (!self.$keepDesiredColumnOnChange && e.old.column != e.value.column)
-            self.$desiredColumn = null;
-    });
-    this.anchor.on("change", function () {
-        self.$anchorChanged = true;
-        if (!self.$isEmpty && !self.$silent)
-            self._emit("changeSelection");
-    });
-};
-(function () {
-    oop.implement(this, EventEmitter);
-    this.isEmpty = function () {
+var Selection = /** @class */ (function () {
+    function Selection(session) {
+        this.session = session;
+        this.doc = session.getDocument();
+        this.clearSelection();
+        this.cursor = this.lead = this.doc.createAnchor(0, 0);
+        this.anchor = this.doc.createAnchor(0, 0);
+        this.$silent = false;
+        var self = this;
+        this.cursor.on("change", function (e) {
+            self.$cursorChanged = true;
+            if (!self.$silent)
+                self._emit("changeCursor");
+            if (!self.$isEmpty && !self.$silent)
+                self._emit("changeSelection");
+            if (!self.$keepDesiredColumnOnChange && e.old.column != e.value.column)
+                self.$desiredColumn = null;
+        });
+        this.anchor.on("change", function () {
+            self.$anchorChanged = true;
+            if (!self.$isEmpty && !self.$silent)
+                self._emit("changeSelection");
+        });
+    }
+    Selection.prototype.isEmpty = function () {
         return this.$isEmpty || (this.anchor.row == this.lead.row &&
             this.anchor.column == this.lead.column);
     };
-    this.isMultiLine = function () {
+    Selection.prototype.isMultiLine = function () {
         return !this.$isEmpty && this.anchor.row != this.cursor.row;
     };
-    this.getCursor = function () {
+    Selection.prototype.getCursor = function () {
         return this.lead.getPosition();
     };
-    this.setAnchor = function (row, column) {
+    Selection.prototype.setAnchor = function (row, column) {
         this.$isEmpty = false;
         this.anchor.setPosition(row, column);
     };
-    this.setSelectionAnchor = this.setAnchor;
-    this.getAnchor = function () {
+    Selection.prototype.getAnchor = function () {
         if (this.$isEmpty)
             return this.getSelectionLead();
         return this.anchor.getPosition();
     };
-    this.getSelectionAnchor = this.getAnchor;
-    this.getSelectionLead = function () {
+    Selection.prototype.getSelectionLead = function () {
         return this.lead.getPosition();
     };
-    this.isBackwards = function () {
+    Selection.prototype.isBackwards = function () {
         var anchor = this.anchor;
         var lead = this.lead;
         return (anchor.row > lead.row || (anchor.row == lead.row && anchor.column > lead.column));
     };
-    this.getRange = function () {
+    Selection.prototype.getRange = function () {
         var anchor = this.anchor;
         var lead = this.lead;
         if (this.$isEmpty)
@@ -22907,22 +22951,21 @@ var Selection = function (session) {
             ? Range.fromPoints(lead, anchor)
             : Range.fromPoints(anchor, lead);
     };
-    this.clearSelection = function () {
+    Selection.prototype.clearSelection = function () {
         if (!this.$isEmpty) {
             this.$isEmpty = true;
             this._emit("changeSelection");
         }
     };
-    this.selectAll = function () {
+    Selection.prototype.selectAll = function () {
         this.$setSelection(0, 0, Number.MAX_VALUE, Number.MAX_VALUE);
     };
-    this.setRange =
-        this.setSelectionRange = function (range, reverse) {
-            var start = reverse ? range.end : range.start;
-            var end = reverse ? range.start : range.end;
-            this.$setSelection(start.row, start.column, end.row, end.column);
-        };
-    this.$setSelection = function (anchorRow, anchorColumn, cursorRow, cursorColumn) {
+    Selection.prototype.setRange = function (range, reverse) {
+        var start = reverse ? range.end : range.start;
+        var end = reverse ? range.start : range.end;
+        this.$setSelection(start.row, start.column, end.row, end.column);
+    };
+    Selection.prototype.$setSelection = function (anchorRow, anchorColumn, cursorRow, cursorColumn) {
         if (this.$silent)
             return;
         var wasEmpty = this.$isEmpty;
@@ -22938,61 +22981,61 @@ var Selection = function (session) {
         if (this.$cursorChanged || this.$anchorChanged || wasEmpty != this.$isEmpty || wasMultiselect)
             this._emit("changeSelection");
     };
-    this.$moveSelection = function (mover) {
+    Selection.prototype.$moveSelection = function (mover) {
         var lead = this.lead;
         if (this.$isEmpty)
             this.setSelectionAnchor(lead.row, lead.column);
         mover.call(this);
     };
-    this.selectTo = function (row, column) {
+    Selection.prototype.selectTo = function (row, column) {
         this.$moveSelection(function () {
             this.moveCursorTo(row, column);
         });
     };
-    this.selectToPosition = function (pos) {
+    Selection.prototype.selectToPosition = function (pos) {
         this.$moveSelection(function () {
             this.moveCursorToPosition(pos);
         });
     };
-    this.moveTo = function (row, column) {
+    Selection.prototype.moveTo = function (row, column) {
         this.clearSelection();
         this.moveCursorTo(row, column);
     };
-    this.moveToPosition = function (pos) {
+    Selection.prototype.moveToPosition = function (pos) {
         this.clearSelection();
         this.moveCursorToPosition(pos);
     };
-    this.selectUp = function () {
+    Selection.prototype.selectUp = function () {
         this.$moveSelection(this.moveCursorUp);
     };
-    this.selectDown = function () {
+    Selection.prototype.selectDown = function () {
         this.$moveSelection(this.moveCursorDown);
     };
-    this.selectRight = function () {
+    Selection.prototype.selectRight = function () {
         this.$moveSelection(this.moveCursorRight);
     };
-    this.selectLeft = function () {
+    Selection.prototype.selectLeft = function () {
         this.$moveSelection(this.moveCursorLeft);
     };
-    this.selectLineStart = function () {
+    Selection.prototype.selectLineStart = function () {
         this.$moveSelection(this.moveCursorLineStart);
     };
-    this.selectLineEnd = function () {
+    Selection.prototype.selectLineEnd = function () {
         this.$moveSelection(this.moveCursorLineEnd);
     };
-    this.selectFileEnd = function () {
+    Selection.prototype.selectFileEnd = function () {
         this.$moveSelection(this.moveCursorFileEnd);
     };
-    this.selectFileStart = function () {
+    Selection.prototype.selectFileStart = function () {
         this.$moveSelection(this.moveCursorFileStart);
     };
-    this.selectWordRight = function () {
+    Selection.prototype.selectWordRight = function () {
         this.$moveSelection(this.moveCursorWordRight);
     };
-    this.selectWordLeft = function () {
+    Selection.prototype.selectWordLeft = function () {
         this.$moveSelection(this.moveCursorWordLeft);
     };
-    this.getWordRange = function (row, column) {
+    Selection.prototype.getWordRange = function (row, column) {
         if (typeof column == "undefined") {
             var cursor = row || this.lead;
             row = cursor.row;
@@ -23000,15 +23043,15 @@ var Selection = function (session) {
         }
         return this.session.getWordRange(row, column);
     };
-    this.selectWord = function () {
+    Selection.prototype.selectWord = function () {
         this.setSelectionRange(this.getWordRange());
     };
-    this.selectAWord = function () {
+    Selection.prototype.selectAWord = function () {
         var cursor = this.getCursor();
         var range = this.session.getAWordRange(cursor.row, cursor.column);
         this.setSelectionRange(range);
     };
-    this.getLineRange = function (row, excludeLastChar) {
+    Selection.prototype.getLineRange = function (row, excludeLastChar) {
         var rowStart = typeof row == "number" ? row : this.lead.row;
         var rowEnd;
         var foldLine = this.session.getFoldLine(rowStart);
@@ -23024,16 +23067,16 @@ var Selection = function (session) {
         else
             return new Range(rowStart, 0, rowEnd + 1, 0);
     };
-    this.selectLine = function () {
+    Selection.prototype.selectLine = function () {
         this.setSelectionRange(this.getLineRange());
     };
-    this.moveCursorUp = function () {
+    Selection.prototype.moveCursorUp = function () {
         this.moveCursorBy(-1, 0);
     };
-    this.moveCursorDown = function () {
+    Selection.prototype.moveCursorDown = function () {
         this.moveCursorBy(1, 0);
     };
-    this.wouldMoveIntoSoftTab = function (cursor, tabSize, direction) {
+    Selection.prototype.wouldMoveIntoSoftTab = function (cursor, tabSize, direction) {
         var start = cursor.column;
         var end = cursor.column + tabSize;
         if (direction < 0) {
@@ -23042,7 +23085,7 @@ var Selection = function (session) {
         }
         return this.session.isTabStop(cursor) && this.doc.getLine(cursor.row).slice(start, end).split(" ").length - 1 == tabSize;
     };
-    this.moveCursorLeft = function () {
+    Selection.prototype.moveCursorLeft = function () {
         var cursor = this.lead.getPosition(), fold;
         if (fold = this.session.getFoldAt(cursor.row, cursor.column, -1)) {
             this.moveCursorTo(fold.start.row, fold.start.column);
@@ -23062,7 +23105,7 @@ var Selection = function (session) {
             }
         }
     };
-    this.moveCursorRight = function () {
+    Selection.prototype.moveCursorRight = function () {
         var cursor = this.lead.getPosition(), fold;
         if (fold = this.session.getFoldAt(cursor.row, cursor.column, 1)) {
             this.moveCursorTo(fold.end.row, fold.end.column);
@@ -23083,7 +23126,7 @@ var Selection = function (session) {
             }
         }
     };
-    this.moveCursorLineStart = function () {
+    Selection.prototype.moveCursorLineStart = function () {
         var row = this.lead.row;
         var column = this.lead.column;
         var screenRow = this.session.documentToScreenRow(row, column);
@@ -23094,7 +23137,7 @@ var Selection = function (session) {
             firstColumnPosition.column += leadingSpace[0].length;
         this.moveCursorToPosition(firstColumnPosition);
     };
-    this.moveCursorLineEnd = function () {
+    Selection.prototype.moveCursorLineEnd = function () {
         var lead = this.lead;
         var lineEnd = this.session.getDocumentLastRowColumnPosition(lead.row, lead.column);
         if (this.lead.column == lineEnd.column) {
@@ -23107,15 +23150,15 @@ var Selection = function (session) {
         }
         this.moveCursorTo(lineEnd.row, lineEnd.column);
     };
-    this.moveCursorFileEnd = function () {
+    Selection.prototype.moveCursorFileEnd = function () {
         var row = this.doc.getLength() - 1;
         var column = this.doc.getLine(row).length;
         this.moveCursorTo(row, column);
     };
-    this.moveCursorFileStart = function () {
+    Selection.prototype.moveCursorFileStart = function () {
         this.moveCursorTo(0, 0);
     };
-    this.moveCursorLongWordRight = function () {
+    Selection.prototype.moveCursorLongWordRight = function () {
         var row = this.lead.row;
         var column = this.lead.column;
         var line = this.doc.getLine(row);
@@ -23145,7 +23188,7 @@ var Selection = function (session) {
         }
         this.moveCursorTo(row, column);
     };
-    this.moveCursorLongWordLeft = function () {
+    Selection.prototype.moveCursorLongWordLeft = function () {
         var row = this.lead.row;
         var column = this.lead.column;
         var fold;
@@ -23178,7 +23221,7 @@ var Selection = function (session) {
         }
         this.moveCursorTo(row, column);
     };
-    this.$shortWordEndIndex = function (rightOfCursor) {
+    Selection.prototype.$shortWordEndIndex = function (rightOfCursor) {
         var index = 0, ch;
         var whitespaceRe = /\s/;
         var tokenRe = this.session.tokenRe;
@@ -23212,7 +23255,7 @@ var Selection = function (session) {
         tokenRe.lastIndex = 0;
         return index;
     };
-    this.moveCursorShortWordRight = function () {
+    Selection.prototype.moveCursorShortWordRight = function () {
         var row = this.lead.row;
         var column = this.lead.column;
         var line = this.doc.getLine(row);
@@ -23233,7 +23276,7 @@ var Selection = function (session) {
         var index = this.$shortWordEndIndex(rightOfCursor);
         this.moveCursorTo(row, column + index);
     };
-    this.moveCursorShortWordLeft = function () {
+    Selection.prototype.moveCursorShortWordLeft = function () {
         var row = this.lead.row;
         var column = this.lead.column;
         var fold;
@@ -23253,19 +23296,19 @@ var Selection = function (session) {
         var index = this.$shortWordEndIndex(leftOfCursor);
         return this.moveCursorTo(row, column - index);
     };
-    this.moveCursorWordRight = function () {
+    Selection.prototype.moveCursorWordRight = function () {
         if (this.session.$selectLongWords)
             this.moveCursorLongWordRight();
         else
             this.moveCursorShortWordRight();
     };
-    this.moveCursorWordLeft = function () {
+    Selection.prototype.moveCursorWordLeft = function () {
         if (this.session.$selectLongWords)
             this.moveCursorLongWordLeft();
         else
             this.moveCursorShortWordLeft();
     };
-    this.moveCursorBy = function (rows, chars) {
+    Selection.prototype.moveCursorBy = function (rows, chars) {
         var screenPos = this.session.documentToScreenPosition(this.lead.row, this.lead.column);
         var offsetX;
         if (chars === 0) {
@@ -23295,10 +23338,10 @@ var Selection = function (session) {
         }
         this.moveCursorTo(docPos.row, docPos.column + chars, chars === 0);
     };
-    this.moveCursorToPosition = function (position) {
+    Selection.prototype.moveCursorToPosition = function (position) {
         this.moveCursorTo(position.row, position.column);
     };
-    this.moveCursorTo = function (row, column, keepDesiredColumn) {
+    Selection.prototype.moveCursorTo = function (row, column, keepDesiredColumn) {
         var fold = this.session.getFoldAt(row, column, 1);
         if (fold) {
             row = fold.start.row;
@@ -23317,19 +23360,19 @@ var Selection = function (session) {
         if (!keepDesiredColumn)
             this.$desiredColumn = null;
     };
-    this.moveCursorToScreen = function (row, column, keepDesiredColumn) {
+    Selection.prototype.moveCursorToScreen = function (row, column, keepDesiredColumn) {
         var pos = this.session.screenToDocumentPosition(row, column);
         this.moveCursorTo(pos.row, pos.column, keepDesiredColumn);
     };
-    this.detach = function () {
+    Selection.prototype.detach = function () {
         this.lead.detach();
         this.anchor.detach();
     };
-    this.fromOrientedRange = function (range) {
+    Selection.prototype.fromOrientedRange = function (range) {
         this.setSelectionRange(range, range.cursor == range.start);
         this.$desiredColumn = range.desiredColumn || this.$desiredColumn;
     };
-    this.toOrientedRange = function (range) {
+    Selection.prototype.toOrientedRange = function (range) {
         var r = this.getRange();
         if (range) {
             range.start.column = r.start.column;
@@ -23344,7 +23387,7 @@ var Selection = function (session) {
         range.desiredColumn = this.$desiredColumn;
         return range;
     };
-    this.getRangeOfMovements = function (func) {
+    Selection.prototype.getRangeOfMovements = function (func) {
         var start = this.getCursor();
         try {
             func(this);
@@ -23358,21 +23401,19 @@ var Selection = function (session) {
             this.moveCursorToPosition(start);
         }
     };
-    this.toJSON = function () {
-        if (this.rangeCount) {
-            var data = this.ranges.map(function (r) {
+    Selection.prototype.toJSON = function () {
+        if (this.rangeCount) { var data = this.ranges.map(function (r) {
                 var r1 = r.clone();
                 r1.isBackwards = r.cursor == r.start;
                 return r1;
             });
         }
-        else {
-            var data = this.getRange();
+        else { var data = this.getRange();
             data.isBackwards = this.isBackwards();
         }
         return data;
     };
-    this.fromJSON = function (data) {
+    Selection.prototype.fromJSON = function (data) {
         if (data.start == undefined) {
             if (this.rangeList && data.length > 1) {
                 this.toSingleRange(data[0]);
@@ -23392,7 +23433,7 @@ var Selection = function (session) {
             this.toSingleRange(data);
         this.setSelectionRange(data, data.isBackwards);
     };
-    this.isEqual = function (data) {
+    Selection.prototype.isEqual = function (data) {
         if ((data.length || this.rangeCount) && data.length != this.rangeCount)
             return false;
         if (!data.length || !this.ranges)
@@ -23403,16 +23444,22 @@ var Selection = function (session) {
         }
         return true;
     };
-}).call(Selection.prototype);
+    return Selection;
+}());
+Selection.prototype.setSelectionAnchor = Selection.prototype.setAnchor;
+Selection.prototype.getSelectionAnchor = Selection.prototype.getAnchor;
+Selection.prototype.setSelectionRange = Selection.prototype.setRange;
+oop.implement(Selection.prototype, EventEmitter);
 exports.Selection = Selection;
 
 });
 
-ace.define("ace/tokenizer",["require","exports","module","ace/config"], function(require, exports, module){"use strict";
-var config = require("./config");
+ace.define("ace/tokenizer",["require","exports","module","ace/lib/report_error"], function(require, exports, module){"use strict";
+var reportError = require("./lib/report_error").reportError;
 var MAX_TOKEN_COUNT = 2000;
 var Tokenizer = /** @class */ (function () {
     function Tokenizer(rules) {
+        this.splitRegex;
         this.states = rules;
         this.regExps = {};
         this.matchMappings = {};
@@ -23576,7 +23623,7 @@ var Tokenizer = /** @class */ (function () {
         }
         else
             var stack = [];
-        var currentState = startState || "start";
+        var currentState = /**@type{string}*/ (startState) || "start";
         var state = this.states[currentState];
         if (!state) {
             currentState = "start";
@@ -23690,14 +23737,15 @@ var Tokenizer = /** @class */ (function () {
     };
     return Tokenizer;
 }());
-Tokenizer.prototype.reportError = config.reportError;
+Tokenizer.prototype.reportError = reportError;
 exports.Tokenizer = Tokenizer;
 
 });
 
-ace.define("ace/mode/text_highlight_rules",["require","exports","module","ace/lib/lang"], function(require, exports, module){"use strict";
-var lang = require("../lib/lang");
-var TextHighlightRules = function () {
+ace.define("ace/mode/text_highlight_rules",["require","exports","module","ace/lib/deep_copy"], function(require, exports, module){"use strict";
+var deepCopy = require("../lib/deep_copy").deepCopy;
+var TextHighlightRules;
+TextHighlightRules = function () {
     this.$rules = {
         "start": [{
                 token: "empty_line",
@@ -23750,7 +23798,7 @@ var TextHighlightRules = function () {
         if (escapeRules) {
             var addRules = Array.prototype[append ? "push" : "unshift"];
             for (var i = 0; i < states.length; i++)
-                addRules.apply(this.$rules[states[i]], lang.deepCopy(escapeRules));
+                addRules.apply(this.$rules[states[i]], deepCopy(escapeRules));
         }
         if (!this.$embeds)
             this.$embeds = [];
@@ -23773,7 +23821,7 @@ var TextHighlightRules = function () {
         var rules = this.$rules;
         function processState(key) {
             var state = rules[key];
-            state.processed = true;
+            state["processed"] = true;
             for (var i = 0; i < state.length; i++) {
                 var rule = state[i];
                 var toInsert = null;
@@ -23880,7 +23928,8 @@ exports.TextHighlightRules = TextHighlightRules;
 });
 
 ace.define("ace/mode/behaviour",["require","exports","module"], function(require, exports, module){"use strict";
-var Behaviour = function () {
+var Behaviour;
+Behaviour = function () {
     this.$behaviours = {};
 };
 (function () {
@@ -24046,7 +24095,9 @@ var getWrapped = function (selection, selected, opening, closing) {
         ]
     };
 };
-var CstyleBehaviour = function (options) {
+var CstyleBehaviour;
+CstyleBehaviour = function (options) {
+    options = options || {};
     this.add("braces", "insertion", function (state, action, editor, session, text) {
         var cursor = editor.getCursorPosition();
         var line = session.doc.getLine(cursor.row);
@@ -24058,7 +24109,7 @@ var CstyleBehaviour = function (options) {
                 return getWrapped(selection, selected, '{', '}');
             }
             else if (CstyleBehaviour.isSaneInsertion(editor, session)) {
-                if (/[\]\}\)]/.test(line[cursor.column]) || editor.inMultiSelectMode || options && options.braces) {
+                if (/[\]\}\)]/.test(line[cursor.column]) || editor.inMultiSelectMode || options.braces) {
                     CstyleBehaviour.recordAutoInsert(editor, session, "}");
                     return {
                         text: '{}',
@@ -24294,6 +24345,36 @@ var CstyleBehaviour = function (options) {
             }
         }
     });
+    if (options.closeDocComment !== false) {
+        this.add("doc comment end", "insertion", function (state, action, editor, session, text) {
+            if (state === "doc-start" && (text === "\n" || text === "\r\n") && editor.selection.isEmpty()) {
+                var cursor = editor.getCursorPosition();
+                var line = session.doc.getLine(cursor.row);
+                var nextLine = session.doc.getLine(cursor.row + 1);
+                var indent = this.$getIndent(line);
+                if (/\s*\*/.test(nextLine)) {
+                    if (/^\s*\*/.test(line)) {
+                        return {
+                            text: text + indent + "* ",
+                            selection: [1, 3 + indent.length, 1, 3 + indent.length]
+                        };
+                    }
+                    else {
+                        return {
+                            text: text + indent + " * ",
+                            selection: [1, 3 + indent.length, 1, 3 + indent.length]
+                        };
+                    }
+                }
+                if (/\/\*\*/.test(line.substring(0, cursor.column))) {
+                    return {
+                        text: text + indent + " * " + text + " " + indent + "*/",
+                        selection: [1, 4 + indent.length, 1, 4 + indent.length]
+                    };
+                }
+            }
+        });
+    }
 };
 CstyleBehaviour.isSaneInsertion = function (editor, session) {
     var cursor = editor.getCursorPosition();
@@ -24309,45 +24390,45 @@ CstyleBehaviour.isSaneInsertion = function (editor, session) {
     return iterator.getCurrentTokenRow() !== cursor.row ||
         this.$matchTokenType(iterator.getCurrentToken() || "text", SAFE_INSERT_BEFORE_TOKENS);
 };
-CstyleBehaviour.$matchTokenType = function (token, types) {
+CstyleBehaviour["$matchTokenType"] = function (token, types) {
     return types.indexOf(token.type || token) > -1;
 };
-CstyleBehaviour.recordAutoInsert = function (editor, session, bracket) {
+CstyleBehaviour["recordAutoInsert"] = function (editor, session, bracket) {
     var cursor = editor.getCursorPosition();
     var line = session.doc.getLine(cursor.row);
-    if (!this.isAutoInsertedClosing(cursor, line, context.autoInsertedLineEnd[0]))
+    if (!this["isAutoInsertedClosing"](cursor, line, context.autoInsertedLineEnd[0]))
         context.autoInsertedBrackets = 0;
     context.autoInsertedRow = cursor.row;
     context.autoInsertedLineEnd = bracket + line.substr(cursor.column);
     context.autoInsertedBrackets++;
 };
-CstyleBehaviour.recordMaybeInsert = function (editor, session, bracket) {
+CstyleBehaviour["recordMaybeInsert"] = function (editor, session, bracket) {
     var cursor = editor.getCursorPosition();
     var line = session.doc.getLine(cursor.row);
-    if (!this.isMaybeInsertedClosing(cursor, line))
+    if (!this["isMaybeInsertedClosing"](cursor, line))
         context.maybeInsertedBrackets = 0;
     context.maybeInsertedRow = cursor.row;
     context.maybeInsertedLineStart = line.substr(0, cursor.column) + bracket;
     context.maybeInsertedLineEnd = line.substr(cursor.column);
     context.maybeInsertedBrackets++;
 };
-CstyleBehaviour.isAutoInsertedClosing = function (cursor, line, bracket) {
+CstyleBehaviour["isAutoInsertedClosing"] = function (cursor, line, bracket) {
     return context.autoInsertedBrackets > 0 &&
         cursor.row === context.autoInsertedRow &&
         bracket === context.autoInsertedLineEnd[0] &&
         line.substr(cursor.column) === context.autoInsertedLineEnd;
 };
-CstyleBehaviour.isMaybeInsertedClosing = function (cursor, line) {
+CstyleBehaviour["isMaybeInsertedClosing"] = function (cursor, line) {
     return context.maybeInsertedBrackets > 0 &&
         cursor.row === context.maybeInsertedRow &&
         line.substr(cursor.column) === context.maybeInsertedLineEnd &&
         line.substr(0, cursor.column) == context.maybeInsertedLineStart;
 };
-CstyleBehaviour.popAutoInsertedClosing = function () {
+CstyleBehaviour["popAutoInsertedClosing"] = function () {
     context.autoInsertedLineEnd = context.autoInsertedLineEnd.substr(1);
     context.autoInsertedBrackets--;
 };
-CstyleBehaviour.clearMaybeInsertedClosing = function () {
+CstyleBehaviour["clearMaybeInsertedClosing"] = function () {
     if (context) {
         context.maybeInsertedBrackets = 0;
         context.maybeInsertedRow = -1;
@@ -24380,7 +24461,8 @@ var unicode = require("../unicode");
 var lang = require("../lib/lang");
 var TokenIterator = require("../token_iterator").TokenIterator;
 var Range = require("../range").Range;
-var Mode = function () {
+var Mode;
+Mode = function () {
     this.HighlightRules = TextHighlightRules;
 };
 (function () {
@@ -24595,14 +24677,19 @@ var Mode = function () {
         }
         var delegations = ["toggleBlockComment", "toggleCommentLines", "getNextLineIndent",
             "checkOutdent", "autoOutdent", "transformAction", "getCompletions"];
-        for (var i = 0; i < delegations.length; i++) {
+        var _loop_1 = function (i) {
             (function (scope) {
                 var functionName = delegations[i];
                 var defaultHandler = scope[functionName];
-                scope[delegations[i]] = function () {
-                    return this.$delegator(functionName, arguments, defaultHandler);
-                };
-            }(this));
+                scope[delegations[i]] =
+                    function () {
+                        return this.$delegator(functionName, arguments, defaultHandler);
+                    };
+            }(this_1));
+        };
+        var this_1 = this;
+        for (var i = 0; i < delegations.length; i++) {
+            _loop_1(i);
         }
     };
     this.$delegator = function (method, args, defaultHandler) {
@@ -24644,7 +24731,7 @@ var Mode = function () {
     };
     this.getKeywords = function (append) {
         if (!this.completionKeywords) {
-            var rules = this.$tokenizer.rules;
+            var rules = this.$tokenizer["rules"];
             var completionKeywords = [];
             for (var rule in rules) {
                 var ruleItr = rules[rule];
@@ -24757,7 +24844,7 @@ var Anchor = /** @class */ (function () {
     function Anchor(doc, row, column) {
         this.$onChange = this.onChange.bind(this);
         this.attach(doc);
-        if (typeof column == "undefined")
+        if (typeof row != "number")
             this.setPosition(row.row, row.column);
         else
             this.setPosition(row, column);
@@ -25201,7 +25288,7 @@ ace.define("ace/background_tokenizer",["require","exports","module","ace/lib/oop
 var oop = require("./lib/oop");
 var EventEmitter = require("./lib/event_emitter").EventEmitter;
 var BackgroundTokenizer = /** @class */ (function () {
-    function BackgroundTokenizer(tokenizer, editor) {
+    function BackgroundTokenizer(tokenizer, session) {
         this.running = false;
         this.lines = [];
         this.states = [];
@@ -25378,6 +25465,487 @@ var SearchHighlight = /** @class */ (function () {
 }());
 SearchHighlight.prototype.MAX_RANGES = 500;
 exports.SearchHighlight = SearchHighlight;
+
+});
+
+ace.define("ace/undomanager",["require","exports","module","ace/range"], function(require, exports, module){"use strict";
+var UndoManager = /** @class */ (function () {
+    function UndoManager() {
+        this.$keepRedoStack;
+        this.$maxRev = 0;
+        this.$fromUndo = false;
+        this.$undoDepth = Infinity;
+        this.reset();
+    }
+    UndoManager.prototype.addSession = function (session) {
+        this.$session = session;
+    };
+    UndoManager.prototype.add = function (delta, allowMerge, session) {
+        if (this.$fromUndo)
+            return;
+        if (delta == this.$lastDelta)
+            return;
+        if (!this.$keepRedoStack)
+            this.$redoStack.length = 0;
+        if (allowMerge === false || !this.lastDeltas) {
+            this.lastDeltas = [];
+            var undoStackLength = this.$undoStack.length;
+            if (undoStackLength > this.$undoDepth - 1) {
+                this.$undoStack.splice(0, undoStackLength - this.$undoDepth + 1);
+            }
+            this.$undoStack.push(this.lastDeltas);
+            delta.id = this.$rev = ++this.$maxRev;
+        }
+        if (delta.action == "remove" || delta.action == "insert")
+            this.$lastDelta = delta;
+        this.lastDeltas.push(delta);
+    };
+    UndoManager.prototype.addSelection = function (selection, rev) {
+        this.selections.push({
+            value: selection,
+            rev: rev || this.$rev
+        });
+    };
+    UndoManager.prototype.startNewGroup = function () {
+        this.lastDeltas = null;
+        return this.$rev;
+    };
+    UndoManager.prototype.markIgnored = function (from, to) {
+        if (to == null)
+            to = this.$rev + 1;
+        var stack = this.$undoStack;
+        for (var i = stack.length; i--;) {
+            var delta = stack[i][0];
+            if (delta.id <= from)
+                break;
+            if (delta.id < to)
+                delta.ignore = true;
+        }
+        this.lastDeltas = null;
+    };
+    UndoManager.prototype.getSelection = function (rev, after) {
+        var stack = this.selections;
+        for (var i = stack.length; i--;) {
+            var selection = stack[i];
+            if (selection.rev < rev) {
+                if (after)
+                    selection = stack[i + 1];
+                return selection;
+            }
+        }
+    };
+    UndoManager.prototype.getRevision = function () {
+        return this.$rev;
+    };
+    UndoManager.prototype.getDeltas = function (from, to) {
+        if (to == null)
+            to = this.$rev + 1;
+        var stack = this.$undoStack;
+        var end = null, start = 0;
+        for (var i = stack.length; i--;) {
+            var delta = stack[i][0];
+            if (delta.id < to && !end)
+                end = i + 1;
+            if (delta.id <= from) {
+                start = i + 1;
+                break;
+            }
+        }
+        return stack.slice(start, end);
+    };
+    UndoManager.prototype.getChangedRanges = function (from, to) {
+        if (to == null)
+            to = this.$rev + 1;
+    };
+    UndoManager.prototype.getChangedLines = function (from, to) {
+        if (to == null)
+            to = this.$rev + 1;
+    };
+    UndoManager.prototype.undo = function (session, dontSelect) {
+        this.lastDeltas = null;
+        var stack = this.$undoStack;
+        if (!rearrangeUndoStack(stack, stack.length))
+            return;
+        if (!session)
+            session = this.$session;
+        if (this.$redoStackBaseRev !== this.$rev && this.$redoStack.length)
+            this.$redoStack = [];
+        this.$fromUndo = true;
+        var deltaSet = stack.pop();
+        var undoSelectionRange = null;
+        if (deltaSet) {
+            undoSelectionRange = session.undoChanges(deltaSet, dontSelect);
+            this.$redoStack.push(deltaSet);
+            this.$syncRev();
+        }
+        this.$fromUndo = false;
+        return undoSelectionRange;
+    };
+    UndoManager.prototype.redo = function (session, dontSelect) {
+        this.lastDeltas = null;
+        if (!session)
+            session = this.$session;
+        this.$fromUndo = true;
+        if (this.$redoStackBaseRev != this.$rev) {
+            var diff = this.getDeltas(this.$redoStackBaseRev, this.$rev + 1);
+            rebaseRedoStack(this.$redoStack, diff);
+            this.$redoStackBaseRev = this.$rev;
+            this.$redoStack.forEach(function (x) {
+                x[0].id = ++this.$maxRev;
+            }, this);
+        }
+        var deltaSet = this.$redoStack.pop();
+        var redoSelectionRange = null;
+        if (deltaSet) {
+            redoSelectionRange = session.redoChanges(deltaSet, dontSelect);
+            this.$undoStack.push(deltaSet);
+            this.$syncRev();
+        }
+        this.$fromUndo = false;
+        return redoSelectionRange;
+    };
+    UndoManager.prototype.$syncRev = function () {
+        var stack = this.$undoStack;
+        var nextDelta = stack[stack.length - 1];
+        var id = nextDelta && nextDelta[0].id || 0;
+        this.$redoStackBaseRev = id;
+        this.$rev = id;
+    };
+    UndoManager.prototype.reset = function () {
+        this.lastDeltas = null;
+        this.$lastDelta = null;
+        this.$undoStack = [];
+        this.$redoStack = [];
+        this.$rev = 0;
+        this.mark = 0;
+        this.$redoStackBaseRev = this.$rev;
+        this.selections = [];
+    };
+    UndoManager.prototype.canUndo = function () {
+        return this.$undoStack.length > 0;
+    };
+    UndoManager.prototype.canRedo = function () {
+        return this.$redoStack.length > 0;
+    };
+    UndoManager.prototype.bookmark = function (rev) {
+        if (rev == undefined)
+            rev = this.$rev;
+        this.mark = rev;
+    };
+    UndoManager.prototype.isAtBookmark = function () {
+        return this.$rev === this.mark;
+    };
+    UndoManager.prototype.toJSON = function () {
+        return {
+            $redoStack: this.$redoStack,
+            $undoStack: this.$undoStack
+        };
+    };
+    UndoManager.prototype.fromJSON = function (json) {
+        this.reset();
+        this.$undoStack = json.$undoStack;
+        this.$redoStack = json.$redoStack;
+    };
+    UndoManager.prototype.$prettyPrint = function (delta) {
+        if (delta)
+            return stringifyDelta(delta);
+        return stringifyDelta(this.$undoStack) + "\n---\n" + stringifyDelta(this.$redoStack);
+    };
+    return UndoManager;
+}());
+UndoManager.prototype.hasUndo = UndoManager.prototype.canUndo;
+UndoManager.prototype.hasRedo = UndoManager.prototype.canRedo;
+UndoManager.prototype.isClean = UndoManager.prototype.isAtBookmark;
+UndoManager.prototype.markClean = UndoManager.prototype.bookmark;
+function rearrangeUndoStack(stack, pos) {
+    for (var i = pos; i--;) {
+        var deltaSet = stack[i];
+        if (deltaSet && !deltaSet[0].ignore) {
+            while (i < pos - 1) {
+                var swapped = swapGroups(stack[i], stack[i + 1]);
+                stack[i] = swapped[0];
+                stack[i + 1] = swapped[1];
+                i++;
+            }
+            return true;
+        }
+    }
+}
+var Range = require("./range").Range;
+var cmp = Range.comparePoints;
+var comparePoints = Range.comparePoints;
+function $updateMarkers(delta) {
+    var isInsert = delta.action == "insert";
+    var start = delta.start;
+    var end = delta.end;
+    var rowShift = (end.row - start.row) * (isInsert ? 1 : -1);
+    var colShift = (end.column - start.column) * (isInsert ? 1 : -1);
+    if (isInsert)
+        end = start;
+    for (var i in this.marks) {
+        var point = this.marks[i];
+        var cmp = comparePoints(point, start);
+        if (cmp < 0) {
+            continue; // delta starts after the range
+        }
+        if (cmp === 0) {
+            if (isInsert) {
+                if (point.bias == 1) {
+                    cmp = 1;
+                }
+                else {
+                    point.bias == -1;
+                    continue;
+                }
+            }
+        }
+        var cmp2 = isInsert ? cmp : comparePoints(point, end);
+        if (cmp2 > 0) {
+            point.row += rowShift;
+            point.column += point.row == end.row ? colShift : 0;
+            continue;
+        }
+        if (!isInsert && cmp2 <= 0) {
+            point.row = start.row;
+            point.column = start.column;
+            if (cmp2 === 0)
+                point.bias = 1;
+        }
+    }
+}
+function clonePos(pos) {
+    return { row: pos.row, column: pos.column };
+}
+function cloneDelta(d) {
+    return {
+        start: clonePos(d.start),
+        end: clonePos(d.end),
+        action: d.action,
+        lines: d.lines.slice()
+    };
+}
+function stringifyDelta(d) {
+    d = d || this;
+    if (Array.isArray(d)) {
+        return d.map(stringifyDelta).join("\n");
+    }
+    var type = "";
+    if (d.action) {
+        type = d.action == "insert" ? "+" : "-";
+        type += "[" + d.lines + "]";
+    }
+    else if (d.value) {
+        if (Array.isArray(d.value)) {
+            type = d.value.map(stringifyRange).join("\n");
+        }
+        else {
+            type = stringifyRange(d.value);
+        }
+    }
+    if (d.start) {
+        type += stringifyRange(d);
+    }
+    if (d.id || d.rev) {
+        type += "\t(" + (d.id || d.rev) + ")";
+    }
+    return type;
+}
+function stringifyRange(r) {
+    return r.start.row + ":" + r.start.column
+        + "=>" + r.end.row + ":" + r.end.column;
+}
+function swap(d1, d2) {
+    var i1 = d1.action == "insert";
+    var i2 = d2.action == "insert";
+    if (i1 && i2) {
+        if (cmp(d2.start, d1.end) >= 0) {
+            shift(d2, d1, -1);
+        }
+        else if (cmp(d2.start, d1.start) <= 0) {
+            shift(d1, d2, +1);
+        }
+        else {
+            return null;
+        }
+    }
+    else if (i1 && !i2) {
+        if (cmp(d2.start, d1.end) >= 0) {
+            shift(d2, d1, -1);
+        }
+        else if (cmp(d2.end, d1.start) <= 0) {
+            shift(d1, d2, -1);
+        }
+        else {
+            return null;
+        }
+    }
+    else if (!i1 && i2) {
+        if (cmp(d2.start, d1.start) >= 0) {
+            shift(d2, d1, +1);
+        }
+        else if (cmp(d2.start, d1.start) <= 0) {
+            shift(d1, d2, +1);
+        }
+        else {
+            return null;
+        }
+    }
+    else if (!i1 && !i2) {
+        if (cmp(d2.start, d1.start) >= 0) {
+            shift(d2, d1, +1);
+        }
+        else if (cmp(d2.end, d1.start) <= 0) {
+            shift(d1, d2, -1);
+        }
+        else {
+            return null;
+        }
+    }
+    return [d2, d1];
+}
+function swapGroups(ds1, ds2) {
+    for (var i = ds1.length; i--;) {
+        for (var j = 0; j < ds2.length; j++) {
+            if (!swap(ds1[i], ds2[j])) {
+                while (i < ds1.length) {
+                    while (j--) {
+                        swap(ds2[j], ds1[i]);
+                    }
+                    j = ds2.length;
+                    i++;
+                }
+                return [ds1, ds2];
+            }
+        }
+    }
+    ds1.selectionBefore = ds2.selectionBefore =
+        ds1.selectionAfter = ds2.selectionAfter = null;
+    return [ds2, ds1];
+}
+function xform(d1, c1) {
+    var i1 = d1.action == "insert";
+    var i2 = c1.action == "insert";
+    if (i1 && i2) {
+        if (cmp(d1.start, c1.start) < 0) {
+            shift(c1, d1, 1);
+        }
+        else {
+            shift(d1, c1, 1);
+        }
+    }
+    else if (i1 && !i2) {
+        if (cmp(d1.start, c1.end) >= 0) {
+            shift(d1, c1, -1);
+        }
+        else if (cmp(d1.start, c1.start) <= 0) {
+            shift(c1, d1, +1);
+        }
+        else {
+            shift(d1, Range.fromPoints(c1.start, d1.start), -1);
+            shift(c1, d1, +1);
+        }
+    }
+    else if (!i1 && i2) {
+        if (cmp(c1.start, d1.end) >= 0) {
+            shift(c1, d1, -1);
+        }
+        else if (cmp(c1.start, d1.start) <= 0) {
+            shift(d1, c1, +1);
+        }
+        else {
+            shift(c1, Range.fromPoints(d1.start, c1.start), -1);
+            shift(d1, c1, +1);
+        }
+    }
+    else if (!i1 && !i2) {
+        if (cmp(c1.start, d1.end) >= 0) {
+            shift(c1, d1, -1);
+        }
+        else if (cmp(c1.end, d1.start) <= 0) {
+            shift(d1, c1, -1);
+        }
+        else {
+            var before, after;
+            if (cmp(d1.start, c1.start) < 0) {
+                before = d1;
+                d1 = splitDelta(d1, c1.start);
+            }
+            if (cmp(d1.end, c1.end) > 0) {
+                after = splitDelta(d1, c1.end);
+            }
+            shiftPos(c1.end, d1.start, d1.end, -1);
+            if (after && !before) {
+                d1.lines = after.lines;
+                d1.start = after.start;
+                d1.end = after.end;
+                after = d1;
+            }
+            return [c1, before, after].filter(Boolean);
+        }
+    }
+    return [c1, d1];
+}
+function shift(d1, d2, dir) {
+    shiftPos(d1.start, d2.start, d2.end, dir);
+    shiftPos(d1.end, d2.start, d2.end, dir);
+}
+function shiftPos(pos, start, end, dir) {
+    if (pos.row == (dir == 1 ? start : end).row) {
+        pos.column += dir * (end.column - start.column);
+    }
+    pos.row += dir * (end.row - start.row);
+}
+function splitDelta(c, pos) {
+    var lines = c.lines;
+    var end = c.end;
+    c.end = clonePos(pos);
+    var rowsBefore = c.end.row - c.start.row;
+    var otherLines = lines.splice(rowsBefore, lines.length);
+    var col = rowsBefore ? pos.column : pos.column - c.start.column;
+    lines.push(otherLines[0].substring(0, col));
+    otherLines[0] = otherLines[0].substr(col);
+    var rest = {
+        start: clonePos(pos),
+        end: end,
+        lines: otherLines,
+        action: c.action
+    };
+    return rest;
+}
+function moveDeltasByOne(redoStack, d) {
+    d = cloneDelta(d);
+    for (var j = redoStack.length; j--;) {
+        var deltaSet = redoStack[j];
+        for (var i = 0; i < deltaSet.length; i++) {
+            var x = deltaSet[i];
+            var xformed = xform(x, d);
+            d = xformed[0];
+            if (xformed.length != 2) {
+                if (xformed[2]) {
+                    deltaSet.splice(i + 1, 1, xformed[1], xformed[2]);
+                    i++;
+                }
+                else if (!xformed[1]) {
+                    deltaSet.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+        if (!deltaSet.length) {
+            redoStack.splice(j, 1);
+        }
+    }
+    return redoStack;
+}
+function rebaseRedoStack(redoStack, deltaSets) {
+    for (var i = 0; i < deltaSets.length; i++) {
+        var deltas = deltaSets[i];
+        for (var j = 0; j < deltas.length; j++) {
+            moveDeltasByOne(redoStack, deltas[j]);
+        }
+    }
+}
+exports.UndoManager = UndoManager;
 
 });
 
@@ -25906,7 +26474,8 @@ exports.Fold = Fold;
 
 });
 
-ace.define("ace/edit_session/folding",["require","exports","module","ace/range","ace/edit_session/fold_line","ace/edit_session/fold","ace/token_iterator","ace/mouse/mouse_event"], function(require, exports, module){"use strict";
+ace.define("ace/edit_session/folding",["require","exports","module","ace/range","ace/edit_session/fold_line","ace/edit_session/fold","ace/token_iterator","ace/mouse/mouse_event"], function(require, exports, module){// @ts-nocheck
+"use strict";
 var Range = require("../range").Range;
 var FoldLine = require("./fold_line").FoldLine;
 var Fold = require("./fold").Fold;
@@ -26383,7 +26952,7 @@ function Folding() {
         if (token && /^comment|string/.test(type)) {
             type = type.match(/comment|string/)[0];
             if (type == "comment")
-                type += "|doc-start";
+                type += "|doc-start|\\.doc";
             var re = new RegExp(type);
             var range = new Range();
             if (dir != 1) {
@@ -26971,7 +27540,7 @@ exports.BracketMatch = BracketMatch;
 
 });
 
-ace.define("ace/edit_session",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/bidihandler","ace/config","ace/lib/event_emitter","ace/selection","ace/mode/text","ace/range","ace/document","ace/background_tokenizer","ace/search_highlight","ace/edit_session/folding","ace/edit_session/bracket_match"], function(require, exports, module){"use strict";
+ace.define("ace/edit_session",["require","exports","module","ace/lib/oop","ace/lib/lang","ace/bidihandler","ace/config","ace/lib/event_emitter","ace/selection","ace/mode/text","ace/range","ace/document","ace/background_tokenizer","ace/search_highlight","ace/undomanager","ace/edit_session/folding","ace/edit_session/bracket_match"], function(require, exports, module){"use strict";
 var oop = require("./lib/oop");
 var lang = require("./lib/lang");
 var BidiHandler = require("./bidihandler").BidiHandler;
@@ -26983,8 +27552,9 @@ var Range = require("./range").Range;
 var Document = require("./document").Document;
 var BackgroundTokenizer = require("./background_tokenizer").BackgroundTokenizer;
 var SearchHighlight = require("./search_highlight").SearchHighlight;
+var UndoManager = require("./undomanager").UndoManager;
 var EditSession = /** @class */ (function () {
-    function EditSession(text, mode) {
+    function EditSession(text, mode) { this.doc;
         this.$breakpoints = [];
         this.$decorations = [];
         this.$frontMarkers = {};
@@ -27004,7 +27574,7 @@ var EditSession = /** @class */ (function () {
         this.on("changeFold", this.onChangeFold.bind(this));
         this.$onChange = this.onChange.bind(this);
         if (typeof text != "object" || !text.getLine)
-            text = new Document(text);
+            text = new Document(/**@type{string}*/ (text));
         this.setDocument(text);
         this.selection = new Selection(this);
         this.$bidiHandler = new BidiHandler(this);
@@ -27090,6 +27660,42 @@ var EditSession = /** @class */ (function () {
         this.$resetRowCache(0);
         this.setUndoManager(this.$undoManager);
         this.getUndoManager().reset();
+    };
+    EditSession.fromJSON = function (session) {
+        if (typeof session == "string")
+            session = JSON.parse(session);
+        var undoManager = new UndoManager();
+        undoManager.$undoStack = session.history.undo;
+        undoManager.$redoStack = session.history.redo;
+        undoManager.mark = session.history.mark;
+        undoManager.$rev = session.history.rev;
+        var editSession = new EditSession(session.value);
+        session.folds.forEach(function (fold) {
+            editSession.addFold("...", Range.fromPoints(fold.start, fold.end));
+        });
+        editSession.setAnnotations(session.annotations);
+        editSession.setBreakpoints(session.breakpoints);
+        editSession.setMode(session.mode);
+        editSession.setScrollLeft(session.scrollLeft);
+        editSession.setScrollTop(session.scrollTop);
+        editSession.setUndoManager(undoManager);
+        editSession.selection.fromJSON(session.selection);
+        return editSession;
+    };
+    EditSession.prototype.toJSON = function () {
+        return {
+            annotations: this.$annotations,
+            breakpoints: this.$breakpoints,
+            folds: this.getAllFolds().map(function (fold) {
+                return fold.range;
+            }),
+            history: this.getUndoManager(),
+            mode: this.$mode.$id,
+            scrollLeft: this.$scrollLeft,
+            scrollTop: this.$scrollTop,
+            selection: this.selection.toJSON(),
+            value: this.doc.getValue()
+        };
     };
     EditSession.prototype.toString = function () {
         return this.doc.getValue();
@@ -27362,7 +27968,7 @@ var EditSession = /** @class */ (function () {
             var path = options.path;
         }
         else {
-            path = mode || "ace/mode/text";
+            path = /**@type{string}*/ (mode) || "ace/mode/text";
         }
         if (!this.$modes["ace/mode/text"])
             this.$modes["ace/mode/text"] = new TextMode();
@@ -27908,7 +28514,7 @@ var EditSession = /** @class */ (function () {
             this.$updateRowLengthCache(firstRow, lastRow);
         return removedFolds;
     };
-    EditSession.prototype.$updateRowLengthCache = function (firstRow, lastRow, b) {
+    EditSession.prototype.$updateRowLengthCache = function (firstRow, lastRow) {
         this.$rowLengthCache[firstRow] = null;
         this.$rowLengthCache[lastRow] = null;
     };
@@ -28240,9 +28846,9 @@ var EditSession = /** @class */ (function () {
     };
     EditSession.prototype.documentToScreenPosition = function (docRow, docColumn) {
         if (typeof docColumn === "undefined")
-            var pos = this.$clipPositionToDocument(docRow.row, docRow.column);
+            var pos = this.$clipPositionToDocument(/**@type{Point}*/ (docRow).row, /**@type{Point}*/ (docRow).column);
         else
-            pos = this.$clipPositionToDocument(docRow, docColumn);
+            pos = this.$clipPositionToDocument(/**@type{number}*/ (docRow), docColumn);
         docRow = pos.row;
         docColumn = pos.column;
         var screenRow = 0;
@@ -28594,8 +29200,8 @@ var Search = /** @class */ (function () {
         var firstRange = null;
         iterator.forEach(function (sr, sc, er, ec) {
             firstRange = new Range(sr, sc, er, ec);
-            if (sc == ec && options.start && options.start.start
-                && options.skipCurrent != false && firstRange.isEqual(options.start)) {
+            if (sc == ec && options.start && /**@type{Range}*/ (options.start).start
+                && options.skipCurrent != false && firstRange.isEqual(/**@type{Range}*/ (options.start))) {
                 firstRange = null;
                 return false;
             }
@@ -28693,9 +29299,17 @@ var Search = /** @class */ (function () {
             return options.re = false;
         if (!options.regExp)
             needle = lang.escapeRegExp(needle);
+        var modifier = options.caseSensitive ? "gm" : "gmi";
+        try {
+            new RegExp(needle, "u");
+            options.$supportsUnicodeFlag = true;
+            modifier += "u";
+        }
+        catch (e) {
+            options.$supportsUnicodeFlag = false; //left for backward compatibility with previous versions for cases like /ab\{2}/gu
+        }
         if (options.wholeWord)
             needle = addWordBoundary(needle, options);
-        var modifier = options.caseSensitive ? "gm" : "gmi";
         options.$isMultiLine = !$disableFakeMultiline && /[\n\r]/.test(needle);
         if (options.$isMultiLine)
             return options.re = this.$assembleMultilineRegExp(needle, modifier);
@@ -28725,6 +29339,7 @@ var Search = /** @class */ (function () {
             return false;
         var backwards = options.backwards == true;
         var skipCurrent = options.skipCurrent != false;
+        var supportsUnicodeFlag = re.unicode;
         var range = options.range;
         var start = options.start;
         if (!start)
@@ -28797,7 +29412,7 @@ var Search = /** @class */ (function () {
                     if (!length) {
                         if (last >= line.length)
                             break;
-                        re.lastIndex = last += 1;
+                        re.lastIndex = last += lang.skipEmptyMatch(line, last, supportsUnicodeFlag);
                     }
                     if (m.index + length > endIndex)
                         break;
@@ -28823,7 +29438,7 @@ var Search = /** @class */ (function () {
                     if (callback(row, last, row, last + length))
                         return true;
                     if (!length) {
-                        re.lastIndex = last += 1;
+                        re.lastIndex = last += lang.skipEmptyMatch(line, last, supportsUnicodeFlag);
                         if (last >= line.length)
                             return false;
                     }
@@ -28835,43 +29450,66 @@ var Search = /** @class */ (function () {
     return Search;
 }());
 function addWordBoundary(needle, options) {
-    function wordBoundary(c) {
-        if (/\w/.test(c) || options.regExp)
+    var supportsLookbehind = lang.supportsLookbehind();
+    function wordBoundary(c, firstChar) {
+        if (firstChar === void 0) { firstChar = true; }
+        var wordRegExp = supportsLookbehind && options.$supportsUnicodeFlag ? new RegExp("[\\p{L}\\p{N}_]", "u") : new RegExp("\\w");
+        if (wordRegExp.test(c) || options.regExp) {
+            if (supportsLookbehind && options.$supportsUnicodeFlag) {
+                if (firstChar)
+                    return "(?<=^|[^\\p{L}\\p{N}_])";
+                return "(?=[^\\p{L}\\p{N}_]|$)";
+            }
             return "\\b";
+        }
         return "";
     }
-    return wordBoundary(needle[0]) + needle
-        + wordBoundary(needle[needle.length - 1]);
+    var needleArray = Array.from(needle);
+    var firstChar = needleArray[0];
+    var lastChar = needleArray[needleArray.length - 1];
+    return wordBoundary(firstChar) + needle + wordBoundary(lastChar, false);
 }
 exports.Search = Search;
 
 });
 
 ace.define("ace/keyboard/hash_handler",["require","exports","module","ace/lib/keys","ace/lib/useragent"], function(require, exports, module){"use strict";
-var keyUtil = require("../lib/keys");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})(); var keyUtil = require("../lib/keys");
 var useragent = require("../lib/useragent");
 var KEY_MODS = keyUtil.KEY_MODS;
-function HashHandler(config, platform) {
-    this.platform = platform || (useragent.isMac ? "mac" : "win");
-    this.commands = {};
-    this.commandKeyBinding = {};
-    this.addCommands(config);
-    this.$singleCommand = true;
-}
-function MultiHashHandler(config, platform) {
-    HashHandler.call(this, config, platform);
-    this.$singleCommand = false;
-}
-MultiHashHandler.prototype = HashHandler.prototype;
-(function () {
-    this.addCommand = function (command) {
+var MultiHashHandler = /** @class */ (function () {
+    function MultiHashHandler(config, platform) {
+        this.$init(config, platform, false);
+    }
+    MultiHashHandler.prototype.$init = function (config, platform, $singleCommand) {
+        this.platform = platform || (useragent.isMac ? "mac" : "win");
+        this.commands = {};
+        this.commandKeyBinding = {};
+        this.addCommands(config);
+        this.$singleCommand = $singleCommand;
+    };
+    MultiHashHandler.prototype.addCommand = function (command) {
         if (this.commands[command.name])
             this.removeCommand(command);
         this.commands[command.name] = command;
         if (command.bindKey)
             this._buildKeyHash(command);
     };
-    this.removeCommand = function (command, keepCommand) {
+    MultiHashHandler.prototype.removeCommand = function (command, keepCommand) {
         var name = command && (typeof command === 'string' ? command : command.name);
         command = this.commands[name];
         if (!keepCommand)
@@ -28892,7 +29530,7 @@ MultiHashHandler.prototype = HashHandler.prototype;
             }
         }
     };
-    this.bindKey = function (key, command, position) {
+    MultiHashHandler.prototype.bindKey = function (key, command, position) {
         if (typeof key == "object" && key) {
             if (position == undefined)
                 position = key.position;
@@ -28901,8 +29539,7 @@ MultiHashHandler.prototype = HashHandler.prototype;
         if (!key)
             return;
         if (typeof command == "function")
-            return this.addCommand({ exec: command, bindKey: key, name: command.name || key });
-        key.split("|").forEach(function (keyPart) {
+            return this.addCommand({ exec: command, bindKey: key, name: command.name || /**@type{string}*/ (key) }); (key).split("|").forEach(function (keyPart) {
             var chain = "";
             if (keyPart.indexOf(" ") != -1) {
                 var parts = keyPart.split(/\s+/);
@@ -28920,12 +29557,7 @@ MultiHashHandler.prototype = HashHandler.prototype;
             this._addCommandToBinding(chain + id, command, position);
         }, this);
     };
-    function getPosition(command) {
-        return typeof command == "object" && command.bindKey
-            && command.bindKey.position
-            || (command.isDefault ? -100 : 0);
-    }
-    this._addCommandToBinding = function (keyId, command, position) {
+    MultiHashHandler.prototype._addCommandToBinding = function (keyId, command, position) {
         var ckb = this.commandKeyBinding, i;
         if (!command) {
             delete ckb[keyId];
@@ -28953,7 +29585,7 @@ MultiHashHandler.prototype = HashHandler.prototype;
             commands.splice(i, 0, command);
         }
     };
-    this.addCommands = function (commands) {
+    MultiHashHandler.prototype.addCommands = function (commands) {
         commands && Object.keys(commands).forEach(function (name) {
             var command = commands[name];
             if (!command)
@@ -28969,20 +29601,20 @@ MultiHashHandler.prototype = HashHandler.prototype;
             this.addCommand(command);
         }, this);
     };
-    this.removeCommands = function (commands) {
+    MultiHashHandler.prototype.removeCommands = function (commands) {
         Object.keys(commands).forEach(function (name) {
             this.removeCommand(commands[name]);
         }, this);
     };
-    this.bindKeys = function (keyList) {
+    MultiHashHandler.prototype.bindKeys = function (keyList) {
         Object.keys(keyList).forEach(function (key) {
             this.bindKey(key, keyList[key]);
         }, this);
     };
-    this._buildKeyHash = function (command) {
+    MultiHashHandler.prototype._buildKeyHash = function (command) {
         this.bindKey(command.bindKey, command);
     };
-    this.parseKeys = function (keys) {
+    MultiHashHandler.prototype.parseKeys = function (keys) {
         var parts = keys.toLowerCase().split(/[\-\+]([\-\+])?/).filter(function (x) { return x; });
         var key = parts.pop();
         var keyCode = keyUtil[key];
@@ -29004,11 +29636,11 @@ MultiHashHandler.prototype = HashHandler.prototype;
         }
         return { key: key, hashId: hashId };
     };
-    this.findKeyCommand = function findKeyCommand(hashId, keyString) {
+    MultiHashHandler.prototype.findKeyCommand = function (hashId, keyString) {
         var key = KEY_MODS[hashId] + keyString;
         return this.commandKeyBinding[key];
     };
-    this.handleKeyboard = function (data, hashId, keyString, keyCode) {
+    MultiHashHandler.prototype.handleKeyboard = function (data, hashId, keyString, keyCode) {
         if (keyCode < 0)
             return;
         var key = KEY_MODS[hashId] + keyString;
@@ -29031,10 +29663,31 @@ MultiHashHandler.prototype = HashHandler.prototype;
         }
         return { command: command };
     };
-    this.getStatusText = function (editor, data) {
+    MultiHashHandler.prototype.getStatusText = function (editor, data) {
         return data.$keyChain || "";
     };
-}).call(HashHandler.prototype);
+    return MultiHashHandler;
+}());
+function getPosition(command) {
+    return typeof command == "object" && command.bindKey
+        && command.bindKey.position
+        || (command.isDefault ? -100 : 0);
+}
+var HashHandler = /** @class */ (function (_super) {
+    __extends(HashHandler, _super);
+    function HashHandler(config, platform) {
+        var _this = _super.call(this, config, platform) || this;
+        _this.$singleCommand = true;
+        return _this;
+    }
+    return HashHandler;
+}(MultiHashHandler));
+HashHandler.call = function (thisArg, config, platform) {
+    MultiHashHandler.prototype.$init.call(thisArg, config, platform, true);
+};
+MultiHashHandler.call = function (thisArg, config, platform) {
+    MultiHashHandler.prototype.$init.call(thisArg, config, platform, false);
+};
 exports.HashHandler = HashHandler;
 exports.MultiHashHandler = MultiHashHandler;
 
@@ -29978,6 +30631,13 @@ exports.commands = [{
         scrollIntoView: "cursor"
     }, {
         name: "openCommandPallete",
+        exec: function (editor) {
+            console.warn("This is an obsolete command. Please use `openCommandPalette` instead.");
+            editor.prompt({ $type: "commands" });
+        },
+        readOnly: true
+    }, {
+        name: "openCommandPalette",
         description: "Open command palette",
         bindKey: bindKey("F1", "F1"),
         exec: function (editor) {
@@ -30029,11 +30689,11 @@ var LineWidgets = /** @class */ (function () {
             h = this.lineWidgets[row] && this.lineWidgets[row].rowCount || 0;
         else
             h = 0;
-        if (!this.$useWrapMode || !this.$wrapData[row]) {
+        if (!this["$useWrapMode"] || !this["$wrapData"][row]) {
             return 1 + h;
         }
         else {
-            return this.$wrapData[row].length + 1 + h;
+            return this["$wrapData"][row].length + 1 + h;
         }
     };
     LineWidgets.prototype.$getWidgetScreenLength = function () {
@@ -30183,11 +30843,11 @@ var LineWidgets = /** @class */ (function () {
                 dom.addCssClass(w.el, w.className);
             }
             w.el.style.position = "absolute";
-            w.el.style.zIndex = 5;
+            w.el.style.zIndex = "5";
             renderer.container.appendChild(w.el);
             w._inDocument = true;
             if (!w.coverGutter) {
-                w.el.style.zIndex = 3;
+                w.el.style.zIndex = "3";
             }
             if (w.pixelHeight == null) {
                 w.pixelHeight = w.el.offsetHeight;
@@ -30372,7 +31032,7 @@ var GutterKeyboardHandler = /** @class */ (function () {
         if (this.annotationTooltip.isOpen) {
             e.preventDefault();
             if (e.keyCode === keys["escape"])
-                this.annotationTooltip.hide();
+                this.annotationTooltip.hideTooltip();
             return;
         }
         if (e.target === this.element) {
@@ -30383,7 +31043,8 @@ var GutterKeyboardHandler = /** @class */ (function () {
             var row = this.editor.getCursorPosition().row;
             if (!this.editor.isRowVisible(row))
                 this.editor.scrollToLine(row, true, true);
-            setTimeout(function () {
+            setTimeout(
+            function () {
                 var index = this.$rowToRowIndex(this.gutterLayer.$cursorCell.row);
                 var nearestFoldIndex = this.$findNearestFoldWidget(index);
                 var nearestAnnotationIndex = this.$findNearestAnnotation(index);
@@ -30416,6 +31077,12 @@ var GutterKeyboardHandler = /** @class */ (function () {
             }.bind(this), 10);
             return;
         }
+        this.$handleGutterKeyboardInteraction(e);
+        setTimeout(function () {
+            this.editor._signal("gutterkeydown", new GutterKeyboardEvent(e, this));
+        }.bind(this), 10);
+    };
+    GutterKeyboardHandler.prototype.$handleGutterKeyboardInteraction = function (e) {
         if (e.keyCode === keys["tab"]) {
             e.preventDefault();
             return;
@@ -30454,10 +31121,12 @@ var GutterKeyboardHandler = /** @class */ (function () {
         if (e.keyCode === keys["left"]) {
             e.preventDefault();
             this.$switchLane("annotation");
+            return;
         }
         if (e.keyCode === keys["right"]) {
             e.preventDefault();
             this.$switchLane("fold");
+            return;
         }
         if (e.keyCode === keys["enter"] || e.keyCode === keys["space"]) {
             e.preventDefault();
@@ -30466,7 +31135,8 @@ var GutterKeyboardHandler = /** @class */ (function () {
                     if (this.gutterLayer.session.foldWidgets[this.$rowIndexToRow(this.activeRowIndex)] === 'start') {
                         var rowFoldingWidget = this.$rowIndexToRow(this.activeRowIndex);
                         this.editor.session.onFoldWidgetClick(this.$rowIndexToRow(this.activeRowIndex), e);
-                        setTimeout(function () {
+                        setTimeout(
+                        function () {
                             if (this.$rowIndexToRow(this.activeRowIndex) !== rowFoldingWidget) {
                                 this.$blurFoldWidget(this.activeRowIndex);
                                 this.activeRowIndex = this.$rowToRowIndex(rowFoldingWidget);
@@ -30503,7 +31173,7 @@ var GutterKeyboardHandler = /** @class */ (function () {
             }
         }
         if (this.annotationTooltip.isOpen)
-            this.annotationTooltip.hide();
+            this.annotationTooltip.hideTooltip();
         return;
     };
     GutterKeyboardHandler.prototype.$isFoldWidgetVisible = function (index) {
@@ -30564,7 +31234,6 @@ var GutterKeyboardHandler = /** @class */ (function () {
             return;
         var annotation = this.$getAnnotation(index);
         annotation.classList.add(this.editor.renderer.keyboardFocusClassName);
-        annotation.setAttribute("role", "button");
         annotation.focus();
     };
     GutterKeyboardHandler.prototype.$blurFoldWidget = function (index) {
@@ -30575,7 +31244,6 @@ var GutterKeyboardHandler = /** @class */ (function () {
     GutterKeyboardHandler.prototype.$blurAnnotation = function (index) {
         var annotation = this.$getAnnotation(index);
         annotation.classList.remove(this.editor.renderer.keyboardFocusClassName);
-        annotation.removeAttribute("role");
         annotation.blur();
     };
     GutterKeyboardHandler.prototype.$moveFoldWidgetUp = function () {
@@ -30678,6 +31346,26 @@ var GutterKeyboardHandler = /** @class */ (function () {
     return GutterKeyboardHandler;
 }());
 exports.GutterKeyboardHandler = GutterKeyboardHandler;
+var GutterKeyboardEvent = /** @class */ (function () {
+    function GutterKeyboardEvent(domEvent, gutterKeyboardHandler) {
+        this.gutterKeyboardHandler = gutterKeyboardHandler;
+        this.domEvent = domEvent;
+    }
+    GutterKeyboardEvent.prototype.getKey = function () {
+        return keys.keyCodeToString(this.domEvent.keyCode);
+    };
+    GutterKeyboardEvent.prototype.getRow = function () {
+        return this.gutterKeyboardHandler.$rowIndexToRow(this.gutterKeyboardHandler.activeRowIndex);
+    };
+    GutterKeyboardEvent.prototype.isInAnnotationLane = function () {
+        return this.gutterKeyboardHandler.activeLane === "annotation";
+    };
+    GutterKeyboardEvent.prototype.isInFoldLane = function () {
+        return this.gutterKeyboardHandler.activeLane === "fold";
+    };
+    return GutterKeyboardEvent;
+}());
+exports.GutterKeyboardEvent = GutterKeyboardEvent;
 
 });
 
@@ -30715,7 +31403,7 @@ var nls = require("./config").nls;
 var clipboard = require("./clipboard");
 var keys = require('./lib/keys');
 var Editor = /** @class */ (function () {
-    function Editor(renderer, session, options) {
+    function Editor(renderer, session, options) { this.session;
         this.$toDestroy = [];
         var container = renderer.getContainerElement();
         this.container = container;
@@ -31298,7 +31986,7 @@ var Editor = /** @class */ (function () {
             this.clearSelection();
         }
         else if (this.session.getOverwrite() && text.indexOf("\n") == -1) {
-            var range = new Range.fromPoints(cursor, cursor);
+            var range = Range.fromPoints(cursor, cursor);
             range.end.column += text.length;
             this.session.remove(range);
         }
@@ -31864,7 +32552,7 @@ var Editor = /** @class */ (function () {
         }
         else {
             var point = reverse ? range.start : range.end;
-            var endPoint = doc.insert(point, doc.getTextRange(range), false);
+            var endPoint = doc.insert(point, doc.getTextRange(range));
             range.start = point;
             range.end = endPoint;
             sel.setSelectionRange(range, reverse);
@@ -32547,14 +33235,15 @@ config.defineOptions(Editor.prototype, "editor", {
         set: function (message) {
             if (!this.$updatePlaceholder) {
                 this.$updatePlaceholder = function () {
-                    var value = this.session && (this.renderer.$composition || this.getValue());
-                    if (value && this.renderer.placeholderNode) {
+                    var hasValue = this.session && (this.renderer.$composition ||
+                        this.session.getLength() > 1 || this.session.getLine(0).length > 0);
+                    if (hasValue && this.renderer.placeholderNode) {
                         this.renderer.off("afterRender", this.$updatePlaceholder);
                         dom.removeCssClass(this.container, "ace_hasPlaceholder");
                         this.renderer.placeholderNode.remove();
                         this.renderer.placeholderNode = null;
                     }
-                    else if (!value && !this.renderer.placeholderNode) {
+                    else if (!hasValue && !this.renderer.placeholderNode) {
                         this.renderer.on("afterRender", this.$updatePlaceholder);
                         dom.addCssClass(this.container, "ace_hasPlaceholder");
                         var el = dom.createElement("div");
@@ -32563,7 +33252,7 @@ config.defineOptions(Editor.prototype, "editor", {
                         this.renderer.placeholderNode = el;
                         this.renderer.content.appendChild(this.renderer.placeholderNode);
                     }
-                    else if (!value && this.renderer.placeholderNode) {
+                    else if (!hasValue && this.renderer.placeholderNode) {
                         this.renderer.placeholderNode.textContent = this.$placeholder || "";
                     }
                 }.bind(this);
@@ -32598,6 +33287,7 @@ config.defineOptions(Editor.prototype, "editor", {
                 this.renderer.enableKeyboardAccessibility = true;
                 this.renderer.keyboardFocusClassName = "ace_keyboard-focus";
                 this.textInput.getElement().setAttribute("tabindex", -1);
+                this.textInput.setNumberOfExtraLines(useragent.isWin ? 3 : 0);
                 this.renderer.scroller.setAttribute("tabindex", 0);
                 this.renderer.scroller.setAttribute("role", "group");
                 this.renderer.scroller.setAttribute("aria-roledescription", nls("editor"));
@@ -32619,6 +33309,7 @@ config.defineOptions(Editor.prototype, "editor", {
             else {
                 this.renderer.enableKeyboardAccessibility = false;
                 this.textInput.getElement().setAttribute("tabindex", 0);
+                this.textInput.setNumberOfExtraLines(0);
                 this.renderer.scroller.setAttribute("tabindex", -1);
                 this.renderer.scroller.removeAttribute("role");
                 this.renderer.scroller.removeAttribute("aria-roledescription");
@@ -32684,21 +33375,21 @@ config.defineOptions(Editor.prototype, "editor", {
     mode: "session"
 });
 var relativeNumberRenderer = {
-    getText: function (session, row) {
+    getText: function (/**@type{EditSession}*/ session, /**@type{number}*/ row) {
         return (Math.abs(session.selection.lead.row - row) || (row + 1 + (row < 9 ? "\xb7" : ""))) + "";
     },
-    getWidth: function (session, lastLineNumber, config) {
+    getWidth: function (session, /**@type{number}*/ lastLineNumber, config) {
         return Math.max(lastLineNumber.toString().length, (config.lastRow + 1).toString().length, 2) * config.characterWidth;
     },
-    update: function (e, editor) {
+    update: function (e, /**@type{Editor}*/ editor) {
         editor.renderer.$loop.schedule(editor.renderer.CHANGE_GUTTER);
     },
-    attach: function (editor) {
+    attach: function (/**@type{Editor}*/ editor) {
         editor.renderer.$gutterLayer.$renderer = this;
         editor.on("changeSelection", this.update);
         this.update(null, editor);
     },
-    detach: function (editor) {
+    detach: function (/**@type{Editor}*/ editor) {
         if (editor.renderer.$gutterLayer.$renderer == this)
             editor.renderer.$gutterLayer.$renderer = null;
         editor.off("changeSelection", this.update);
@@ -32706,479 +33397,6 @@ var relativeNumberRenderer = {
     }
 };
 exports.Editor = Editor;
-
-});
-
-ace.define("ace/undomanager",["require","exports","module","ace/range"], function(require, exports, module){"use strict";
-var UndoManager = /** @class */ (function () {
-    function UndoManager() {
-        this.$maxRev = 0;
-        this.$fromUndo = false;
-        this.$undoDepth = Infinity;
-        this.reset();
-    }
-    UndoManager.prototype.addSession = function (session) {
-        this.$session = session;
-    };
-    UndoManager.prototype.add = function (delta, allowMerge, session) {
-        if (this.$fromUndo)
-            return;
-        if (delta == this.$lastDelta)
-            return;
-        if (!this.$keepRedoStack)
-            this.$redoStack.length = 0;
-        if (allowMerge === false || !this.lastDeltas) {
-            this.lastDeltas = [];
-            var undoStackLength = this.$undoStack.length;
-            if (undoStackLength > this.$undoDepth - 1) {
-                this.$undoStack.splice(0, undoStackLength - this.$undoDepth + 1);
-            }
-            this.$undoStack.push(this.lastDeltas);
-            delta.id = this.$rev = ++this.$maxRev;
-        }
-        if (delta.action == "remove" || delta.action == "insert")
-            this.$lastDelta = delta;
-        this.lastDeltas.push(delta);
-    };
-    UndoManager.prototype.addSelection = function (selection, rev) {
-        this.selections.push({
-            value: selection,
-            rev: rev || this.$rev
-        });
-    };
-    UndoManager.prototype.startNewGroup = function () {
-        this.lastDeltas = null;
-        return this.$rev;
-    };
-    UndoManager.prototype.markIgnored = function (from, to) {
-        if (to == null)
-            to = this.$rev + 1;
-        var stack = this.$undoStack;
-        for (var i = stack.length; i--;) {
-            var delta = stack[i][0];
-            if (delta.id <= from)
-                break;
-            if (delta.id < to)
-                delta.ignore = true;
-        }
-        this.lastDeltas = null;
-    };
-    UndoManager.prototype.getSelection = function (rev, after) {
-        var stack = this.selections;
-        for (var i = stack.length; i--;) {
-            var selection = stack[i];
-            if (selection.rev < rev) {
-                if (after)
-                    selection = stack[i + 1];
-                return selection;
-            }
-        }
-    };
-    UndoManager.prototype.getRevision = function () {
-        return this.$rev;
-    };
-    UndoManager.prototype.getDeltas = function (from, to) {
-        if (to == null)
-            to = this.$rev + 1;
-        var stack = this.$undoStack;
-        var end = null, start = 0;
-        for (var i = stack.length; i--;) {
-            var delta = stack[i][0];
-            if (delta.id < to && !end)
-                end = i + 1;
-            if (delta.id <= from) {
-                start = i + 1;
-                break;
-            }
-        }
-        return stack.slice(start, end);
-    };
-    UndoManager.prototype.getChangedRanges = function (from, to) {
-        if (to == null)
-            to = this.$rev + 1;
-    };
-    UndoManager.prototype.getChangedLines = function (from, to) {
-        if (to == null)
-            to = this.$rev + 1;
-    };
-    UndoManager.prototype.undo = function (session, dontSelect) {
-        this.lastDeltas = null;
-        var stack = this.$undoStack;
-        if (!rearrangeUndoStack(stack, stack.length))
-            return;
-        if (!session)
-            session = this.$session;
-        if (this.$redoStackBaseRev !== this.$rev && this.$redoStack.length)
-            this.$redoStack = [];
-        this.$fromUndo = true;
-        var deltaSet = stack.pop();
-        var undoSelectionRange = null;
-        if (deltaSet) {
-            undoSelectionRange = session.undoChanges(deltaSet, dontSelect);
-            this.$redoStack.push(deltaSet);
-            this.$syncRev();
-        }
-        this.$fromUndo = false;
-        return undoSelectionRange;
-    };
-    UndoManager.prototype.redo = function (session, dontSelect) {
-        this.lastDeltas = null;
-        if (!session)
-            session = this.$session;
-        this.$fromUndo = true;
-        if (this.$redoStackBaseRev != this.$rev) {
-            var diff = this.getDeltas(this.$redoStackBaseRev, this.$rev + 1);
-            rebaseRedoStack(this.$redoStack, diff);
-            this.$redoStackBaseRev = this.$rev;
-            this.$redoStack.forEach(function (x) {
-                x[0].id = ++this.$maxRev;
-            }, this);
-        }
-        var deltaSet = this.$redoStack.pop();
-        var redoSelectionRange = null;
-        if (deltaSet) {
-            redoSelectionRange = session.redoChanges(deltaSet, dontSelect);
-            this.$undoStack.push(deltaSet);
-            this.$syncRev();
-        }
-        this.$fromUndo = false;
-        return redoSelectionRange;
-    };
-    UndoManager.prototype.$syncRev = function () {
-        var stack = this.$undoStack;
-        var nextDelta = stack[stack.length - 1];
-        var id = nextDelta && nextDelta[0].id || 0;
-        this.$redoStackBaseRev = id;
-        this.$rev = id;
-    };
-    UndoManager.prototype.reset = function () {
-        this.lastDeltas = null;
-        this.$lastDelta = null;
-        this.$undoStack = [];
-        this.$redoStack = [];
-        this.$rev = 0;
-        this.mark = 0;
-        this.$redoStackBaseRev = this.$rev;
-        this.selections = [];
-    };
-    UndoManager.prototype.canUndo = function () {
-        return this.$undoStack.length > 0;
-    };
-    UndoManager.prototype.canRedo = function () {
-        return this.$redoStack.length > 0;
-    };
-    UndoManager.prototype.bookmark = function (rev) {
-        if (rev == undefined)
-            rev = this.$rev;
-        this.mark = rev;
-    };
-    UndoManager.prototype.isAtBookmark = function () {
-        return this.$rev === this.mark;
-    };
-    UndoManager.prototype.toJSON = function () {
-    };
-    UndoManager.prototype.fromJSON = function () {
-    };
-    UndoManager.prototype.$prettyPrint = function (delta) {
-        if (delta)
-            return stringifyDelta(delta);
-        return stringifyDelta(this.$undoStack) + "\n---\n" + stringifyDelta(this.$redoStack);
-    };
-    return UndoManager;
-}());
-UndoManager.prototype.hasUndo = UndoManager.prototype.canUndo;
-UndoManager.prototype.hasRedo = UndoManager.prototype.canRedo;
-UndoManager.prototype.isClean = UndoManager.prototype.isAtBookmark;
-UndoManager.prototype.markClean = UndoManager.prototype.bookmark;
-function rearrangeUndoStack(stack, pos) {
-    for (var i = pos; i--;) {
-        var deltaSet = stack[i];
-        if (deltaSet && !deltaSet[0].ignore) {
-            while (i < pos - 1) {
-                var swapped = swapGroups(stack[i], stack[i + 1]);
-                stack[i] = swapped[0];
-                stack[i + 1] = swapped[1];
-                i++;
-            }
-            return true;
-        }
-    }
-}
-var Range = require("./range").Range;
-var cmp = Range.comparePoints;
-var comparePoints = Range.comparePoints;
-function $updateMarkers(delta) {
-    var isInsert = delta.action == "insert";
-    var start = delta.start;
-    var end = delta.end;
-    var rowShift = (end.row - start.row) * (isInsert ? 1 : -1);
-    var colShift = (end.column - start.column) * (isInsert ? 1 : -1);
-    if (isInsert)
-        end = start;
-    for (var i in this.marks) {
-        var point = this.marks[i];
-        var cmp = comparePoints(point, start);
-        if (cmp < 0) {
-            continue; // delta starts after the range
-        }
-        if (cmp === 0) {
-            if (isInsert) {
-                if (point.bias == 1) {
-                    cmp = 1;
-                }
-                else {
-                    point.bias == -1;
-                    continue;
-                }
-            }
-        }
-        var cmp2 = isInsert ? cmp : comparePoints(point, end);
-        if (cmp2 > 0) {
-            point.row += rowShift;
-            point.column += point.row == end.row ? colShift : 0;
-            continue;
-        }
-        if (!isInsert && cmp2 <= 0) {
-            point.row = start.row;
-            point.column = start.column;
-            if (cmp2 === 0)
-                point.bias = 1;
-        }
-    }
-}
-function clonePos(pos) {
-    return { row: pos.row, column: pos.column };
-}
-function cloneDelta(d) {
-    return {
-        start: clonePos(d.start),
-        end: clonePos(d.end),
-        action: d.action,
-        lines: d.lines.slice()
-    };
-}
-function stringifyDelta(d) {
-    d = d || this;
-    if (Array.isArray(d)) {
-        return d.map(stringifyDelta).join("\n");
-    }
-    var type = "";
-    if (d.action) {
-        type = d.action == "insert" ? "+" : "-";
-        type += "[" + d.lines + "]";
-    }
-    else if (d.value) {
-        if (Array.isArray(d.value)) {
-            type = d.value.map(stringifyRange).join("\n");
-        }
-        else {
-            type = stringifyRange(d.value);
-        }
-    }
-    if (d.start) {
-        type += stringifyRange(d);
-    }
-    if (d.id || d.rev) {
-        type += "\t(" + (d.id || d.rev) + ")";
-    }
-    return type;
-}
-function stringifyRange(r) {
-    return r.start.row + ":" + r.start.column
-        + "=>" + r.end.row + ":" + r.end.column;
-}
-function swap(d1, d2) {
-    var i1 = d1.action == "insert";
-    var i2 = d2.action == "insert";
-    if (i1 && i2) {
-        if (cmp(d2.start, d1.end) >= 0) {
-            shift(d2, d1, -1);
-        }
-        else if (cmp(d2.start, d1.start) <= 0) {
-            shift(d1, d2, +1);
-        }
-        else {
-            return null;
-        }
-    }
-    else if (i1 && !i2) {
-        if (cmp(d2.start, d1.end) >= 0) {
-            shift(d2, d1, -1);
-        }
-        else if (cmp(d2.end, d1.start) <= 0) {
-            shift(d1, d2, -1);
-        }
-        else {
-            return null;
-        }
-    }
-    else if (!i1 && i2) {
-        if (cmp(d2.start, d1.start) >= 0) {
-            shift(d2, d1, +1);
-        }
-        else if (cmp(d2.start, d1.start) <= 0) {
-            shift(d1, d2, +1);
-        }
-        else {
-            return null;
-        }
-    }
-    else if (!i1 && !i2) {
-        if (cmp(d2.start, d1.start) >= 0) {
-            shift(d2, d1, +1);
-        }
-        else if (cmp(d2.end, d1.start) <= 0) {
-            shift(d1, d2, -1);
-        }
-        else {
-            return null;
-        }
-    }
-    return [d2, d1];
-}
-function swapGroups(ds1, ds2) {
-    for (var i = ds1.length; i--;) {
-        for (var j = 0; j < ds2.length; j++) {
-            if (!swap(ds1[i], ds2[j])) {
-                while (i < ds1.length) {
-                    while (j--) {
-                        swap(ds2[j], ds1[i]);
-                    }
-                    j = ds2.length;
-                    i++;
-                }
-                return [ds1, ds2];
-            }
-        }
-    }
-    ds1.selectionBefore = ds2.selectionBefore =
-        ds1.selectionAfter = ds2.selectionAfter = null;
-    return [ds2, ds1];
-}
-function xform(d1, c1) {
-    var i1 = d1.action == "insert";
-    var i2 = c1.action == "insert";
-    if (i1 && i2) {
-        if (cmp(d1.start, c1.start) < 0) {
-            shift(c1, d1, 1);
-        }
-        else {
-            shift(d1, c1, 1);
-        }
-    }
-    else if (i1 && !i2) {
-        if (cmp(d1.start, c1.end) >= 0) {
-            shift(d1, c1, -1);
-        }
-        else if (cmp(d1.start, c1.start) <= 0) {
-            shift(c1, d1, +1);
-        }
-        else {
-            shift(d1, Range.fromPoints(c1.start, d1.start), -1);
-            shift(c1, d1, +1);
-        }
-    }
-    else if (!i1 && i2) {
-        if (cmp(c1.start, d1.end) >= 0) {
-            shift(c1, d1, -1);
-        }
-        else if (cmp(c1.start, d1.start) <= 0) {
-            shift(d1, c1, +1);
-        }
-        else {
-            shift(c1, Range.fromPoints(d1.start, c1.start), -1);
-            shift(d1, c1, +1);
-        }
-    }
-    else if (!i1 && !i2) {
-        if (cmp(c1.start, d1.end) >= 0) {
-            shift(c1, d1, -1);
-        }
-        else if (cmp(c1.end, d1.start) <= 0) {
-            shift(d1, c1, -1);
-        }
-        else {
-            var before, after;
-            if (cmp(d1.start, c1.start) < 0) {
-                before = d1;
-                d1 = splitDelta(d1, c1.start);
-            }
-            if (cmp(d1.end, c1.end) > 0) {
-                after = splitDelta(d1, c1.end);
-            }
-            shiftPos(c1.end, d1.start, d1.end, -1);
-            if (after && !before) {
-                d1.lines = after.lines;
-                d1.start = after.start;
-                d1.end = after.end;
-                after = d1;
-            }
-            return [c1, before, after].filter(Boolean);
-        }
-    }
-    return [c1, d1];
-}
-function shift(d1, d2, dir) {
-    shiftPos(d1.start, d2.start, d2.end, dir);
-    shiftPos(d1.end, d2.start, d2.end, dir);
-}
-function shiftPos(pos, start, end, dir) {
-    if (pos.row == (dir == 1 ? start : end).row) {
-        pos.column += dir * (end.column - start.column);
-    }
-    pos.row += dir * (end.row - start.row);
-}
-function splitDelta(c, pos) {
-    var lines = c.lines;
-    var end = c.end;
-    c.end = clonePos(pos);
-    var rowsBefore = c.end.row - c.start.row;
-    var otherLines = lines.splice(rowsBefore, lines.length);
-    var col = rowsBefore ? pos.column : pos.column - c.start.column;
-    lines.push(otherLines[0].substring(0, col));
-    otherLines[0] = otherLines[0].substr(col);
-    var rest = {
-        start: clonePos(pos),
-        end: end,
-        lines: otherLines,
-        action: c.action
-    };
-    return rest;
-}
-function moveDeltasByOne(redoStack, d) {
-    d = cloneDelta(d);
-    for (var j = redoStack.length; j--;) {
-        var deltaSet = redoStack[j];
-        for (var i = 0; i < deltaSet.length; i++) {
-            var x = deltaSet[i];
-            var xformed = xform(x, d);
-            d = xformed[0];
-            if (xformed.length != 2) {
-                if (xformed[2]) {
-                    deltaSet.splice(i + 1, 1, xformed[1], xformed[2]);
-                    i++;
-                }
-                else if (!xformed[1]) {
-                    deltaSet.splice(i, 1);
-                    i--;
-                }
-            }
-        }
-        if (!deltaSet.length) {
-            redoStack.splice(j, 1);
-        }
-    }
-    return redoStack;
-}
-function rebaseRedoStack(redoStack, deltaSets) {
-    for (var i = 0; i < deltaSets.length; i++) {
-        var deltas = deltaSets[i];
-        for (var j = 0; j < deltas.length; j++) {
-            moveDeltasByOne(redoStack, deltas[j]);
-        }
-    }
-}
-exports.UndoManager = UndoManager;
 
 });
 
@@ -33417,8 +33635,7 @@ var Gutter = /** @class */ (function () {
         var padding = this.$padding || this.$computePadding();
         gutterWidth += padding.left + padding.right;
         if (gutterWidth !== this.gutterWidth && !isNaN(gutterWidth)) {
-            this.gutterWidth = gutterWidth;
-            this.element.parentNode.style.width =
+            this.gutterWidth = gutterWidth; (this.element.parentNode).style.width =
                 this.element.style.width = Math.ceil(this.gutterWidth) + "px";
             this._signal("changeGutterWidth", gutterWidth);
         }
@@ -33544,18 +33761,17 @@ var Gutter = /** @class */ (function () {
             className += decorations[row];
         if (this.$annotations[row] && row !== foldStart)
             className += this.$annotations[row].className;
-        if (element.className != className)
-            element.className = className;
         if (foldWidgets) {
             var c = foldWidgets[row];
             if (c == null)
                 c = foldWidgets[row] = session.getFoldWidget(row);
         }
         if (c) {
-            var className = "ace_fold-widget ace_" + c;
-            if (c == "start" && row == foldStart && row < fold.end.row) {
-                className += " ace_closed";
-                var foldAnnotationClass;
+            var foldClass = "ace_fold-widget ace_" + c;
+            var isClosedFold = c == "start" && row == foldStart && row < fold.end.row;
+            if (isClosedFold) {
+                foldClass += " ace_closed";
+                var foldAnnotationClass = '';
                 var annotationInFold = false;
                 for (var i = row + 1; i <= fold.end.row; i++) {
                     if (!this.$annotations[i])
@@ -33571,23 +33787,31 @@ var Gutter = /** @class */ (function () {
                         continue;
                     }
                 }
-                element.className += foldAnnotationClass;
+                className += foldAnnotationClass;
             }
             else
-                className += " ace_open";
-            if (foldWidget.className != className)
-                foldWidget.className = className;
+                foldClass += " ace_open";
+            if (foldWidget.className != foldClass)
+                foldWidget.className = foldClass;
             dom.setStyle(foldWidget.style, "height", lineHeight);
             dom.setStyle(foldWidget.style, "display", "inline-block");
             foldWidget.setAttribute("role", "button");
             foldWidget.setAttribute("tabindex", "-1");
-            var fold = session.getFoldLine(rowText - 1);
-            if (fold) {
-                foldWidget.setAttribute("aria-label", nls("Unfold rows $0 to $1", [rowText, fold.end.row + 1]));
+            var foldRange = session.getFoldWidgetRange(row);
+            if (foldRange)
+                foldWidget.setAttribute("aria-label", nls("Toggle code folding, rows $0 through $1", [foldRange.start.row + 1, foldRange.end.row + 1]));
+            else {
+                if (fold)
+                    foldWidget.setAttribute("aria-label", nls("Toggle code folding, rows $0 through $1", [fold.start.row + 1, fold.end.row + 1]));
+                else
+                    foldWidget.setAttribute("aria-label", nls("Toggle code folding, row $0", [row + 1]));
+            }
+            if (isClosedFold) {
+                foldWidget.setAttribute("aria-expanded", "false");
                 foldWidget.setAttribute("title", nls("Unfold code"));
             }
             else {
-                foldWidget.setAttribute("aria-label", nls("Fold at row $0", [rowText]));
+                foldWidget.setAttribute("aria-expanded", "true");
                 foldWidget.setAttribute("title", nls("Fold code"));
             }
         }
@@ -33608,6 +33832,7 @@ var Gutter = /** @class */ (function () {
             dom.setStyle(annotationNode.style, "height", lineHeight);
             annotationNode.setAttribute("aria-label", nls("Read annotations row $0", [rowText]));
             annotationNode.setAttribute("tabindex", "-1");
+            annotationNode.setAttribute("role", "button");
         }
         else if (this.$annotations[row]) {
             annotationNode.className = "ace_gutter_annotation";
@@ -33621,15 +33846,19 @@ var Gutter = /** @class */ (function () {
             dom.setStyle(annotationNode.style, "height", lineHeight);
             annotationNode.setAttribute("aria-label", nls("Read annotations row $0", [rowText]));
             annotationNode.setAttribute("tabindex", "-1");
+            annotationNode.setAttribute("role", "button");
         }
         else {
             dom.setStyle(annotationNode.style, "display", "none");
             annotationNode.removeAttribute("aria-label");
+            annotationNode.removeAttribute("role");
             annotationNode.setAttribute("tabindex", "0");
         }
         if (rowText !== textNode.data) {
             textNode.data = rowText;
         }
+        if (element.className != className)
+            element.className = className;
         dom.setStyle(cell.element.style, "height", this.$lines.computeLineHeight(row, config, session) + "px");
         dom.setStyle(cell.element.style, "top", this.$lines.computeLineTop(row, config, session) + "px");
         cell.text = rowText;
@@ -33665,7 +33894,7 @@ var Gutter = /** @class */ (function () {
     Gutter.prototype.$computePadding = function () {
         if (!this.element.firstChild)
             return { left: 0, right: 0 };
-        var style = dom.computedStyle(this.element.firstChild);
+        var style = dom.computedStyle(/**@type{Element}*/ (this.element.firstChild));
         this.$padding = {};
         this.$padding.left = (parseInt(style.borderLeftWidth) || 0)
             + (parseInt(style.paddingLeft) || 0) + 1;
@@ -33887,12 +34116,22 @@ exports.Marker = Marker;
 
 });
 
-ace.define("ace/layer/text",["require","exports","module","ace/lib/oop","ace/lib/dom","ace/lib/lang","ace/layer/lines","ace/lib/event_emitter"], function(require, exports, module){"use strict";
+ace.define("ace/layer/text_util",["require","exports","module"], function(require, exports, module){// Tokens for which Ace just uses a simple TextNode and does not add any special className.
+var textTokens = new Set(["text", "rparen", "lparen"]);
+exports.isTextToken = function (tokenType) {
+    return textTokens.has(tokenType);
+};
+
+});
+
+ace.define("ace/layer/text",["require","exports","module","ace/lib/oop","ace/lib/dom","ace/lib/lang","ace/layer/lines","ace/lib/event_emitter","ace/config","ace/layer/text_util"], function(require, exports, module){"use strict";
 var oop = require("../lib/oop");
 var dom = require("../lib/dom");
 var lang = require("../lib/lang");
 var Lines = require("./lines").Lines;
 var EventEmitter = require("../lib/event_emitter").EventEmitter;
+var nls = require("../config").nls;
+var isTextToken = require("./text_util").isTextToken;
 var Text = /** @class */ (function () {
     function Text(parentEl) {
         this.dom = dom;
@@ -33923,7 +34162,8 @@ var Text = /** @class */ (function () {
     };
     Text.prototype.$setFontMetrics = function (measure) {
         this.$fontMetrics = measure;
-        this.$fontMetrics.on("changeCharacterSize", function (e) {
+        this.$fontMetrics.on("changeCharacterSize", 
+        function (e) {
             this._signal("changeCharacterSize", e);
         }.bind(this));
         this.$pollSizeChanges();
@@ -33969,8 +34209,7 @@ var Text = /** @class */ (function () {
     };
     Text.prototype.$computeTabString = function () {
         var tabSize = this.session.getTabSize();
-        this.tabSize = tabSize;
-        var tabStr = this.$tabStrings = [0];
+        this.tabSize = tabSize; var tabStr = this.$tabStrings = [0];
         for (var i = 1; i < tabSize + 1; i++) {
             if (this.showTabs) {
                 var span = this.dom.createElement("span");
@@ -34037,8 +34276,7 @@ var Text = /** @class */ (function () {
                 foldStart = foldLine ? foldLine.start.row : Infinity;
             }
             if (row > last)
-                break;
-            var lineElement = lineElements[lineElementsIdx++];
+                break; var lineElement = lineElements[lineElementsIdx++];
             if (lineElement) {
                 this.dom.removeChildren(lineElement);
                 this.$renderLine(lineElement, row, row == foldStart ? foldLine : false);
@@ -34161,7 +34399,7 @@ var Text = /** @class */ (function () {
                     valueFragment.appendChild(span);
                 }
                 else {
-                    valueFragment.appendChild(this.com.createTextNode(simpleSpace, this.element));
+                    valueFragment.appendChild(this.dom.createTextNode(simpleSpace, this.element));
                 }
             }
             else if (controlCharacter) {
@@ -34188,12 +34426,12 @@ var Text = /** @class */ (function () {
             }
         }
         valueFragment.appendChild(this.dom.createTextNode(i ? value.slice(i) : value, this.element));
-        if (!this.$textToken[token.type]) {
+        if (!isTextToken(token.type)) {
             var classes = "ace_" + token.type.replace(/\./g, " ace_");
             var span = this.dom.createElement("span");
             if (token.type == "fold") {
                 span.style.width = (token.value.length * this.config.characterWidth) + "px";
-                span.setAttribute("title", "Unfold code");
+                span.setAttribute("title", nls("Unfold code"));
             }
             span.className = classes;
             span.appendChild(valueFragment);
@@ -34498,11 +34736,6 @@ var Text = /** @class */ (function () {
     };
     return Text;
 }());
-Text.prototype.$textToken = {
-    "text": true,
-    "rparen": true,
-    "lparen": true
-};
 Text.prototype.EOF_CHAR = "\xB6";
 Text.prototype.EOL_CHAR_LF = "\xAC";
 Text.prototype.EOL_CHAR_CRLF = "\xa4";
@@ -34637,7 +34870,7 @@ var Cursor = /** @class */ (function () {
             this.$startCssAnimation();
         }
         else {
-            var blink = function () {
+            var blink = /**@this{Cursor}*/ function () {
                 this.timeoutId = setTimeout(function () {
                     update(false);
                 }, 0.6 * this.blinkInterval);
@@ -35257,7 +35490,7 @@ var FontMetrics = /** @class */ (function () {
     FontMetrics.prototype.$getZoom = function (element) {
         if (!element || !element.parentElement)
             return 1;
-        return (window.getComputedStyle(element).zoom || 1) * this.$getZoom(element.parentElement);
+        return (window.getComputedStyle(element)["zoom"] || 1) * this.$getZoom(element.parentElement);
     };
     FontMetrics.prototype.$initTransformMeasureNodes = function () {
         var t = function (t, l) {
@@ -35313,7 +35546,7 @@ exports.FontMetrics = FontMetrics;
 
 });
 
-ace.define("ace/css/editor.css",["require","exports","module"], function(require, exports, module){/*
+ace.define("ace/css/editor-css",["require","exports","module"], function(require, exports, module){/*
 styles = []
 for (var i = 1; i < 16; i++) {
     styles.push(".ace_br" + i + "{" + (
@@ -35324,7 +35557,7 @@ for (var i = 1; i < 16; i++) {
 }
 styles.join("\\n")
 */
-module.exports = "\n.ace_br1 {border-top-left-radius    : 3px;}\n.ace_br2 {border-top-right-radius   : 3px;}\n.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}\n.ace_br4 {border-bottom-right-radius: 3px;}\n.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}\n.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}\n.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}\n.ace_br8 {border-bottom-left-radius : 3px;}\n.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}\n.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}\n.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}\n.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}\n.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}\n.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}\n.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}\n\n\n.ace_editor {\n    position: relative;\n    overflow: hidden;\n    padding: 0;\n    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Source Code Pro', 'source-code-pro', monospace;\n    direction: ltr;\n    text-align: left;\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n\n.ace_scroller {\n    position: absolute;\n    overflow: hidden;\n    top: 0;\n    bottom: 0;\n    background-color: inherit;\n    -ms-user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    user-select: none;\n    cursor: text;\n}\n\n.ace_content {\n    position: absolute;\n    box-sizing: border-box;\n    min-width: 100%;\n    contain: style size layout;\n    font-variant-ligatures: no-common-ligatures;\n}\n\n.ace_keyboard-focus:focus {\n    box-shadow: inset 0 0 0 2px #5E9ED6;\n    outline: none;\n}\n\n.ace_dragging .ace_scroller:before{\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    content: '';\n    background: rgba(250, 250, 250, 0.01);\n    z-index: 1000;\n}\n.ace_dragging.ace_dark .ace_scroller:before{\n    background: rgba(0, 0, 0, 0.01);\n}\n\n.ace_gutter {\n    position: absolute;\n    overflow : hidden;\n    width: auto;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    cursor: default;\n    z-index: 4;\n    -ms-user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    user-select: none;\n    contain: style size layout;\n}\n\n.ace_gutter-active-line {\n    position: absolute;\n    left: 0;\n    right: 0;\n}\n\n.ace_scroller.ace_scroll-left:after {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;\n    pointer-events: none;\n}\n\n.ace_gutter-cell, .ace_gutter-cell_svg-icons {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    padding-left: 19px;\n    padding-right: 6px;\n    background-repeat: no-repeat;\n}\n\n.ace_gutter-cell_svg-icons .ace_gutter_annotation {\n    margin-left: -14px;\n    float: left;\n}\n\n.ace_gutter-cell .ace_gutter_annotation {\n    margin-left: -19px;\n    float: left;\n}\n\n.ace_gutter-cell.ace_error, .ace_icon.ace_error, .ace_icon.ace_error_fold {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==\");\n    background-repeat: no-repeat;\n    background-position: 2px center;\n}\n\n.ace_gutter-cell.ace_warning, .ace_icon.ace_warning, .ace_icon.ace_warning_fold {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==\");\n    background-repeat: no-repeat;\n    background-position: 2px center;\n}\n\n.ace_gutter-cell.ace_info, .ace_icon.ace_info {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=\");\n    background-repeat: no-repeat;\n    background-position: 2px center;\n}\n.ace_dark .ace_gutter-cell.ace_info, .ace_dark .ace_icon.ace_info {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC\");\n}\n\n.ace_icon_svg.ace_error {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJyZWQiIHNoYXBlLXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIj4KPGNpcmNsZSBmaWxsPSJub25lIiBjeD0iOCIgY3k9IjgiIHI9IjciIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGxpbmUgeDE9IjExIiB5MT0iNSIgeDI9IjUiIHkyPSIxMSIvPgo8bGluZSB4MT0iMTEiIHkxPSIxMSIgeDI9IjUiIHkyPSI1Ii8+CjwvZz4KPC9zdmc+\");\n    background-color: crimson;\n}\n.ace_icon_svg.ace_warning {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJkYXJrb3JhbmdlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+Cjxwb2x5Z29uIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiIHBvaW50cz0iOCAxIDE1IDE1IDEgMTUgOCAxIi8+CjxyZWN0IHg9IjgiIHk9IjEyIiB3aWR0aD0iMC4wMSIgaGVpZ2h0PSIwLjAxIi8+CjxsaW5lIHgxPSI4IiB5MT0iNiIgeDI9IjgiIHkyPSIxMCIvPgo8L2c+Cjwvc3ZnPg==\");\n    background-color: darkorange;\n}\n.ace_icon_svg.ace_info {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJibHVlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+CjxjaXJjbGUgZmlsbD0ibm9uZSIgY3g9IjgiIGN5PSI4IiByPSI3IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjxwb2x5bGluZSBwb2ludHM9IjggMTEgOCA4Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjkgOCA2IDgiLz4KPGxpbmUgeDE9IjEwIiB5MT0iMTEiIHgyPSI2IiB5Mj0iMTEiLz4KPHJlY3QgeD0iOCIgeT0iNSIgd2lkdGg9IjAuMDEiIGhlaWdodD0iMC4wMSIvPgo8L2c+Cjwvc3ZnPg==\");\n    background-color: royalblue;\n}\n\n.ace_icon_svg.ace_error_fold {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0ibSAxOC45Mjk4NTEsNy44Mjk4MDc2IGMgMC4xNDYzNTMsNi4zMzc0NjA0IC02LjMyMzE0Nyw3Ljc3Nzg0NDQgLTcuNDc3OTEyLDcuNzc3ODQ0NCAtMi4xMDcyNzI2LC0wLjEyODc1IDUuMTE3Njc4LDAuMzU2MjQ5IDUuMDUxNjk4LC03Ljg3MDA2MTggLTAuNjA0NjcyLC04LjAwMzk3MzQ5IC03LjA3NzI3MDYsLTcuNTYzMTE4OSAtNC44NTczLC03LjQzMDM5NTU2IDEuNjA2LC0wLjExNTE0MjI1IDYuODk3NDg1LDEuMjYyNTQ1OTYgNy4yODM1MTQsNy41MjI2MTI5NiB6IiBmaWxsPSJjcmltc29uIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibSA4LjExNDc1NjIsMi4wNTI5ODI4IGMgMy4zNDkxNjk4LDAgNi4wNjQxMzI4LDIuNjc2ODYyNyA2LjA2NDEzMjgsNS45Nzg5NTMgMCwzLjMwMjExMjIgLTIuNzE0OTYzLDUuOTc4OTIwMiAtNi4wNjQxMzI4LDUuOTc4OTIwMiAtMy4zNDkxNDczLDAgLTYuMDY0MTc3MiwtMi42NzY4MDggLTYuMDY0MTc3MiwtNS45Nzg5MjAyIDAuMDA1MzksLTMuMjk5ODg2MSAyLjcxNzI2NTYsLTUuOTczNjQwOCA2LjA2NDE3NzIsLTUuOTc4OTUzIHogbSAwLC0xLjczNTgyNzE5IGMgLTQuMzIxNDgzNiwwIC03LjgyNDc0MDM4LDMuNDU0MDE4NDkgLTcuODI0NzQwMzgsNy43MTQ3ODAxOSAwLDQuMjYwNzI4MiAzLjUwMzI1Njc4LDcuNzE0NzQ1MiA3LjgyNDc0MDM4LDcuNzE0NzQ1MiA0LjMyMTQ0OTgsMCA3LjgyNDY5OTgsLTMuNDU0MDE3IDcuODI0Njk5OCwtNy43MTQ3NDUyIDAsLTIuMDQ2MDkxNCAtMC44MjQzOTIsLTQuMDA4MzY3MiAtMi4yOTE3NTYsLTUuNDU1MTc0NiBDIDEyLjE4MDIyNSwxLjEyOTk2NDggMTAuMTkwMDEzLDAuMzE3MTU1NjEgOC4xMTQ3NTYyLDAuMzE3MTU1NjEgWiBNIDYuOTM3NDU2Myw4LjI0MDU5ODUgNC42NzE4Njg1LDEwLjQ4NTg1MiA2LjAwODY4MTQsMTEuODc2NzI4IDguMzE3MDAzNSw5LjYwMDc5MTEgMTAuNjI1MzM3LDExLjg3NjcyOCAxMS45NjIxMzgsMTAuNDg1ODUyIDkuNjk2NTUwOCw4LjI0MDU5ODUgMTEuOTYyMTM4LDYuMDA2ODA2NiAxMC41NzMyNDYsNC42Mzc0MzM1IDguMzE3MDAzNSw2Ljg3MzQyOTcgNi4wNjA3NjA3LDQuNjM3NDMzNSA0LjY3MTg2ODUsNi4wMDY4MDY2IFoiIGZpbGw9ImNyaW1zb24iIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=\");\n    background-color: crimson;\n}\n.ace_icon_svg.ace_warning_fold {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC43NzY5IDE0LjczMzdMOC42NTE5MiAyLjQ4MzY5QzguMzI5NDYgMS44Mzg3NyA3LjQwOTEzIDEuODM4NzcgNy4wODY2NyAyLjQ4MzY5TDAuOTYxNjY5IDE0LjczMzdDMC42NzA3NzUgMTUuMzE1NSAxLjA5MzgzIDE2IDEuNzQ0MjkgMTZIMTMuOTk0M0MxNC42NDQ4IDE2IDE1LjA2NzggMTUuMzE1NSAxNC43NzY5IDE0LjczMzdaTTMuMTYwMDcgMTQuMjVMNy44NjkyOSA0LjgzMTU2TDEyLjU3ODUgMTQuMjVIMy4xNjAwN1pNOC43NDQyOSAxMS42MjVWMTMuMzc1SDYuOTk0MjlWMTEuNjI1SDguNzQ0MjlaTTYuOTk0MjkgMTAuNzVWNy4yNUg4Ljc0NDI5VjEwLjc1SDYuOTk0MjlaIiBmaWxsPSIjRUM3MjExIi8+CjxwYXRoIGQ9Ik0xMS4xOTkxIDIuOTUyMzhDMTAuODgwOSAyLjMxNDY3IDEwLjM1MzcgMS44MDUyNiA5LjcwNTUgMS41MDlMMTEuMDQxIDEuMDY5NzhDMTEuNjg4MyAwLjk0OTgxNCAxMi4zMzcgMS4yNzI2MyAxMi42MzE3IDEuODYxNDFMMTcuNjEzNiAxMS44MTYxQzE4LjM1MjcgMTMuMjkyOSAxNy41OTM4IDE1LjA4MDQgMTYuMDE4IDE1LjU3NDVDMTYuNDA0NCAxNC40NTA3IDE2LjMyMzEgMTMuMjE4OCAxNS43OTI0IDEyLjE1NTVMMTEuMTk5MSAyLjk1MjM4WiIgZmlsbD0iI0VDNzIxMSIvPgo8L3N2Zz4=\");\n    background-color: darkorange;\n}\n\n.ace_scrollbar {\n    contain: strict;\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    z-index: 6;\n}\n\n.ace_scrollbar-inner {\n    position: absolute;\n    cursor: text;\n    left: 0;\n    top: 0;\n}\n\n.ace_scrollbar-v{\n    overflow-x: hidden;\n    overflow-y: scroll;\n    top: 0;\n}\n\n.ace_scrollbar-h {\n    overflow-x: scroll;\n    overflow-y: hidden;\n    left: 0;\n}\n\n.ace_print-margin {\n    position: absolute;\n    height: 100%;\n}\n\n.ace_text-input {\n    position: absolute;\n    z-index: 0;\n    width: 0.5em;\n    height: 1em;\n    opacity: 0;\n    background: transparent;\n    -moz-appearance: none;\n    appearance: none;\n    border: none;\n    resize: none;\n    outline: none;\n    overflow: hidden;\n    font: inherit;\n    padding: 0 1px;\n    margin: 0 -1px;\n    contain: strict;\n    -ms-user-select: text;\n    -moz-user-select: text;\n    -webkit-user-select: text;\n    user-select: text;\n    /*with `pre-line` chrome inserts &nbsp; instead of space*/\n    white-space: pre!important;\n}\n.ace_text-input.ace_composition {\n    background: transparent;\n    color: inherit;\n    z-index: 1000;\n    opacity: 1;\n}\n.ace_composition_placeholder { color: transparent }\n.ace_composition_marker { \n    border-bottom: 1px solid;\n    position: absolute;\n    border-radius: 0;\n    margin-top: 1px;\n}\n\n[ace_nocontext=true] {\n    transform: none!important;\n    filter: none!important;\n    clip-path: none!important;\n    mask : none!important;\n    contain: none!important;\n    perspective: none!important;\n    mix-blend-mode: initial!important;\n    z-index: auto;\n}\n\n.ace_layer {\n    z-index: 1;\n    position: absolute;\n    overflow: hidden;\n    /* workaround for chrome bug https://github.com/ajaxorg/ace/issues/2312*/\n    word-wrap: normal;\n    white-space: pre;\n    height: 100%;\n    width: 100%;\n    box-sizing: border-box;\n    /* setting pointer-events: auto; on node under the mouse, which changes\n        during scroll, will break mouse wheel scrolling in Safari */\n    pointer-events: none;\n}\n\n.ace_gutter-layer {\n    position: relative;\n    width: auto;\n    text-align: right;\n    pointer-events: auto;\n    height: 1000000px;\n    contain: style size layout;\n}\n\n.ace_text-layer {\n    font: inherit !important;\n    position: absolute;\n    height: 1000000px;\n    width: 1000000px;\n    contain: style size layout;\n}\n\n.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {\n    contain: style size layout;\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n}\n\n.ace_hidpi .ace_text-layer,\n.ace_hidpi .ace_gutter-layer,\n.ace_hidpi .ace_content,\n.ace_hidpi .ace_gutter {\n    contain: strict;\n}\n.ace_hidpi .ace_text-layer > .ace_line, \n.ace_hidpi .ace_text-layer > .ace_line_group {\n    contain: strict;\n}\n\n.ace_cjk {\n    display: inline-block;\n    text-align: center;\n}\n\n.ace_cursor-layer {\n    z-index: 4;\n}\n\n.ace_cursor {\n    z-index: 4;\n    position: absolute;\n    box-sizing: border-box;\n    border-left: 2px solid;\n    /* workaround for smooth cursor repaintng whole screen in chrome */\n    transform: translatez(0);\n}\n\n.ace_multiselect .ace_cursor {\n    border-left-width: 1px;\n}\n\n.ace_slim-cursors .ace_cursor {\n    border-left-width: 1px;\n}\n\n.ace_overwrite-cursors .ace_cursor {\n    border-left-width: 0;\n    border-bottom: 1px solid;\n}\n\n.ace_hidden-cursors .ace_cursor {\n    opacity: 0.2;\n}\n\n.ace_hasPlaceholder .ace_hidden-cursors .ace_cursor {\n    opacity: 0;\n}\n\n.ace_smooth-blinking .ace_cursor {\n    transition: opacity 0.18s;\n}\n\n.ace_animate-blinking .ace_cursor {\n    animation-duration: 1000ms;\n    animation-timing-function: step-end;\n    animation-name: blink-ace-animate;\n    animation-iteration-count: infinite;\n}\n\n.ace_animate-blinking.ace_smooth-blinking .ace_cursor {\n    animation-duration: 1000ms;\n    animation-timing-function: ease-in-out;\n    animation-name: blink-ace-animate-smooth;\n}\n    \n@keyframes blink-ace-animate {\n    from, to { opacity: 1; }\n    60% { opacity: 0; }\n}\n\n@keyframes blink-ace-animate-smooth {\n    from, to { opacity: 1; }\n    45% { opacity: 1; }\n    60% { opacity: 0; }\n    85% { opacity: 0; }\n}\n\n.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {\n    position: absolute;\n    z-index: 3;\n}\n\n.ace_marker-layer .ace_selection {\n    position: absolute;\n    z-index: 5;\n}\n\n.ace_marker-layer .ace_bracket {\n    position: absolute;\n    z-index: 6;\n}\n\n.ace_marker-layer .ace_error_bracket {\n    position: absolute;\n    border-bottom: 1px solid #DE5555;\n    border-radius: 0;\n}\n\n.ace_marker-layer .ace_active-line {\n    position: absolute;\n    z-index: 2;\n}\n\n.ace_marker-layer .ace_selected-word {\n    position: absolute;\n    z-index: 4;\n    box-sizing: border-box;\n}\n\n.ace_line .ace_fold {\n    box-sizing: border-box;\n\n    display: inline-block;\n    height: 11px;\n    margin-top: -2px;\n    vertical-align: middle;\n\n    background-image:\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII=\"),\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=\");\n    background-repeat: no-repeat, repeat-x;\n    background-position: center center, top left;\n    color: transparent;\n\n    border: 1px solid black;\n    border-radius: 2px;\n\n    cursor: pointer;\n    pointer-events: auto;\n}\n\n.ace_dark .ace_fold {\n}\n\n.ace_fold:hover{\n    background-image:\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII=\"),\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC\");\n}\n\n.ace_tooltip {\n    background-color: #f5f5f5;\n    border: 1px solid gray;\n    border-radius: 1px;\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);\n    color: black;\n    max-width: 100%;\n    padding: 3px 4px;\n    position: fixed;\n    z-index: 999999;\n    box-sizing: border-box;\n    cursor: default;\n    white-space: pre;\n    word-wrap: break-word;\n    line-height: normal;\n    font-style: normal;\n    font-weight: normal;\n    letter-spacing: normal;\n    pointer-events: none;\n}\n\n.ace_tooltip.ace_dark {\n    background-color: #636363;\n    color: #fff;\n}\n\n.ace_tooltip:focus {\n    outline: 1px solid #5E9ED6;\n}\n\n.ace_icon {\n    display: inline-block;\n    width: 18px;\n    vertical-align: top;\n}\n\n.ace_icon_svg {\n    display: inline-block;\n    width: 12px;\n    vertical-align: top;\n    -webkit-mask-repeat: no-repeat;\n    -webkit-mask-size: 12px;\n    -webkit-mask-position: center;\n}\n\n.ace_folding-enabled > .ace_gutter-cell, .ace_folding-enabled > .ace_gutter-cell_svg-icons {\n    padding-right: 13px;\n}\n\n.ace_fold-widget {\n    box-sizing: border-box;\n\n    margin: 0 -12px 0 1px;\n    display: none;\n    width: 11px;\n    vertical-align: top;\n\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==\");\n    background-repeat: no-repeat;\n    background-position: center;\n\n    border-radius: 3px;\n    \n    border: 1px solid transparent;\n    cursor: pointer;\n}\n\n.ace_folding-enabled .ace_fold-widget {\n    display: inline-block;   \n}\n\n.ace_fold-widget.ace_end {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==\");\n}\n\n.ace_fold-widget.ace_closed {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==\");\n}\n\n.ace_fold-widget:hover {\n    border: 1px solid rgba(0, 0, 0, 0.3);\n    background-color: rgba(255, 255, 255, 0.2);\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);\n}\n\n.ace_fold-widget:active {\n    border: 1px solid rgba(0, 0, 0, 0.4);\n    background-color: rgba(0, 0, 0, 0.05);\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);\n}\n/**\n * Dark version for fold widgets\n */\n.ace_dark .ace_fold-widget {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC\");\n}\n.ace_dark .ace_fold-widget.ace_end {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==\");\n}\n.ace_dark .ace_fold-widget.ace_closed {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==\");\n}\n.ace_dark .ace_fold-widget:hover {\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);\n    background-color: rgba(255, 255, 255, 0.1);\n}\n.ace_dark .ace_fold-widget:active {\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);\n}\n\n.ace_inline_button {\n    border: 1px solid lightgray;\n    display: inline-block;\n    margin: -1px 8px;\n    padding: 0 5px;\n    pointer-events: auto;\n    cursor: pointer;\n}\n.ace_inline_button:hover {\n    border-color: gray;\n    background: rgba(200,200,200,0.2);\n    display: inline-block;\n    pointer-events: auto;\n}\n\n.ace_fold-widget.ace_invalid {\n    background-color: #FFB4B4;\n    border-color: #DE5555;\n}\n\n.ace_fade-fold-widgets .ace_fold-widget {\n    transition: opacity 0.4s ease 0.05s;\n    opacity: 0;\n}\n\n.ace_fade-fold-widgets:hover .ace_fold-widget {\n    transition: opacity 0.05s ease 0.05s;\n    opacity:1;\n}\n\n.ace_underline {\n    text-decoration: underline;\n}\n\n.ace_bold {\n    font-weight: bold;\n}\n\n.ace_nobold .ace_bold {\n    font-weight: normal;\n}\n\n.ace_italic {\n    font-style: italic;\n}\n\n\n.ace_error-marker {\n    background-color: rgba(255, 0, 0,0.2);\n    position: absolute;\n    z-index: 9;\n}\n\n.ace_highlight-marker {\n    background-color: rgba(255, 255, 0,0.2);\n    position: absolute;\n    z-index: 8;\n}\n\n.ace_mobile-menu {\n    position: absolute;\n    line-height: 1.5;\n    border-radius: 4px;\n    -ms-user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    user-select: none;\n    background: white;\n    box-shadow: 1px 3px 2px grey;\n    border: 1px solid #dcdcdc;\n    color: black;\n}\n.ace_dark > .ace_mobile-menu {\n    background: #333;\n    color: #ccc;\n    box-shadow: 1px 3px 2px grey;\n    border: 1px solid #444;\n\n}\n.ace_mobile-button {\n    padding: 2px;\n    cursor: pointer;\n    overflow: hidden;\n}\n.ace_mobile-button:hover {\n    background-color: #eee;\n    opacity:1;\n}\n.ace_mobile-button:active {\n    background-color: #ddd;\n}\n\n.ace_placeholder {\n    font-family: arial;\n    transform: scale(0.9);\n    transform-origin: left;\n    white-space: pre;\n    opacity: 0.7;\n    margin: 0 10px;\n}\n\n.ace_ghost_text {\n    opacity: 0.5;\n    font-style: italic;\n    white-space: pre;\n}";
+module.exports = "\n.ace_br1 {border-top-left-radius    : 3px;}\n.ace_br2 {border-top-right-radius   : 3px;}\n.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}\n.ace_br4 {border-bottom-right-radius: 3px;}\n.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}\n.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}\n.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}\n.ace_br8 {border-bottom-left-radius : 3px;}\n.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}\n.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}\n.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}\n.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}\n.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}\n.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}\n.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}\n\n\n.ace_editor {\n    position: relative;\n    overflow: hidden;\n    padding: 0;\n    font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Source Code Pro', 'source-code-pro', monospace;\n    direction: ltr;\n    text-align: left;\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\n\n.ace_scroller {\n    position: absolute;\n    overflow: hidden;\n    top: 0;\n    bottom: 0;\n    background-color: inherit;\n    -ms-user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    user-select: none;\n    cursor: text;\n}\n\n.ace_content {\n    position: absolute;\n    box-sizing: border-box;\n    min-width: 100%;\n    contain: style size layout;\n    font-variant-ligatures: no-common-ligatures;\n}\n\n.ace_keyboard-focus:focus {\n    box-shadow: inset 0 0 0 2px #5E9ED6;\n    outline: none;\n}\n\n.ace_dragging .ace_scroller:before{\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    content: '';\n    background: rgba(250, 250, 250, 0.01);\n    z-index: 1000;\n}\n.ace_dragging.ace_dark .ace_scroller:before{\n    background: rgba(0, 0, 0, 0.01);\n}\n\n.ace_gutter {\n    position: absolute;\n    overflow : hidden;\n    width: auto;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    cursor: default;\n    z-index: 4;\n    -ms-user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    user-select: none;\n    contain: style size layout;\n}\n\n.ace_gutter-active-line {\n    position: absolute;\n    left: 0;\n    right: 0;\n}\n\n.ace_scroller.ace_scroll-left:after {\n    content: \"\";\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;\n    pointer-events: none;\n}\n\n.ace_gutter-cell, .ace_gutter-cell_svg-icons {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    padding-left: 19px;\n    padding-right: 6px;\n    background-repeat: no-repeat;\n}\n\n.ace_gutter-cell_svg-icons .ace_gutter_annotation {\n    margin-left: -14px;\n    float: left;\n}\n\n.ace_gutter-cell .ace_gutter_annotation {\n    margin-left: -19px;\n    float: left;\n}\n\n.ace_gutter-cell.ace_error, .ace_icon.ace_error, .ace_icon.ace_error_fold {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==\");\n    background-repeat: no-repeat;\n    background-position: 2px center;\n}\n\n.ace_gutter-cell.ace_warning, .ace_icon.ace_warning, .ace_icon.ace_warning_fold {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==\");\n    background-repeat: no-repeat;\n    background-position: 2px center;\n}\n\n.ace_gutter-cell.ace_info, .ace_icon.ace_info {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=\");\n    background-repeat: no-repeat;\n    background-position: 2px center;\n}\n.ace_dark .ace_gutter-cell.ace_info, .ace_dark .ace_icon.ace_info {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC\");\n}\n\n.ace_icon_svg.ace_error {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJyZWQiIHNoYXBlLXJlbmRlcmluZz0iZ2VvbWV0cmljUHJlY2lzaW9uIj4KPGNpcmNsZSBmaWxsPSJub25lIiBjeD0iOCIgY3k9IjgiIHI9IjciIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGxpbmUgeDE9IjExIiB5MT0iNSIgeDI9IjUiIHkyPSIxMSIvPgo8bGluZSB4MT0iMTEiIHkxPSIxMSIgeDI9IjUiIHkyPSI1Ii8+CjwvZz4KPC9zdmc+\");\n    background-color: crimson;\n}\n.ace_icon_svg.ace_warning {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJkYXJrb3JhbmdlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+Cjxwb2x5Z29uIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9Im5vbmUiIHBvaW50cz0iOCAxIDE1IDE1IDEgMTUgOCAxIi8+CjxyZWN0IHg9IjgiIHk9IjEyIiB3aWR0aD0iMC4wMSIgaGVpZ2h0PSIwLjAxIi8+CjxsaW5lIHgxPSI4IiB5MT0iNiIgeDI9IjgiIHkyPSIxMCIvPgo8L2c+Cjwvc3ZnPg==\");\n    background-color: darkorange;\n}\n.ace_icon_svg.ace_info {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiI+CjxnIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlPSJibHVlIiBzaGFwZS1yZW5kZXJpbmc9Imdlb21ldHJpY1ByZWNpc2lvbiI+CjxjaXJjbGUgZmlsbD0ibm9uZSIgY3g9IjgiIGN5PSI4IiByPSI3IiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjxwb2x5bGluZSBwb2ludHM9IjggMTEgOCA4Ii8+Cjxwb2x5bGluZSBwb2ludHM9IjkgOCA2IDgiLz4KPGxpbmUgeDE9IjEwIiB5MT0iMTEiIHgyPSI2IiB5Mj0iMTEiLz4KPHJlY3QgeD0iOCIgeT0iNSIgd2lkdGg9IjAuMDEiIGhlaWdodD0iMC4wMSIvPgo8L2c+Cjwvc3ZnPg==\");\n    background-color: royalblue;\n}\n\n.ace_icon_svg.ace_error_fold {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSI+CiAgPHBhdGggZD0ibSAxOC45Mjk4NTEsNy44Mjk4MDc2IGMgMC4xNDYzNTMsNi4zMzc0NjA0IC02LjMyMzE0Nyw3Ljc3Nzg0NDQgLTcuNDc3OTEyLDcuNzc3ODQ0NCAtMi4xMDcyNzI2LC0wLjEyODc1IDUuMTE3Njc4LDAuMzU2MjQ5IDUuMDUxNjk4LC03Ljg3MDA2MTggLTAuNjA0NjcyLC04LjAwMzk3MzQ5IC03LjA3NzI3MDYsLTcuNTYzMTE4OSAtNC44NTczLC03LjQzMDM5NTU2IDEuNjA2LC0wLjExNTE0MjI1IDYuODk3NDg1LDEuMjYyNTQ1OTYgNy4yODM1MTQsNy41MjI2MTI5NiB6IiBmaWxsPSJjcmltc29uIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibSA4LjExNDc1NjIsMi4wNTI5ODI4IGMgMy4zNDkxNjk4LDAgNi4wNjQxMzI4LDIuNjc2ODYyNyA2LjA2NDEzMjgsNS45Nzg5NTMgMCwzLjMwMjExMjIgLTIuNzE0OTYzLDUuOTc4OTIwMiAtNi4wNjQxMzI4LDUuOTc4OTIwMiAtMy4zNDkxNDczLDAgLTYuMDY0MTc3MiwtMi42NzY4MDggLTYuMDY0MTc3MiwtNS45Nzg5MjAyIDAuMDA1MzksLTMuMjk5ODg2MSAyLjcxNzI2NTYsLTUuOTczNjQwOCA2LjA2NDE3NzIsLTUuOTc4OTUzIHogbSAwLC0xLjczNTgyNzE5IGMgLTQuMzIxNDgzNiwwIC03LjgyNDc0MDM4LDMuNDU0MDE4NDkgLTcuODI0NzQwMzgsNy43MTQ3ODAxOSAwLDQuMjYwNzI4MiAzLjUwMzI1Njc4LDcuNzE0NzQ1MiA3LjgyNDc0MDM4LDcuNzE0NzQ1MiA0LjMyMTQ0OTgsMCA3LjgyNDY5OTgsLTMuNDU0MDE3IDcuODI0Njk5OCwtNy43MTQ3NDUyIDAsLTIuMDQ2MDkxNCAtMC44MjQzOTIsLTQuMDA4MzY3MiAtMi4yOTE3NTYsLTUuNDU1MTc0NiBDIDEyLjE4MDIyNSwxLjEyOTk2NDggMTAuMTkwMDEzLDAuMzE3MTU1NjEgOC4xMTQ3NTYyLDAuMzE3MTU1NjEgWiBNIDYuOTM3NDU2Myw4LjI0MDU5ODUgNC42NzE4Njg1LDEwLjQ4NTg1MiA2LjAwODY4MTQsMTEuODc2NzI4IDguMzE3MDAzNSw5LjYwMDc5MTEgMTAuNjI1MzM3LDExLjg3NjcyOCAxMS45NjIxMzgsMTAuNDg1ODUyIDkuNjk2NTUwOCw4LjI0MDU5ODUgMTEuOTYyMTM4LDYuMDA2ODA2NiAxMC41NzMyNDYsNC42Mzc0MzM1IDguMzE3MDAzNSw2Ljg3MzQyOTcgNi4wNjA3NjA3LDQuNjM3NDMzNSA0LjY3MTg2ODUsNi4wMDY4MDY2IFoiIGZpbGw9ImNyaW1zb24iIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=\");\n    background-color: crimson;\n}\n.ace_icon_svg.ace_warning_fold {\n    -webkit-mask-image: url(\"data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyMCAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC43NzY5IDE0LjczMzdMOC42NTE5MiAyLjQ4MzY5QzguMzI5NDYgMS44Mzg3NyA3LjQwOTEzIDEuODM4NzcgNy4wODY2NyAyLjQ4MzY5TDAuOTYxNjY5IDE0LjczMzdDMC42NzA3NzUgMTUuMzE1NSAxLjA5MzgzIDE2IDEuNzQ0MjkgMTZIMTMuOTk0M0MxNC42NDQ4IDE2IDE1LjA2NzggMTUuMzE1NSAxNC43NzY5IDE0LjczMzdaTTMuMTYwMDcgMTQuMjVMNy44NjkyOSA0LjgzMTU2TDEyLjU3ODUgMTQuMjVIMy4xNjAwN1pNOC43NDQyOSAxMS42MjVWMTMuMzc1SDYuOTk0MjlWMTEuNjI1SDguNzQ0MjlaTTYuOTk0MjkgMTAuNzVWNy4yNUg4Ljc0NDI5VjEwLjc1SDYuOTk0MjlaIiBmaWxsPSIjRUM3MjExIi8+CjxwYXRoIGQ9Ik0xMS4xOTkxIDIuOTUyMzhDMTAuODgwOSAyLjMxNDY3IDEwLjM1MzcgMS44MDUyNiA5LjcwNTUgMS41MDlMMTEuMDQxIDEuMDY5NzhDMTEuNjg4MyAwLjk0OTgxNCAxMi4zMzcgMS4yNzI2MyAxMi42MzE3IDEuODYxNDFMMTcuNjEzNiAxMS44MTYxQzE4LjM1MjcgMTMuMjkyOSAxNy41OTM4IDE1LjA4MDQgMTYuMDE4IDE1LjU3NDVDMTYuNDA0NCAxNC40NTA3IDE2LjMyMzEgMTMuMjE4OCAxNS43OTI0IDEyLjE1NTVMMTEuMTk5MSAyLjk1MjM4WiIgZmlsbD0iI0VDNzIxMSIvPgo8L3N2Zz4=\");\n    background-color: darkorange;\n}\n\n.ace_scrollbar {\n    contain: strict;\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    z-index: 6;\n}\n\n.ace_scrollbar-inner {\n    position: absolute;\n    cursor: text;\n    left: 0;\n    top: 0;\n}\n\n.ace_scrollbar-v{\n    overflow-x: hidden;\n    overflow-y: scroll;\n    top: 0;\n}\n\n.ace_scrollbar-h {\n    overflow-x: scroll;\n    overflow-y: hidden;\n    left: 0;\n}\n\n.ace_print-margin {\n    position: absolute;\n    height: 100%;\n}\n\n.ace_text-input {\n    position: absolute;\n    z-index: 0;\n    width: 0.5em;\n    height: 1em;\n    opacity: 0;\n    background: transparent;\n    -moz-appearance: none;\n    appearance: none;\n    border: none;\n    resize: none;\n    outline: none;\n    overflow: hidden;\n    font: inherit;\n    padding: 0 1px;\n    margin: 0 -1px;\n    contain: strict;\n    -ms-user-select: text;\n    -moz-user-select: text;\n    -webkit-user-select: text;\n    user-select: text;\n    /*with `pre-line` chrome inserts &nbsp; instead of space*/\n    white-space: pre!important;\n}\n.ace_text-input.ace_composition {\n    background: transparent;\n    color: inherit;\n    z-index: 1000;\n    opacity: 1;\n}\n.ace_composition_placeholder { color: transparent }\n.ace_composition_marker { \n    border-bottom: 1px solid;\n    position: absolute;\n    border-radius: 0;\n    margin-top: 1px;\n}\n\n[ace_nocontext=true] {\n    transform: none!important;\n    filter: none!important;\n    clip-path: none!important;\n    mask : none!important;\n    contain: none!important;\n    perspective: none!important;\n    mix-blend-mode: initial!important;\n    z-index: auto;\n}\n\n.ace_layer {\n    z-index: 1;\n    position: absolute;\n    overflow: hidden;\n    /* workaround for chrome bug https://github.com/ajaxorg/ace/issues/2312*/\n    word-wrap: normal;\n    white-space: pre;\n    height: 100%;\n    width: 100%;\n    box-sizing: border-box;\n    /* setting pointer-events: auto; on node under the mouse, which changes\n        during scroll, will break mouse wheel scrolling in Safari */\n    pointer-events: none;\n}\n\n.ace_gutter-layer {\n    position: relative;\n    width: auto;\n    text-align: right;\n    pointer-events: auto;\n    height: 1000000px;\n    contain: style size layout;\n}\n\n.ace_text-layer {\n    font: inherit !important;\n    position: absolute;\n    height: 1000000px;\n    width: 1000000px;\n    contain: style size layout;\n}\n\n.ace_text-layer > .ace_line, .ace_text-layer > .ace_line_group {\n    contain: style size layout;\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n}\n\n.ace_hidpi .ace_text-layer,\n.ace_hidpi .ace_gutter-layer,\n.ace_hidpi .ace_content,\n.ace_hidpi .ace_gutter {\n    contain: strict;\n}\n.ace_hidpi .ace_text-layer > .ace_line, \n.ace_hidpi .ace_text-layer > .ace_line_group {\n    contain: strict;\n}\n\n.ace_cjk {\n    display: inline-block;\n    text-align: center;\n}\n\n.ace_cursor-layer {\n    z-index: 4;\n}\n\n.ace_cursor {\n    z-index: 4;\n    position: absolute;\n    box-sizing: border-box;\n    border-left: 2px solid;\n    /* workaround for smooth cursor repaintng whole screen in chrome */\n    transform: translatez(0);\n}\n\n.ace_multiselect .ace_cursor {\n    border-left-width: 1px;\n}\n\n.ace_slim-cursors .ace_cursor {\n    border-left-width: 1px;\n}\n\n.ace_overwrite-cursors .ace_cursor {\n    border-left-width: 0;\n    border-bottom: 1px solid;\n}\n\n.ace_hidden-cursors .ace_cursor {\n    opacity: 0.2;\n}\n\n.ace_hasPlaceholder .ace_hidden-cursors .ace_cursor {\n    opacity: 0;\n}\n\n.ace_smooth-blinking .ace_cursor {\n    transition: opacity 0.18s;\n}\n\n.ace_animate-blinking .ace_cursor {\n    animation-duration: 1000ms;\n    animation-timing-function: step-end;\n    animation-name: blink-ace-animate;\n    animation-iteration-count: infinite;\n}\n\n.ace_animate-blinking.ace_smooth-blinking .ace_cursor {\n    animation-duration: 1000ms;\n    animation-timing-function: ease-in-out;\n    animation-name: blink-ace-animate-smooth;\n}\n    \n@keyframes blink-ace-animate {\n    from, to { opacity: 1; }\n    60% { opacity: 0; }\n}\n\n@keyframes blink-ace-animate-smooth {\n    from, to { opacity: 1; }\n    45% { opacity: 1; }\n    60% { opacity: 0; }\n    85% { opacity: 0; }\n}\n\n.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {\n    position: absolute;\n    z-index: 3;\n}\n\n.ace_marker-layer .ace_selection {\n    position: absolute;\n    z-index: 5;\n}\n\n.ace_marker-layer .ace_bracket {\n    position: absolute;\n    z-index: 6;\n}\n\n.ace_marker-layer .ace_error_bracket {\n    position: absolute;\n    border-bottom: 1px solid #DE5555;\n    border-radius: 0;\n}\n\n.ace_marker-layer .ace_active-line {\n    position: absolute;\n    z-index: 2;\n}\n\n.ace_marker-layer .ace_selected-word {\n    position: absolute;\n    z-index: 4;\n    box-sizing: border-box;\n}\n\n.ace_line .ace_fold {\n    box-sizing: border-box;\n\n    display: inline-block;\n    height: 11px;\n    margin-top: -2px;\n    vertical-align: middle;\n\n    background-image:\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII=\"),\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=\");\n    background-repeat: no-repeat, repeat-x;\n    background-position: center center, top left;\n    color: transparent;\n\n    border: 1px solid black;\n    border-radius: 2px;\n\n    cursor: pointer;\n    pointer-events: auto;\n}\n\n.ace_dark .ace_fold {\n}\n\n.ace_fold:hover{\n    background-image:\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII=\"),\n        url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC\");\n}\n\n.ace_tooltip {\n    background-color: #f5f5f5;\n    border: 1px solid gray;\n    border-radius: 1px;\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);\n    color: black;\n    max-width: 100%;\n    padding: 3px 4px;\n    position: fixed;\n    z-index: 999999;\n    box-sizing: border-box;\n    cursor: default;\n    white-space: pre-wrap;\n    word-wrap: break-word;\n    line-height: normal;\n    font-style: normal;\n    font-weight: normal;\n    letter-spacing: normal;\n    pointer-events: none;\n    overflow: auto;\n    max-width: min(60em, 66vw);\n    overscroll-behavior: contain;\n}\n.ace_tooltip pre {\n    white-space: pre-wrap;\n}\n\n.ace_tooltip.ace_dark {\n    background-color: #636363;\n    color: #fff;\n}\n\n.ace_tooltip:focus {\n    outline: 1px solid #5E9ED6;\n}\n\n.ace_icon {\n    display: inline-block;\n    width: 18px;\n    vertical-align: top;\n}\n\n.ace_icon_svg {\n    display: inline-block;\n    width: 12px;\n    vertical-align: top;\n    -webkit-mask-repeat: no-repeat;\n    -webkit-mask-size: 12px;\n    -webkit-mask-position: center;\n}\n\n.ace_folding-enabled > .ace_gutter-cell, .ace_folding-enabled > .ace_gutter-cell_svg-icons {\n    padding-right: 13px;\n}\n\n.ace_fold-widget {\n    box-sizing: border-box;\n\n    margin: 0 -12px 0 1px;\n    display: none;\n    width: 11px;\n    vertical-align: top;\n\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==\");\n    background-repeat: no-repeat;\n    background-position: center;\n\n    border-radius: 3px;\n    \n    border: 1px solid transparent;\n    cursor: pointer;\n}\n\n.ace_folding-enabled .ace_fold-widget {\n    display: inline-block;   \n}\n\n.ace_fold-widget.ace_end {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==\");\n}\n\n.ace_fold-widget.ace_closed {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==\");\n}\n\n.ace_fold-widget:hover {\n    border: 1px solid rgba(0, 0, 0, 0.3);\n    background-color: rgba(255, 255, 255, 0.2);\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);\n}\n\n.ace_fold-widget:active {\n    border: 1px solid rgba(0, 0, 0, 0.4);\n    background-color: rgba(0, 0, 0, 0.05);\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);\n}\n/**\n * Dark version for fold widgets\n */\n.ace_dark .ace_fold-widget {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC\");\n}\n.ace_dark .ace_fold-widget.ace_end {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==\");\n}\n.ace_dark .ace_fold-widget.ace_closed {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==\");\n}\n.ace_dark .ace_fold-widget:hover {\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);\n    background-color: rgba(255, 255, 255, 0.1);\n}\n.ace_dark .ace_fold-widget:active {\n    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);\n}\n\n.ace_inline_button {\n    border: 1px solid lightgray;\n    display: inline-block;\n    margin: -1px 8px;\n    padding: 0 5px;\n    pointer-events: auto;\n    cursor: pointer;\n}\n.ace_inline_button:hover {\n    border-color: gray;\n    background: rgba(200,200,200,0.2);\n    display: inline-block;\n    pointer-events: auto;\n}\n\n.ace_fold-widget.ace_invalid {\n    background-color: #FFB4B4;\n    border-color: #DE5555;\n}\n\n.ace_fade-fold-widgets .ace_fold-widget {\n    transition: opacity 0.4s ease 0.05s;\n    opacity: 0;\n}\n\n.ace_fade-fold-widgets:hover .ace_fold-widget {\n    transition: opacity 0.05s ease 0.05s;\n    opacity:1;\n}\n\n.ace_underline {\n    text-decoration: underline;\n}\n\n.ace_bold {\n    font-weight: bold;\n}\n\n.ace_nobold .ace_bold {\n    font-weight: normal;\n}\n\n.ace_italic {\n    font-style: italic;\n}\n\n\n.ace_error-marker {\n    background-color: rgba(255, 0, 0,0.2);\n    position: absolute;\n    z-index: 9;\n}\n\n.ace_highlight-marker {\n    background-color: rgba(255, 255, 0,0.2);\n    position: absolute;\n    z-index: 8;\n}\n\n.ace_mobile-menu {\n    position: absolute;\n    line-height: 1.5;\n    border-radius: 4px;\n    -ms-user-select: none;\n    -moz-user-select: none;\n    -webkit-user-select: none;\n    user-select: none;\n    background: white;\n    box-shadow: 1px 3px 2px grey;\n    border: 1px solid #dcdcdc;\n    color: black;\n}\n.ace_dark > .ace_mobile-menu {\n    background: #333;\n    color: #ccc;\n    box-shadow: 1px 3px 2px grey;\n    border: 1px solid #444;\n\n}\n.ace_mobile-button {\n    padding: 2px;\n    cursor: pointer;\n    overflow: hidden;\n}\n.ace_mobile-button:hover {\n    background-color: #eee;\n    opacity:1;\n}\n.ace_mobile-button:active {\n    background-color: #ddd;\n}\n\n.ace_placeholder {\n    font-family: arial;\n    transform: scale(0.9);\n    transform-origin: left;\n    white-space: pre;\n    opacity: 0.7;\n    margin: 0 10px;\n}\n\n.ace_ghost_text {\n    opacity: 0.5;\n    font-style: italic;\n    white-space: pre;\n}\n\n.ace_screenreader-only {\n    position:absolute;\n    left:-10000px;\n    top:auto;\n    width:1px;\n    height:1px;\n    overflow:hidden;\n}";
 
 });
 
@@ -35449,7 +35682,7 @@ exports.Decorator = Decorator;
 
 });
 
-ace.define("ace/virtual_renderer",["require","exports","module","ace/lib/oop","ace/lib/dom","ace/lib/lang","ace/config","ace/layer/gutter","ace/layer/marker","ace/layer/text","ace/layer/cursor","ace/scrollbar","ace/scrollbar","ace/scrollbar_custom","ace/scrollbar_custom","ace/renderloop","ace/layer/font_metrics","ace/lib/event_emitter","ace/css/editor.css","ace/layer/decorators","ace/lib/useragent"], function(require, exports, module){"use strict";
+ace.define("ace/virtual_renderer",["require","exports","module","ace/lib/oop","ace/lib/dom","ace/lib/lang","ace/config","ace/layer/gutter","ace/layer/marker","ace/layer/text","ace/layer/cursor","ace/scrollbar","ace/scrollbar","ace/scrollbar_custom","ace/scrollbar_custom","ace/renderloop","ace/layer/font_metrics","ace/lib/event_emitter","ace/css/editor-css","ace/layer/decorators","ace/lib/useragent"], function(require, exports, module){"use strict";
 var oop = require("./lib/oop");
 var dom = require("./lib/dom");
 var lang = require("./lib/lang");
@@ -35465,7 +35698,7 @@ var VScrollBarCustom = require("./scrollbar_custom").VScrollBar;
 var RenderLoop = require("./renderloop").RenderLoop;
 var FontMetrics = require("./layer/font_metrics").FontMetrics;
 var EventEmitter = require("./lib/event_emitter").EventEmitter;
-var editorCss = require("./css/editor.css");
+var editorCss = require("./css/editor-css");
 var Decorator = require("./layer/decorators").Decorator;
 var useragent = require("./lib/useragent");
 dom.importCssString(editorCss, "ace_editor.css", false);
@@ -35482,7 +35715,7 @@ var VirtualRenderer = /** @class */ (function () {
         this.$gutter = dom.createElement("div");
         this.$gutter.className = "ace_gutter";
         this.container.appendChild(this.$gutter);
-        this.$gutter.setAttribute("aria-hidden", true);
+        this.$gutter.setAttribute("aria-hidden", "true");
         this.scroller = dom.createElement("div");
         this.scroller.className = "ace_scroller";
         this.container.appendChild(this.scroller);
@@ -35758,7 +35991,7 @@ var VirtualRenderer = /** @class */ (function () {
     VirtualRenderer.prototype.getShowInvisibles = function () {
         return this.getOption("showInvisibles");
     };
-    VirtualRenderer.prototype.getDisplayIndentGuide = function () {
+    VirtualRenderer.prototype.getDisplayIndentGuides = function () {
         return this.getOption("displayIndentGuides");
     };
     VirtualRenderer.prototype.setDisplayIndentGuides = function (display) {
@@ -35776,8 +36009,8 @@ var VirtualRenderer = /** @class */ (function () {
     VirtualRenderer.prototype.getShowPrintMargin = function () {
         return this.getOption("showPrintMargin");
     };
-    VirtualRenderer.prototype.setPrintMarginColumn = function (showPrintMargin) {
-        this.setOption("printMarginColumn", showPrintMargin);
+    VirtualRenderer.prototype.setPrintMarginColumn = function (printMarginColumn) {
+        this.setOption("printMarginColumn", printMarginColumn);
     };
     VirtualRenderer.prototype.getPrintMarginColumn = function () {
         return this.getOption("printMarginColumn");
@@ -36229,6 +36462,7 @@ var VirtualRenderer = /** @class */ (function () {
         this.$gutterLayer.removeGutterDecoration(row, className);
     };
     VirtualRenderer.prototype.updateBreakpoints = function (rows) {
+        this._rows = rows;
         this.$loop.schedule(this.CHANGE_GUTTER);
     };
     VirtualRenderer.prototype.setAnnotations = function (annotations) {
@@ -36521,6 +36755,19 @@ var VirtualRenderer = /** @class */ (function () {
                 className: "ace_ghost_text"
             };
             this.session.widgetManager.addLineWidget(this.$ghostTextWidget);
+            var pixelPosition = this.$cursorLayer.getPixelPosition(insertPosition, true);
+            var el = this.container;
+            var height = el.getBoundingClientRect().height;
+            var ghostTextHeight = textLines.length * this.lineHeight;
+            var fitsY = ghostTextHeight < height - pixelPosition.top;
+            if (fitsY)
+                return;
+            if (ghostTextHeight < height) {
+                this.scrollBy(0, (textLines.length - 1) * this.lineHeight);
+            }
+            else {
+                this.scrollBy(0, pixelPosition.top);
+            }
         }
     };
     VirtualRenderer.prototype.removeGhostText = function () {
@@ -36998,6 +37245,9 @@ var WorkerClient = function(worker) {
         this._signal("terminate", {});
         this.deltaQueue = null;
         this.$worker.terminate();
+        this.$worker.onerror = function(e) {
+            e.preventDefault();
+        };
         this.$worker = null;
         if (this.$doc)
             this.$doc.off("change", this.changeListener);
@@ -37137,7 +37387,7 @@ var PlaceHolder = /** @class */ (function () {
             });
         };
         this.$pos = pos;
-        var undoStack = session.getUndoManager().$undoStack || session.getUndoManager().$undostack || { length: -1 };
+        var undoStack = session.getUndoManager().$undoStack || session.getUndoManager()["$undostack"] || { length: -1 };
         this.$undoStackDepth = undoStack.length;
         this.setup();
         session.selection.on("changeCursor", this.$onCursorChange);
@@ -37259,7 +37509,7 @@ var PlaceHolder = /** @class */ (function () {
         if (this.$undoStackDepth === -1)
             return;
         var undoManager = this.session.getUndoManager();
-        var undosRequired = (undoManager.$undoStack || undoManager.$undostack).length - this.$undoStackDepth;
+        var undosRequired = (undoManager.$undoStack || undoManager["$undostack"]).length - this.$undoStackDepth;
         for (var i = 0; i < undosRequired; i++) {
             undoManager.undo(this.session, true);
         }
@@ -37420,7 +37670,10 @@ exports.onMouseDown = onMouseDown;
 
 });
 
-ace.define("ace/commands/multi_select_commands",["require","exports","module","ace/keyboard/hash_handler"], function(require, exports, module){// commands to enter multiselect mode
+ace.define("ace/commands/multi_select_commands",["require","exports","module","ace/keyboard/hash_handler"], function(require, exports, module){/**
+ * commands to enter multiselect mode
+ * @type {import("../../ace-internal").Ace.Command[]}
+ */
 exports.defaultCommands = [{
         name: "addCursorAbove",
         description: "Add cursor above",
@@ -37521,7 +37774,12 @@ exports.keyboardHandler = new HashHandler(exports.multiSelectCommands);
 
 });
 
-ace.define("ace/multi_select",["require","exports","module","ace/range_list","ace/range","ace/selection","ace/mouse/multi_select_handler","ace/lib/event","ace/lib/lang","ace/commands/multi_select_commands","ace/search","ace/edit_session","ace/editor","ace/config"], function(require, exports, module){var RangeList = require("./range_list").RangeList;
+ace.define("ace/multi_select",["require","exports","module","ace/range_list","ace/range","ace/selection","ace/mouse/multi_select_handler","ace/lib/event","ace/lib/lang","ace/commands/multi_select_commands","ace/search","ace/edit_session","ace/editor","ace/config"], function(require, exports, module){/**
+ * @typedef {import("./anchor").Anchor} Anchor
+ * @typedef {import("../ace-internal").Ace.Point} Point
+ * @typedef {import("../ace-internal").Ace.ScreenCoordinates} ScreenCoordinates
+ */
+var RangeList = require("./range_list").RangeList;
 var Range = require("./range").Range;
 var Selection = require("./selection").Selection;
 var onMouseDown = require("./mouse/multi_select_handler").onMouseDown;
@@ -37973,11 +38231,11 @@ var Editor = require("./editor").Editor;
         for (var i = all.length; i--;) {
             var range = all[i];
             if (range.isEmpty()) {
-                var tmp = session.getWordRange(range.start.row, range.start.column);
-                range.start.row = tmp.start.row;
-                range.start.column = tmp.start.column;
-                range.end.row = tmp.end.row;
-                range.end.column = tmp.end.column;
+                var tmp_1 = session.getWordRange(range.start.row, range.start.column);
+                range.start.row = tmp_1.start.row;
+                range.start.column = tmp_1.start.column;
+                range.end.row = tmp_1.end.row;
+                range.end.column = tmp_1.end.column;
             }
         }
         sel.mergeOverlappingRanges();
@@ -38221,11 +38479,9 @@ require("./config").defineOptions(Editor.prototype, "editor", {
         set: function (val) {
             MultiSelect(this);
             if (val) {
-                this.on("changeSession", this.$multiselectOnSessionChange);
                 this.on("mousedown", onMouseDown);
             }
             else {
-                this.off("changeSession", this.$multiselectOnSessionChange);
                 this.off("mousedown", onMouseDown);
             }
         },
@@ -38449,7 +38705,7 @@ dom.importCssString("\n    .error_widget_wrapper {\n        background: inherit;
 ace.define("ace/ace",["require","exports","module","ace/lib/dom","ace/range","ace/editor","ace/edit_session","ace/undomanager","ace/virtual_renderer","ace/worker/worker_client","ace/keyboard/hash_handler","ace/placeholder","ace/multi_select","ace/mode/folding/fold_mode","ace/theme/textmate","ace/ext/error_marker","ace/config","ace/loader_build"], function(require, exports, module){/**
  * The main class required to set up an Ace instance in the browser.
  *
- * @class Ace
+ * @namespace Ace
  **/
 "use strict";
 require("./loader_build")(exports)
@@ -38520,13 +38776,19 @@ exports.version = exports.config.version;
                         a.config.init(true);
                         a.define = ace.define;
                     }
-                    if (!window.ace)
-                        window.ace = a;
+                    var global = (function () {
+                        return this;
+                    })();
+                    if (!global && typeof window != "undefined") global = window; // can happen in strict mode
+                    if (!global && typeof self != "undefined") global = self; // can happen in webworker
+                    
+                    if (!global.ace)
+                        global.ace = a;
                     for (var key in a) if (a.hasOwnProperty(key))
-                        window.ace[key] = a[key];
-                    window.ace["default"] = window.ace;
+                        global.ace[key] = a[key];
+                    global.ace["default"] = global.ace;
                     if ( true && module) {
-                        module.exports = window.ace;
+                        module.exports = global.ace;
                     }
                 });
             })();
@@ -38620,16 +38882,16 @@ function date(dateFormat) {
     var str = new Date().toLocaleString("en-us", dateFormat);
     return str.length == 1 ? "0" + str : str;
 }
-var SnippetManager = function () {
-    this.snippetMap = {};
-    this.snippetNameMap = {};
-};
-(function () {
-    oop.implement(this, EventEmitter);
-    this.getTokenizer = function () {
-        return SnippetManager.$tokenizer || this.createTokenizer();
+var SnippetManager = /** @class */ (function () {
+    function SnippetManager() {
+        this.snippetMap = {};
+        this.snippetNameMap = {};
+        this.variables = VARIABLES;
+    }
+    SnippetManager.prototype.getTokenizer = function () {
+        return SnippetManager["$tokenizer"] || this.createTokenizer();
     };
-    this.createTokenizer = function () {
+    SnippetManager.prototype.createTokenizer = function () {
         function TabstopToken(str) {
             str = str.substr(1);
             if (/^\d+$/.test(str))
@@ -38650,7 +38912,7 @@ var SnippetManager = function () {
             },
             next: "formatString"
         };
-        SnippetManager.$tokenizer = new Tokenizer({
+        SnippetManager["$tokenizer"] = new Tokenizer({
             start: [
                 { regex: /\\./, onMatch: function (val, state, stack) {
                         var ch = val[1];
@@ -38747,14 +39009,14 @@ var SnippetManager = function () {
                 { regex: "([^:}\\\\]|\\\\.)*:?", token: "", next: "formatString" }
             ]
         });
-        return SnippetManager.$tokenizer;
+        return SnippetManager["$tokenizer"];
     };
-    this.tokenizeTmSnippet = function (str, startState) {
+    SnippetManager.prototype.tokenizeTmSnippet = function (str, startState) {
         return this.getTokenizer().getLineTokens(str, startState).tokens.map(function (x) {
             return x.value || x;
         });
     };
-    this.getVariableValue = function (editor, name, indentation) {
+    SnippetManager.prototype.getVariableValue = function (editor, name, indentation) {
         if (/^\d+$/.test(name))
             return (this.variables.__ || {})[name] || "";
         if (/^[A-Z]\d+$/.test(name))
@@ -38767,8 +39029,7 @@ var SnippetManager = function () {
             value = this.variables[name](editor, name, indentation);
         return value == null ? "" : value;
     };
-    this.variables = VARIABLES;
-    this.tmStrFormat = function (str, ch, editor) {
+    SnippetManager.prototype.tmStrFormat = function (str, ch, editor) {
         if (!ch.fmt)
             return str;
         var flag = ch.flag || "";
@@ -38811,14 +39072,14 @@ var SnippetManager = function () {
         });
         return formatted;
     };
-    this.tmFormatFunction = function (str, ch, editor) {
+    SnippetManager.prototype.tmFormatFunction = function (str, ch, editor) {
         if (ch.formatFunction == "upcase")
             return str.toUpperCase();
         if (ch.formatFunction == "downcase")
             return str.toLowerCase();
         return str;
     };
-    this.resolveVariables = function (snippet, editor) {
+    SnippetManager.prototype.resolveVariables = function (snippet, editor) {
         var result = [];
         var indentation = "";
         var afterNewLine = true;
@@ -38877,142 +39138,22 @@ var SnippetManager = function () {
         }
         return result;
     };
-    var processSnippetText = function (editor, snippetText, options) {
-        if (options === void 0) { options = {}; }
-        var cursor = editor.getCursorPosition();
-        var line = editor.session.getLine(cursor.row);
-        var tabString = editor.session.getTabString();
-        var indentString = line.match(/^\s*/)[0];
-        if (cursor.column < indentString.length)
-            indentString = indentString.slice(0, cursor.column);
-        snippetText = snippetText.replace(/\r/g, "");
-        var tokens = this.tokenizeTmSnippet(snippetText);
-        tokens = this.resolveVariables(tokens, editor);
-        tokens = tokens.map(function (x) {
-            if (x == "\n" && !options.excludeExtraIndent)
-                return x + indentString;
-            if (typeof x == "string")
-                return x.replace(/\t/g, tabString);
-            return x;
-        });
-        var tabstops = [];
-        tokens.forEach(function (p, i) {
-            if (typeof p != "object")
-                return;
-            var id = p.tabstopId;
-            var ts = tabstops[id];
-            if (!ts) {
-                ts = tabstops[id] = [];
-                ts.index = id;
-                ts.value = "";
-                ts.parents = {};
-            }
-            if (ts.indexOf(p) !== -1)
-                return;
-            if (p.choices && !ts.choices)
-                ts.choices = p.choices;
-            ts.push(p);
-            var i1 = tokens.indexOf(p, i + 1);
-            if (i1 === -1)
-                return;
-            var value = tokens.slice(i + 1, i1);
-            var isNested = value.some(function (t) { return typeof t === "object"; });
-            if (isNested && !ts.value) {
-                ts.value = value;
-            }
-            else if (value.length && (!ts.value || typeof ts.value !== "string")) {
-                ts.value = value.join("");
-            }
-        });
-        tabstops.forEach(function (ts) { ts.length = 0; });
-        var expanding = {};
-        function copyValue(val) {
-            var copy = [];
-            for (var i = 0; i < val.length; i++) {
-                var p = val[i];
-                if (typeof p == "object") {
-                    if (expanding[p.tabstopId])
-                        continue;
-                    var j = val.lastIndexOf(p, i - 1);
-                    p = copy[j] || { tabstopId: p.tabstopId };
-                }
-                copy[i] = p;
-            }
-            return copy;
-        }
-        for (var i = 0; i < tokens.length; i++) {
-            var p = tokens[i];
-            if (typeof p != "object")
-                continue;
-            var id = p.tabstopId;
-            var ts = tabstops[id];
-            var i1 = tokens.indexOf(p, i + 1);
-            if (expanding[id]) {
-                if (expanding[id] === p) {
-                    delete expanding[id];
-                    Object.keys(expanding).forEach(function (parentId) {
-                        ts.parents[parentId] = true;
-                    });
-                }
-                continue;
-            }
-            expanding[id] = p;
-            var value = ts.value;
-            if (typeof value !== "string")
-                value = copyValue(value);
-            else if (p.fmt)
-                value = this.tmStrFormat(value, p, editor);
-            tokens.splice.apply(tokens, [i + 1, Math.max(0, i1 - i)].concat(value, p));
-            if (ts.indexOf(p) === -1)
-                ts.push(p);
-        }
-        var row = 0, column = 0;
-        var text = "";
-        tokens.forEach(function (t) {
-            if (typeof t === "string") {
-                var lines = t.split("\n");
-                if (lines.length > 1) {
-                    column = lines[lines.length - 1].length;
-                    row += lines.length - 1;
-                }
-                else
-                    column += t.length;
-                text += t;
-            }
-            else if (t) {
-                if (!t.start)
-                    t.start = { row: row, column: column };
-                else
-                    t.end = { row: row, column: column };
-            }
-        });
-        return {
-            text: text,
-            tabstops: tabstops,
-            tokens: tokens
-        };
-    };
-    this.getDisplayTextForSnippet = function (editor, snippetText) {
+    SnippetManager.prototype.getDisplayTextForSnippet = function (editor, snippetText) {
         var processedSnippet = processSnippetText.call(this, editor, snippetText);
         return processedSnippet.text;
     };
-    this.insertSnippetForSelection = function (editor, snippetText, options) {
+    SnippetManager.prototype.insertSnippetForSelection = function (editor, snippetText, options) {
         if (options === void 0) { options = {}; }
         var processedSnippet = processSnippetText.call(this, editor, snippetText, options);
         var range = editor.getSelectionRange();
-        if (options.range && options.range.compareRange(range) === 0) {
-            range = options.range;
-        }
         var end = editor.session.replace(range, processedSnippet.text);
         var tabstopManager = new TabstopManager(editor);
         var selectionId = editor.inVirtualSelectionMode && editor.selection.index;
         tabstopManager.addTabstops(processedSnippet.tabstops, range.start, end, selectionId);
     };
-    this.insertSnippet = function (editor, snippetText, options) {
+    SnippetManager.prototype.insertSnippet = function (editor, snippetText, options) {
         if (options === void 0) { options = {}; }
         var self = this;
-        if (options.range && !(options.range instanceof Range))
-            options.range = Range.fromPoints(options.range.start, options.range.end);
         if (editor.inVirtualSelectionMode)
             return self.insertSnippetForSelection(editor, snippetText, options);
         editor.forEachSelection(function () {
@@ -39021,7 +39162,7 @@ var SnippetManager = function () {
         if (editor.tabstopManager)
             editor.tabstopManager.tabNext();
     };
-    this.$getScope = function (editor) {
+    SnippetManager.prototype.$getScope = function (editor) {
         var scope = editor.session.$mode.$id || "";
         scope = scope.split("/").pop();
         if (scope === "html" || scope === "php") {
@@ -39043,7 +39184,7 @@ var SnippetManager = function () {
         }
         return scope;
     };
-    this.getActiveScopes = function (editor) {
+    SnippetManager.prototype.getActiveScopes = function (editor) {
         var scope = this.$getScope(editor);
         var scopes = [scope];
         var snippetMap = this.snippetMap;
@@ -39053,7 +39194,7 @@ var SnippetManager = function () {
         scopes.push("_");
         return scopes;
     };
-    this.expandWithTab = function (editor, options) {
+    SnippetManager.prototype.expandWithTab = function (editor, options) {
         var self = this;
         var result = editor.forEachSelection(function () {
             return self.expandSnippetForSelection(editor, options);
@@ -39062,7 +39203,7 @@ var SnippetManager = function () {
             editor.tabstopManager.tabNext();
         return result;
     };
-    this.expandSnippetForSelection = function (editor, options) {
+    SnippetManager.prototype.expandSnippetForSelection = function (editor, options) {
         var cursor = editor.getCursorPosition();
         var line = editor.session.getLine(cursor.row);
         var before = line.substring(0, cursor.column);
@@ -39086,7 +39227,7 @@ var SnippetManager = function () {
         this.variables.M__ = this.variables.T__ = null;
         return true;
     };
-    this.findMatchingSnippet = function (snippetList, before, after) {
+    SnippetManager.prototype.findMatchingSnippet = function (snippetList, before, after) {
         for (var i = snippetList.length; i--;) {
             var s = snippetList[i];
             if (s.startRe && !s.startRe.test(before))
@@ -39102,9 +39243,7 @@ var SnippetManager = function () {
             return s;
         }
     };
-    this.snippetMap = {};
-    this.snippetNameMap = {};
-    this.register = function (snippets, scope) {
+    SnippetManager.prototype.register = function (snippets, scope) {
         var snippetMap = this.snippetMap;
         var snippetNameMap = this.snippetNameMap;
         var self = this;
@@ -39172,7 +39311,7 @@ var SnippetManager = function () {
         }
         this._signal("registerSnippets", { scope: scope });
     };
-    this.unregister = function (snippets, scope) {
+    SnippetManager.prototype.unregister = function (snippets, scope) {
         var snippetMap = this.snippetMap;
         var snippetNameMap = this.snippetNameMap;
         function removeSnippet(s) {
@@ -39190,9 +39329,9 @@ var SnippetManager = function () {
         else if (Array.isArray(snippets))
             snippets.forEach(removeSnippet);
     };
-    this.parseSnippetFile = function (str) {
+    SnippetManager.prototype.parseSnippetFile = function (str) {
         str = str.replace(/\r/g, "");
-        var list = [], snippet = {};
+        var list = [], /**@type{Snippet}*/ snippet = {};
         var re = /^#.*|^({[\s\S]*})\s*$|^(\S+) (.*)$|^((?:\n*\t.*)+)/gm;
         var m;
         while (m = re.exec(str)) {
@@ -39229,7 +39368,7 @@ var SnippetManager = function () {
         }
         return list;
     };
-    this.getSnippetByName = function (name, editor) {
+    SnippetManager.prototype.getSnippetByName = function (name, editor) {
         var snippetMap = this.snippetNameMap;
         var snippet;
         this.getActiveScopes(editor).some(function (scope) {
@@ -39240,49 +39379,168 @@ var SnippetManager = function () {
         }, this);
         return snippet;
     };
-}).call(SnippetManager.prototype);
-var TabstopManager = function (editor) {
-    if (editor.tabstopManager)
-        return editor.tabstopManager;
-    editor.tabstopManager = this;
-    this.$onChange = this.onChange.bind(this);
-    this.$onChangeSelection = lang.delayedCall(this.onChangeSelection.bind(this)).schedule;
-    this.$onChangeSession = this.onChangeSession.bind(this);
-    this.$onAfterExec = this.onAfterExec.bind(this);
-    this.attach(editor);
+    return SnippetManager;
+}());
+oop.implement(SnippetManager.prototype, EventEmitter);
+var processSnippetText = function (editor, snippetText, options) {
+    if (options === void 0) { options = {}; }
+    var cursor = editor.getCursorPosition();
+    var line = editor.session.getLine(cursor.row);
+    var tabString = editor.session.getTabString();
+    var indentString = line.match(/^\s*/)[0];
+    if (cursor.column < indentString.length)
+        indentString = indentString.slice(0, cursor.column);
+    snippetText = snippetText.replace(/\r/g, "");
+    var tokens = this.tokenizeTmSnippet(snippetText);
+    tokens = this.resolveVariables(tokens, editor);
+    tokens = tokens.map(function (x) {
+        if (x == "\n" && !options.excludeExtraIndent)
+            return x + indentString;
+        if (typeof x == "string")
+            return x.replace(/\t/g, tabString);
+        return x;
+    });
+    var tabstops = [];
+    tokens.forEach(function (p, i) {
+        if (typeof p != "object")
+            return;
+        var id = p.tabstopId;
+        var ts = tabstops[id];
+        if (!ts) {
+            ts = tabstops[id] = [];
+            ts.index = id;
+            ts.value = "";
+            ts.parents = {};
+        }
+        if (ts.indexOf(p) !== -1)
+            return;
+        if (p.choices && !ts.choices)
+            ts.choices = p.choices;
+        ts.push(p);
+        var i1 = tokens.indexOf(p, i + 1);
+        if (i1 === -1)
+            return;
+        var value = tokens.slice(i + 1, i1);
+        var isNested = value.some(function (t) { return typeof t === "object"; });
+        if (isNested && !ts.value) {
+            ts.value = value;
+        }
+        else if (value.length && (!ts.value || typeof ts.value !== "string")) {
+            ts.value = value.join("");
+        }
+    });
+    tabstops.forEach(function (ts) { ts.length = 0; });
+    var expanding = {};
+    function copyValue(val) {
+        var copy = [];
+        for (var i = 0; i < val.length; i++) {
+            var p = val[i];
+            if (typeof p == "object") {
+                if (expanding[p.tabstopId])
+                    continue;
+                var j = val.lastIndexOf(p, i - 1);
+                p = copy[j] || { tabstopId: p.tabstopId };
+            }
+            copy[i] = p;
+        }
+        return copy;
+    }
+    for (var i = 0; i < tokens.length; i++) {
+        var p = tokens[i];
+        if (typeof p != "object")
+            continue;
+        var id = p.tabstopId;
+        var ts = tabstops[id];
+        var i1 = tokens.indexOf(p, i + 1);
+        if (expanding[id]) {
+            if (expanding[id] === p) {
+                delete expanding[id];
+                Object.keys(expanding).forEach(function (parentId) {
+                    ts.parents[parentId] = true;
+                });
+            }
+            continue;
+        }
+        expanding[id] = p;
+        var value = ts.value;
+        if (typeof value !== "string")
+            value = copyValue(value);
+        else if (p.fmt)
+            value = this.tmStrFormat(value, p, editor);
+        tokens.splice.apply(tokens, [i + 1, Math.max(0, i1 - i)].concat(value, p));
+        if (ts.indexOf(p) === -1)
+            ts.push(p);
+    }
+    var row = 0, column = 0;
+    var text = "";
+    tokens.forEach(function (t) {
+        if (typeof t === "string") {
+            var lines = t.split("\n");
+            if (lines.length > 1) {
+                column = lines[lines.length - 1].length;
+                row += lines.length - 1;
+            }
+            else
+                column += t.length;
+            text += t;
+        }
+        else if (t) {
+            if (!t.start)
+                t.start = { row: row, column: column };
+            else
+                t.end = { row: row, column: column };
+        }
+    });
+    return {
+        text: text,
+        tabstops: tabstops,
+        tokens: tokens
+    };
 };
-(function () {
-    this.attach = function (editor) {
+var TabstopManager = /** @class */ (function () {
+    function TabstopManager(editor) {
         this.index = 0;
         this.ranges = [];
         this.tabstops = [];
+        if (editor.tabstopManager)
+            return editor.tabstopManager;
+        editor.tabstopManager = this;
+        this.$onChange = this.onChange.bind(this);
+        this.$onChangeSelection = lang.delayedCall(this.onChangeSelection.bind(this)).schedule;
+        this.$onChangeSession = this.onChangeSession.bind(this);
+        this.$onAfterExec = this.onAfterExec.bind(this);
+        this.attach(editor);
+    }
+    TabstopManager.prototype.attach = function (editor) {
         this.$openTabstops = null;
         this.selectedTabstop = null;
         this.editor = editor;
+        this.session = editor.session;
         this.editor.on("change", this.$onChange);
         this.editor.on("changeSelection", this.$onChangeSelection);
         this.editor.on("changeSession", this.$onChangeSession);
         this.editor.commands.on("afterExec", this.$onAfterExec);
         this.editor.keyBinding.addKeyboardHandler(this.keyboardHandler);
     };
-    this.detach = function () {
+    TabstopManager.prototype.detach = function () {
         this.tabstops.forEach(this.removeTabstopMarkers, this);
-        this.ranges = null;
-        this.tabstops = null;
+        this.ranges.length = 0;
+        this.tabstops.length = 0;
         this.selectedTabstop = null;
-        this.editor.removeListener("change", this.$onChange);
-        this.editor.removeListener("changeSelection", this.$onChangeSelection);
-        this.editor.removeListener("changeSession", this.$onChangeSession);
-        this.editor.commands.removeListener("afterExec", this.$onAfterExec);
+        this.editor.off("change", this.$onChange);
+        this.editor.off("changeSelection", this.$onChangeSelection);
+        this.editor.off("changeSession", this.$onChangeSession);
+        this.editor.commands.off("afterExec", this.$onAfterExec);
         this.editor.keyBinding.removeKeyboardHandler(this.keyboardHandler);
         this.editor.tabstopManager = null;
+        this.session = null;
         this.editor = null;
     };
-    this.onChange = function (delta) {
+    TabstopManager.prototype.onChange = function (delta) {
         var isRemove = delta.action[0] == "r";
         var selectedTabstop = this.selectedTabstop || {};
         var parents = selectedTabstop.parents || {};
-        var tabstops = (this.tabstops || []).slice();
+        var tabstops = this.tabstops.slice();
         for (var i = 0; i < tabstops.length; i++) {
             var ts = tabstops[i];
             var active = ts == selectedTabstop || parents[ts.index];
@@ -39299,16 +39557,16 @@ var TabstopManager = function (editor) {
             }
             ts.rangeList.$onChange(delta);
         }
-        var session = this.editor.session;
+        var session = this.session;
         if (!this.$inChange && isRemove && session.getLength() == 1 && !session.getValue())
             this.detach();
     };
-    this.updateLinkedFields = function () {
+    TabstopManager.prototype.updateLinkedFields = function () {
         var ts = this.selectedTabstop;
         if (!ts || !ts.hasLinkedRanges || !ts.firstNonLinked)
             return;
         this.$inChange = true;
-        var session = this.editor.session;
+        var session = this.session;
         var text = session.getTextRange(ts.firstNonLinked);
         for (var i = 0; i < ts.length; i++) {
             var range = ts[i];
@@ -39320,11 +39578,11 @@ var TabstopManager = function (editor) {
         }
         this.$inChange = false;
     };
-    this.onAfterExec = function (e) {
+    TabstopManager.prototype.onAfterExec = function (e) {
         if (e.command && !e.command.readOnly)
             this.updateLinkedFields();
     };
-    this.onChangeSelection = function () {
+    TabstopManager.prototype.onChangeSelection = function () {
         if (!this.editor)
             return;
         var lead = this.editor.selection.lead;
@@ -39340,10 +39598,10 @@ var TabstopManager = function (editor) {
         }
         this.detach();
     };
-    this.onChangeSession = function () {
+    TabstopManager.prototype.onChangeSession = function () {
         this.detach();
     };
-    this.tabNext = function (dir) {
+    TabstopManager.prototype.tabNext = function (dir) {
         var max = this.tabstops.length;
         var index = this.index + (dir || 1);
         index = Math.min(Math.max(index, 1), max);
@@ -39353,7 +39611,7 @@ var TabstopManager = function (editor) {
         if (index === 0)
             this.detach();
     };
-    this.selectTabstop = function (index) {
+    TabstopManager.prototype.selectTabstop = function (index) {
         this.$openTabstops = null;
         var ts = this.tabstops[this.index];
         if (ts)
@@ -39382,7 +39640,7 @@ var TabstopManager = function (editor) {
         if (this.selectedTabstop && this.selectedTabstop.choices)
             this.editor.execCommand("startAutocomplete", { matches: this.selectedTabstop.choices });
     };
-    this.addTabstops = function (tabstops, start, end) {
+    TabstopManager.prototype.addTabstops = function (tabstops, start, end) {
         var useLink = this.useLink || !this.editor.getOption("enableMultiselect");
         if (!this.$openTabstops)
             this.$openTabstops = [];
@@ -39434,21 +39692,21 @@ var TabstopManager = function (editor) {
             this.tabstops.splice.apply(this.tabstops, arg);
         }
     };
-    this.addTabstopMarkers = function (ts) {
-        var session = this.editor.session;
+    TabstopManager.prototype.addTabstopMarkers = function (ts) {
+        var session = this.session;
         ts.forEach(function (range) {
             if (!range.markerId)
                 range.markerId = session.addMarker(range, "ace_snippet-marker", "text");
         });
     };
-    this.removeTabstopMarkers = function (ts) {
-        var session = this.editor.session;
+    TabstopManager.prototype.removeTabstopMarkers = function (ts) {
+        var session = this.session;
         ts.forEach(function (range) {
             session.removeMarker(range.markerId);
             range.markerId = null;
         });
     };
-    this.removeRange = function (range) {
+    TabstopManager.prototype.removeRange = function (range) {
         var i = range.tabstop.indexOf(range);
         if (i != -1)
             range.tabstop.splice(i, 1);
@@ -39458,7 +39716,7 @@ var TabstopManager = function (editor) {
         i = range.tabstop.rangeList.ranges.indexOf(range);
         if (i != -1)
             range.tabstop.splice(i, 1);
-        this.editor.session.removeMarker(range.markerId);
+        this.session.removeMarker(range.markerId);
         if (!range.tabstop.length) {
             i = this.tabstops.indexOf(range.tabstop);
             if (i != -1)
@@ -39467,23 +39725,24 @@ var TabstopManager = function (editor) {
                 this.detach();
         }
     };
-    this.keyboardHandler = new HashHandler();
-    this.keyboardHandler.bindKeys({
-        "Tab": function (editor) {
-            if (exports.snippetManager && exports.snippetManager.expandWithTab(editor))
-                return;
-            editor.tabstopManager.tabNext(1);
-            editor.renderer.scrollCursorIntoView();
-        },
-        "Shift-Tab": function (editor) {
-            editor.tabstopManager.tabNext(-1);
-            editor.renderer.scrollCursorIntoView();
-        },
-        "Esc": function (editor) {
-            editor.tabstopManager.detach();
-        }
-    });
-}).call(TabstopManager.prototype);
+    return TabstopManager;
+}());
+TabstopManager.prototype.keyboardHandler = new HashHandler();
+TabstopManager.prototype.keyboardHandler.bindKeys({
+    "Tab": function (editor) {
+        if (exports.snippetManager && exports.snippetManager.expandWithTab(editor))
+            return;
+        editor.tabstopManager.tabNext(1);
+        editor.renderer.scrollCursorIntoView();
+    },
+    "Shift-Tab": function (editor) {
+        editor.tabstopManager.tabNext(-1);
+        editor.renderer.scrollCursorIntoView();
+    },
+    "Esc": function (editor) {
+        editor.tabstopManager.detach();
+    }
+});
 var movePoint = function (point, diff) {
     if (point.row == 0)
         point.column += diff.column;
@@ -39508,7 +39767,7 @@ var Editor = require("./editor").Editor;
 
 });
 
-ace.define("ace/autocomplete/popup",["require","exports","module","ace/virtual_renderer","ace/editor","ace/range","ace/lib/event","ace/lib/lang","ace/lib/dom","ace/config"], function(require, exports, module){"use strict";
+ace.define("ace/autocomplete/popup",["require","exports","module","ace/virtual_renderer","ace/editor","ace/range","ace/lib/event","ace/lib/lang","ace/lib/dom","ace/config","ace/lib/useragent"], function(require, exports, module){"use strict";
 var Renderer = require("../virtual_renderer").VirtualRenderer;
 var Editor = require("../editor").Editor;
 var Range = require("../range").Range;
@@ -39516,9 +39775,13 @@ var event = require("../lib/event");
 var lang = require("../lib/lang");
 var dom = require("../lib/dom");
 var nls = require("../config").nls;
+var userAgent = require("./../lib/useragent");
 var getAriaId = function (index) {
     return "suggest-aria-id:".concat(index);
 };
+var popupAriaRole = userAgent.isSafari ? "menu" : "listbox";
+var optionAriaRole = userAgent.isSafari ? "menuitem" : "option";
+var ariaActiveState = userAgent.isSafari ? "aria-current" : "aria-selected";
 var $singleLineEditor = function (el) {
     var renderer = new Renderer(el);
     renderer.$maxLines = 4;
@@ -39534,21 +39797,24 @@ var $singleLineEditor = function (el) {
 var AcePopup = /** @class */ (function () {
     function AcePopup(parentNode) {
         var el = dom.createElement("div");
-        var popup = new $singleLineEditor(el);
-        if (parentNode)
+        var popup = $singleLineEditor(el);
+        if (parentNode) {
             parentNode.appendChild(el);
+        }
         el.style.display = "none";
         popup.renderer.content.style.cursor = "default";
         popup.renderer.setStyle("ace_autocomplete");
-        popup.renderer.container.setAttribute("role", "listbox");
-        popup.renderer.container.setAttribute("aria-label", nls("Autocomplete suggestions"));
+        popup.renderer.$textLayer.element.setAttribute("role", popupAriaRole);
+        popup.renderer.$textLayer.element.setAttribute("aria-roledescription", nls("Autocomplete suggestions"));
+        popup.renderer.$textLayer.element.setAttribute("aria-label", nls("Autocomplete suggestions"));
+        popup.renderer.textarea.setAttribute("aria-hidden", "true");
         popup.setOption("displayIndentGuides", false);
         popup.setOption("dragDelay", 150);
         var noop = function () { };
         popup.focus = noop;
         popup.$isFocused = true;
         popup.renderer.$cursorLayer.restartTimer = noop;
-        popup.renderer.$cursorLayer.element.style.opacity = 0;
+        popup.renderer.$cursorLayer.element.style.opacity = "0";
         popup.renderer.$maxLines = 8;
         popup.renderer.$keepTextAreaAtCursor = false;
         popup.setHighlightActiveLine(false);
@@ -39584,6 +39850,7 @@ var AcePopup = /** @class */ (function () {
             }
             lastMouseEvent = e;
             lastMouseEvent.scrollTop = popup.renderer.scrollTop;
+            popup.isMouseOver = true;
             var row = lastMouseEvent.getDocumentPosition().row;
             if (hoverMarker.start.row != row) {
                 if (!hoverMarker.id)
@@ -39603,24 +39870,28 @@ var AcePopup = /** @class */ (function () {
         popup.renderer.on("afterRender", function () {
             var row = popup.getRow();
             var t = popup.renderer.$textLayer;
-            var selected = t.element.childNodes[row - t.config.firstRow];
+            var selected = /** @type {HTMLElement|null} */ (t.element.childNodes[row - t.config.firstRow]);
             var el = document.activeElement; // Active element is textarea of main editor
-            if (selected !== t.selectedNode && t.selectedNode) {
-                dom.removeCssClass(t.selectedNode, "ace_selected");
+            if (selected !== popup.selectedNode && popup.selectedNode) {
+                dom.removeCssClass(popup.selectedNode, "ace_selected");
                 el.removeAttribute("aria-activedescendant");
-                t.selectedNode.removeAttribute("id");
+                popup.selectedNode.removeAttribute(ariaActiveState);
+                popup.selectedNode.removeAttribute("id");
             }
-            t.selectedNode = selected;
+            popup.selectedNode = selected;
             if (selected) {
                 dom.addCssClass(selected, "ace_selected");
                 var ariaId = getAriaId(row);
                 selected.id = ariaId;
-                popup.renderer.container.setAttribute("aria-activedescendant", ariaId);
+                t.element.setAttribute("aria-activedescendant", ariaId);
                 el.setAttribute("aria-activedescendant", ariaId);
-                selected.setAttribute("role", "option");
+                selected.setAttribute("role", optionAriaRole);
+                selected.setAttribute("aria-roledescription", nls("item"));
                 selected.setAttribute("aria-label", popup.getData(row).value);
                 selected.setAttribute("aria-setsize", popup.data.length);
-                selected.setAttribute("aria-posinset", row);
+                selected.setAttribute("aria-posinset", row + 1);
+                selected.setAttribute("aria-describedby", "doc-tooltip");
+                selected.setAttribute(ariaActiveState, "true");
             }
         });
         var hideHoverMarker = function () { setHoverMarker(-1); };
@@ -39635,7 +39906,10 @@ var AcePopup = /** @class */ (function () {
         popup.getHoveredRow = function () {
             return hoverMarker.start.row;
         };
-        event.addListener(popup.container, "mouseout", hideHoverMarker);
+        event.addListener(popup.container, "mouseout", function () {
+            popup.isMouseOver = false;
+            hideHoverMarker();
+        });
         popup.on("hide", hideHoverMarker);
         popup.on("changeSelection", hideHoverMarker);
         popup.session.doc.getLength = function () {
@@ -39679,6 +39953,7 @@ var AcePopup = /** @class */ (function () {
                 }
             }
             addToken(caption.slice(lastIndex, caption.length), "");
+            tokens.push({ type: "completion-spacer", value: " " });
             if (data.meta)
                 tokens.push({ type: "completion-meta", value: data.meta });
             if (data.message)
@@ -39694,6 +39969,7 @@ var AcePopup = /** @class */ (function () {
         popup.isTopdown = false;
         popup.autoSelect = true;
         popup.filterText = "";
+        popup.isMouseOver = false;
         popup.data = [];
         popup.setData = function (list, filterText) {
             popup.filterText = filterText || "";
@@ -39708,7 +39984,7 @@ var AcePopup = /** @class */ (function () {
             return selectionMarker.start.row;
         };
         popup.setRow = function (line) {
-            line = Math.max(this.autoSelect ? 0 : -1, Math.min(this.data.length, line));
+            line = Math.max(this.autoSelect ? 0 : -1, Math.min(this.data.length - 1, line));
             if (selectionMarker.start.row != line) {
                 popup.selection.clearSelection();
                 selectionMarker.start.row = selectionMarker.end.row = line || 0;
@@ -39833,15 +40109,68 @@ var AcePopup = /** @class */ (function () {
     }
     return AcePopup;
 }());
-dom.importCssString("\n.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {\n    background-color: #CAD6FA;\n    z-index: 1;\n}\n.ace_dark.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {\n    background-color: #3a674e;\n}\n.ace_editor.ace_autocomplete .ace_line-hover {\n    border: 1px solid #abbffe;\n    margin-top: -1px;\n    background: rgba(233,233,253,0.4);\n    position: absolute;\n    z-index: 2;\n}\n.ace_dark.ace_editor.ace_autocomplete .ace_line-hover {\n    border: 1px solid rgba(109, 150, 13, 0.8);\n    background: rgba(58, 103, 78, 0.62);\n}\n.ace_completion-meta {\n    opacity: 0.5;\n    margin: 0 0.9em;\n}\n.ace_completion-message {\n    color: blue;\n}\n.ace_editor.ace_autocomplete .ace_completion-highlight{\n    color: #2d69c7;\n}\n.ace_dark.ace_editor.ace_autocomplete .ace_completion-highlight{\n    color: #93ca12;\n}\n.ace_editor.ace_autocomplete {\n    width: 300px;\n    z-index: 200000;\n    border: 1px lightgray solid;\n    position: fixed;\n    box-shadow: 2px 3px 5px rgba(0,0,0,.2);\n    line-height: 1.4;\n    background: #fefefe;\n    color: #111;\n}\n.ace_dark.ace_editor.ace_autocomplete {\n    border: 1px #484747 solid;\n    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.51);\n    line-height: 1.4;\n    background: #25282c;\n    color: #c1c1c1;\n}\n.ace_autocomplete_right .ace_text-layer  {\n    width: calc(100% - 8px);\n}\n.ace_autocomplete_right .ace_line {\n    display: flex;\n}\n.ace_autocomplete_right .ace_completion-meta {\n    flex: 1;\n    text-align: right;\n}\n", "autocompletion.css", false);
+dom.importCssString("\n.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {\n    background-color: #CAD6FA;\n    z-index: 1;\n}\n.ace_dark.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {\n    background-color: #3a674e;\n}\n.ace_editor.ace_autocomplete .ace_line-hover {\n    border: 1px solid #abbffe;\n    margin-top: -1px;\n    background: rgba(233,233,253,0.4);\n    position: absolute;\n    z-index: 2;\n}\n.ace_dark.ace_editor.ace_autocomplete .ace_line-hover {\n    border: 1px solid rgba(109, 150, 13, 0.8);\n    background: rgba(58, 103, 78, 0.62);\n}\n.ace_completion-meta {\n    opacity: 0.5;\n    margin-left: 0.9em;\n}\n.ace_completion-message {\n    margin-left: 0.9em;\n    color: blue;\n}\n.ace_editor.ace_autocomplete .ace_completion-highlight{\n    color: #2d69c7;\n}\n.ace_dark.ace_editor.ace_autocomplete .ace_completion-highlight{\n    color: #93ca12;\n}\n.ace_editor.ace_autocomplete {\n    width: 300px;\n    z-index: 200000;\n    border: 1px lightgray solid;\n    position: fixed;\n    box-shadow: 2px 3px 5px rgba(0,0,0,.2);\n    line-height: 1.4;\n    background: #fefefe;\n    color: #111;\n}\n.ace_dark.ace_editor.ace_autocomplete {\n    border: 1px #484747 solid;\n    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.51);\n    line-height: 1.4;\n    background: #25282c;\n    color: #c1c1c1;\n}\n.ace_autocomplete .ace_text-layer  {\n    width: calc(100% - 8px);\n}\n.ace_autocomplete .ace_line {\n    display: flex;\n    align-items: center;\n}\n.ace_autocomplete .ace_line > * {\n    min-width: 0;\n    flex: 0 0 auto;\n}\n.ace_autocomplete .ace_line .ace_ {\n    flex: 0 1 auto;\n    overflow: hidden;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n.ace_autocomplete .ace_completion-spacer {\n    flex: 1;\n}\n.ace_autocomplete.ace_loading:after  {\n    content: \"\";\n    position: absolute;\n    top: 0px;\n    height: 2px;\n    width: 8%;\n    background: blue;\n    z-index: 100;\n    animation: ace_progress 3s infinite linear;\n    animation-delay: 300ms;\n    transform: translateX(-100%) scaleX(1);\n}\n@keyframes ace_progress {\n    0% { transform: translateX(-100%) scaleX(1) }\n    50% { transform: translateX(625%) scaleX(2) } \n    100% { transform: translateX(1500%) scaleX(3) } \n}\n@media (prefers-reduced-motion) {\n    .ace_autocomplete.ace_loading:after {\n        transform: translateX(625%) scaleX(2);\n        animation: none;\n     }\n}\n", "autocompletion.css", false);
 exports.AcePopup = AcePopup;
 exports.$singleLineEditor = $singleLineEditor;
 exports.getAriaId = getAriaId;
 
 });
 
-ace.define("ace/autocomplete/inline",["require","exports","module","ace/snippets"], function(require, exports, module){"use strict";
+ace.define("ace/autocomplete/inline_screenreader",["require","exports","module"], function(require, exports, module){"use strict";
+var AceInlineScreenReader = /** @class */ (function () {
+    function AceInlineScreenReader(editor) {
+        this.editor = editor;
+        this.screenReaderDiv = document.createElement("div");
+        this.screenReaderDiv.classList.add("ace_screenreader-only");
+        this.editor.container.appendChild(this.screenReaderDiv);
+    }
+    AceInlineScreenReader.prototype.setScreenReaderContent = function (content) {
+        if (!this.popup && this.editor.completer && /**@type{import("../autocomplete").Autocomplete}*/ (this.editor.completer).popup) {
+            this.popup = /**@type{import("../autocomplete").Autocomplete}*/ (this.editor.completer).popup;
+            this.popup.renderer.on("afterRender", function () {
+                var row = this.popup.getRow();
+                var t = this.popup.renderer.$textLayer;
+                var selected = t.element.childNodes[row - t.config.firstRow];
+                if (selected) {
+                    var idString = "doc-tooltip ";
+                    for (var lineIndex = 0; lineIndex < this._lines.length; lineIndex++) {
+                        idString += "ace-inline-screenreader-line-".concat(lineIndex, " ");
+                    }
+                    selected.setAttribute("aria-describedby", idString);
+                }
+            }.bind(this));
+        }
+        while (this.screenReaderDiv.firstChild) {
+            this.screenReaderDiv.removeChild(this.screenReaderDiv.firstChild);
+        }
+        this._lines = content.split(/\r\n|\r|\n/);
+        var codeElement = this.createCodeBlock();
+        this.screenReaderDiv.appendChild(codeElement);
+    };
+    AceInlineScreenReader.prototype.destroy = function () {
+        this.screenReaderDiv.remove();
+    };
+    AceInlineScreenReader.prototype.createCodeBlock = function () {
+        var container = document.createElement("pre");
+        container.setAttribute("id", "ace-inline-screenreader");
+        for (var lineIndex = 0; lineIndex < this._lines.length; lineIndex++) {
+            var codeElement = document.createElement("code");
+            codeElement.setAttribute("id", "ace-inline-screenreader-line-".concat(lineIndex));
+            var line = document.createTextNode(this._lines[lineIndex]);
+            codeElement.appendChild(line);
+            container.appendChild(codeElement);
+        }
+        return container;
+    };
+    return AceInlineScreenReader;
+}());
+exports.AceInlineScreenReader = AceInlineScreenReader;
+
+});
+
+ace.define("ace/autocomplete/inline",["require","exports","module","ace/snippets","ace/autocomplete/inline_screenreader"], function(require, exports, module){"use strict";
 var snippetManager = require("../snippets").snippetManager;
+var AceInlineScreenReader = require("./inline_screenreader").AceInlineScreenReader;
 var AceInline = /** @class */ (function () {
     function AceInline() {
         this.editor = null;
@@ -39851,15 +40180,20 @@ var AceInline = /** @class */ (function () {
         if (editor && this.editor && this.editor !== editor) {
             this.hide();
             this.editor = null;
+            this.inlineScreenReader = null;
         }
         if (!editor || !completion) {
             return false;
         }
+        if (!this.inlineScreenReader) {
+            this.inlineScreenReader = new AceInlineScreenReader(editor);
+        }
         var displayText = completion.snippet ? snippetManager.getDisplayTextForSnippet(editor, completion.snippet) : completion.value;
-        if (!displayText || !displayText.startsWith(prefix)) {
+        if (completion.hideInlinePreview || !displayText || !displayText.startsWith(prefix)) {
             return false;
         }
         this.editor = editor;
+        this.inlineScreenReader.setScreenReaderContent(displayText);
         displayText = displayText.slice(prefix.length);
         if (displayText === "") {
             editor.removeGhostText();
@@ -39885,6 +40219,10 @@ var AceInline = /** @class */ (function () {
     AceInline.prototype.destroy = function () {
         this.hide();
         this.editor = null;
+        if (this.inlineScreenReader) {
+            this.inlineScreenReader.destroy();
+            this.inlineScreenReader = null;
+        }
     };
     return AceInline;
 }());
@@ -39943,10 +40281,21 @@ exports.getCompletionPrefix = function (editor) {
     }.bind(this));
     return prefix || this.retrievePrecedingIdentifier(line, pos.column);
 };
+exports.triggerAutocomplete = function (editor) {
+    var pos = editor.getCursorPosition();
+    var line = editor.session.getLine(pos.row);
+    var column = (pos.column === 0) ? 0 : pos.column - 1;
+    var previousChar = line[column];
+    return editor.completers.some(function (el) {
+        if (el.triggerCharacters && Array.isArray(el.triggerCharacters)) {
+            return el.triggerCharacters.includes(previousChar);
+        }
+    });
+};
 
 });
 
-ace.define("ace/autocomplete",["require","exports","module","ace/keyboard/hash_handler","ace/autocomplete/popup","ace/autocomplete/inline","ace/autocomplete/popup","ace/autocomplete/util","ace/lib/lang","ace/lib/dom","ace/snippets","ace/config"], function(require, exports, module){"use strict";
+ace.define("ace/autocomplete",["require","exports","module","ace/keyboard/hash_handler","ace/autocomplete/popup","ace/autocomplete/inline","ace/autocomplete/popup","ace/autocomplete/util","ace/lib/lang","ace/lib/dom","ace/snippets","ace/config","ace/lib/event","ace/lib/scroll"], function(require, exports, module){"use strict";
 var HashHandler = require("./keyboard/hash_handler").HashHandler;
 var AcePopup = require("./autocomplete/popup").AcePopup;
 var AceInline = require("./autocomplete/inline").AceInline;
@@ -39956,6 +40305,8 @@ var lang = require("./lib/lang");
 var dom = require("./lib/dom");
 var snippetManager = require("./snippets").snippetManager;
 var config = require("./config");
+var event = require("./lib/event");
+var preventParentScroll = require("./lib/scroll").preventParentScroll;
 var destroyCompleter = function (e, editor) {
     editor.completer && editor.completer.destroy();
 };
@@ -39963,30 +40314,61 @@ var Autocomplete = /** @class */ (function () {
     function Autocomplete() {
         this.autoInsert = false;
         this.autoSelect = true;
+        this.autoShown = false;
         this.exactMatch = false;
         this.inlineEnabled = false;
         this.keyboardHandler = new HashHandler();
         this.keyboardHandler.bindKeys(this.commands);
+        this.parentNode = null;
+        this.setSelectOnHover = false;
+        this.hasSeen = new Set();
+        this.showLoadingState = false;
+        this.stickySelectionDelay = 500;
         this.blurListener = this.blurListener.bind(this);
         this.changeListener = this.changeListener.bind(this);
         this.mousedownListener = this.mousedownListener.bind(this);
         this.mousewheelListener = this.mousewheelListener.bind(this);
+        this.onLayoutChange = this.onLayoutChange.bind(this);
         this.changeTimer = lang.delayedCall(function () {
             this.updateCompletions(true);
         }.bind(this));
         this.tooltipTimer = lang.delayedCall(this.updateDocTooltip.bind(this), 50);
+        this.popupTimer = lang.delayedCall(this.$updatePopupPosition.bind(this), 50);
+        this.stickySelectionTimer = lang.delayedCall(function () {
+            this.stickySelection = true;
+        }.bind(this), this.stickySelectionDelay);
+        this.$firstOpenTimer = lang.delayedCall(/**@this{Autocomplete}*/ function () {
+            var initialPosition = this.completionProvider && this.completionProvider.initialPosition;
+            if (this.autoShown || (this.popup && this.popup.isOpen) || !initialPosition || this.editor.completers.length === 0)
+                return;
+            this.completions = new FilteredList(Autocomplete.completionsForLoading);
+            this.openPopup(this.editor, initialPosition.prefix, false);
+            this.popup.renderer.setStyle("ace_loading", true);
+        }.bind(this), this.stickySelectionDelay);
     }
+    Object.defineProperty(Autocomplete, "completionsForLoading", {
+        get: function () {
+            return [{
+                    caption: config.nls("Loading..."),
+                    value: ""
+                }];
+        },
+        enumerable: false,
+        configurable: true
+    });
     Autocomplete.prototype.$init = function () {
-        this.popup = new AcePopup(document.body || document.documentElement);
+        this.popup = new AcePopup(this.parentNode || document.body || document.documentElement);
         this.popup.on("click", function (e) {
             this.insertMatch();
             e.stop();
         }.bind(this));
         this.popup.focus = this.editor.focus.bind(this.editor);
-        this.popup.on("show", this.$onPopupChange.bind(this));
+        this.popup.on("show", this.$onPopupShow.bind(this));
         this.popup.on("hide", this.$onHidePopup.bind(this));
         this.popup.on("select", this.$onPopupChange.bind(this));
+        event.addListener(this.popup.container, "mouseout", this.mouseOutListener.bind(this));
         this.popup.on("changeHoverMarker", this.tooltipTimer.bind(null, null));
+        this.popup.renderer.on("afterRender", this.$onPopupRender.bind(this));
         return this.popup;
     };
     Autocomplete.prototype.$initInline = function () {
@@ -40003,6 +40385,15 @@ var Autocomplete = /** @class */ (function () {
             this.inlineRenderer.hide();
         }
         this.hideDocTooltip();
+        this.stickySelectionTimer.cancel();
+        this.popupTimer.cancel();
+        this.stickySelection = false;
+    };
+    Autocomplete.prototype.$seen = function (completion) {
+        if (!this.hasSeen.has(completion) && completion && completion.completer && completion.completer.onSeen && typeof completion.completer.onSeen === "function") {
+            completion.completer.onSeen(this.editor, completion);
+            this.hasSeen.add(completion);
+        }
     };
     Autocomplete.prototype.$onPopupChange = function (hide) {
         if (this.inlineRenderer && this.inlineEnabled) {
@@ -40011,9 +40402,66 @@ var Autocomplete = /** @class */ (function () {
             if (!this.inlineRenderer.show(this.editor, completion, prefix)) {
                 this.inlineRenderer.hide();
             }
-            this.$updatePopupPosition();
+            else {
+                this.$seen(completion);
+            }
+            if (this.popup.isMouseOver && this.setSelectOnHover) {
+                this.tooltipTimer.call(null, null);
+                return;
+            }
+            this.popupTimer.schedule();
+            this.tooltipTimer.schedule();
         }
-        this.tooltipTimer.call(null, null);
+        else {
+            this.popupTimer.call(null, null);
+            this.tooltipTimer.call(null, null);
+        }
+    };
+    Autocomplete.prototype.$onPopupRender = function () {
+        var inlineEnabled = this.inlineRenderer && this.inlineEnabled;
+        if (this.completions && this.completions.filtered && this.completions.filtered.length > 0) {
+            for (var i = this.popup.getFirstVisibleRow(); i <= this.popup.getLastVisibleRow(); i++) {
+                var completion = this.popup.getData(i);
+                if (completion && (!inlineEnabled || completion.hideInlinePreview)) {
+                    this.$seen(completion);
+                }
+            }
+        }
+    };
+    Autocomplete.prototype.$onPopupShow = function (hide) {
+        this.$onPopupChange(hide);
+        this.stickySelection = false;
+        if (this.stickySelectionDelay >= 0)
+            this.stickySelectionTimer.schedule(this.stickySelectionDelay);
+    };
+    Autocomplete.prototype.observeLayoutChanges = function () {
+        if (this.$elements || !this.editor)
+            return;
+        window.addEventListener("resize", this.onLayoutChange, { passive: true });
+        window.addEventListener("wheel", this.mousewheelListener);
+        var el = this.editor.container.parentNode;
+        var elements = [];
+        while (el) {
+            elements.push(el);
+            el.addEventListener("scroll", this.onLayoutChange, { passive: true });
+            el = el.parentNode;
+        }
+        this.$elements = elements;
+    };
+    Autocomplete.prototype.unObserveLayoutChanges = function () {
+        var _this = this;
+        window.removeEventListener("resize", this.onLayoutChange, { passive: true });
+        window.removeEventListener("wheel", this.mousewheelListener);
+        this.$elements && this.$elements.forEach(function (el) {
+            el.removeEventListener("scroll", _this.onLayoutChange, { passive: true });
+        });
+        this.$elements = null;
+    };
+    Autocomplete.prototype.onLayoutChange = function () {
+        if (!this.popup.isOpen)
+            return this.unObserveLayoutChanges();
+        this.$updatePopupPosition();
+        this.updateDocTooltip();
     };
     Autocomplete.prototype.$updatePopupPosition = function () {
         var editor = this.editor;
@@ -40034,7 +40482,11 @@ var Autocomplete = /** @class */ (function () {
                 posGhostText.top += renderer.$ghostTextWidget.el.offsetHeight;
             }
         }
-        if (this.popup.tryShow(posGhostText, lineHeight, "bottom")) {
+        var editorContainerBottom = editor.container.getBoundingClientRect().bottom - lineHeight;
+        var lowestPosition = editorContainerBottom < posGhostText.top ?
+            { top: editorContainerBottom, left: posGhostText.left } :
+            posGhostText;
+        if (this.popup.tryShow(lowestPosition, lineHeight, "bottom")) {
             return;
         }
         if (this.popup.tryShow(pos, lineHeight, "top")) {
@@ -40043,11 +40495,15 @@ var Autocomplete = /** @class */ (function () {
         this.popup.show(pos, lineHeight);
     };
     Autocomplete.prototype.openPopup = function (editor, prefix, keepPopupPosition) {
+        this.$firstOpenTimer.cancel();
         if (!this.popup)
             this.$init();
         if (this.inlineEnabled && !this.inlineRenderer)
             this.$initInline();
         this.popup.autoSelect = this.autoSelect;
+        this.popup.setSelectOnHover(this.setSelectOnHover);
+        var oldRow = this.popup.getRow();
+        var previousSelectedItem = this.popup.data[oldRow];
         this.popup.setData(this.completions.filtered, this.completions.filterText);
         if (this.editor.textInput.setAriaOptions) {
             this.editor.textInput.setAriaOptions({
@@ -40056,7 +40512,14 @@ var Autocomplete = /** @class */ (function () {
             });
         }
         editor.keyBinding.addKeyboardHandler(this.keyboardHandler);
-        this.popup.setRow(this.autoSelect ? 0 : -1);
+        var newRow;
+        if (this.stickySelection)
+            newRow = this.popup.data.indexOf(previousSelectedItem);
+        if (!newRow || newRow === -1)
+            newRow = 0;
+        this.popup.setRow(this.autoSelect ? newRow : -1);
+        if (newRow === oldRow && previousSelectedItem !== this.completions.filtered[newRow])
+            this.$onPopupChange();
         if (!keepPopupPosition) {
             this.popup.setTheme(editor.getTheme());
             this.popup.setFontSize(editor.getFontSize());
@@ -40069,6 +40532,7 @@ var Autocomplete = /** @class */ (function () {
             this.detach();
         }
         this.changeTimer.cancel();
+        this.observeLayoutChanges();
     };
     Autocomplete.prototype.detach = function () {
         if (this.editor) {
@@ -40078,6 +40542,7 @@ var Autocomplete = /** @class */ (function () {
             this.editor.off("mousedown", this.mousedownListener);
             this.editor.off("mousewheel", this.mousewheelListener);
         }
+        this.$firstOpenTimer.cancel();
         this.changeTimer.cancel();
         this.hideDocTooltip();
         if (this.completionProvider) {
@@ -40085,10 +40550,14 @@ var Autocomplete = /** @class */ (function () {
         }
         if (this.popup && this.popup.isOpen)
             this.popup.hide();
+        if (this.popup && this.popup.renderer) {
+            this.popup.renderer.off("afterRender", this.$onPopupRender);
+        }
         if (this.base)
             this.base.detach();
         this.activated = false;
         this.completionProvider = this.completions = this.base = null;
+        this.unObserveLayoutChanges();
     };
     Autocomplete.prototype.changeListener = function (e) {
         var cursor = this.editor.selection.lead;
@@ -40114,7 +40583,12 @@ var Autocomplete = /** @class */ (function () {
         this.detach();
     };
     Autocomplete.prototype.mousewheelListener = function (e) {
-        this.detach();
+        if (!this.popup.isMouseOver)
+            this.detach();
+    };
+    Autocomplete.prototype.mouseOutListener = function (e) {
+        if (this.popup.isOpen)
+            this.$updatePopupPosition();
     };
     Autocomplete.prototype.goTo = function (where) {
         this.popup.goTo(where);
@@ -40124,6 +40598,8 @@ var Autocomplete = /** @class */ (function () {
             data = this.popup.getData(this.popup.getRow());
         if (!data)
             return false;
+        if (data.value === "") // Explicitly given nothing to insert, e.g. "No suggestion state"
+            return this.detach();
         var completions = this.completions;
         var result = this.getCompletionProvider().insertMatch(this.editor, data, completions.filterText, options);
         if (this.completions == completions)
@@ -40146,9 +40622,9 @@ var Autocomplete = /** @class */ (function () {
         editor.on("mousewheel", this.mousewheelListener);
         this.updateCompletions(false, options);
     };
-    Autocomplete.prototype.getCompletionProvider = function () {
+    Autocomplete.prototype.getCompletionProvider = function (initialPosition) {
         if (!this.completionProvider)
-            this.completionProvider = new CompletionProvider();
+            this.completionProvider = new CompletionProvider(initialPosition);
         return this.completionProvider;
     };
     Autocomplete.prototype.gatherCompletions = function (editor, callback) {
@@ -40182,28 +40658,58 @@ var Autocomplete = /** @class */ (function () {
         var prefix = util.getCompletionPrefix(this.editor);
         this.base = session.doc.createAnchor(pos.row, pos.column - prefix.length);
         this.base.$insertRight = true;
-        var completionOptions = { exactMatch: this.exactMatch };
-        this.getCompletionProvider().provideCompletions(this.editor, completionOptions, function (err, completions, finished) {
+        var completionOptions = {
+            exactMatch: this.exactMatch,
+            ignoreCaption: this.ignoreCaption
+        };
+        this.getCompletionProvider({
+            prefix: prefix,
+            pos: pos
+        }).provideCompletions(this.editor, completionOptions, 
+        function (err, completions, finished) {
             var filtered = completions.filtered;
             var prefix = util.getCompletionPrefix(this.editor);
+            this.$firstOpenTimer.cancel();
             if (finished) {
-                if (!filtered.length)
+                if (!filtered.length) {
+                    var emptyMessage = !this.autoShown && this.emptyMessage;
+                    if (typeof emptyMessage == "function")
+                        emptyMessage = this.emptyMessage(prefix);
+                    if (emptyMessage) {
+                        var completionsForEmpty = [{
+                                caption: emptyMessage,
+                                value: ""
+                            }
+                        ];
+                        this.completions = new FilteredList(completionsForEmpty);
+                        this.openPopup(this.editor, prefix, keepPopupPosition);
+                        this.popup.renderer.setStyle("ace_loading", false);
+                        return;
+                    }
                     return this.detach();
-                if (filtered.length == 1 && filtered[0].value == prefix && !filtered[0].snippet)
+                }
+                if (filtered.length == 1 && filtered[0].value == prefix
+                    && !filtered[0].snippet)
                     return this.detach();
-                if (this.autoInsert && filtered.length == 1)
+                if (this.autoInsert && !this.autoShown && filtered.length == 1)
                     return this.insertMatch(filtered[0]);
             }
-            this.completions = completions;
+            this.completions = !finished && this.showLoadingState ?
+                new FilteredList(Autocomplete.completionsForLoading.concat(filtered), completions.filterText) :
+                completions;
             this.openPopup(this.editor, prefix, keepPopupPosition);
+            this.popup.renderer.setStyle("ace_loading", !finished);
         }.bind(this));
+        if (this.showLoadingState && !this.autoShown && !(this.popup && this.popup.isOpen)) {
+            this.$firstOpenTimer.delay(this.stickySelectionDelay / 2);
+        }
     };
     Autocomplete.prototype.cancelContextMenu = function () {
         this.editor.$mouseHandler.cancelContextMenu();
     };
     Autocomplete.prototype.updateDocTooltip = function () {
         var popup = this.popup;
-        var all = popup.data;
+        var all = this.completions.filtered;
         var selected = all && (all[popup.getHoveredRow()] || all[popup.getRow()]);
         var doc = null;
         if (!selected || !this.editor || !this.popup.isOpen)
@@ -40227,11 +40733,15 @@ var Autocomplete = /** @class */ (function () {
     Autocomplete.prototype.showDocTooltip = function (item) {
         if (!this.tooltipNode) {
             this.tooltipNode = dom.createElement("div");
-            this.tooltipNode.style.margin = 0;
+            this.tooltipNode.style.margin = "0";
             this.tooltipNode.style.pointerEvents = "auto";
+            this.tooltipNode.style.overscrollBehavior = "contain";
             this.tooltipNode.tabIndex = -1;
             this.tooltipNode.onblur = this.blurListener.bind(this);
             this.tooltipNode.onclick = this.onTooltipClick.bind(this);
+            this.tooltipNode.id = "doc-tooltip";
+            this.tooltipNode.setAttribute("role", "tooltip");
+            this.tooltipNode.addEventListener("wheel", preventParentScroll);
         }
         var theme = this.editor.renderer.theme;
         this.tooltipNode.className = "ace_tooltip ace_doc-tooltip " +
@@ -40244,7 +40754,7 @@ var Autocomplete = /** @class */ (function () {
             tooltipNode.textContent = item.docText;
         }
         if (!tooltipNode.parentNode)
-            document.body.appendChild(tooltipNode);
+            this.popup.container.appendChild(this.tooltipNode);
         var popup = this.popup;
         var rect = popup.container.getBoundingClientRect();
         tooltipNode.style.top = popup.container.style.top;
@@ -40340,9 +40850,9 @@ Autocomplete.for = function (editor) {
         editor.completer = null;
     }
     if (config.get("sharedPopups")) {
-        if (!Autocomplete.$sharedInstance)
-            Autocomplete.$sharedInstance = new Autocomplete();
-        editor.completer = Autocomplete.$sharedInstance;
+        if (!Autocomplete["$sharedInstance"])
+            Autocomplete["$sharedInstance"] = new Autocomplete();
+        editor.completer = Autocomplete["$sharedInstance"];
     }
     else {
         editor.completer = new Autocomplete();
@@ -40356,13 +40866,15 @@ Autocomplete.startCommand = {
         var completer = Autocomplete.for(editor);
         completer.autoInsert = false;
         completer.autoSelect = true;
+        completer.autoShown = false;
         completer.showPopup(editor, options);
         completer.cancelContextMenu();
     },
     bindKey: "Ctrl-Space|Ctrl-Shift-Space|Alt-Space"
 };
 var CompletionProvider = /** @class */ (function () {
-    function CompletionProvider() {
+    function CompletionProvider(initialPosition) {
+        this.initialPosition = initialPosition;
         this.active = true;
     }
     CompletionProvider.prototype.insertByIndex = function (editor, index, options) {
@@ -40381,7 +40893,14 @@ var CompletionProvider = /** @class */ (function () {
         else {
             if (!this.completions)
                 return false;
-            if (this.completions.filterText) {
+            var replaceBefore = this.completions.filterText.length;
+            var replaceAfter = 0;
+            if (data.range && data.range.start.row === data.range.end.row) {
+                replaceBefore -= this.initialPosition.prefix.length;
+                replaceBefore += this.initialPosition.pos.column - data.range.start.column;
+                replaceAfter += data.range.end.column - this.initialPosition.pos.column;
+            }
+            if (replaceBefore || replaceAfter) {
                 var ranges;
                 if (editor.selection.getAllRanges) {
                     ranges = editor.selection.getAllRanges();
@@ -40390,14 +40909,19 @@ var CompletionProvider = /** @class */ (function () {
                     ranges = [editor.getSelectionRange()];
                 }
                 for (var i = 0, range; range = ranges[i]; i++) {
-                    range.start.column -= this.completions.filterText.length;
+                    range.start.column -= replaceBefore;
+                    range.end.column += replaceAfter;
                     editor.session.remove(range);
                 }
             }
-            if (data.snippet)
-                snippetManager.insertSnippet(editor, data.snippet, { range: data.range });
+            if (data.snippet) {
+                snippetManager.insertSnippet(editor, data.snippet);
+            }
             else {
                 this.$insertString(editor, data);
+            }
+            if (data.completer && data.completer.onInsert && typeof data.completer.onInsert == "function") {
+                data.completer.onInsert(editor, data);
             }
             if (data.command && data.command === "startAutocomplete") {
                 editor.execCommand(data.command);
@@ -40408,32 +40932,21 @@ var CompletionProvider = /** @class */ (function () {
     };
     CompletionProvider.prototype.$insertString = function (editor, data) {
         var text = data.value || data;
-        if (data.range) {
-            if (editor.inVirtualSelectionMode) {
-                return editor.session.replace(data.range, text);
-            }
-            editor.forEachSelection(function () {
-                var range = editor.getSelectionRange();
-                if (data.range.compareRange(range) === 0) {
-                    editor.session.replace(data.range, text);
-                }
-                else {
-                    editor.insert(text);
-                }
-            }, null, { keepOrder: true });
-        }
-        else {
-            editor.execCommand("insertstring", text);
-        }
+        editor.execCommand("insertstring", text);
     };
     CompletionProvider.prototype.gatherCompletions = function (editor, callback) {
         var session = editor.getSession();
         var pos = editor.getCursorPosition();
         var prefix = util.getCompletionPrefix(editor);
         var matches = [];
+        this.completers = editor.completers;
         var total = editor.completers.length;
         editor.completers.forEach(function (completer, i) {
             completer.getCompletions(editor, session, pos, prefix, function (err, results) {
+                if (completer.hideInlinePreview)
+                    results = results.map(function (result) {
+                        return Object.assign(result, { hideInlinePreview: completer.hideInlinePreview });
+                    });
                 if (!err && results)
                     matches = matches.concat(results);
                 callback(null, {
@@ -40486,6 +40999,11 @@ var CompletionProvider = /** @class */ (function () {
     };
     CompletionProvider.prototype.detach = function () {
         this.active = false;
+        this.completers && this.completers.forEach(function (completer) {
+            if (typeof completer.cancel === "function") {
+                completer.cancel();
+            }
+        });
     };
     return CompletionProvider;
 }());
@@ -40741,13 +41259,29 @@ var doLiveAutocomplete = function (e) {
         if (hasCompleter && !util.getCompletionPrefix(editor))
             editor.completer.detach();
     }
-    else if (e.command.name === "insertstring") {
-        var prefix = util.getCompletionPrefix(editor);
-        if (prefix && !hasCompleter) {
-            var completer = Autocomplete.for(editor);
-            completer.autoInsert = false;
-            completer.showPopup(editor);
+    else if (e.command.name === "insertstring" && !hasCompleter) {
+        lastExecEvent = e;
+        var delay = e.editor.$liveAutocompletionDelay;
+        if (delay) {
+            liveAutocompleteTimer.delay(delay);
         }
+        else {
+            showLiveAutocomplete(e);
+        }
+    }
+};
+var lastExecEvent;
+var liveAutocompleteTimer = lang.delayedCall(function () {
+    showLiveAutocomplete(lastExecEvent);
+}, 0);
+var showLiveAutocomplete = function (e) {
+    var editor = e.editor;
+    var prefix = util.getCompletionPrefix(editor);
+    var triggerAutocomplete = util.triggerAutocomplete(editor);
+    if (prefix && prefix.length >= editor.$liveAutocompletionThreshold || triggerAutocomplete) {
+        var completer = Autocomplete.for(editor);
+        completer.autoShown = true;
+        completer.showPopup(editor);
     }
 };
 var Editor = require("../editor").Editor;
@@ -40773,10 +41307,16 @@ require("../config").defineOptions(Editor.prototype, "editor", {
                 this.commands.on('afterExec', doLiveAutocomplete);
             }
             else {
-                this.commands.removeListener('afterExec', doLiveAutocomplete);
+                this.commands.off('afterExec', doLiveAutocomplete);
             }
         },
         value: false
+    },
+    liveAutocompletionDelay: {
+        initialValue: 0
+    },
+    liveAutocompletionThreshold: {
+        initialValue: 0
     },
     enableSnippets: {
         set: function (val) {
@@ -40809,15 +41349,15 @@ require("../config").defineOptions(Editor.prototype, "editor", {
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
-ace.define("ace/ext/searchbox.css",["require","exports","module"], function(require, exports, module){module.exports = "\n\n/* ------------------------------------------------------------------------------------------\n * Editor Search Form\n * --------------------------------------------------------------------------------------- */\n.ace_search {\n    background-color: #ddd;\n    color: #666;\n    border: 1px solid #cbcbcb;\n    border-top: 0 none;\n    overflow: hidden;\n    margin: 0;\n    padding: 4px 6px 0 4px;\n    position: absolute;\n    top: 0;\n    z-index: 99;\n    white-space: normal;\n}\n.ace_search.left {\n    border-left: 0 none;\n    border-radius: 0px 0px 5px 0px;\n    left: 0;\n}\n.ace_search.right {\n    border-radius: 0px 0px 0px 5px;\n    border-right: 0 none;\n    right: 0;\n}\n\n.ace_search_form, .ace_replace_form {\n    margin: 0 20px 4px 0;\n    overflow: hidden;\n    line-height: 1.9;\n}\n.ace_replace_form {\n    margin-right: 0;\n}\n.ace_search_form.ace_nomatch {\n    outline: 1px solid red;\n}\n\n.ace_search_field {\n    border-radius: 3px 0 0 3px;\n    background-color: white;\n    color: black;\n    border: 1px solid #cbcbcb;\n    border-right: 0 none;\n    outline: 0;\n    padding: 0;\n    font-size: inherit;\n    margin: 0;\n    line-height: inherit;\n    padding: 0 6px;\n    min-width: 17em;\n    vertical-align: top;\n    min-height: 1.8em;\n    box-sizing: content-box;\n}\n.ace_searchbtn {\n    border: 1px solid #cbcbcb;\n    line-height: inherit;\n    display: inline-block;\n    padding: 0 6px;\n    background: #fff;\n    border-right: 0 none;\n    border-left: 1px solid #dcdcdc;\n    cursor: pointer;\n    margin: 0;\n    position: relative;\n    color: #666;\n}\n.ace_searchbtn:last-child {\n    border-radius: 0 3px 3px 0;\n    border-right: 1px solid #cbcbcb;\n}\n.ace_searchbtn:disabled {\n    background: none;\n    cursor: default;\n}\n.ace_searchbtn:hover {\n    background-color: #eef1f6;\n}\n.ace_searchbtn.prev, .ace_searchbtn.next {\n     padding: 0px 0.7em\n}\n.ace_searchbtn.prev:after, .ace_searchbtn.next:after {\n     content: \"\";\n     border: solid 2px #888;\n     width: 0.5em;\n     height: 0.5em;\n     border-width:  2px 0 0 2px;\n     display:inline-block;\n     transform: rotate(-45deg);\n}\n.ace_searchbtn.next:after {\n     border-width: 0 2px 2px 0 ;\n}\n.ace_searchbtn_close {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px;\n    top: 9px;\n    right: 7px;\n    position: absolute;\n}\n.ace_searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.ace_button {\n    margin-left: 2px;\n    cursor: pointer;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    overflow: hidden;\n    opacity: 0.7;\n    border: 1px solid rgba(100,100,100,0.23);\n    padding: 1px;\n    box-sizing:    border-box!important;\n    color: black;\n}\n\n.ace_button:hover {\n    background-color: #eee;\n    opacity:1;\n}\n.ace_button:active {\n    background-color: #ddd;\n}\n\n.ace_button.checked {\n    border-color: #3399ff;\n    opacity:1;\n}\n\n.ace_search_options{\n    margin-bottom: 3px;\n    text-align: right;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    clear: both;\n}\n\n.ace_search_counter {\n    float: left;\n    font-family: arial;\n    padding: 0 8px;\n}";
+ace.define("ace/ext/searchbox-css",["require","exports","module"], function(require, exports, module){module.exports = "\n\n/* ------------------------------------------------------------------------------------------\n * Editor Search Form\n * --------------------------------------------------------------------------------------- */\n.ace_search {\n    background-color: #ddd;\n    color: #666;\n    border: 1px solid #cbcbcb;\n    border-top: 0 none;\n    overflow: hidden;\n    margin: 0;\n    padding: 4px 6px 0 4px;\n    position: absolute;\n    top: 0;\n    z-index: 99;\n    white-space: normal;\n}\n.ace_search.left {\n    border-left: 0 none;\n    border-radius: 0px 0px 5px 0px;\n    left: 0;\n}\n.ace_search.right {\n    border-radius: 0px 0px 0px 5px;\n    border-right: 0 none;\n    right: 0;\n}\n\n.ace_search_form, .ace_replace_form {\n    margin: 0 20px 4px 0;\n    overflow: hidden;\n    line-height: 1.9;\n}\n.ace_replace_form {\n    margin-right: 0;\n}\n.ace_search_form.ace_nomatch {\n    outline: 1px solid red;\n}\n\n.ace_search_field {\n    border-radius: 3px 0 0 3px;\n    background-color: white;\n    color: black;\n    border: 1px solid #cbcbcb;\n    border-right: 0 none;\n    outline: 0;\n    padding: 0;\n    font-size: inherit;\n    margin: 0;\n    line-height: inherit;\n    padding: 0 6px;\n    min-width: 17em;\n    vertical-align: top;\n    min-height: 1.8em;\n    box-sizing: content-box;\n}\n.ace_searchbtn {\n    border: 1px solid #cbcbcb;\n    line-height: inherit;\n    display: inline-block;\n    padding: 0 6px;\n    background: #fff;\n    border-right: 0 none;\n    border-left: 1px solid #dcdcdc;\n    cursor: pointer;\n    margin: 0;\n    position: relative;\n    color: #666;\n}\n.ace_searchbtn:last-child {\n    border-radius: 0 3px 3px 0;\n    border-right: 1px solid #cbcbcb;\n}\n.ace_searchbtn:disabled {\n    background: none;\n    cursor: default;\n}\n.ace_searchbtn:hover {\n    background-color: #eef1f6;\n}\n.ace_searchbtn.prev, .ace_searchbtn.next {\n     padding: 0px 0.7em\n}\n.ace_searchbtn.prev:after, .ace_searchbtn.next:after {\n     content: \"\";\n     border: solid 2px #888;\n     width: 0.5em;\n     height: 0.5em;\n     border-width:  2px 0 0 2px;\n     display:inline-block;\n     transform: rotate(-45deg);\n}\n.ace_searchbtn.next:after {\n     border-width: 0 2px 2px 0 ;\n}\n.ace_searchbtn_close {\n    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;\n    border-radius: 50%;\n    border: 0 none;\n    color: #656565;\n    cursor: pointer;\n    font: 16px/16px Arial;\n    padding: 0;\n    height: 14px;\n    width: 14px;\n    top: 9px;\n    right: 7px;\n    position: absolute;\n}\n.ace_searchbtn_close:hover {\n    background-color: #656565;\n    background-position: 50% 100%;\n    color: white;\n}\n\n.ace_button {\n    margin-left: 2px;\n    cursor: pointer;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    overflow: hidden;\n    opacity: 0.7;\n    border: 1px solid rgba(100,100,100,0.23);\n    padding: 1px;\n    box-sizing:    border-box!important;\n    color: black;\n}\n\n.ace_button:hover {\n    background-color: #eee;\n    opacity:1;\n}\n.ace_button:active {\n    background-color: #ddd;\n}\n\n.ace_button.checked {\n    border-color: #3399ff;\n    opacity:1;\n}\n\n.ace_search_options{\n    margin-bottom: 3px;\n    text-align: right;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -o-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    clear: both;\n}\n\n.ace_search_counter {\n    float: left;\n    font-family: arial;\n    padding: 0 8px;\n}";
 
 });
 
-ace.define("ace/ext/searchbox",["require","exports","module","ace/lib/dom","ace/lib/lang","ace/lib/event","ace/ext/searchbox.css","ace/keyboard/hash_handler","ace/lib/keys","ace/config"], function(require, exports, module){"use strict";
+ace.define("ace/ext/searchbox",["require","exports","module","ace/lib/dom","ace/lib/lang","ace/lib/event","ace/ext/searchbox-css","ace/keyboard/hash_handler","ace/lib/keys","ace/config"], function(require, exports, module){"use strict";
 var dom = require("../lib/dom");
 var lang = require("../lib/lang");
 var event = require("../lib/event");
-var searchboxCss = require("./searchbox.css");
+var searchboxCss = require("./searchbox-css");
 var HashHandler = require("../keyboard/hash_handler").HashHandler;
 var keyUtil = require("../lib/keys");
 var nls = require("../config").nls;
@@ -40825,6 +41365,7 @@ var MAX_COUNT = 999;
 dom.importCssString(searchboxCss, "ace_searchbox", false);
 var SearchBox = /** @class */ (function () {
     function SearchBox(editor, range, showReplaceForm) {
+        this.activeInput;
         var div = dom.createElement("div");
         dom.buildDom(["div", { class: "ace_search right" },
             ["span", { action: "hide", class: "ace_searchbtn_close" }],
@@ -40964,6 +41505,7 @@ var SearchBox = /** @class */ (function () {
     SearchBox.prototype.updateCounter = function () {
         var editor = this.editor;
         var regex = editor.$search.$options.re;
+        var supportsUnicodeFlag = regex.unicode;
         var all = 0;
         var before = 0;
         if (regex) {
@@ -40983,7 +41525,7 @@ var SearchBox = /** @class */ (function () {
                 if (all > MAX_COUNT)
                     break;
                 if (!m[0]) {
-                    regex.lastIndex = last += 1;
+                    regex.lastIndex = last += lang.skipEmptyMatch(value, last, supportsUnicodeFlag);
                     if (last >= value.length)
                         break;
                 }
@@ -41165,29 +41707,29 @@ var JsonHighlightRules = function () {
     this.$rules = {
         "start": [
             {
-                token: "variable",
+                token: "variable", // single line
                 regex: '["](?:(?:\\\\.)|(?:[^"\\\\]))*?["]\\s*(?=:)'
             }, {
-                token: "string",
+                token: "string", // single line
                 regex: '"',
                 next: "string"
             }, {
-                token: "constant.numeric",
+                token: "constant.numeric", // hex
                 regex: "0[xX][0-9a-fA-F]+\\b"
             }, {
-                token: "constant.numeric",
+                token: "constant.numeric", // float
                 regex: "[+-]?\\d+(?:(?:\\.\\d*)?(?:[eE][+-]?\\d+)?)?\\b"
             }, {
                 token: "constant.language.boolean",
                 regex: "(?:true|false)\\b"
             }, {
-                token: "text",
+                token: "text", // single quoted strings are not allowed
                 regex: "['](?:(?:\\\\.)|(?:[^'\\\\]))*?[']"
             }, {
-                token: "comment",
+                token: "comment", // comments are not allowed, but who cares?
                 regex: "\\/\\/.*$"
             }, {
-                token: "comment.start",
+                token: "comment.start", // comments are not allowed, but who cares?
                 regex: "\\/\\*",
                 next: "comment"
             }, {
@@ -41218,7 +41760,7 @@ var JsonHighlightRules = function () {
         ],
         "comment": [
             {
-                token: "comment.end",
+                token: "comment.end", // comments are not allowed, but who cares?
                 regex: "\\*\\/",
                 next: "start"
             }, {
@@ -41377,18 +41919,17 @@ oop.inherits(FoldMode, BaseFoldMode);
 
 });
 
-ace.define("ace/mode/json",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/json_highlight_rules","ace/mode/matching_brace_outdent","ace/mode/behaviour/cstyle","ace/mode/folding/cstyle","ace/worker/worker_client"], function(require, exports, module){"use strict";
+ace.define("ace/mode/json",["require","exports","module","ace/lib/oop","ace/mode/text","ace/mode/json_highlight_rules","ace/mode/matching_brace_outdent","ace/mode/folding/cstyle","ace/worker/worker_client"], function(require, exports, module){"use strict";
 var oop = require("../lib/oop");
 var TextMode = require("./text").Mode;
 var HighlightRules = require("./json_highlight_rules").JsonHighlightRules;
 var MatchingBraceOutdent = require("./matching_brace_outdent").MatchingBraceOutdent;
-var CstyleBehaviour = require("./behaviour/cstyle").CstyleBehaviour;
 var CStyleFoldMode = require("./folding/cstyle").FoldMode;
 var WorkerClient = require("../worker/worker_client").WorkerClient;
 var Mode = function () {
     this.HighlightRules = HighlightRules;
     this.$outdent = new MatchingBraceOutdent();
-    this.$behaviour = new CstyleBehaviour();
+    this.$behaviour = this.$defaultBehaviour;
     this.foldingRules = new CStyleFoldMode();
 };
 oop.inherits(Mode, TextMode);
@@ -51512,10 +52053,10 @@ Object.defineProperty(exports, '__esModule', { value: true });
 /***/ (function(module) {
 
 /*!
- * vanilla-picker v2.12.1
+ * vanilla-picker v2.12.2
  * https://vanilla-picker.js.org
  *
- * Copyright 2017-2021 Andreas Borgen (https://github.com/Sphinxxxx), Adam Brooks (https://github.com/dissimulate)
+ * Copyright 2017-2023 Andreas Borgen (https://github.com/Sphinxxxx), Adam Brooks (https://github.com/dissimulate)
  * Released under the ISC license.
  */
 (function (global, factory) {
@@ -52523,92 +53064,68 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 /***/ }),
 
-/***/ 1262:
+/***/ 7304:
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "K": function() { return /* binding */ jsonrepair; }
+  K: function() { return /* binding */ jsonrepair; }
 });
 
-;// CONCATENATED MODULE: ./node_modules/jsonrepair/lib/esm/JSONRepairError.js
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
-function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
-function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct.bind(); } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-var JSONRepairError = /*#__PURE__*/function (_Error) {
-  _inherits(JSONRepairError, _Error);
-  var _super = _createSuper(JSONRepairError);
-  function JSONRepairError(message, position) {
-    var _this;
-    _classCallCheck(this, JSONRepairError);
-    _this = _super.call(this, message + ' at position ' + position);
-    _this.position = position;
-    return _this;
+;// CONCATENATED MODULE: ./node_modules/jsonrepair/lib/esm/utils/JSONRepairError.js
+class JSONRepairError extends Error {
+  constructor(message, position) {
+    super(message + ' at position ' + position);
+    this.position = position;
   }
-  return _createClass(JSONRepairError);
-}( /*#__PURE__*/_wrapNativeSuper(Error));
+}
 
-;// CONCATENATED MODULE: ./node_modules/jsonrepair/lib/esm/stringUtils.js
-// TODO: sort the codes
-var codeBackslash = 0x5c; // "\"
-var codeSlash = 0x2f; // "/"
-var codeAsterisk = 0x2a; // "*"
-var codeOpeningBrace = 0x7b; // "{"
-var codeClosingBrace = 0x7d; // "}"
-var codeOpeningBracket = 0x5b; // "["
-var codeClosingBracket = 0x5d; // "]"
-var codeOpenParenthesis = 0x28; // "("
-var codeCloseParenthesis = 0x29; // ")"
-var codeSpace = 0x20; // " "
-var codeNewline = 0xa; // "\n"
-var codeTab = 0x9; // "\t"
-var codeReturn = 0xd; // "\r"
-var codeBackspace = 0x08; // "\b"
-var codeFormFeed = 0x0c; // "\f"
-var codeDoubleQuote = 0x0022; // "
-var codePlus = 0x2b; // "+"
-var codeMinus = 0x2d; // "-"
-var codeQuote = 0x27; // "'"
-var codeZero = 0x30;
-var codeOne = 0x31;
-var codeNine = 0x39;
-var codeComma = 0x2c; // ","
-var codeDot = 0x2e; // "." (dot, period)
-var codeColon = 0x3a; // ":"
-var codeSemicolon = 0x3b; // ";"
-var codeUppercaseA = 0x41; // "A"
-var codeLowercaseA = 0x61; // "a"
-var codeUppercaseE = 0x45; // "E"
-var codeLowercaseE = 0x65; // "e"
-var codeUppercaseF = 0x46; // "F"
-var codeLowercaseF = 0x66; // "f"
-var codeNonBreakingSpace = 0xa0;
-var codeEnQuad = 0x2000;
-var codeHairSpace = 0x200a;
-var codeNarrowNoBreakSpace = 0x202f;
-var codeMediumMathematicalSpace = 0x205f;
-var codeIdeographicSpace = 0x3000;
-var codeDoubleQuoteLeft = 0x201c; // “
-var codeDoubleQuoteRight = 0x201d; // ”
-var codeQuoteLeft = 0x2018; // ‘
-var codeQuoteRight = 0x2019; // ’
-var codeGraveAccent = 0x0060; // `
-var codeAcuteAccent = 0x00b4; // ´
+;// CONCATENATED MODULE: ./node_modules/jsonrepair/lib/esm/utils/stringUtils.js
+const codeBackslash = 0x5c; // "\"
+const codeSlash = 0x2f; // "/"
+const codeAsterisk = 0x2a; // "*"
+const codeOpeningBrace = 0x7b; // "{"
+const codeClosingBrace = 0x7d; // "}"
+const codeOpeningBracket = 0x5b; // "["
+const codeClosingBracket = 0x5d; // "]"
+const codeOpenParenthesis = 0x28; // "("
+const codeCloseParenthesis = 0x29; // ")"
+const codeSpace = 0x20; // " "
+const codeNewline = 0xa; // "\n"
+const codeTab = 0x9; // "\t"
+const codeReturn = 0xd; // "\r"
+const codeBackspace = 0x08; // "\b"
+const codeFormFeed = 0x0c; // "\f"
+const codeDoubleQuote = 0x0022; // "
+const codePlus = 0x2b; // "+"
+const codeMinus = 0x2d; // "-"
+const codeQuote = 0x27; // "'"
+const codeZero = 0x30; // "0"
+const codeNine = 0x39; // "9"
+const codeComma = 0x2c; // ","
+const codeDot = 0x2e; // "." (dot, period)
+const codeColon = 0x3a; // ":"
+const codeSemicolon = 0x3b; // ";"
+const codeUppercaseA = 0x41; // "A"
+const codeLowercaseA = 0x61; // "a"
+const codeUppercaseE = 0x45; // "E"
+const codeLowercaseE = 0x65; // "e"
+const codeUppercaseF = 0x46; // "F"
+const codeLowercaseF = 0x66; // "f"
+const codeNonBreakingSpace = 0xa0;
+const codeEnQuad = 0x2000;
+const codeHairSpace = 0x200a;
+const codeNarrowNoBreakSpace = 0x202f;
+const codeMediumMathematicalSpace = 0x205f;
+const codeIdeographicSpace = 0x3000;
+const codeDoubleQuoteLeft = 0x201c; // “
+const codeDoubleQuoteRight = 0x201d; // ”
+const codeQuoteLeft = 0x2018; // ‘
+const codeQuoteRight = 0x2019; // ’
+const codeGraveAccent = 0x0060; // `
+const codeAcuteAccent = 0x00b4; // ´
 
 function isHex(code) {
   return code >= codeZero && code <= codeNine || code >= codeUppercaseA && code <= codeUppercaseF || code >= codeLowercaseA && code <= codeLowercaseF;
@@ -52616,22 +53133,19 @@ function isHex(code) {
 function isDigit(code) {
   return code >= codeZero && code <= codeNine;
 }
-function isNonZeroDigit(code) {
-  return code >= codeOne && code <= codeNine;
-}
 function isValidStringCharacter(code) {
   return code >= 0x20 && code <= 0x10ffff;
 }
 function isDelimiter(char) {
-  return regexDelimiter.test(char) || char && isQuote(char.charCodeAt(0));
+  return regexDelimiter.test(char) || isQuote(char.charCodeAt(0));
 }
-var regexDelimiter = /^[,:[\]{}()\n]$/;
+const regexDelimiter = /^[,:[\]{}()\n+]$/;
 function isStartOfValue(char) {
   return regexStartOfValue.test(char) || char && isQuote(char.charCodeAt(0));
 }
 
 // alpha, number, minus, or opening bracket or brace
-var regexStartOfValue = /^[[{\w-]$/;
+const regexStartOfValue = /^[[{\w-]$/;
 function isControlCharacter(code) {
   return code === codeNewline || code === codeReturn || code === codeTab || code === codeBackspace || code === codeFormFeed;
 }
@@ -52687,15 +53201,23 @@ function isSingleQuoteLike(code) {
 }
 
 /**
+ * Test whether the given character is a single quote character.
+ * Does NOT test for special variants of single quotes.
+ */
+function isSingleQuote(code) {
+  return code === codeQuote;
+}
+
+/**
  * Strip last occurrence of textToStrip from text
  */
 function stripLastOccurrence(text, textToStrip) {
-  var stripRemainingText = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
-  var index = text.lastIndexOf(textToStrip);
+  let stripRemainingText = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+  const index = text.lastIndexOf(textToStrip);
   return index !== -1 ? text.substring(0, index) + (stripRemainingText ? '' : text.substring(index + 1)) : text;
 }
 function insertBeforeLastWhitespace(text, textToInsert) {
-  var index = text.length;
+  let index = text.length;
   if (!isWhitespace(text.charCodeAt(index - 1))) {
     // no trailing whitespaces
     return text + textToInsert;
@@ -52715,11 +53237,18 @@ function removeAtIndex(text, start, count) {
 function endsWithCommaOrNewline(text) {
   return /[,\n][ \t\r]*$/.test(text);
 }
+function nextNonWhiteSpaceCharacter(text, start) {
+  let i = start;
+  while (isWhitespace(text.charCodeAt(i))) {
+    i++;
+  }
+  return text.charAt(i);
+}
 
-;// CONCATENATED MODULE: ./node_modules/jsonrepair/lib/esm/jsonrepair.js
+;// CONCATENATED MODULE: ./node_modules/jsonrepair/lib/esm/regular/jsonrepair.js
 
 
-var controlCharacters = {
+const controlCharacters = {
   '\b': '\\b',
   '\f': '\\f',
   '\n': '\\n',
@@ -52728,7 +53257,7 @@ var controlCharacters = {
 };
 
 // map with all escape characters
-var escapeCharacters = {
+const escapeCharacters = {
   '"': '"',
   '\\': '\\',
   '/': '/',
@@ -52757,14 +53286,14 @@ var escapeCharacters = {
  *
  */
 function jsonrepair(text) {
-  var i = 0; // current index in text
-  var output = ''; // generated output
+  let i = 0; // current index in text
+  let output = ''; // generated output
 
-  var processed = parseValue();
+  const processed = parseValue();
   if (!processed) {
     throwUnexpectedEnd();
   }
-  var processedComma = parseCharacter(codeComma);
+  const processedComma = parseCharacter(codeComma);
   if (processedComma) {
     parseWhitespaceAndSkipComments();
   }
@@ -52780,6 +53309,12 @@ function jsonrepair(text) {
     // repair: remove trailing comma
     output = stripLastOccurrence(output, ',');
   }
+
+  // repair redundant end quotes
+  while (text.charCodeAt(i) === codeClosingBrace || text.charCodeAt(i) === codeClosingBracket) {
+    i++;
+    parseWhitespaceAndSkipComments();
+  }
   if (i >= text.length) {
     // reached the end of the document properly
     return output;
@@ -52787,13 +53322,13 @@ function jsonrepair(text) {
   throwUnexpectedCharacter();
   function parseValue() {
     parseWhitespaceAndSkipComments();
-    var processed = parseObject() || parseArray() || parseString() || parseNumber() || parseKeywords() || parseUnquotedString();
+    const processed = parseObject() || parseArray() || parseString() || parseNumber() || parseKeywords() || parseUnquotedString();
     parseWhitespaceAndSkipComments();
     return processed;
   }
   function parseWhitespaceAndSkipComments() {
-    var start = i;
-    var changed = parseWhitespace();
+    const start = i;
+    let changed = parseWhitespace();
     do {
       changed = parseComment();
       if (changed) {
@@ -52803,8 +53338,8 @@ function jsonrepair(text) {
     return i > start;
   }
   function parseWhitespace() {
-    var whitespace = '';
-    var normal;
+    let whitespace = '';
+    let normal;
     while ((normal = isWhitespace(text.charCodeAt(i))) || isSpecialWhitespace(text.charCodeAt(i))) {
       if (normal) {
         whitespace += text[i];
@@ -52868,21 +53403,21 @@ function jsonrepair(text) {
       output += '{';
       i++;
       parseWhitespaceAndSkipComments();
-      var initial = true;
+      let initial = true;
       while (i < text.length && text.charCodeAt(i) !== codeClosingBrace) {
-        var _processedComma = void 0;
+        let processedComma;
         if (!initial) {
-          _processedComma = parseCharacter(codeComma);
-          if (!_processedComma) {
+          processedComma = parseCharacter(codeComma);
+          if (!processedComma) {
             // repair missing comma
             output = insertBeforeLastWhitespace(output, ',');
           }
           parseWhitespaceAndSkipComments();
         } else {
-          _processedComma = true;
+          processedComma = true;
           initial = false;
         }
-        var processedKey = parseString() || parseUnquotedString();
+        const processedKey = parseString() || parseUnquotedString();
         if (!processedKey) {
           if (text.charCodeAt(i) === codeClosingBrace || text.charCodeAt(i) === codeOpeningBrace || text.charCodeAt(i) === codeClosingBracket || text.charCodeAt(i) === codeOpeningBracket || text[i] === undefined) {
             // repair trailing comma
@@ -52893,19 +53428,21 @@ function jsonrepair(text) {
           break;
         }
         parseWhitespaceAndSkipComments();
-        var processedColon = parseCharacter(codeColon);
+        const processedColon = parseCharacter(codeColon);
+        const truncatedText = i >= text.length;
         if (!processedColon) {
-          if (isStartOfValue(text[i])) {
+          if (isStartOfValue(text[i]) || truncatedText) {
             // repair missing colon
             output = insertBeforeLastWhitespace(output, ':');
           } else {
             throwColonExpected();
           }
         }
-        var processedValue = parseValue();
+        const processedValue = parseValue();
         if (!processedValue) {
-          if (processedColon) {
-            throwObjectValueExpected();
+          if (processedColon || truncatedText) {
+            // repair missing object value
+            output += 'null';
           } else {
             throwColonExpected();
           }
@@ -52931,18 +53468,18 @@ function jsonrepair(text) {
       output += '[';
       i++;
       parseWhitespaceAndSkipComments();
-      var initial = true;
+      let initial = true;
       while (i < text.length && text.charCodeAt(i) !== codeClosingBracket) {
         if (!initial) {
-          var _processedComma2 = parseCharacter(codeComma);
-          if (!_processedComma2) {
+          const processedComma = parseCharacter(codeComma);
+          if (!processedComma) {
             // repair missing comma
             output = insertBeforeLastWhitespace(output, ',');
           }
         } else {
           initial = false;
         }
-        var processedValue = parseValue();
+        const processedValue = parseValue();
         if (!processedValue) {
           // repair trailing comma
           output = stripLastOccurrence(output, ',');
@@ -52967,13 +53504,13 @@ function jsonrepair(text) {
    */
   function parseNewlineDelimitedJSON() {
     // repair NDJSON
-    var initial = true;
-    var processedValue = true;
+    let initial = true;
+    let processedValue = true;
     while (processedValue) {
       if (!initial) {
         // parse optional comma, insert when missing
-        var _processedComma3 = parseCharacter(codeComma);
-        if (!_processedComma3) {
+        const processedComma = parseCharacter(codeComma);
+        if (!processedComma) {
           // repair: add missing comma
           output = insertBeforeLastWhitespace(output, ',');
         }
@@ -52988,82 +53525,111 @@ function jsonrepair(text) {
     }
 
     // repair: wrap the output inside array brackets
-    output = "[\n".concat(output, "\n]");
+    output = `[\n${output}\n]`;
   }
 
   /**
    * Parse a string enclosed by double quotes "...". Can contain escaped quotes
    * Repair strings enclosed in single quotes or special quotes
    * Repair an escaped string
+   *
+   * The function can run in two stages:
+   * - First, it assumes the string has a valid end quote
+   * - If it turns out that the string does not have a valid end quote followed
+   *   by a delimiter (which should be the case), the function runs again in a
+   *   more conservative way, stopping the string at the first next delimiter
+   *   and fixing the string by inserting a quote there.
    */
   function parseString() {
-    var skipEscapeChars = text.charCodeAt(i) === codeBackslash;
+    let stopAtDelimiter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+    let skipEscapeChars = text.charCodeAt(i) === codeBackslash;
     if (skipEscapeChars) {
       // repair: remove the first escape character
       i++;
       skipEscapeChars = true;
     }
     if (isQuote(text.charCodeAt(i))) {
-      var isEndQuote = isSingleQuoteLike(text.charCodeAt(i)) ? isSingleQuoteLike : isDoubleQuote(text.charCodeAt(i)) ? isDoubleQuote // eslint-disable-line indent
-      : isDoubleQuoteLike; // eslint-disable-line indent
-
-      output += '"';
+      // double quotes are correct JSON,
+      // single quotes come from JavaScript for example, we assume it will have a correct single end quote too
+      // otherwise, we will match any double-quote-like start with a double-quote-like end,
+      // or any single-quote-like start with a single-quote-like end
+      const isEndQuote = isDoubleQuote(text.charCodeAt(i)) ? isDoubleQuote : isSingleQuote(text.charCodeAt(i)) ? isSingleQuote : isSingleQuoteLike(text.charCodeAt(i)) ? isSingleQuoteLike : isDoubleQuoteLike;
+      const iBefore = i;
+      let str = '"';
       i++;
-      while (i < text.length && !isEndQuote(text.charCodeAt(i))) {
+      const isEndOfString = stopAtDelimiter ? i => isDelimiter(text[i]) : i => isEndQuote(text.charCodeAt(i));
+      while (i < text.length && !isEndOfString(i)) {
         if (text.charCodeAt(i) === codeBackslash) {
-          var char = text[i + 1];
-          var escapeChar = escapeCharacters[char];
+          const char = text.charAt(i + 1);
+          const escapeChar = escapeCharacters[char];
           if (escapeChar !== undefined) {
-            output += text.slice(i, i + 2);
+            str += text.slice(i, i + 2);
             i += 2;
           } else if (char === 'u') {
-            if (isHex(text.charCodeAt(i + 2)) && isHex(text.charCodeAt(i + 3)) && isHex(text.charCodeAt(i + 4)) && isHex(text.charCodeAt(i + 5))) {
-              output += text.slice(i, i + 6);
+            let j = 2;
+            while (j < 6 && isHex(text.charCodeAt(i + j))) {
+              j++;
+            }
+            if (j === 6) {
+              str += text.slice(i, i + 6);
               i += 6;
+            } else if (i + j >= text.length) {
+              // repair invalid or truncated unicode char at the end of the text
+              // by removing the unicode char and ending the string here
+              i = text.length;
             } else {
-              throwInvalidUnicodeCharacter(i);
+              throwInvalidUnicodeCharacter();
             }
           } else {
             // repair invalid escape character: remove it
-            output += char;
+            str += char;
             i += 2;
           }
         } else {
-          var _char = text[i];
-          var code = text.charCodeAt(i);
+          const char = text.charAt(i);
+          const code = text.charCodeAt(i);
           if (code === codeDoubleQuote && text.charCodeAt(i - 1) !== codeBackslash) {
             // repair unescaped double quote
-            output += '\\' + _char;
+            str += '\\' + char;
             i++;
           } else if (isControlCharacter(code)) {
             // unescaped control character
-            output += controlCharacters[_char];
+            str += controlCharacters[char];
             i++;
           } else {
             if (!isValidStringCharacter(code)) {
-              throwInvalidCharacter(_char);
+              throwInvalidCharacter(char);
             }
-            output += _char;
+            str += char;
             i++;
           }
         }
         if (skipEscapeChars) {
-          var _processed = skipEscapeCharacter();
-          if (_processed) {
+          const processed = skipEscapeCharacter();
+          if (processed) {
             // repair: skipped escape character (nothing to do)
           }
         }
       }
-      if (isQuote(text.charCodeAt(i))) {
-        if (text.charCodeAt(i) !== codeDoubleQuote) {
-          // repair non-normalized quote
-        }
-        output += '"';
+
+      // see whether we have an end quote followed by a valid delimiter
+      const hasEndQuote = isQuote(text.charCodeAt(i));
+      const valid = hasEndQuote && (i + 1 >= text.length || isDelimiter(nextNonWhiteSpaceCharacter(text, i + 1)));
+      if (!valid && !stopAtDelimiter) {
+        // we're dealing with a missing quote somewhere. Let's revert parsing
+        // this string and try again, running in a more conservative mode,
+        // stopping at the first next delimiter
+        i = iBefore;
+        return parseString(true);
+      }
+      if (hasEndQuote) {
+        str += '"';
         i++;
       } else {
-        // repair missing end quote
-        output += '"';
+        // repair missing quote
+        str = insertBeforeLastWhitespace(str, '"');
       }
+      output += str;
       parseConcatenatedString();
       return true;
     }
@@ -53074,7 +53640,7 @@ function jsonrepair(text) {
    * Repair concatenated strings like "hello" + "world", change this into "helloworld"
    */
   function parseConcatenatedString() {
-    var processed = false;
+    let processed = false;
     parseWhitespaceAndSkipComments();
     while (text.charCodeAt(i) === codePlus) {
       processed = true;
@@ -53083,11 +53649,15 @@ function jsonrepair(text) {
 
       // repair: remove the end quote of the first string
       output = stripLastOccurrence(output, '"', true);
-      var start = output.length;
-      parseString();
-
-      // repair: remove the start quote of the second string
-      output = removeAtIndex(output, start, 1);
+      const start = output.length;
+      const parsedStr = parseString();
+      if (parsedStr) {
+        // repair: remove the start quote of the second string
+        output = removeAtIndex(output, start, 1);
+      } else {
+        // repair: remove the + because it is not followed by a string
+        output = insertBeforeLastWhitespace(output, '"');
+      }
     }
     return processed;
   }
@@ -53096,20 +53666,20 @@ function jsonrepair(text) {
    * Parse a number like 2.4 or 2.4e6
    */
   function parseNumber() {
-    var start = i;
+    const start = i;
     if (text.charCodeAt(i) === codeMinus) {
       i++;
       if (expectDigitOrRepair(start)) {
         return true;
       }
     }
-    if (text.charCodeAt(i) === codeZero) {
+
+    // Note that in JSON leading zeros like "00789" are not allowed.
+    // We will allow all leading zeros here though and at the end of parseNumber
+    // check against trailing zeros and repair that if needed.
+    // Leading zeros can have meaning, so we should not clear them.
+    while (isDigit(text.charCodeAt(i))) {
       i++;
-    } else if (isNonZeroDigit(text.charCodeAt(i))) {
-      i++;
-      while (isDigit(text.charCodeAt(i))) {
-        i++;
-      }
     }
     if (text.charCodeAt(i) === codeDot) {
       i++;
@@ -53133,7 +53703,10 @@ function jsonrepair(text) {
       }
     }
     if (i > start) {
-      output += text.slice(start, i);
+      // repair a number with leading zeros like "00789"
+      const num = text.slice(start, i);
+      const hasInvalidLeadingZero = /^0\d/.test(num);
+      output += hasInvalidLeadingZero ? `"${num}"` : num;
       return true;
     }
     return false;
@@ -53164,7 +53737,7 @@ function jsonrepair(text) {
    */
   function parseUnquotedString() {
     // note that the symbol can end with whitespaces: we stop at the next delimiter
-    var start = i;
+    const start = i;
     while (i < text.length && !isDelimiter(text[i])) {
       i++;
     }
@@ -53185,21 +53758,26 @@ function jsonrepair(text) {
         return true;
       } else {
         // repair unquoted string
+        // also, repair undefined into null
 
         // first, go back to prevent getting trailing whitespaces in the string
         while (isWhitespace(text.charCodeAt(i - 1)) && i > 0) {
           i--;
         }
-        var symbol = text.slice(start, i);
-        output += JSON.stringify(symbol);
+        const symbol = text.slice(start, i);
+        output += symbol === 'undefined' ? 'null' : JSON.stringify(symbol);
+        if (text.charCodeAt(i) === codeDoubleQuote) {
+          // we had a missing start quote, but now we encountered the end quote, so we can skip that one
+          i++;
+        }
         return true;
       }
     }
   }
   function expectDigit(start) {
     if (!isDigit(text.charCodeAt(i))) {
-      var numSoFar = text.slice(start, i);
-      throw new JSONRepairError("Invalid number '".concat(numSoFar, "', expecting a digit ").concat(got()), 2);
+      const numSoFar = text.slice(start, i);
+      throw new JSONRepairError(`Invalid number '${numSoFar}', expecting a digit ${got()}`, i);
     }
   }
   function expectDigitOrRepair(start) {
@@ -53226,22 +53804,15 @@ function jsonrepair(text) {
   function throwObjectKeyExpected() {
     throw new JSONRepairError('Object key expected', i);
   }
-  function throwObjectValueExpected() {
-    throw new JSONRepairError('Object value expected', i);
-  }
   function throwColonExpected() {
     throw new JSONRepairError('Colon expected', i);
   }
-  function throwInvalidUnicodeCharacter(start) {
-    var end = start + 2;
-    while (/\w/.test(text[end])) {
-      end++;
-    }
-    var chars = text.slice(start, end);
-    throw new JSONRepairError("Invalid unicode character \"".concat(chars, "\""), i);
+  function throwInvalidUnicodeCharacter() {
+    const chars = text.slice(i, i + 6);
+    throw new JSONRepairError(`Invalid unicode character "${chars}"`, i);
   }
   function got() {
-    return text[i] ? "but got '".concat(text[i], "'") : 'but reached end of input';
+    return text[i] ? `but got '${text[i]}'` : 'but reached end of input';
   }
 }
 function atEndOfBlockComment(text, i) {

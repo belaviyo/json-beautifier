@@ -1,3 +1,9 @@
+.jsoneditor,
+.jsoneditor-modal {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
 .jsoneditor input,
 .jsoneditor input:not([type]),
 .jsoneditor input[type=text],
@@ -600,6 +606,7 @@
 
 div.jsoneditor-field,
 div.jsoneditor-value,
+a.jsoneditor-value,
 div.jsoneditor-readonly,
 div.jsoneditor-default {
   border: 1px solid transparent;
@@ -609,16 +616,14 @@ div.jsoneditor-default {
   padding: 2px;
   margin: 1px;
   word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
   float: left;
 }
 
 div.jsoneditor-field p,
 div.jsoneditor-value p {
   margin: 0;
-}
-
-div.jsoneditor-value {
-  word-break: break-word;
 }
 
 div.jsoneditor-value.jsoneditor-empty::after {
