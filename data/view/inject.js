@@ -44,11 +44,6 @@ chrome.storage.onChanged.addListener(ps => {
   }
 });
 
-// const meta = document.createElement('meta');
-// meta.setAttribute('http-equiv', 'Content-Security-Policy');
-// meta.setAttribute('content', `img-src data: chrome-extension:`);
-// document.head.appendChild(meta);
-
 let editor;
 const base = document.createElement('base');
 base.href = chrome.runtime.getURL('/data/view/ace/theme/');
@@ -162,6 +157,14 @@ function buttons() {
   }
 }
 
+function menu() {
+  editor.modeSwitcher.dom.box.title += `
+
+Ctrl + Shift + R: Switch to "Tree" mode
+Ctrl + Shift + C: Switch to "Code" mode
+Ctrl + Shift + E: Switch to "Text" mode`;
+}
+
 async function render() {
   // https://github.com/belaviyo/json-beautifier/issues/16
   const container = document.querySelector('body > pre') || document.body;
@@ -195,10 +198,12 @@ async function render() {
         modes: ['tree', 'code', 'text'],
         mode: 'code',
         onModeChange(mode) {
-          buttons();
           chrome.storage.local.set({
             mode
           });
+
+          buttons();
+          menu();
         },
         // support for custom "Big Number"
         onEditable({path, field, value}) {
@@ -283,7 +288,9 @@ async function render() {
 
       config.mode = prefs.mode;
       editor = new JSONEditor(container, config);
+
       buttons();
+      menu();
       editor.set(json);
       editor.focus();
 
@@ -369,3 +376,21 @@ if (location.protocol.indexOf('extension') === -1) {
     }
   });
 }
+
+// shortcuts
+document.addEventListener('keydown', e => {
+  const meta = e.metaKey || e.ctrlKey;
+
+  if (e.code === 'KeyC' && e.shiftKey && meta) { // code
+    e.preventDefault();
+    editor.setMode('code');
+  }
+  else if (e.code === 'KeyE' && e.shiftKey && meta) { // text
+    e.preventDefault();
+    editor.setMode('text');
+  }
+  else if (e.code === 'KeyR' && e.shiftKey && meta) { // tree
+    e.preventDefault();
+    editor.setMode('tree');
+  }
+}, true);

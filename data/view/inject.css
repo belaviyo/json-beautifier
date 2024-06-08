@@ -20,3 +20,7 @@ html.jsb body,
 html.jsb body > pre {
   height: 100vh;
 }
+
+html.jsb .json-formatter-container {
+  display: none;
+}
