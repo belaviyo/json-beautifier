@@ -1,0 +1,2 @@
+@import "/data/view/json-editor/jsoneditor-firefox.css" supports(-moz-appearance:none);
+@import "/data/view/json-editor/jsoneditor-chrome.css" supports(display: grid);

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Editor</title>
+  <link rel="stylesheet" type="text/css" href="/data/view/json-editor/theme/jse-theme-dark.css">
+  <link rel="stylesheet" type="text/css" href="/data/view/inject.css">
+  <meta charset="utf-8">
+</head>
+<body>
+  <pre>{
+  "number": 123,
+  "string": "sample data",
+  "number string": "8143661439548533232",
+  "array": [1, 2, 3, 8143661439548533232, "8143661439548533232"],
+  "safe integer": 9007199254740991,
+  "unsafe integer": 9007199254111741001,
+  "object": {
+    "complex": [
+      40.66,
+      -73.23,
+      -73.9899789999999000000009
+    ],
+    "type": "Point"
+  }
+}</pre>
+
+  <script type="module" src="/data/view/json-editor/lossless-json.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+</html>

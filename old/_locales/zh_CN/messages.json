@@ -1,0 +1,5 @@
+{
+  "description": {
+    "message": "通过将JSON对象转换为Syntax可编辑的高亮HTML来显示JSON对象，以验证、格式化和保存它们。"
+  }
+}
