@@ -1,4 +1,4 @@
-/* global LosslessJSON */
+/* global LosslessJSON, Sval */
 'use strict';
 
 document.documentElement.classList.add('jsb');
@@ -151,12 +151,6 @@ async function render() {
           items[1].title += ' (Ctrl + Shift + R)'; // tree mode
           items[2].title += ' (Ctrl + Shift + C)'; // table mode
 
-          // remove "Transform"
-          const tns = items.findIndex(o => o.className === 'jse-transform');
-          if (tns > -1) {
-            items.splice(tns, 1);
-          }
-
           items.push({
             type: 'separator'
           }, buttons.refresh, buttons.save);
@@ -164,6 +158,30 @@ async function render() {
         }
       }
     });
+
+    // TO-DO; This is a temporary solution until "executeQuery" accepts async function.
+    try {
+      editor.$$.ctx[38][0].executeQuery = function(e, t) {
+        try {
+          const interpreter = new Sval({
+            ecmaVer: 'latest'
+          });
+          interpreter.run(`exports.user = ${t}`);
+          return interpreter.exports.user(Object.assign({}, e));
+        }
+        catch (e) {
+          console.error(e);
+          return 'JavaScript Interpreter Error: ' + e.message + '\n\nVisit the browser console for more info';
+        }
+      };
+      editor.$$.ctx[38][0].description = `<p>
+    Enter a JavaScript function to filter, sort, or transform the data. Use <code style="background: rgba(128, 128, 128, 0.2); padding: 2px 5px;">console.log(data)</code> to see the input argument in the browser console.
+  </p>`;
+    }
+    catch (e) {
+      console.error('Cannot override the JS executeQuery', e);
+    }
+
     if (prefs.mode === 'tree') {
       editor.expand(path => {
         return path.length <= prefs.expandLevel;

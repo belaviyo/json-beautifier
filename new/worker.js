@@ -18,7 +18,12 @@ const onMessage = (request, {tab}, response) => {
       });
       await chrome.scripting.executeScript({
         target,
-        files: ['/data/view/json-editor/lossless-json.js', '/data/view/inject.js']
+        files: [
+          '/data/view/json-editor/acorn.js',
+          '/data/view/json-editor/sval.js',
+          '/data/view/json-editor/lossless-json.js',
+          '/data/view/inject.js'
+        ]
       });
     });
   }
