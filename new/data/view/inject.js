@@ -118,7 +118,7 @@ async function render() {
   const prefs = await new Promise(resolve => chrome.storage.local.get({
     'mode': 'tree',
     'expandLevel': 2,
-    'auto-format': false
+    'auto-format': true
   }, resolve));
   if (prefs.mode === 'code') { // backward compatibility
     prefs.mode = 'text';
@@ -139,7 +139,7 @@ async function render() {
       mode: prefs.mode,
       parser: LosslessJSON,
       content: {},
-      // askToFormat: true,
+      askToFormat: true,
       onRenderMenu(items, context) {
         chrome.storage.local.set({
           mode: context.mode
@@ -155,11 +155,17 @@ async function render() {
         return items;
       }
     };
-    try {
-      props.content.json = LosslessJSON.parse(raw);
+    // formatting
+    if (prefs['auto-format']) {
+      try {
+        props.content.json = LosslessJSON.parse(raw);
+      }
+      catch (e) {
+        console.info('[Error]', 'Cannot Parse JSON', e);
+        props.content.text = raw;
+      }
     }
-    catch (e) {
-      console.info('[Error]', 'Cannot Parse JSON', e);
+    else {
       props.content.text = raw;
     }
 

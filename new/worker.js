@@ -66,7 +66,7 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
       'auto-format': true
     }, prefs => {
       chrome.contextMenus.create({
-        title: 'Automatically Format JSON',
+        title: 'Automatically Format JSON (Text Mode)',
         contexts: ['action'],
         id: 'auto-format',
         type: 'checkbox',
