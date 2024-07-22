@@ -12,7 +12,7 @@ const js = [
   'text/x-javascript',
   'application/javascript'
 ].includes(type);
-const txt = ['text/plain'].includes(type);
+const txt = type && type.startsWith('text/');
 
 const next = () => chrome.runtime.sendMessage({
   method: 'convert',

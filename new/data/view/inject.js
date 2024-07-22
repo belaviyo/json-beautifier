@@ -117,7 +117,8 @@ async function render() {
 
   const prefs = await new Promise(resolve => chrome.storage.local.get({
     'mode': 'tree',
-    'expandLevel': 2
+    'expandLevel': 2,
+    'auto-format': false
   }, resolve));
   if (prefs.mode === 'code') { // backward compatibility
     prefs.mode = 'text';
@@ -134,29 +135,37 @@ async function render() {
   const {JSONEditor} = await import('/data/view/json-editor/standalone.js');
 
   try {
+    const props = {
+      mode: prefs.mode,
+      parser: LosslessJSON,
+      content: {},
+      // askToFormat: true,
+      onRenderMenu(items, context) {
+        chrome.storage.local.set({
+          mode: context.mode
+        });
+
+        items[0].title += ' (Ctrl + Shift + E)'; // text mode
+        items[1].title += ' (Ctrl + Shift + R)'; // tree mode
+        items[2].title += ' (Ctrl + Shift + C)'; // table mode
+
+        items.push({
+          type: 'separator'
+        }, buttons.refresh, buttons.save);
+        return items;
+      }
+    };
+    try {
+      props.content.json = LosslessJSON.parse(raw);
+    }
+    catch (e) {
+      console.info('[Error]', 'Cannot Parse JSON', e);
+      props.content.text = raw;
+    }
+
     editor = new JSONEditor({
       target,
-      props: {
-        mode: prefs.mode,
-        parser: LosslessJSON,
-        content: {
-          text: raw
-        },
-        onRenderMenu(items, context) {
-          chrome.storage.local.set({
-            mode: context.mode
-          });
-
-          items[0].title += ' (Ctrl + Shift + E)'; // text mode
-          items[1].title += ' (Ctrl + Shift + R)'; // tree mode
-          items[2].title += ' (Ctrl + Shift + C)'; // table mode
-
-          items.push({
-            type: 'separator'
-          }, buttons.refresh, buttons.save);
-          return items;
-        }
-      }
+      props
     });
 
     // TO-DO; This is a temporary solution until "executeQuery" accepts async function.

@@ -63,14 +63,14 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
     }, () => chrome.runtime.lastError);
     chrome.storage.local.get({
       'theme': 'system-theme',
-      'use-big-number': true
+      'auto-format': true
     }, prefs => {
       chrome.contextMenus.create({
-        title: 'Convert Unsafe Big Numbers',
+        title: 'Automatically Format JSON',
         contexts: ['action'],
-        id: 'use-big-number',
+        id: 'auto-format',
         type: 'checkbox',
-        checked: prefs['use-big-number']
+        checked: prefs['auto-format']
       }, () => chrome.runtime.lastError);
 
       chrome.contextMenus.create({
@@ -167,9 +167,9 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
       url: chrome.runtime.getManifest().homepage_url + '#faq6'
     });
   }
-  else if (info.menuItemId === 'use-big-number') {
+  else if (info.menuItemId === 'auto-format') {
     chrome.storage.local.set({
-      'use-big-number': info.checked
+      'auto-format': info.checked
     });
   }
   else if (info.menuItemId === 'preview') {
