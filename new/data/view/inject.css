@@ -27,6 +27,11 @@ svg.rotating {
   animation: rotating 1s linear infinite;
 }
 
+/* search on long json objects */
+#json-editor {
+  height: 100vh;
+}
+
 @keyframes rotating {
   from {
     transform: rotate(360deg);
