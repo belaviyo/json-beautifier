@@ -91,7 +91,7 @@ buttons.save = {
     });
 
     const a = document.createElement('a');
-    a.download = (document.title || 'content') + '.json';
+    a.download = (document.title || location.pathname.split('/').pop() || 'content') + '.json';
     const href = URL.createObjectURL(blob);
     a.href = href;
     a.click();
@@ -132,9 +132,9 @@ async function render() {
 
   theme();
 
-  const {JSONEditor} = await import('/data/view/json-editor/standalone.js');
-
   try {
+    const {JSONEditor} = await import(chrome.runtime.getURL('/data/view/json-editor/standalone.js'));
+
     const props = {
       mode: prefs.mode,
       parser: LosslessJSON,
@@ -153,6 +153,9 @@ async function render() {
           type: 'separator'
         }, buttons.refresh, buttons.save);
         return items;
+      },
+      onSelect(selection) {
+        editor.selected = selection?.path || [];
       }
     };
     // formatting
@@ -173,6 +176,7 @@ async function render() {
       target,
       props
     });
+    editor.selected = [];
 
     // TO-DO; This is a temporary solution until "executeQuery" accepts async function.
     try {
@@ -185,7 +189,7 @@ async function render() {
           return interpreter.exports.user(Object.assign({}, e));
         }
         catch (e) {
-          console.error(e);
+          console.error('[JavaScript Interpreter]', e);
           return 'JavaScript Interpreter Error: ' + e.message + '\n\nVisit the browser console for more info';
         }
       };
@@ -199,13 +203,13 @@ async function render() {
 
     if (prefs.mode === 'tree') {
       editor.expand(path => {
-        return path.length <= prefs.expandLevel;
+        return prefs.expandLevel === -1 ? true : path.length <= prefs.expandLevel;
       });
     }
     editor.focus();
   }
   catch (e) {
-    console.error('JSON Editor', e);
+    console.error('[JSON Editor]', e);
     document.documentElement.classList.remove('jsb');
     if (location.protocol.startsWith('http')) {
       chrome.runtime.sendMessage({
@@ -247,4 +251,9 @@ document.addEventListener('keydown', e => {
     e.preventDefault();
     editor.setMode('tree');
   }
+  // else if (e.code === 'ArrowDown' && meta) {
+  //   if (editor.selected?.length > 0) {
+  //     editor.expand(() => undefined);
+  //   }
+  // }
 }, true);
