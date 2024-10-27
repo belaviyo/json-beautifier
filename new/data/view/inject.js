@@ -1,4 +1,4 @@
-/* global LosslessJSON, Sval */
+/* global LosslessJSON */
 'use strict';
 
 document.documentElement.classList.add('jsb');
@@ -133,7 +133,7 @@ async function render() {
   theme();
 
   try {
-    const {JSONEditor} = await import(chrome.runtime.getURL('/data/view/json-editor/standalone.js'));
+    const {createJSONEditor} = await import(chrome.runtime.getURL('/data/view/json-editor/standalone.js'));
 
     const props = {
       mode: prefs.mode,
@@ -155,7 +155,7 @@ async function render() {
         return items;
       },
       onSelect(selection) {
-        editor.selected = selection?.path || [];
+        editor.selection = selection;
       }
     };
     // formatting
@@ -172,39 +172,23 @@ async function render() {
       props.content.text = raw;
     }
 
-    editor = new JSONEditor({
+    editor = createJSONEditor({
       target,
       props
     });
-    editor.selected = [];
-
-    // TO-DO; This is a temporary solution until "executeQuery" accepts async function.
-    try {
-      editor.$$.ctx[38][0].executeQuery = function(e, t) {
-        try {
-          const interpreter = new Sval({
-            ecmaVer: 'latest'
-          });
-          interpreter.run(`exports.user = ${t}`);
-          return interpreter.exports.user(Object.assign({}, e));
-        }
-        catch (e) {
-          console.error('[JavaScript Interpreter]', e);
-          return 'JavaScript Interpreter Error: ' + e.message + '\n\nVisit the browser console for more info';
-        }
-      };
-      editor.$$.ctx[38][0].description = `<p>
-    Enter a JavaScript function to filter, sort, or transform the data. Use <code style="background: rgba(128, 128, 128, 0.2); padding: 2px 5px;">console.log(data)</code> to see the input argument in the browser console.
-  </p>`;
-    }
-    catch (e) {
-      console.error('Cannot override the JS executeQuery', e);
-    }
 
     if (prefs.mode === 'tree') {
-      editor.expand(path => {
-        return prefs.expandLevel === -1 ? true : path.length <= prefs.expandLevel;
-      });
+      if (prefs.expandLevel === -1) {
+        editor.expand([], () => true);
+      }
+      else {
+        editor.collapse([], path => {
+          return path.length > prefs.expandLevel;
+        });
+        editor.expand([], path => {
+          return path.length <= prefs.expandLevel;
+        });
+      }
     }
     editor.focus();
   }
@@ -241,19 +225,50 @@ document.addEventListener('keydown', e => {
 
   if (e.code === 'KeyC' && e.shiftKey && meta) { // code
     e.preventDefault();
-    editor.setMode('code');
+    editor.updateProps({
+      mode: 'text'
+    });
   }
   else if (e.code === 'KeyE' && e.shiftKey && meta) { // table
     e.preventDefault();
-    editor.setMode('table');
+    editor.updateProps({
+      mode: 'table'
+    });
   }
   else if (e.code === 'KeyR' && e.shiftKey && meta) { // tree
     e.preventDefault();
-    editor.setMode('tree');
+    editor.updateProps({
+      mode: 'tree'
+    });
   }
   // else if (e.code === 'ArrowDown' && meta) {
-  //   if (editor.selected?.length > 0) {
-  //     editor.expand(() => undefined);
+  //   const selection = editor.selection;
+
+  //   if (selection) {
+  //     if (selection.type === 'value' && selection.path) {
+  //       editor.expand(selection.path.slice(0, -1), () => true);
+  //     }
+  //     else if (selection.type === 'key' && selection.path) {
+  //       editor.expand(selection.path, () => true);
+  //     }
+  //   }
+  // }
+  // else if (e.code === 'ArrowUp' && meta) {
+  //   const selection = editor.selection;
+
+  //   if (selection) {
+  //     if (selection.type === 'value' && selection.path) {
+  //       const path = selection.path.slice(0, -1);
+  //       editor.collapse(path, () => true);
+
+  //       import(chrome.runtime.getURL('/data/view/json-editor/standalone.js')).then(o => {
+  //         editor.selection = o.createKeySelection(path);
+  //         editor.select(editor.selection);
+  //       });
+  //     }
+  //     else if (selection.type === 'key' && selection.path) {
+  //       editor.collapse(selection.path, () => true);
+  //     }
   //   }
   // }
 }, true);
