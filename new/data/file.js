@@ -29,7 +29,8 @@ else if (js && location.pathname.endsWith('.json')) {
 // e.g.: https://www.google.com/robots.txt
 else if (txt) {
   document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('body > pre') || document.body;
+    // example: https://json.org/example.html
+    const container = document.querySelector('body pre:first-child') || document.body;
     const raw = container.innerText.trim();
 
     try {

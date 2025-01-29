@@ -43,6 +43,11 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
 
 {
   const startup = () => {
+    if (startup.done) {
+      return;
+    }
+    startup.done = true;
+
     chrome.contextMenus.create({
       title: 'Open in JSON Editor',
       contexts: ['selection'],

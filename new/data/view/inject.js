@@ -145,9 +145,9 @@ async function render() {
           mode: context.mode
         });
 
-        items[0].title += ' (Ctrl + Shift + E)'; // text mode
-        items[1].title += ' (Ctrl + Shift + R)'; // tree mode
-        items[2].title += ' (Ctrl + Shift + C)'; // table mode
+        items.filter(o => o.text === 'text').forEach(o => o.title += ' (Ctrl + Shift + C)');
+        items.filter(o => o.text === 'tree').forEach(o => o.title += ' (Ctrl + Shift + R)');
+        items.filter(o => o.text === 'table').forEach(o => o.title += ' (Ctrl + Shift + E)');
 
         items.push({
           type: 'separator'
@@ -177,20 +177,22 @@ async function render() {
       props
     });
 
-    if (prefs.mode === 'tree') {
-      if (prefs.expandLevel === -1) {
-        editor.expand([], () => true);
+    requestAnimationFrame(() => {
+      if (prefs.mode === 'tree') {
+        if (prefs.expandLevel === -1) {
+          editor.expand([], () => true);
+        }
+        else {
+          editor.collapse([], path => {
+            return path.length > prefs.expandLevel;
+          });
+          editor.expand([], path => {
+            return path.length <= prefs.expandLevel;
+          });
+        }
       }
-      else {
-        editor.collapse([], path => {
-          return path.length > prefs.expandLevel;
-        });
-        editor.expand([], path => {
-          return path.length <= prefs.expandLevel;
-        });
-      }
-    }
-    editor.focus();
+      editor.focus();
+    });
   }
   catch (e) {
     console.error('[JSON Editor]', e);

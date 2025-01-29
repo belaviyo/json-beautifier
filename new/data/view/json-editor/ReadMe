@@ -1,3 +1,4 @@
 https://unpkg.com/lossless-json@4.0.2/lib/umd/lossless-json.js
-https://unpkg.com/vanilla-jsoneditor@1.1.1/standalone.js
-https://unpkg.com/vanilla-jsoneditor@1.1.1/themes/jse-theme-dark.css
+
+https://unpkg.com/vanilla-jsoneditor@2.3.3/standalone.js
+https://unpkg.com/vanilla-jsoneditor@2.3.3/themes/jse-theme-dark.css
