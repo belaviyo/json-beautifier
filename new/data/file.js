@@ -14,9 +14,17 @@ const js = [
 ].includes(type);
 const txt = type && type.startsWith('text/');
 
-const next = () => chrome.runtime.sendMessage({
-  method: 'convert',
-  type
+const next = () => chrome.storage.local.get({
+  exceptions: []
+}, prefs => {
+  if (prefs.exceptions.includes(location.host)) {
+    return console.info('This site is in the exception list');
+  }
+
+  chrome.runtime.sendMessage({
+    method: 'convert',
+    type
+  });
 });
 
 if (json) {
@@ -29,14 +37,21 @@ else if (js && location.pathname.endsWith('.json')) {
 // e.g.: https://www.google.com/robots.txt
 else if (txt) {
   document.addEventListener('DOMContentLoaded', () => {
-    // example: https://json.org/example.html
-    const container = document.querySelector('body pre:first-child') || document.body;
-    const raw = container.innerText.trim();
-
-    try {
-      JSON.parse(raw);
-      next();
+    const container = document.querySelector('body pre') || document.body;
+    if (container.nodeName === 'PRE') {
+      // example: https://json.org/example.html
+      if (document.body.innerText !== document.querySelector('pre').innerText) {
+        return;
+      }
     }
-    catch (e) {}
+
+    const raw = container.innerText.trim();
+    if (raw[0] === '{') {
+      try {
+        JSON.parse(raw);
+        next();
+      }
+      catch (e) {}
+    }
   });
 }

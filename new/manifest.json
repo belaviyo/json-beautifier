@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.5.7",
+  "version": "0.5.8",
   "name": "JSON Beautifier and Editor",
   "description": "__MSG_description__",
   "default_locale": "en",
@@ -42,6 +42,11 @@
   "action": {},
   "commands": {
     "_execute_action": {}
+  },
+  "options_ui": {
+    "open_in_tab": true,
+    "page": "/data/options/index.html"
+
   },
   "browser_specific_settings": {
     "gecko": {
