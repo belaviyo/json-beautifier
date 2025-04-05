@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.5.8",
+  "version": "0.5.10",
   "name": "JSON Beautifier and Editor",
   "description": "__MSG_description__",
   "default_locale": "en",
@@ -33,15 +33,17 @@
   "homepage_url": "https://webextension.org/listing/json-beautifier.html",
   "web_accessible_resources": [{
     "resources": [
-      "/data/view/json-editor/standalone.js",
-      "/data/view/loading.svg",
-      "/data/page/index.html"
+      "data/view/json-editor/standalone.js",
+      "data/view/loading.svg",
+      "data/page/index.html"
     ],
     "matches": ["<all_urls>"]
   }],
   "action": {},
   "commands": {
-    "_execute_action": {}
+    "_execute_action": {
+      "description": "Execute Action"
+    }
   },
   "options_ui": {
     "open_in_tab": true,

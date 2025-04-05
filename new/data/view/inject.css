@@ -40,3 +40,26 @@ svg.rotating {
     transform: rotate(0deg);
   }
 }
+
+.headers {
+  font-family: var(--jse-font-family-mono, consolas, menlo, monaco, "Ubuntu Mono", "source-code-pro", monospace);
+  font-size: var(--jse-font-size-mono, 14px);
+  padding: 10px 20px;
+  background-color: var(--jse-panel-background, #fff);
+  width: min(100% - 2rem, 70rem);
+  max-height: 80vh;
+}
+.headers > div {
+  display: grid;
+  grid-gap: 5px 10px;
+  grid-template-columns: min-content 1fr;
+}
+.headers .key {
+  white-space: nowrap;
+  color: var(--jse-value-color-url, #008000);
+}
+.headers .value {
+  white-space: pre-wrap;
+  color: var(--jse-text-color);
+  line-break: anywhere;
+}

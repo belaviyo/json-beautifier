@@ -1,5 +1,5 @@
 {
   "description": {
-    "message": "Visualizzare gli oggetti JSON trasformandoli in HTML evidenziati con sintassi modificabile per convalidarli, formattarli e salvarli"
+    "message": "Visualizza, modifica, convalida, formatta e salva oggetti JSON in HTML con sintassi evidenziata."
   }
 }
