@@ -40,12 +40,12 @@ else if (txt) {
     const container = document.querySelector('body pre') || document.body;
     if (container.nodeName === 'PRE') {
       // example: https://json.org/example.html
-      if (document.body.innerText !== document.querySelector('pre').innerText) {
+      if (document.body.textContent !== document.querySelector('pre').textContent) {
         return;
       }
     }
 
-    const raw = container.innerText.trim();
+    const raw = container.textContent.trim();
     if (raw[0] === '{') {
       try {
         JSON.parse(raw);

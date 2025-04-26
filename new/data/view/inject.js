@@ -151,7 +151,7 @@ buttons.headers = {
 async function render() {
   // https://github.com/belaviyo/json-beautifier/issues/16
   const container = document.querySelector('body > pre') || document.body;
-  let raw = container.innerText.trim();
+  let raw = container.textContent.trim();
 
   // browser may have altered the raw, so try to fetch a new copy
   try {
