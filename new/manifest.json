@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "version": "0.6.1",
+  "version": "0.6.2",
   "name": "JSON Beautifier and Editor",
   "description": "__MSG_description__",
   "default_locale": "en",
@@ -13,22 +13,21 @@
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "worker.js",
-    "scripts": ["worker.js"]
+    "service_worker": "worker.js"
   },
   "content_scripts": [{
     "run_at": "document_start",
     "matches": ["<all_urls>"],
-    "js": ["/data/file.js"]
+    "js": ["data/file.js"]
   }],
   "icons": {
-    "16": "/data/icons/16.png",
-    "32": "/data/icons/32.png",
-    "48": "/data/icons/48.png",
-    "64": "/data/icons/64.png",
-    "128": "/data/icons/128.png",
-    "256": "/data/icons/256.png",
-    "512": "/data/icons/512.png"
+    "16": "data/icons/16.png",
+    "32": "data/icons/32.png",
+    "48": "data/icons/48.png",
+    "64": "data/icons/64.png",
+    "128": "data/icons/128.png",
+    "256": "data/icons/256.png",
+    "512": "data/icons/512.png"
   },
   "homepage_url": "https://webextension.org/listing/json-beautifier.html",
   "web_accessible_resources": [{
@@ -47,13 +46,7 @@
   },
   "options_ui": {
     "open_in_tab": true,
-    "page": "/data/options/index.html"
+    "page": "data/options/index.html"
 
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "{9616baea-74a5-422d-bbcb-394fcd751bb8}",
-      "strict_min_version": "128.0"
-    }
   }
 }

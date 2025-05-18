@@ -14,9 +14,12 @@ const js = [
 ].includes(type);
 const txt = type && type.startsWith('text/');
 
-const next = () => chrome.storage.local.get({
-  exceptions: []
-}, prefs => {
+const next = async reason => {
+  console.info('[Converting to JSON]', reason);
+
+  const prefs = await chrome.storage.local.get({
+    exceptions: []
+  });
   if (prefs.exceptions.includes(location.host)) {
     return console.info('This site is in the exception list');
   }
@@ -25,31 +28,34 @@ const next = () => chrome.storage.local.get({
     method: 'convert',
     type
   });
-});
+};
+
 
 if (json) {
-  next();
+  next('type');
 }
 // e.g.: https://api.coindesk.com/v1/bpi/currentprice.json
 else if (js && location.pathname.endsWith('.json')) {
-  next();
+  next('extension');
 }
 // e.g.: https://www.google.com/robots.txt
+// e.g.: 1.html
+// e.g.: https://json.org/example.html
 else if (txt) {
   document.addEventListener('DOMContentLoaded', () => {
-    const container = document.querySelector('body pre') || document.body;
-    if (container.nodeName === 'PRE') {
-      // example: https://json.org/example.html
-      if (document.body.textContent !== document.querySelector('pre').textContent) {
-        return;
-      }
+    if (
+      document.scripts?.length > 0 || document.images?.length > 0 || document.links?.length > 0 ||
+      document.forms?.length > 0 || document.anchors?.length || window.frames?.length > 0
+    ) {
+      return;
     }
 
+    const container = document.querySelector('body pre') || document.body;
     const raw = container.textContent.trim();
-    if (raw[0] === '{') {
+    if (raw.at(0) === '{' && raw.at(-1) === '}') {
       try {
         JSON.parse(raw);
-        next();
+        next('raw');
       }
       catch (e) {}
     }

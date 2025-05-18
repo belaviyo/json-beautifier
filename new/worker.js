@@ -77,6 +77,11 @@ chrome.action.onClicked.addListener(() => chrome.tabs.create({
       id: 'sample'
     }, () => chrome.runtime.lastError);
     chrome.contextMenus.create({
+      title: 'Open this Page in JSON Editor',
+      contexts: ['action'],
+      id: 'open-tab'
+    }, () => chrome.runtime.lastError);
+    chrome.contextMenus.create({
       title: 'Usage Preview',
       contexts: ['action'],
       id: 'preview'
@@ -237,6 +242,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     chrome.tabs.create({
       url: chrome.runtime.getManifest().homepage_url + '#faq6'
     });
+  }
+  else if (info.menuItemId === 'open-tab') {
+    onMessage({
+      method: 'convert'
+    }, {tab});
   }
   else if (info.menuItemId === 'auto-format') {
     chrome.storage.local.set({
