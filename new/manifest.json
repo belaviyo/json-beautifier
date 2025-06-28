@@ -13,7 +13,10 @@
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "worker.js"
+    "service_worker": "worker.js",
+    "scripts": [
+      "worker.js"
+    ]
   },
   "content_scripts": [{
     "run_at": "document_start",
@@ -47,6 +50,11 @@
   "options_ui": {
     "open_in_tab": true,
     "page": "data/options/index.html"
-
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{9616baea-74a5-422d-bbcb-394fcd751bb8}",
+      "strict_min_version": "128.0"
+    }
   }
 }
