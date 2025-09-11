@@ -158,8 +158,14 @@ async function render() {
     JSON.parse(raw);
   }
   catch (e) {
-    raw = await fetch(location.href).then(r => r.text());
     console.info('re-fetch a fresh copy', e);
+    // only use fetch when the value is a valid JSON
+    const server = await fetch(location.href).then(r => r.text());
+    try {
+      JSON.parse(server);
+      raw = server;
+    }
+    catch (e) {}
   }
 
   const prefs = await new Promise(resolve => chrome.storage.local.get({
