@@ -15,6 +15,11 @@ html.jsb[data-loaded="true"] body {
   margin: 0 !important;
 }
 
+/* Default parser on Google Chrome */
+html.jsb[data-loaded="true"] .json-formatter-container {
+  visibility: collapse;
+}
+
 html.jsb body pre {
   all: initial;
   margin: 0;
@@ -46,8 +51,9 @@ svg.rotating {
   font-size: var(--jse-font-size-mono, 14px);
   padding: 10px 20px;
   background-color: var(--jse-panel-background, #fff);
-  width: min(100% - 2rem, 70rem);
+  width: min(100% - 5rem, 70rem);
   max-height: 80vh;
+  box-sizing: border-box;
 }
 .headers > div {
   display: grid;
