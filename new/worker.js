@@ -51,6 +51,23 @@ const onMessage = (request, {tab}, response) => {
       });
     }
   }
+  // in case the page is sandboxed and we cannot directly download. e.g.: raw.githubusercontent.com
+  else if (request.method === 'download') {
+    chrome.permissions.request({
+      permissions: ['downloads']
+    }).then(granted => {
+      if (granted) {
+        chrome.downloads.download({
+          url: request.href,
+          filename: request.filename
+        }).then(() => response(true)).catch(e => response(false));
+      }
+      else {
+        response(false);
+      }
+    }).catch(e => response(false));
+    return true;
+  }
 };
 chrome.runtime.onMessage.addListener(onMessage);
 
